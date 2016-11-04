@@ -8,8 +8,7 @@
 #ifndef SATHELPER_INCLUDES_VITERBI27_H_
 #define SATHELPER_INCLUDES_VITERBI27_H_
 
-#include <stdint.h>
-
+#include <cstdint>
 
 #define _VITERBI27_POLYA 0x4F
 #define _VITERBI27_POLYB 0x6D

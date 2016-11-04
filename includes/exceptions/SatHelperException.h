@@ -14,6 +14,8 @@
 class SatHelperException: public std::exception {
 public:
 
+	SatHelperException(): msg_("") {}
+
 	SatHelperException(const char *message): msg_(message) {}
 
 	SatHelperException(const std::string &message): msg_(message) {}
