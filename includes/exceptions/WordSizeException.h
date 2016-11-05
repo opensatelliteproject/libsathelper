@@ -2,7 +2,7 @@
  * WordSizeException.h
  *
  *  Created on: 04/11/2016
- *      Author: lucas
+ *      Author: Lucas Teske
  */
 
 #ifndef INCLUDES_EXCEPTIONS_WORDSIZEEXCEPTION_H_
