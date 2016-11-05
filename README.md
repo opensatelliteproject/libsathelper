@@ -10,4 +10,4 @@ Features
 *   CCSDS ReedSolomon Decode (wrapper from [libfec](https://github.com/quiet/libfec))
 *   ReedSolomon [De]Interleaver
 *   Correlator for Sync Word
-
+*   Packet Phase Ambiguity Fixer (For 0, 90, 180, 270 degrees and IQ Inversion)
