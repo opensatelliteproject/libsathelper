@@ -5,16 +5,19 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../src/correlator.cpp \
+../src/packetfixer.cpp \
 ../src/reedsolomon.cpp \
 ../src/viterbi27.cpp 
 
 OBJS += \
 ./src/correlator.o \
+./src/packetfixer.o \
 ./src/reedsolomon.o \
 ./src/viterbi27.o 
 
 CPP_DEPS += \
 ./src/correlator.d \
+./src/packetfixer.d \
 ./src/reedsolomon.d \
 ./src/viterbi27.d 
 

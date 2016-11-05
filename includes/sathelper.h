@@ -11,6 +11,7 @@
 #include <correlator.h>
 #include <viterbi27.h>
 #include <reedsolomon.h>
+#include <packetfixer.h>
 
 // Exceptions
 
