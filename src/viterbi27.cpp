@@ -14,6 +14,8 @@ extern "C" {
 #include "correlator.h"
 #include "ViterbiCreationException.h"
 
+using namespace SatHelper;
+
 Viterbi27::Viterbi27(int frameBits, int polyA, int polyB) {
     this->frameBits = frameBits;
     this->polynomials[0] = polyA;

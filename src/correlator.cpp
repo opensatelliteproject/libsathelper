@@ -8,6 +8,12 @@
 #include "correlator.h"
 #include "WordSizeException.h"
 
+using namespace SatHelper;
+
+Correlator::Correlator() {
+
+}
+
 void Correlator::addWord(uint32_t word) {
     if (currentWordSize != 0 && currentWordSize != 32) {
         throw WordSizeException(32, currentWordSize);

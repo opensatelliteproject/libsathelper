@@ -13,6 +13,9 @@ extern "C" {
 
 #define NULL 0
 
+
+using namespace SatHelper;
+
 ReedSolomon::ReedSolomon(uint32_t parityOffset) {
     this->parityOffset = parityOffset;
     this->copyParityToOutput = false;
