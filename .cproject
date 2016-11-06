@@ -33,8 +33,8 @@
 								<option id="gnu.cpp.compiler.so.debug.option.optimization.level.994270113" name="Optimization Level" superClass="gnu.cpp.compiler.so.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.so.debug.option.debugging.level.1420111919" name="Debug Level" superClass="gnu.cpp.compiler.so.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.714590260" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SatHelper/includes}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SatHelper/includes/exceptions}&quot;"/>
+									<listOptionValue builtIn="false" value="../includes"/>
+									<listOptionValue builtIn="false" value="../includes/exceptions"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.dialect.std.332926126" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.dialect.flags.1832962123" name="Other dialect flags" superClass="gnu.cpp.compiler.option.dialect.flags" value="-std=c++11" valueType="string"/>
@@ -45,11 +45,11 @@
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.so.debug.option.optimization.level.161755209" name="Optimization Level" superClass="gnu.c.compiler.so.debug.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.so.debug.option.debugging.level.1545150925" name="Debug Level" superClass="gnu.c.compiler.so.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.1387468160" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SatHelper/includes}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SatHelper/includes/exceptions}&quot;"/>
+									<listOptionValue builtIn="false" value="../includes"/>
+									<listOptionValue builtIn="false" value="../includes/exceptions"/>
 								</option>
 								<option id="gnu.c.compiler.option.dialect.std.2008146641" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" value="gnu.c.compiler.dialect.c99" valueType="enumerated"/>
-								<option id="gnu.c.compiler.option.misc.pic.970018659" superClass="gnu.c.compiler.option.misc.pic" value="true" valueType="boolean"/>
+								<option id="gnu.c.compiler.option.misc.pic.970018659" name="Position Independent Code (-fPIC)" superClass="gnu.c.compiler.option.misc.pic" value="true" valueType="boolean"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1175925669" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.so.debug.2035924906" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.so.debug">
@@ -67,8 +67,8 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.so.debug.128359206" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.so.debug">
 								<option id="gnu.both.asm.option.include.paths.1789642924" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SatHelper/includes}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SatHelper/includes/exceptions}&quot;"/>
+									<listOptionValue builtIn="false" value="../includes"/>
+									<listOptionValue builtIn="false" value="../includes/exceptions"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.539663695" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
@@ -113,23 +113,23 @@
 								<option id="gnu.cpp.compiler.so.release.option.optimization.level.1206315311" name="Optimization Level" superClass="gnu.cpp.compiler.so.release.option.optimization.level" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.so.release.option.debugging.level.1971907138" name="Debug Level" superClass="gnu.cpp.compiler.so.release.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1922307588" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SatHelper/includes}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SatHelper/includes/exceptions}&quot;"/>
+									<listOptionValue builtIn="false" value="../includes"/>
+									<listOptionValue builtIn="false" value="../includes/exceptions"/>
 								</option>
-								<option id="gnu.cpp.compiler.option.dialect.std.1147177734" superClass="gnu.cpp.compiler.option.dialect.std" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
-								<option id="gnu.cpp.compiler.option.dialect.flags.1508987239" superClass="gnu.cpp.compiler.option.dialect.flags" value="-std=c++11" valueType="string"/>
-								<option id="gnu.cpp.compiler.option.other.pic.1867212146" superClass="gnu.cpp.compiler.option.other.pic" value="true" valueType="boolean"/>
+								<option id="gnu.cpp.compiler.option.dialect.std.1147177734" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.dialect.flags.1508987239" name="Other dialect flags" superClass="gnu.cpp.compiler.option.dialect.flags" value="-std=c++11" valueType="string"/>
+								<option id="gnu.cpp.compiler.option.other.pic.1867212146" name="Position Independent Code (-fPIC)" superClass="gnu.cpp.compiler.option.other.pic" value="true" valueType="boolean"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1356356092" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.so.release.2142868027" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.so.release">
 								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.so.release.option.optimization.level.1747637889" name="Optimization Level" superClass="gnu.c.compiler.so.release.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.so.release.option.debugging.level.119307141" name="Debug Level" superClass="gnu.c.compiler.so.release.option.debugging.level" value="gnu.c.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.581256974" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SatHelper/includes}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SatHelper/includes/exceptions}&quot;"/>
+									<listOptionValue builtIn="false" value="../includes"/>
+									<listOptionValue builtIn="false" value="../includes/exceptions"/>
 								</option>
-								<option id="gnu.c.compiler.option.misc.pic.2096492934" superClass="gnu.c.compiler.option.misc.pic" value="true" valueType="boolean"/>
-								<option id="gnu.c.compiler.option.dialect.std.1096141745" superClass="gnu.c.compiler.option.dialect.std" value="gnu.c.compiler.dialect.c99" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.misc.pic.2096492934" name="Position Independent Code (-fPIC)" superClass="gnu.c.compiler.option.misc.pic" value="true" valueType="boolean"/>
+								<option id="gnu.c.compiler.option.dialect.std.1096141745" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" value="gnu.c.compiler.dialect.c99" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.112602047" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.so.release.1987543138" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.so.release">
@@ -137,7 +137,7 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.so.release.1475073751" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.so.release">
 								<option defaultValue="true" id="gnu.cpp.link.so.release.option.shared.1805196614" name="Shared (-shared)" superClass="gnu.cpp.link.so.release.option.shared" valueType="boolean"/>
-								<option id="gnu.cpp.link.option.libs.1184655184" superClass="gnu.cpp.link.option.libs" valueType="libs">
+								<option id="gnu.cpp.link.option.libs.1184655184" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="fec"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1454628821" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
@@ -147,8 +147,8 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.so.release.788032668" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.so.release">
 								<option id="gnu.both.asm.option.include.paths.518411456" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SatHelper/includes}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SatHelper/includes/exceptions}&quot;"/>
+									<listOptionValue builtIn="false" value="../includes"/>
+									<listOptionValue builtIn="false" value="../includes/exceptions"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.242876665" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
