@@ -5,3 +5,6 @@ Release/*.so
 Release/**/*.o
 Release/**/*.d
 Debug/channels*
+Release (Static)/*.a
+Release (Static)/**/*.o
+Release (Static)/**/*.d
