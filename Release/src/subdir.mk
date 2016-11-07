@@ -5,20 +5,32 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../src/correlator.cpp \
+../src/derandomizer.cpp \
 ../src/packetfixer.cpp \
 ../src/reedsolomon.cpp \
+../src/screenmanager.cpp \
+../src/socket.cpp \
+../src/tcpserver.cpp \
 ../src/viterbi27.cpp 
 
 OBJS += \
 ./src/correlator.o \
+./src/derandomizer.o \
 ./src/packetfixer.o \
 ./src/reedsolomon.o \
+./src/screenmanager.o \
+./src/socket.o \
+./src/tcpserver.o \
 ./src/viterbi27.o 
 
 CPP_DEPS += \
 ./src/correlator.d \
+./src/derandomizer.d \
 ./src/packetfixer.d \
 ./src/reedsolomon.d \
+./src/screenmanager.d \
+./src/socket.d \
+./src/tcpserver.d \
 ./src/viterbi27.d 
 
 

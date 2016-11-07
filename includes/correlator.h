@@ -10,6 +10,7 @@
 
 #include <vector>
 #include <cstdint>
+#include <stdint.h>
 
 namespace SatHelper {
 
