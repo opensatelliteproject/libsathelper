@@ -17,6 +17,7 @@
 #include <tcpsocket.h>
 #include <tcpserver.h>
 #include <derandomizer.h>
+#include <tools.h>
 
 #include <exceptions.h>
 
