@@ -63,9 +63,13 @@ void Correlator::correlate(uint8_t *data, uint32_t length) {
 
     // TODO: Use Duff's Device for numWords iteration
     for (int i = 0; i < maxSearch; i++) {
+        for (int n = 0; n < numWords; n++) {
+            tmpCorrelation[n] = 0;
+        }
+
         for (int k = 0; k < wordSize; k++) {
             for (int n = 0; n < numWords; n++) {
-                tmpCorrelation[n] += Correlator::hardCorrelate(data[i + k], words[n][k]);
+                tmpCorrelation[n] += (uint32_t) Correlator::hardCorrelate(data[i + k], words[n][k]);
             }
         }
 

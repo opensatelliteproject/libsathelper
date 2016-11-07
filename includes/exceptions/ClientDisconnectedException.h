@@ -2,7 +2,7 @@
  * ClientDisconnectedException.h
  *
  *  Created on: 06/11/2016
- *      Author: lucas
+ *      Author: Lucas Teske
  */
 
 #ifndef INCLUDES_EXCEPTIONS_CLIENTDISCONNECTEDEXCEPTION_H_
@@ -11,7 +11,7 @@
 #include "SocketException.h"
 
 namespace SatHelper {
-    class ClientDisconnectedException: SocketException {
+    class ClientDisconnectedException: public SocketException {
     public:
         ClientDisconnectedException() :
                 SocketException(0) {

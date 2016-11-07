@@ -17,14 +17,16 @@ namespace SatHelper {
 
     class PacketFixer {
     private:
-        static std::once_flag initFlag;
+        static bool initialized;
         static uint8_t deg90LUT[256];
         static uint8_t iqInvertLUT[256];
         static void initializeLUT();
 
     public:
         PacketFixer() {
-            std::call_once(initFlag, &PacketFixer::initializeLUT);
+            if (!initialized) {
+                PacketFixer::initializeLUT();
+            }
         }
         void fixPacket(uint8_t *data, uint32_t length, PhaseShift phaseShift, bool iqInversion);
     };

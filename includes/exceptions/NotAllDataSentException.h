@@ -2,7 +2,7 @@
  * NotAllDataSentException.h
  *
  *  Created on: 06/11/2016
- *      Author: lucas
+ *      Author: Lucas Teske
  */
 
 #ifndef INCLUDES_EXCEPTIONS_NOTALLDATASENTEXCEPTION_H_

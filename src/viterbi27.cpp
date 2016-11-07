@@ -26,7 +26,7 @@ Viterbi27::Viterbi27(int frameBits, int polyA, int polyB) {
     if ((viterbi = create_viterbi27(this->frameBits)) == NULL) {
         throw ViterbiCreationException();
     }
-    this->checkDataPointer = new uint8_t[this->frameBits];
+    this->checkDataPointer = new uint8_t[this->frameBits*2];
 }
 
 Viterbi27::~Viterbi27() {
@@ -38,8 +38,8 @@ void Viterbi27::encode(uint8_t *input, uint8_t *output) {
     uint8_t c;
     uint32_t pos = 0;
     uint32_t opos = 0;
-    uint32_t outputLength = this->frameBits / 8;
-    uint32_t inputLength = this->frameBits;
+    uint32_t outputLength = this->EncodedSize();
+    uint32_t inputLength = this->DecodedSize();
 
     memset(output, 0x00, outputLength);
     while (pos < inputLength && (pos * 16) < outputLength) {
@@ -62,7 +62,7 @@ void Viterbi27::decode(uint8_t *input, uint8_t *output) {
     chainback_viterbi27(viterbi, output, this->frameBits, 0);
     if (calculateErrors) {
         this->encode(output, this->checkDataPointer);
-        this->BER = Viterbi27::calculateError(input, this->checkDataPointer, this->frameBits);
+        this->BER = Viterbi27::calculateError(input, this->checkDataPointer, this->frameBits*2);
     }
 }
 

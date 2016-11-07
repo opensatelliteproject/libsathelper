@@ -2,7 +2,7 @@
  * tcpsocket.hpp
  *
  *  Created on: 06/11/2016
- *      Author: lucas
+ *      Author: Lucas Teske
  */
 
 #ifndef INCLUDES_TCPSOCKET_HPP_

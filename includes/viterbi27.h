@@ -36,7 +36,7 @@ namespace SatHelper {
             return this->frameBits / 8;
         }
         inline int EncodedSize() {
-            return this->frameBits;
+            return this->frameBits * 2;
         }
         inline void SetCalculateErrors(bool calculateErrors) {
             this->calculateErrors = calculateErrors;
