@@ -81,7 +81,7 @@ void Correlator::correlate(uint8_t *data, uint32_t length) {
     uint32_t corr = 0;
     for (int n = 0; n < numWords; n++) {
         if (correlation[n] > corr) {
-            highestCorrelation = n;
+            wordNumber = n;
             corr = correlation[n];
         }
     }

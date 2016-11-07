@@ -21,7 +21,7 @@ namespace SatHelper {
         std::vector<uint32_t> correlation;
         std::vector<uint32_t> tmpCorrelation;
         std::vector<uint32_t> position;
-        uint32_t highestCorrelation;
+        uint32_t wordNumber;
         uint8_t currentWordSize;
 
         void resetCorrelation();
@@ -34,11 +34,15 @@ namespace SatHelper {
         Correlator();
 
         inline uint32_t getHighestCorrelation() {
-            return correlation[highestCorrelation];
+            return correlation[wordNumber];
         }
 
         inline uint32_t getHighestCorrelationPosition() {
-            return position[highestCorrelation];
+            return position[wordNumber];
+        }
+
+        inline uint32_t getCorrelationWordNumber() {
+            return wordNumber;
         }
 
         void addWord(uint32_t word);

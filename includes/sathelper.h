@@ -16,6 +16,7 @@
 #include <ipaddress.h>
 #include <tcpsocket.h>
 #include <tcpserver.h>
+#include <derandomizer.h>
 
 #include <exceptions.h>
 
