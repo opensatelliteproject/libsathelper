@@ -5,10 +5,12 @@ Debug/**/*.d
 Debug/*.*log
 Debug/*.idb
 Debug/*.pdb
+Debug/*.dll
 Release/*.so
 Release/**/*.o
 Release/*.obj
 Release/**/*.d
+Release/*.dll
 Debug/channels*
 Release (Static)/*.a
 Release (Static)/**/*.o
@@ -16,6 +18,7 @@ Release (Static)/**/*.d
 Release/*.*log
 Release/*.idb
 Release/*.pdb
+winfec
 *.db
 *.opendb
 
