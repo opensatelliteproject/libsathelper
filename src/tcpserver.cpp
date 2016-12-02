@@ -16,13 +16,18 @@
 #include <sstream>
 #include <iostream>
 #include "exceptions.h"
+#include <fcntl.h>
 
 using namespace SatHelper;
 
-void TcpServer::Listen(int port) {
+void TcpServer::Listen(int port, bool nonBlocking) {
     s = socket(AF_INET, SOCK_STREAM, 0);
     if (s < 0) {
         throw SocketErrorException(errno);
+    }
+
+    if (nonBlocking) {
+        fcntl(s, F_SETFL, O_NONBLOCK);
     }
 
     memset(&socketAddr, '\0', sizeof(socketAddr));

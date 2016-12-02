@@ -32,7 +32,7 @@ void Socket::Receive(char *data, int length) {
 }
 
 void Socket::Send(char * data, int length) {
-    int n = send(s, data, length, 0);
+    int n = send(s, data, length, MSG_NOSIGNAL);
     if (n == 0) {
         throw ClientDisconnectedException();
     } else if (n < 0) {

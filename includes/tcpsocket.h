@@ -29,6 +29,10 @@ namespace SatHelper {
         TcpSocket(const TcpSocket &a) :
                 Socket(a) {
         }
+
+        inline int GetSocketFD() {
+            return s;
+        }
     };
 }
 
