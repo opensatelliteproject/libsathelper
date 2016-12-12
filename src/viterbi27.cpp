@@ -23,7 +23,7 @@ Viterbi27::Viterbi27(int frameBits, int polyA, int polyB) {
     this->BER = 0;
     this->calculateErrors = true;
     set_viterbi27_polynomial(this->polynomials);
-    if ((viterbi = create_viterbi27(this->frameBits)) == NULL) {
+    if ((viterbi = create_viterbi27(this->frameBits+6)) == NULL) {
         throw ViterbiCreationException();
     }
     this->checkDataPointer = new uint8_t[this->frameBits*2];
