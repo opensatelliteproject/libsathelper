@@ -10,14 +10,18 @@
 
 #include <cstdint>
 
+extern "C" {
+    #include <correct.h>
+}
+
 namespace SatHelper {
     class ReedSolomon {
     private:
-        uint32_t parityOffset;
         bool copyParityToOutput;
+        correct_reed_solomon *rs;
 
     public:
-        ReedSolomon(uint32_t parityOffset);
+        ReedSolomon();
 
         // CCSDS standard (255,223) RS codec with dual-basis symbol representation
         uint32_t decode_ccsds(uint8_t *data);
@@ -34,6 +38,8 @@ namespace SatHelper {
         inline void SetCopyParityToOutput(bool copyParityToOutput) {
             this->copyParityToOutput = copyParityToOutput;
         }
+
+        ~ReedSolomon();
     };
 }
 

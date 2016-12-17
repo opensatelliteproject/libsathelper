@@ -6,11 +6,12 @@
  */
 
 extern "C" {
-#include <fec.h>
+#include <correct.h>
 }
 
 #include "viterbi27.h"
 #include <memory.h>
+#include <cstring>
 #include "correlator.h"
 #include "ViterbiCreationException.h"
 
@@ -22,11 +23,13 @@ Viterbi27::Viterbi27(int frameBits, int polyA, int polyB) {
     this->polynomials[1] = polyB;
     this->BER = 0;
     this->calculateErrors = true;
-    set_viterbi27_polynomial(this->polynomials);
-    if ((viterbi = create_viterbi27(this->frameBits+6)) == NULL) {
+
+    viterbi = correct_convolutional_create(2, 7, new uint16_t[2] { (uint16_t)polyA, (uint16_t)polyB });
+
+    if (viterbi == NULL) {
         throw ViterbiCreationException();
     }
-    this->checkDataPointer = new uint8_t[this->frameBits*2];
+    this->checkDataPointer = new uint8_t[this->frameBits * 2];
 }
 
 Viterbi27::~Viterbi27() {
@@ -34,32 +37,22 @@ Viterbi27::~Viterbi27() {
 }
 
 void Viterbi27::encode(uint8_t *input, uint8_t *output) {
-    unsigned int encstate = 0;
-    uint8_t c;
-    uint32_t pos = 0;
-    uint32_t opos = 0;
-    uint32_t outputLength = this->EncodedSize();
-    uint32_t inputLength = this->DecodedSize();
+    int l = correct_convolutional_encode_len((correct_convolutional *)viterbi, this->DecodedSize());
+    int bl = l % 8 == 0 ? l / 8 : (l / 8) + 1;
+    uint8_t data[bl];
+    correct_convolutional_encode((correct_convolutional *)viterbi, input, this->DecodedSize(), data);
 
-    memset(output, 0x00, outputLength);
-    while (pos < inputLength && (pos * 16) < outputLength) {
-        c = input[pos];
-        for (int i = 7; i >= 0; i--) {
-            encstate = (encstate << 1) | ((c >> 7) & 1);
-            c <<= 1;
-            output[opos] = ~(0 - parity(encstate & polynomials[0]));
-            output[opos + 1] = ~(0 - parity(encstate & polynomials[1]));
-
-            opos += 2;
+    // Convert to soft bits
+    for (int i=0; i<bl && i*8 < this->EncodedSize(); i++) {
+        uint8_t d = data[i];
+        for (int z=7; z>=0; z--) {
+            output[i*8+(7-z)] = 0 - ( (d & (1 << z)) == 0);
         }
-        pos++;
     }
 }
 
 void Viterbi27::decode(uint8_t *input, uint8_t *output) {
-    init_viterbi27(viterbi, 0);
-    update_viterbi27_blk(viterbi, input, this->frameBits + 6);
-    chainback_viterbi27(viterbi, output, this->frameBits, 0);
+    correct_convolutional_decode_soft((correct_convolutional *)viterbi, input, this->frameBits*2, output);
     if (calculateErrors) {
         this->encode(output, this->checkDataPointer);
         this->BER = Viterbi27::calculateError(input, this->checkDataPointer, this->frameBits*2);
