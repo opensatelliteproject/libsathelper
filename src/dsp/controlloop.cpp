@@ -3,6 +3,7 @@
  *
  *  Created on: 22/12/2016
  *      Author: Lucas Teske
+ *      Based on GNU Radio Implementation
  */
 
 #include <dsp/controlloop.h>

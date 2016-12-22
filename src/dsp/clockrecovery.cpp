@@ -1,0 +1,113 @@
+/*
+ * clockrecovery.cpp
+ *
+ *  Created on: 22/12/2016
+ *      Author: Lucas Teske
+ *      Based on GNU Radio Implementation
+ */
+
+#include "dsp/clockrecovery.h"
+#include "SatHelperException.h"
+#include "tools.h"
+#include <cstring>
+
+#define SAMPLE_HISTORY 3
+
+namespace SatHelper {
+    static const int FUDGE = 16;
+
+    ClockRecovery::ClockRecovery(float omega, float gain_omega, float mu, float gain_mu, float omega_relative_limit) {
+
+        if (omega <= 0.0) {
+            throw SatHelperException("ClockRecovery Rate must be higher than 0.");
+        }
+
+        if (gain_mu < 0 || gain_omega < 0) {
+            throw SatHelperException("ClockRecovery Gains should be positive.");
+        }
+
+        SetOmega(omega);
+
+        for (int i = 0; i < SAMPLE_HISTORY; i++) {
+            samples.push_back(std::complex<float>(0, 0));
+        }
+    }
+
+    ClockRecovery::~ClockRecovery() {
+        delete interp;
+    }
+
+    std::complex<float> ClockRecovery::slicer_0deg(std::complex<float> sample) {
+        float real = 0, imag = 0;
+
+        if (sample.real() > 0) {
+            real = 1;
+        }
+
+        if (sample.imag() > 0) {
+            imag = 1;
+        }
+
+        return std::complex<float>(real, imag);
+    }
+
+    std::complex<float> ClockRecovery::slicer_45deg(std::complex<float> sample) {
+        float real = -1, imag = -1;
+        if (sample.real() > 0) {
+            real = 1;
+        }
+
+        if (sample.imag() > 0) {
+            imag = 1;
+        }
+
+        return std::complex<float>(real, imag);
+    }
+
+    int ClockRecovery::Work(std::complex<float> *rInput, std::complex<float> *output, int length) {
+
+        int ii = 0; // input index
+        int oo = 0; // output index
+        int ni = length - interp->GetNTaps() - FUDGE;  // don't use more input than this
+
+        float mm_val = 0;
+        std::complex<float> u, x, y;
+
+        if (samples.size() < (unsigned int) (SAMPLE_HISTORY + length)) {
+            samples.resize(SAMPLE_HISTORY + length);
+        }
+
+        memcpy(&samples[SAMPLE_HISTORY], rInput, length * sizeof(std::complex<float>));
+
+        while (oo < length && ii < ni) {
+            p_2T = p_1T;
+            p_1T = p_0T;
+            p_0T = interp->interpolate(&samples[ii], mu);
+
+            c_2T = c_1T;
+            c_1T = c_0T;
+            c_0T = slicer_0deg(p_0T);
+
+            x = (c_0T - c_2T) * conj(p_1T);
+            y = (p_0T - p_2T) * conj(c_1T);
+            u = y - x;
+            mm_val = u.real();
+            output[oo++] = p_0T;
+
+            mm_val = Tools::clip(mm_val, 1.0);
+            omega = omega + gainOmega * mm_val;
+            omega = omegaMid + Tools::clip(omega - omegaMid, omegaLim);
+
+            mu = mu + omega + gainMu * mm_val;
+            ii += (int) floor(mu);
+            mu -= floor(mu);
+
+            if (ii < 0) {
+                ii = 0;
+            }
+        }
+
+        return ii;
+    }
+
+} /* namespace SatHelper */

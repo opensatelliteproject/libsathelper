@@ -4,16 +4,25 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../src/dsp/clockrecovery.cpp \
 ../src/dsp/controlloop.cpp \
-../src/dsp/costasloop.cpp 
+../src/dsp/costasloop.cpp \
+../src/dsp/firinterpolator.cpp \
+../src/dsp/firkernel.cpp 
 
 OBJS += \
+./src/dsp/clockrecovery.o \
 ./src/dsp/controlloop.o \
-./src/dsp/costasloop.o 
+./src/dsp/costasloop.o \
+./src/dsp/firinterpolator.o \
+./src/dsp/firkernel.o 
 
 CPP_DEPS += \
+./src/dsp/clockrecovery.d \
 ./src/dsp/controlloop.d \
-./src/dsp/costasloop.d 
+./src/dsp/costasloop.d \
+./src/dsp/firinterpolator.d \
+./src/dsp/firkernel.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
