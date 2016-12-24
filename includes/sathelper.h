@@ -21,4 +21,11 @@
 
 #include <exceptions.h>
 
+#include <dsp/agc.h>
+#include <dsp/clockrecovery.h>
+#include <dsp/costasloop.h>
+#include <dsp/filters.h>
+#include <dsp/firinterpolator.h>
+#include <dsp/firkernel.h>
+
 #endif /* SATHELPER_INCLUDES_SATHELPER_H_ */
