@@ -10,19 +10,23 @@
 #include "SatHelperException.h"
 #include "tools.h"
 #include <cstring>
+#include <iostream>
+#include <cmath>
 
-#define SAMPLE_HISTORY 3
+#define SAMPLE_HISTORY 8
 
 namespace SatHelper {
-    static const int FUDGE = 16;
+    //static const int FUDGE = 16;
 
-    ClockRecovery::ClockRecovery(float omega, float gain_omega, float mu, float gain_mu, float omega_relative_limit) {
+    ClockRecovery::ClockRecovery(float omega, float gainOmega, float mu, float gainMu, float omegaRelativeLimit) :
+            mu(mu), omega(omega), gainOmega(gainOmega), omegaRelativeLimit(omegaRelativeLimit), gainMu(gainMu), interp(new MMSEFirInterpolator()), p_2T(0, 0), p_1T(
+                    0, 0), p_0T(0, 0), c_2T(0, 0), c_1T(0, 0), c_0T(0, 0) {
 
         if (omega <= 0.0) {
             throw SatHelperException("ClockRecovery Rate must be higher than 0.");
         }
 
-        if (gain_mu < 0 || gain_omega < 0) {
+        if (gainMu < 0 || gainOmega < 0) {
             throw SatHelperException("ClockRecovery Gains should be positive.");
         }
 
@@ -68,7 +72,7 @@ namespace SatHelper {
 
         int ii = 0; // input index
         int oo = 0; // output index
-        int ni = length - interp->GetNTaps() - FUDGE;  // don't use more input than this
+        int ni = length - interp->GetNTaps();// - FUDGE;  // don't use more input than this
 
         float mm_val = 0;
         std::complex<float> u, x, y;
@@ -107,7 +111,11 @@ namespace SatHelper {
             }
         }
 
-        return ii;
+        memcpy(&samples[0], &rInput[length-SAMPLE_HISTORY], SAMPLE_HISTORY * sizeof(std::complex<float>));
+
+        std::cout << "II: " << ii << std::endl;
+
+        return oo;
     }
 
 } /* namespace SatHelper */

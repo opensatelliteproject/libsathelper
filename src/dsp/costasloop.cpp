@@ -75,7 +75,6 @@ namespace SatHelper {
 
             error = (this->*PhaseDetector)(output[i]);
             error = Tools::clip(error, 1.0);
-
             AdvanceLoop(error);
             PhaseWrap();
             FrequencyLimit();

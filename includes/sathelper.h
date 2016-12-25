@@ -16,6 +16,7 @@
 #include <ipaddress.h>
 #include <tcpsocket.h>
 #include <tcpserver.h>
+#include <tcpclient.h>
 #include <derandomizer.h>
 #include <tools.h>
 
@@ -27,5 +28,7 @@
 #include <dsp/filters.h>
 #include <dsp/firinterpolator.h>
 #include <dsp/firkernel.h>
+#include <dsp/fftwindows.h>
+#include <dsp/firfilter.h>
 
 #endif /* SATHELPER_INCLUDES_SATHELPER_H_ */

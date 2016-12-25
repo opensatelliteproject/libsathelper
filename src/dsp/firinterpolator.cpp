@@ -17,7 +17,7 @@ namespace SatHelper {
 
         for (int i = 0; i < NSTEPS + 1; i++) {
             std::vector<float> t(&taps[i][0], &taps[i][NTAPS]);
-            filters[i] = new FirKernel(1, t);
+            filters[i] = new FirKernel(t);
         }
     }
 

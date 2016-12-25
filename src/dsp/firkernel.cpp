@@ -12,7 +12,7 @@
 
 namespace SatHelper {
 
-    FirKernel::FirKernel(int decimation, const std::vector<float> &taps) {
+    FirKernel::FirKernel(const std::vector<float> &taps) {
         align = volk_get_alignment();
         naligned = std::max((size_t) 1, align / sizeof(std::complex<float>));
         aligned_taps = NULL;
@@ -23,19 +23,19 @@ namespace SatHelper {
     FirKernel::~FirKernel() {
         if (aligned_taps != NULL) {
             for (int i = 0; i < naligned; i++) {
-                volk_free (aligned_taps[i]);
+                volk_free(aligned_taps[i]);
             }
             std::free(aligned_taps);
             aligned_taps = NULL;
         }
 
-        volk_free (output);
+        volk_free(output);
     }
 
     void FirKernel::SetTaps(const std::vector<float> &taps) {
         if (aligned_taps != NULL) {
             for (int i = 0; i < naligned; i++) {
-                volk_free (aligned_taps[i]);
+                volk_free(aligned_taps[i]);
             }
             std::free(aligned_taps);
             aligned_taps = NULL;
@@ -55,7 +55,7 @@ namespace SatHelper {
         }
     }
 
-    std::complex<float> FirKernel::filter(const std::complex<float> input[]) {
+    std::complex<float> FirKernel::filter(const std::complex<float> *input) {
         const std::complex<float> *ar = (std::complex<float> *) ((size_t) input & ~(align - 1));
         unsigned al = input - ar;
 
@@ -63,13 +63,13 @@ namespace SatHelper {
         return *output;
     }
 
-    void FirKernel::Filter(std::complex<float> output[], const std::complex<float> input[], unsigned long n) {
+    void FirKernel::Filter(const std::complex<float> *input, std::complex<float> *output, unsigned long n) {
         for (unsigned long i = 0; i < n; i++) {
             output[i] = filter(&input[i]);
         }
     }
 
-    void FirKernel::FilterDecimating(std::complex<float> output[], const std::complex<float> input[], unsigned long n, unsigned int decimate) {
+    void FirKernel::FilterDecimating(const std::complex<float> *input, std::complex<float> *output, unsigned long n, unsigned int decimate) {
         unsigned long j = 0;
         for (unsigned long i = 0; i < n; i++) {
             output[i] = filter(&input[j]);

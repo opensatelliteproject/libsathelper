@@ -25,14 +25,14 @@ namespace SatHelper {
         int naligned;
 
     public:
-        FirKernel(int decimation, const std::vector<float> &taps);
+        FirKernel(const std::vector<float> &taps);
         virtual ~FirKernel();
 
         void SetTaps(const std::vector<float> &taps);
 
-        std::complex<float> filter(const std::complex<float> input[]);
-        void Filter(std::complex<float> output[], const std::complex<float> input[], unsigned long n);
-        void FilterDecimating(std::complex<float> output[], const std::complex<float> input[], unsigned long n, unsigned int decimate);
+        std::complex<float> filter(const std::complex<float> *input);
+        void Filter(const std::complex<float> *input, std::complex<float> *output, unsigned long n);
+        void FilterDecimating(const std::complex<float> *input, std::complex<float> *output, unsigned long n, unsigned int decimate);
 
         inline void UpdateTap(float t, unsigned int index) {
             taps[index] = t;

@@ -41,8 +41,12 @@ namespace SatHelper {
                 TcpSocket(addr), port(0), maxConnections(maxConnections) {
         }
 
-        void Listen(int port) { Listen(port, false); }
+        void Listen(int port) {
+            Listen(port, false);
+        }
+
         void Listen(int port, bool nonBlocking);
+
         TcpSocket Accept();
 
         inline int GetPort() {
