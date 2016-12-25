@@ -28,7 +28,7 @@ namespace SatHelper {
             samples.resize(length * decimation + sampleHistory);
         }
 
-        memcpy(&samples[sampleHistory], input, length * sizeof(std::complex<float>));
+        memcpy(&samples[sampleHistory], input, length * decimation * sizeof(std::complex<float>));
 
         if (decimation > 1) {
             kernel.FilterDecimating(&samples[0], output, length, decimation);

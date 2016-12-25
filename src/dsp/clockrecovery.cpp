@@ -13,10 +13,10 @@
 #include <iostream>
 #include <cmath>
 
-#define SAMPLE_HISTORY 8
+#define MIN_SAMPLE_HISTORY 8
 
 namespace SatHelper {
-    //static const int FUDGE = 16;
+    static const int FUDGE = 16;
 
     ClockRecovery::ClockRecovery(float omega, float gainOmega, float mu, float gainMu, float omegaRelativeLimit) :
             mu(mu), omega(omega), gainOmega(gainOmega), omegaRelativeLimit(omegaRelativeLimit), gainMu(gainMu), interp(new MMSEFirInterpolator()), p_2T(0, 0), p_1T(
@@ -32,7 +32,9 @@ namespace SatHelper {
 
         SetOmega(omega);
 
-        for (int i = 0; i < SAMPLE_HISTORY; i++) {
+        sampleHistory = MIN_SAMPLE_HISTORY;
+
+        for (int i = 0; i < sampleHistory; i++) {
             samples.push_back(std::complex<float>(0, 0));
         }
     }
@@ -72,16 +74,16 @@ namespace SatHelper {
 
         int ii = 0; // input index
         int oo = 0; // output index
-        int ni = length - interp->GetNTaps();// - FUDGE;  // don't use more input than this
-
+        int ni = sampleHistory + length - interp->GetNTaps() - FUDGE;  // don't use more input than this
+        //
         float mm_val = 0;
         std::complex<float> u, x, y;
 
-        if (samples.size() < (unsigned int) (SAMPLE_HISTORY + length)) {
-            samples.resize(SAMPLE_HISTORY + length);
+        if (samples.size() < (unsigned int) (sampleHistory + length)) {
+            samples.resize(sampleHistory + length);
         }
 
-        memcpy(&samples[SAMPLE_HISTORY], rInput, length * sizeof(std::complex<float>));
+        memcpy(&samples[sampleHistory], rInput, length * sizeof(std::complex<float>));
 
         while (oo < length && ii < ni) {
             p_2T = p_1T;
@@ -111,9 +113,9 @@ namespace SatHelper {
             }
         }
 
-        memcpy(&samples[0], &rInput[length-SAMPLE_HISTORY], SAMPLE_HISTORY * sizeof(std::complex<float>));
+        sampleHistory = sampleHistory + length - ii;
 
-        std::cout << "II: " << ii << std::endl;
+        memmove(&samples[0], &samples[ii], sampleHistory * sizeof(std::complex<float>));
 
         return oo;
     }

@@ -22,6 +22,7 @@ namespace SatHelper {
         MMSEFirInterpolator *interp;
 
         bool d_verbose;
+        int sampleHistory;
 
         std::complex<float> p_2T, p_1T, p_0T;
         std::complex<float> c_2T, c_1T, c_0T;
