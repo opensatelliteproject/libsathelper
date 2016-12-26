@@ -34,6 +34,10 @@ namespace SatHelper {
             return error;
         }
 
+        inline float GetFrequency() const {
+            return freq;
+        }
+
         void Work(std::complex<float> *input, std::complex<float> *output, int length);
     };
 
