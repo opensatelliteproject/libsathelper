@@ -2,7 +2,7 @@
  * tcpclient.cpp
  *
  *  Created on: 25/12/2016
- *      Author: lucas
+ *      Author: Lucas Teske
  */
 
 #include "tcpclient.h"

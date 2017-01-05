@@ -3,14 +3,11 @@
 ################################################################################
 
 # Add inputs and outputs from these tool invocations to the build variables 
-CPP_SRCS += \
-../tcpclient.cpp 
+CPP_SRCS +=
 
-OBJS += \
-./tcpclient.o 
+OBJS +=
 
-CPP_DEPS += \
-./tcpclient.d 
+CPP_DEPS +=
 
 
 # Each subdirectory must supply rules for building sources it contributes
