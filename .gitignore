@@ -21,7 +21,9 @@ Release/*.pdb
 winfec
 *.db
 *.opendb
-
+tests/*.d
+tests/*.o
+tests/tester
 [Xx]64/
 [Xx]86/
 [Bb]uild/
