@@ -13,13 +13,14 @@
 namespace SatHelper {
 
     class CorrelationTest: public BaseTest {
+    private:
+        static const uint8_t word[];
+        static const uint8_t data[];
+        static const uint32_t correlation[];
 
     public:
         std::string TestName() const override { return std::string("Correlation Test"); }
         bool RunTest() override;
-
-        CorrelationTest();
-        virtual ~CorrelationTest();
     };
 
 } /* namespace SatHelper */

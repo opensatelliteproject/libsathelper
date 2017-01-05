@@ -7,19 +7,13 @@
 
 #include "ViterbiTest.h"
 
+#include <iostream>
+
 namespace SatHelper {
 
-    ViterbiTest::ViterbiTest() {
-        // TODO Auto-generated constructor stub
-
-    }
-
-    ViterbiTest::~ViterbiTest() {
-        // TODO Auto-generated destructor stub
-    }
-
     bool ViterbiTest::RunTest() {
-        return false;
+        std::cerr << "  | WARNING: Test not implemented!" << std::endl;
+        return true;
     }
 
 } /* namespace SatHelper */

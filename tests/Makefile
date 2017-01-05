@@ -26,5 +26,5 @@ clean:
 
 test: tester
 	@echo 'Running Tester Program'
-	./tester
+	@./tester
 	@echo 'Done running Tester Program'

@@ -16,9 +16,6 @@ namespace SatHelper {
     public:
         std::string TestName() const override { return std::string("Viterbi Test"); }
         bool RunTest() override;
-
-        ViterbiTest();
-        virtual ~ViterbiTest();
     };
 
 } /* namespace SatHelper */

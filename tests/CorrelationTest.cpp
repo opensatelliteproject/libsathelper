@@ -7,19 +7,27 @@
 
 #include "CorrelationTest.h"
 
+#include <iostream>
+
 namespace SatHelper {
 
-    CorrelationTest::CorrelationTest() {
-        // TODO Auto-generated constructor stub
+    // TODO:
 
-    }
+    const uint8_t CorrelationTest::word[] = {
 
-    CorrelationTest::~CorrelationTest() {
-        // TODO Auto-generated destructor stub
-    }
+    };
+
+    const uint8_t CorrelationTest::data[] = {
+
+    };
+
+    const uint32_t CorrelationTest::correlation[] = {
+
+    };
 
     bool CorrelationTest::RunTest() {
-        return false;
+        std::cerr << "  | WARNING: Test not implemented!" << std::endl;
+        return true;
     }
 
 

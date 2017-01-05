@@ -7,19 +7,12 @@
 
 #include "ReedSolomonTest.h"
 
+#include <iostream>
+
 namespace SatHelper {
-
-    ReedSolomonTest::ReedSolomonTest() {
-        // TODO Auto-generated constructor stub
-
-    }
-
-    ReedSolomonTest::~ReedSolomonTest() {
-        // TODO Auto-generated destructor stub
-    }
-
     bool ReedSolomonTest::RunTest() {
-        return false;
+        std::cerr << "  | WARNING: Test not implemented!" << std::endl;
+        return true;
     }
 
 } /* namespace SatHelper */

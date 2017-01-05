@@ -17,9 +17,6 @@ namespace SatHelper {
 
         std::string TestName() const override { return std::string("Reed Solomon Test"); }
         bool RunTest() override;
-
-        ReedSolomonTest();
-        virtual ~ReedSolomonTest();
     };
 
 } /* namespace SatHelper */

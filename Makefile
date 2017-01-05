@@ -18,6 +18,12 @@ clean:
 	$(MAKE) -C "Release (Static)" clean
 	@echo -e '\033[0m'
 	@echo -e '\033[0;32mFinished cleaning target Release (Static)\033[0m'
+	@echo -e '\033[0;32mCleaning target tests\033[0m'
+	@echo -e '\033[0;34m'
+	$(MAKE) -C "tests" clean
+	@echo -e '\033[0m'
+	@echo -e '\033[0;32mFinished cleaning target tests\033[0m'
+
 
 libSatHelper-debug.so:
 	@echo -e '\033[0;32mBuilding target: $@\033[0m'
@@ -43,5 +49,10 @@ libSatHelper.a:
 	@echo -e '\033[0;32mFinished building target: $@\033[0m'
 	@echo ' '
 
-test:
-	@echo 'No tests configured'
+test: libSatHelper.a
+	@echo -e '\033[0;32mBuilding target: $@\033[0m'
+	@echo -e '\033[0;34m'
+	$(MAKE) -C "tests" test
+	@echo -e '\033[0m'
+	@echo -e '\033[0;32mFinished building target: $@\033[0m'
+	@echo ' '
