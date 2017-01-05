@@ -11,7 +11,7 @@
 #include <vector>
 #include <cstdint>
 #include <stdint.h>
-
+#include <cstdio>
 namespace SatHelper {
 
     typedef std::vector<uint8_t> VecU8;
@@ -30,6 +30,16 @@ namespace SatHelper {
 
         static inline bool hardCorrelate(uint8_t dataByte, uint8_t wordByte) {
             return ((dataByte >= 127) && (wordByte == 0)) || ((dataByte < 127) && (wordByte == 255));
+        }
+
+        static inline uint32_t softCorrelate(uint8_t dataByte, uint8_t wordByte) {
+            // TODO: This doesn't work
+            /*
+            int a = dataByte - 128; // 127
+            int b = wordByte - 128; // 127  |
+            return (uint32_t) ((a + b) * (a + b)); // Its a modulus, should NEVER be negative.
+            */
+            return hardCorrelate(dataByte, wordByte);
         }
 
         Correlator();

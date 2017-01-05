@@ -102,12 +102,14 @@ void Correlator::correlate(uint8_t *data, uint32_t length) {
     int maxSearch = length - wordSize;
     resetCorrelation();
 
-    if (wordSize == 2) { // Optimization for BPSK Phase
+    if (numWords == 2) { // Optimization for BPSK Phase
         for (int i = 0; i < maxSearch; i++) {
-            memset(&tmpCorrelation[0], 0x00, 2 * sizeof(uint32_t));
+            tmpCorrelation[0] = 0;
+            tmpCorrelation[1] = 0;
+
             for (int k = 0; k < wordSize; k++) {
-                tmpCorrelation[0] += (uint32_t) Correlator::hardCorrelate(data[i + k], words[0][k]);
-                tmpCorrelation[1] += (uint32_t) Correlator::hardCorrelate(data[i + k], words[1][k]);
+                tmpCorrelation[0] += softCorrelate(data[i + k], words[0][k]); //(uint32_t) Correlator::hardCorrelate(data[i + k], words[0][k]);
+                tmpCorrelation[1] += softCorrelate(data[i + k], words[1][k]); //(uint32_t) Correlator::hardCorrelate(data[i + k], words[1][k]);
             }
 
             if (tmpCorrelation[0] > correlation[0]) {
@@ -122,14 +124,18 @@ void Correlator::correlate(uint8_t *data, uint32_t length) {
                 tmpCorrelation[1] = 0;
             }
         }
-    } else if (wordSize == 4) { // Optimization for QPSK Phase
+    } else if (numWords == 4) { // Optimization for QPSK Phase
         for (int i = 0; i < maxSearch; i++) {
-            memset(&tmpCorrelation[0], 0x00, 4 * sizeof(uint32_t));
+            tmpCorrelation[0] = 0;
+            tmpCorrelation[1] = 0;
+            tmpCorrelation[2] = 0;
+            tmpCorrelation[3] = 0;
+
             for (int k = 0; k < wordSize; k++) {
-                tmpCorrelation[0] += (uint32_t) Correlator::hardCorrelate(data[i + k], words[0][k]);
-                tmpCorrelation[1] += (uint32_t) Correlator::hardCorrelate(data[i + k], words[1][k]);
-                tmpCorrelation[2] += (uint32_t) Correlator::hardCorrelate(data[i + k], words[2][k]);
-                tmpCorrelation[3] += (uint32_t) Correlator::hardCorrelate(data[i + k], words[3][k]);
+                tmpCorrelation[0] += softCorrelate(data[i + k], words[0][k]); //(uint32_t) Correlator::hardCorrelate(data[i + k], words[0][k]);
+                tmpCorrelation[1] += softCorrelate(data[i + k], words[1][k]); //(uint32_t) Correlator::hardCorrelate(data[i + k], words[1][k]);
+                tmpCorrelation[2] += softCorrelate(data[i + k], words[2][k]); //(uint32_t) Correlator::hardCorrelate(data[i + k], words[2][k]);
+                tmpCorrelation[3] += softCorrelate(data[i + k], words[3][k]); //(uint32_t) Correlator::hardCorrelate(data[i + k], words[3][k]);
             }
 
             if (tmpCorrelation[0] > correlation[0]) {
@@ -157,7 +163,6 @@ void Correlator::correlate(uint8_t *data, uint32_t length) {
             }
         }
     } else { // Other use cases
-
         // Duff's Device Loop Unfolding
         int c;
         register int n;
