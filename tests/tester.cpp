@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
     cout << "Starting libSatHelper Tests" << endl;
 
     try {
-        RunTests(DerandomizerTest, PacketFixerTest, CorrelationTest, ReedSolomonTest, ViterbiTest);
+        RunTests(SIMDTest, DerandomizerTest, PacketFixerTest, CorrelationTest, ReedSolomonTest, ViterbiTest);
     } catch (TestFailException &e) {
         std::cerr << "The test "  << e.GetTestName() << " has failed." << std::endl;
         return 1;

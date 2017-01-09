@@ -4,6 +4,7 @@
 #include "PacketFixerTest.h"
 #include "ReedSolomonTest.h"
 #include "ViterbiTest.h"
+#include "SIMDTest.h"
 
 // Class Tester Template - by Paulo Torrens
 

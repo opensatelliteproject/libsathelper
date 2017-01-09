@@ -25,4 +25,5 @@ C_DEPS :=
 SUBDIRS := \
 src \
 src/dsp \
+src/SIMD \
 

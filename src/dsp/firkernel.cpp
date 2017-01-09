@@ -9,15 +9,17 @@
 #include "dsp/firkernel.h"
 #include <volk/volk.h>
 #include <cstring>
+#include "SIMD/MemoryOp.h"
+#include "SIMD/Operations.h"
 
 namespace SatHelper {
 
     FirKernel::FirKernel(const std::vector<float> &taps) {
-        align = volk_get_alignment();
+        align = MemoryOp::getAligment();
         naligned = std::max((size_t) 1, align / sizeof(std::complex<float>));
         aligned_taps = NULL;
         SetTaps(taps);
-        output = (std::complex<float>*) volk_malloc(1 * sizeof(std::complex<float>), align);
+        output = (std::complex<float>*) MemoryOp::alignedAlloc(1 * sizeof(std::complex<float>), align);
     }
 
     FirKernel::~FirKernel() {
@@ -47,7 +49,7 @@ namespace SatHelper {
 
         aligned_taps = (float**) malloc(naligned * sizeof(float*));
         for (int i = 0; i < naligned; i++) {
-            aligned_taps[i] = (float*) volk_malloc((ntaps + naligned - 1) * sizeof(float), align);
+            aligned_taps[i] = (float*) MemoryOp::alignedAlloc((ntaps + naligned - 1) * sizeof(float), align);
             memset(aligned_taps[i], 0, sizeof(float) * (ntaps + naligned - 1));
             for (unsigned int j = 0; j < ntaps; j++) {
                 aligned_taps[i][i + j] = taps[j];
@@ -59,7 +61,7 @@ namespace SatHelper {
         const std::complex<float> *ar = (std::complex<float> *) ((size_t) input & ~(align - 1));
         unsigned al = input - ar;
 
-        volk_32fc_32f_dot_prod_32fc_a(output, ar, aligned_taps[al], (ntaps + al));
+        Operations::dotProduct(output, ar, aligned_taps[al], (ntaps + al));
         return *output;
     }
 

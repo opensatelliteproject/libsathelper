@@ -41,7 +41,7 @@
 								<option id="gnu.cpp.compiler.option.other.pic.2011655048" name="Position Independent Code (-fPIC)" superClass="gnu.cpp.compiler.option.other.pic" value="true" valueType="boolean"/>
 								<option id="gnu.cpp.compiler.option.other.other.2061622747" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0" valueType="string"/>
 								<option id="gnu.cpp.compiler.option.warnings.pedantic.1766946578" name="Pedantic (-pedantic)" superClass="gnu.cpp.compiler.option.warnings.pedantic" value="false" valueType="boolean"/>
-								<option id="gnu.cpp.compiler.option.preprocessor.def.1643644225" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols"/>
+								<option id="gnu.cpp.compiler.option.preprocessor.def.1643644225" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.2013717117" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.so.debug.709566701" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.so.debug">
@@ -78,8 +78,18 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<folderInfo id="cdt.managedbuild.config.gnu.so.debug.364804545.490398968" name="/" resourcePath="tests">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.so.debug.1291684273" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.so.debug" unusedChildren="">
+							<tool id="cdt.managedbuild.tool.gnu.archiver.base.321692071" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base.1947442881"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.so.debug.604103928" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.so.debug.1926738326"/>
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.so.debug.577351140" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.so.debug.709566701"/>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.so.debug.1380690934" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.so.debug.2035924906"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.so.debug.74171272" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.so.debug.460035107"/>
+							<tool id="cdt.managedbuild.tool.gnu.assembler.so.debug.820062429" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.so.debug.128359206"/>
+						</toolChain>
+					</folderInfo>
 					<sourceEntries>
-						<entry excluding="tests|src/tester.cpp|GOES|Aggregator|APT Decoder|Toolset" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="tests|GOES|Aggregator|APT Decoder|src/tester.cpp|Toolset" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -123,7 +133,7 @@
 								<option id="gnu.cpp.compiler.option.dialect.std.1147177734" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.dialect.flags.1508987239" name="Other dialect flags" superClass="gnu.cpp.compiler.option.dialect.flags" value="-std=c++11" valueType="string"/>
 								<option id="gnu.cpp.compiler.option.other.pic.1867212146" name="Position Independent Code (-fPIC)" superClass="gnu.cpp.compiler.option.other.pic" value="true" valueType="boolean"/>
-								<option id="gnu.cpp.compiler.option.preprocessor.def.1098142778" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols"/>
+								<option id="gnu.cpp.compiler.option.preprocessor.def.1098142778" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1356356092" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.so.release.2142868027" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.so.release">
@@ -160,8 +170,18 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<folderInfo id="cdt.managedbuild.config.gnu.so.release.851107600.204348908" name="/" resourcePath="tests">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.so.release.317950287" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.so.release" unusedChildren="">
+							<tool id="cdt.managedbuild.tool.gnu.archiver.base.1084981065" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base.1603493585"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.so.release.127429881" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.so.release.1789428389"/>
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.so.release.1196971059" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.so.release.2142868027"/>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.so.release.1888399011" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.so.release.1987543138"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.so.release.1928387404" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.so.release.1475073751"/>
+							<tool id="cdt.managedbuild.tool.gnu.assembler.so.release.13783429" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.so.release.788032668"/>
+						</toolChain>
+					</folderInfo>
 					<sourceEntries>
-						<entry excluding="tests|src/tester.cpp|GOES|Aggregator|APT Decoder|Toolset" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="tests|GOES|Aggregator|APT Decoder|src/tester.cpp|Toolset" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -201,7 +221,7 @@
 								<option id="gnu.cpp.compiler.option.dialect.std.1984195097" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.dialect.flags.335645380" name="Other dialect flags" superClass="gnu.cpp.compiler.option.dialect.flags" value="-std=c++11" valueType="string"/>
 								<option id="gnu.cpp.compiler.option.other.pic.350837341" name="Position Independent Code (-fPIC)" superClass="gnu.cpp.compiler.option.other.pic" value="true" valueType="boolean"/>
-								<option id="gnu.cpp.compiler.option.preprocessor.def.248280453" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols"/>
+								<option id="gnu.cpp.compiler.option.preprocessor.def.248280453" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.706449076" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.so.release.2104712704" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.so.release">
@@ -238,8 +258,18 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<folderInfo id="cdt.managedbuild.config.gnu.so.release.851107600.359571823.444648548" name="/" resourcePath="tests">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.so.release.914796846" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.so.release" unusedChildren="">
+							<tool id="cdt.managedbuild.tool.gnu.archiver.base.1302242998" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base.1251984922"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.so.release.1260221708" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.so.release.993208882"/>
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.so.release.766945082" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.so.release.2104712704"/>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.so.release.54743008" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.so.release.183837793"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.so.release.544482143" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.so.release.816257241"/>
+							<tool id="cdt.managedbuild.tool.gnu.assembler.so.release.943722571" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.so.release.1360436983"/>
+						</toolChain>
+					</folderInfo>
 					<sourceEntries>
-						<entry excluding="tests|src/tester.cpp|GOES|Aggregator|APT Decoder|Toolset" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="tests|GOES|Aggregator|APT Decoder|src/tester.cpp|Toolset" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
