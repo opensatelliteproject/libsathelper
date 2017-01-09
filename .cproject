@@ -62,7 +62,6 @@
 								<option defaultValue="true" id="gnu.cpp.link.so.debug.option.shared.2129899201" name="Shared (-shared)" superClass="gnu.cpp.link.so.debug.option.shared" valueType="boolean"/>
 								<option id="gnu.cpp.link.option.libs.1143188868" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="correct"/>
-									<listOptionValue builtIn="false" value="volk"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.568063617" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
@@ -76,16 +75,6 @@
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.539663695" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
-						</toolChain>
-					</folderInfo>
-					<folderInfo id="cdt.managedbuild.config.gnu.so.debug.364804545.490398968" name="/" resourcePath="tests">
-						<toolChain id="cdt.managedbuild.toolchain.gnu.so.debug.1291684273" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.so.debug" unusedChildren="">
-							<tool id="cdt.managedbuild.tool.gnu.archiver.base.321692071" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base.1947442881"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.so.debug.604103928" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.so.debug.1926738326"/>
-							<tool id="cdt.managedbuild.tool.gnu.c.compiler.so.debug.577351140" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.so.debug.709566701"/>
-							<tool id="cdt.managedbuild.tool.gnu.c.linker.so.debug.1380690934" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.so.debug.2035924906"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.so.debug.74171272" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.so.debug.460035107"/>
-							<tool id="cdt.managedbuild.tool.gnu.assembler.so.debug.820062429" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.so.debug.128359206"/>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
@@ -154,7 +143,6 @@
 								<option defaultValue="true" id="gnu.cpp.link.so.release.option.shared.1805196614" name="Shared (-shared)" superClass="gnu.cpp.link.so.release.option.shared" valueType="boolean"/>
 								<option id="gnu.cpp.link.option.libs.1184655184" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="correct"/>
-									<listOptionValue builtIn="false" value="volk"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1454628821" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
@@ -168,16 +156,6 @@
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.242876665" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
-						</toolChain>
-					</folderInfo>
-					<folderInfo id="cdt.managedbuild.config.gnu.so.release.851107600.204348908" name="/" resourcePath="tests">
-						<toolChain id="cdt.managedbuild.toolchain.gnu.so.release.317950287" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.so.release" unusedChildren="">
-							<tool id="cdt.managedbuild.tool.gnu.archiver.base.1084981065" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base.1603493585"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.so.release.127429881" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.so.release.1789428389"/>
-							<tool id="cdt.managedbuild.tool.gnu.c.compiler.so.release.1196971059" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.so.release.2142868027"/>
-							<tool id="cdt.managedbuild.tool.gnu.c.linker.so.release.1888399011" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.so.release.1987543138"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.so.release.1928387404" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.so.release.1475073751"/>
-							<tool id="cdt.managedbuild.tool.gnu.assembler.so.release.13783429" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.so.release.788032668"/>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
@@ -256,16 +234,6 @@
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.667331187" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
-						</toolChain>
-					</folderInfo>
-					<folderInfo id="cdt.managedbuild.config.gnu.so.release.851107600.359571823.444648548" name="/" resourcePath="tests">
-						<toolChain id="cdt.managedbuild.toolchain.gnu.so.release.914796846" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.so.release" unusedChildren="">
-							<tool id="cdt.managedbuild.tool.gnu.archiver.base.1302242998" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base.1251984922"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.so.release.1260221708" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.so.release.993208882"/>
-							<tool id="cdt.managedbuild.tool.gnu.c.compiler.so.release.766945082" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.so.release.2104712704"/>
-							<tool id="cdt.managedbuild.tool.gnu.c.linker.so.release.54743008" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.so.release.183837793"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.so.release.544482143" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.so.release.816257241"/>
-							<tool id="cdt.managedbuild.tool.gnu.assembler.so.release.943722571" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.so.release.1360436983"/>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>

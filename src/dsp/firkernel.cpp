@@ -7,7 +7,6 @@
  */
 
 #include "dsp/firkernel.h"
-#include <volk/volk.h>
 #include <cstring>
 #include "SIMD/MemoryOp.h"
 #include "SIMD/Operations.h"
@@ -25,19 +24,19 @@ namespace SatHelper {
     FirKernel::~FirKernel() {
         if (aligned_taps != NULL) {
             for (int i = 0; i < naligned; i++) {
-                volk_free(aligned_taps[i]);
+                MemoryOp::free(aligned_taps[i]);
             }
             std::free(aligned_taps);
             aligned_taps = NULL;
         }
 
-        volk_free(output);
+        MemoryOp::free(output);
     }
 
     void FirKernel::SetTaps(const std::vector<float> &taps) {
         if (aligned_taps != NULL) {
             for (int i = 0; i < naligned; i++) {
-                volk_free(aligned_taps[i]);
+                MemoryOp::free(aligned_taps[i]);
             }
             std::free(aligned_taps);
             aligned_taps = NULL;

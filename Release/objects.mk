@@ -4,5 +4,5 @@
 
 USER_OBJS :=
 
-LIBS := -lcorrect -lvolk
+LIBS := -lcorrect
 
