@@ -37,7 +37,7 @@ libcorrect: FORCE
 	@echo -e '\033[0;32mFinished building target: $@\033[0m'
 	@echo ' '
 
-libcorrect-install: libcorrect FORCE
+libcorrect-install: FORCE
 	@echo -e '\033[0;32mInstalling target: $@\033[0m'
 	@echo -e '\033[0;34m'
 	$(MAKE) -C libcorrect/build install
@@ -49,6 +49,14 @@ install: libSatHelper
 	@echo -e '\033[0;32mInstalling target: $@\033[0m'
 	@echo -e '\033[0;34m'
 	$(MAKE) -C build install
+	@echo -e '\033[0m'
+	@echo -e '\033[0;32mFinished installing target: $@\033[0m'
+	@echo ' '
+
+package: libSatHelper
+	@echo -e '\033[0;32mInstalling target: $@\033[0m'
+	@echo -e '\033[0;34m'
+	$(MAKE) -C build package
 	@echo -e '\033[0m'
 	@echo -e '\033[0;32mFinished installing target: $@\033[0m'
 	@echo ' '

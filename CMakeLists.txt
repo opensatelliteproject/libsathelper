@@ -66,3 +66,10 @@ SET(AVAILABLE_TESTS "CorrelationTest;DerandomizerTest;PacketFixerTest;ReedSolomo
 foreach(TEST_NAME ${AVAILABLE_TESTS})
   add_test (NAME ${TEST_NAME} COMMAND ${TEST_NAME})
 endforeach()
+
+# Debian Package
+SET(CPACK_GENERATOR "DEB")
+SET(CPACK_DEBIAN_PACKAGE_MAINTAINER "Lucas Teske")
+SET(CPACK_DEBIAN_PACKAGE_DEPENDS "libcorrect")
+SET(CPACK_DEBIAN_PACKAGE_DESCRIPTION "SatHelper library for Satellite Projects")
+INCLUDE(CPack)
