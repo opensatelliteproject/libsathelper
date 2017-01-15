@@ -22,5 +22,17 @@ namespace SatHelper {
     };
 }
 
+#define RUNTEST(T) \
+    using namespace SatHelper; \
+    using namespace std; \
+    int main(int argc, char **argv) { \
+      T test; \
+      cout << "Starting " << test.TestName() << endl; \
+      if (!test.RunTest()) { \
+          std::cerr << "The test "  << test.TestName() << " has failed." << std::endl; \
+          return 1; \
+      } \
+      return 0; \
+    }
 
 #endif /* TESTS_BASETEST_H_ */

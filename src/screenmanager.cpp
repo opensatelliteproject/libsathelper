@@ -5,7 +5,7 @@
  *      Author: Lucas Teske
  */
 
-#include "screenmanager.h"
+#include <screenmanager.h>
 
 #include <iostream>
 

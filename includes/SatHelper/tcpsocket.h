@@ -9,7 +9,7 @@
 #define INCLUDES_TCPSOCKET_HPP_
 
 #include <cstdlib>
-#include "socket.h"
+#include <SatHelper/socket.h>
 
 namespace SatHelper {
     class TcpSocket: public Socket {

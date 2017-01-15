@@ -8,7 +8,7 @@
 #ifndef INCLUDES_TCPSERVER_H_
 #define INCLUDES_TCPSERVER_H_
 
-#include <tcpsocket.h>
+#include <SatHelper/tcpsocket.h>
 
 namespace SatHelper {
     class TcpServer: public TcpSocket {

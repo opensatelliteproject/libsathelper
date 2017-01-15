@@ -6,7 +6,7 @@
  */
 
 #include "PacketFixerTest.h"
-#include "packetfixer.h"
+#include <SatHelper/packetfixer.h>
 #include <cstring>
 #include <iostream>
 
@@ -254,3 +254,5 @@ namespace SatHelper {
     }
 
 } /* namespace SatHelper */
+
+RUNTEST(PacketFixerTest)

@@ -10,7 +10,7 @@
 #define SRC_DSP_FIRINTERPOLATOR_H_
 
 #include <complex>
-#include "firkernel.h"
+#include <SatHelper/dsp/firkernel.h>
 
 namespace SatHelper {
 

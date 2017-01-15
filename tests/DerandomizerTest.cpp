@@ -6,8 +6,9 @@
  */
 
 #include "DerandomizerTest.h"
-#include "derandomizer.h"
+#include <SatHelper/derandomizer.h>
 #include <cstring>
+#include <iostream>
 
 namespace SatHelper {
 #define TEST_SIZE 920
@@ -145,3 +146,5 @@ namespace SatHelper {
     }
 
 } /* namespace SatHelper */
+
+RUNTEST(DerandomizerTest)

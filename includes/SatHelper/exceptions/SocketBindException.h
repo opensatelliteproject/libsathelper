@@ -8,8 +8,8 @@
 #ifndef INCLUDES_EXCEPTIONS_SOCKETBINDEXCEPTION_H_
 #define INCLUDES_EXCEPTIONS_SOCKETBINDEXCEPTION_H_
 
-#include "SocketException.h"
-#include "ipaddress.h"
+#include <SatHelper/exceptions/SocketException.h>
+#include <SatHelper/ipaddress.h>
 
 namespace SatHelper {
     class SocketBindException: public SocketException {

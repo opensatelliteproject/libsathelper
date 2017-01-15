@@ -10,7 +10,7 @@
 #define SRC_DSP_CLOCKRECOVERY_H_
 
 #include <complex>
-#include "firinterpolator.h"
+#include <SatHelper/dsp/firinterpolator.h>
 
 namespace SatHelper {
 

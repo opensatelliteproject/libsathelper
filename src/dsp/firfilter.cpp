@@ -5,7 +5,7 @@
  *      Author: Lucas Teske
  */
 
-#include "dsp/firfilter.h"
+#include <dsp/firfilter.h>
 #include <cstring>
 
 

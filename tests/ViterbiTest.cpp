@@ -17,3 +17,5 @@ namespace SatHelper {
     }
 
 } /* namespace SatHelper */
+
+RUNTEST(ViterbiTest)

@@ -8,7 +8,7 @@
 
 #include <dsp/costasloop.h>
 #include <tools.h>
-#include <SatHelperException.h>
+#include <exceptions/SatHelperException.h>
 
 namespace SatHelper {
 

@@ -9,8 +9,8 @@
 
 #define _USE_MATH_DEFINES
 #include <cmath>
-#include "dsp/fftwindows.h"
-#include "SatHelperException.h"
+#include <dsp/fftwindows.h>
+#include <exceptions/SatHelperException.h>
 
 namespace SatHelper {
 

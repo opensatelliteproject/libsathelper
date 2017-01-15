@@ -9,7 +9,7 @@
 #define INCLUDES_DSP_FILTERS_H_
 
 #include <vector>
-#include "dsp/fftwindows.h"
+#include <SatHelper/dsp/fftwindows.h>
 
 namespace SatHelper {
 

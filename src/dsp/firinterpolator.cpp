@@ -6,9 +6,9 @@
  *      Based on GNU Radio Implementation
  */
 
-#include "dsp/firinterpolator.h"
-#include "dsp/interpolator_taps.h"
-#include "SatHelperException.h"
+#include <dsp/firinterpolator.h>
+#include <dsp/interpolator_taps.h>
+#include <exceptions/SatHelperException.h>
 
 namespace SatHelper {
 

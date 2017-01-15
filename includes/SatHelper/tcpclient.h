@@ -8,7 +8,7 @@
 #ifndef TCPCLIENT_H_
 #define TCPCLIENT_H_
 
-#include <tcpsocket.h>
+#include <SatHelper/tcpsocket.h>
 
 namespace SatHelper {
 

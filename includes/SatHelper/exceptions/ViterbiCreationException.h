@@ -8,7 +8,7 @@
 #ifndef INCLUDES_EXCEPTIONS_VITERBICREATIONEXCEPTION_H_
 #define INCLUDES_EXCEPTIONS_VITERBICREATIONEXCEPTION_H_
 
-#include "SatHelperException.h"
+#include <SatHelper/exceptions/SatHelperException.h>
 
 class ViterbiCreationException: public SatHelperException {
 public:

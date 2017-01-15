@@ -8,7 +8,7 @@
 #ifndef INCLUDES_EXCEPTIONS_SOCKETERROREXCEPTION_H_
 #define INCLUDES_EXCEPTIONS_SOCKETERROREXCEPTION_H_
 
-#include "SocketException.h"
+#include <SatHelper/exceptions/SocketException.h>
 
 namespace SatHelper {
     class SocketErrorException: public SocketException {

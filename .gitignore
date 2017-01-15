@@ -1,4 +1,6 @@
 libcorrect
+build
+test/build
 Debug/*.so
 Debug/**/*.o
 Debug/*.obj
