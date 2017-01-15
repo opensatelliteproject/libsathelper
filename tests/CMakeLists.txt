@@ -15,25 +15,17 @@ endmacro(use_cxx11)
 
 use_cxx11()
 
-# Version
-set(VERSION_INFO_MAJOR_VERSION 1)
-set(VERSION_INFO_MINOR_VERSION 3)
-set(VERSION_INFO_MAINT_VERSION 0git)
 
 # Flags
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")
 
-# Library Source Code
-file(GLOB SOURCES *.cpp)
-
-# Library Targets
-add_executable (${PROJECT_NAME} ${SOURCES})
-
-# Links
-target_link_libraries (${PROJECT_NAME} correct)
-target_link_libraries (${PROJECT_NAME} SatHelper)
-
 # Test
-enable_testing()
-add_test(${PROJECT_NAME} ${PROJECT_NAME})
+SET(AVAILABLE_TESTS "CorrelationTest;DerandomizerTest;PacketFixerTest;ReedSolomonTest;SIMDTest;ViterbiTest")
+
+foreach(TEST_NAME ${AVAILABLE_TESTS})
+  add_executable (${TEST_NAME} ${TEST_NAME}.cpp)
+  # add_test (NAME ${TEST_NAME} COMMAND ${TEST_NAME})
+  target_link_libraries (${TEST_NAME} correct)
+  target_link_libraries (${TEST_NAME} SatHelper)
+endforeach()

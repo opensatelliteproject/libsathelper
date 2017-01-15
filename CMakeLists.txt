@@ -32,7 +32,7 @@ include_directories ("${PROJECT_SOURCE_DIR}/includes/SatHelper/exceptions")
 include_directories ("${PROJECT_SOURCE_DIR}/includes/SatHelper/SIMD")
 
 # Library Source Code
-file(GLOB SOURCES src/*.cpp)
+file(GLOB SOURCES src/*.cpp src/SIMD/*.cpp src/dsp/*.cpp)
 
 # Library Targets
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
@@ -57,3 +57,12 @@ install(FILES ${HEADERS} DESTINATION include/${PROJECT_NAME})
 install(FILES ${HEADERS_DSP} DESTINATION include/${PROJECT_NAME}/dsp)
 install(FILES ${HEADERS_SIMD} DESTINATION include/${PROJECT_NAME}/SIMD)
 install(FILES ${HEADERS_EXCEPTIONS} DESTINATION include/${PROJECT_NAME}/exceptions)
+
+add_subdirectory(tests)
+enable_testing()
+
+SET(AVAILABLE_TESTS "CorrelationTest;DerandomizerTest;PacketFixerTest;ReedSolomonTest;SIMDTest;ViterbiTest")
+
+foreach(TEST_NAME ${AVAILABLE_TESTS})
+  add_test (NAME ${TEST_NAME} COMMAND ${TEST_NAME})
+endforeach()

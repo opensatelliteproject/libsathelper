@@ -14,5 +14,6 @@ namespace SatHelper {
         std::cerr << "  | WARNING: Test not implemented!" << std::endl;
         return true;
     }
-
 } /* namespace SatHelper */
+
+RUNTEST(ReedSolomonTest)

@@ -254,3 +254,5 @@ namespace SatHelper {
     }
 
 } /* namespace SatHelper */
+
+RUNTEST(PacketFixerTest)

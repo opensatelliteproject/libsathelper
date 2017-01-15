@@ -93,4 +93,6 @@ namespace SatHelper {
 
 } /* namespace SatHelper */
 
+RUNTEST(SIMDTest)
+
 #undef TEST_LENGTH
