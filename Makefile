@@ -41,6 +41,7 @@ libcorrect-install: FORCE
 	@echo -e '\033[0;32mInstalling target: $@\033[0m'
 	@echo -e '\033[0;34m'
 	$(MAKE) -C libcorrect/build install
+	@ldconfig
 	@echo -e '\033[0m'
 	@echo -e '\033[0;32mFinished installing target: $@\033[0m'
 	@echo ' '
