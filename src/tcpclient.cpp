@@ -5,9 +5,9 @@
  *      Author: Lucas Teske
  */
 
-#include "tcpclient.h"
+#include <tcpclient.h>
 #include <cstdio>
-#include "exceptions.h"
+#include <exceptions.h>
 #include <fcntl.h>
 
 #ifdef _WIN32

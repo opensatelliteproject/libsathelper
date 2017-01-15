@@ -5,9 +5,8 @@
  *      Author: Lucas Teske
  */
 
-#include "SIMD/Operations.h"
-
-#include "SIMD/SIMD.h"
+#include <SIMD/Operations.h>
+#include <SIMD/SIMD.h>
 #include <stdio.h>
 
 namespace SatHelper {

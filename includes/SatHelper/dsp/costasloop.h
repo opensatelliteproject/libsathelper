@@ -11,8 +11,7 @@
 
 #define _USE_MATH_DEFINES
 #include <complex>
-
-#include "controlloop.h"
+#include <SatHelper/dsp/controlloop.h>
 
 namespace SatHelper {
 

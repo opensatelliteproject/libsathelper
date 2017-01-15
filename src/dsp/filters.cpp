@@ -9,7 +9,7 @@
 
 #define _USE_MATH_DEFINES
 #include <dsp/filters.h>
-#include <SatHelperException.h>
+#include <exceptions/SatHelperException.h>
 #include <cmath>
 
 namespace SatHelper {

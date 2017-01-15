@@ -9,7 +9,7 @@
 #define INCLUDES_EXCEPTIONS_WORDSIZEEXCEPTION_H_
 
 #include <sstream>
-#include "SatHelperException.h"
+#include <SatHelper/exceptions/SatHelperException.h>
 
 class WordSizeException: public SatHelperException {
 public:

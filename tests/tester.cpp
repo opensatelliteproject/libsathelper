@@ -12,7 +12,7 @@
 #include <cstdint>
 #include <vector>
 #include <cstring>
-#include "sathelper.h"
+#include <SatHelper/sathelper.h>
 #include "tests.h"
 
 using namespace SatHelper;

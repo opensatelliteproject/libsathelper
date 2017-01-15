@@ -8,7 +8,7 @@
 
 #include <dsp/controlloop.h>
 #include <cmath>
-#include <SatHelperException.h>
+#include <exceptions/SatHelperException.h>
 
 #define M_TWOPI (2.0f*M_PI)
 

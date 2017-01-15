@@ -5,7 +5,7 @@
  *      Author: Lucas Teske
  */
 
-#include "SIMD/MemoryOp.h"
+#include <SIMD/MemoryOp.h>
 
 #include <cstdlib>
 #include <iostream>

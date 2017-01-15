@@ -13,8 +13,8 @@
 #include <iostream>
 #include <cmath>
 
-#include "SIMD/MemoryOp.h"
-#include "SIMD/Operations.h"
+#include <SatHelper/SIMD/MemoryOp.h>
+#include <SatHelper/SIMD/Operations.h>
 
 using namespace std;
 

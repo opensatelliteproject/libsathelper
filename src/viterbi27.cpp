@@ -9,11 +9,11 @@ extern "C" {
 #include <correct.h>
 }
 
-#include "viterbi27.h"
+#include <viterbi27.h>
 #include <memory.h>
 #include <cstring>
-#include "correlator.h"
-#include "ViterbiCreationException.h"
+#include <correlator.h>
+#include <exceptions/ViterbiCreationException.h>
 
 using namespace SatHelper;
 

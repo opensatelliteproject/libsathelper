@@ -6,9 +6,9 @@
  *      Based on GNU Radio Implementation
  */
 
-#include "dsp/clockrecovery.h"
-#include "SatHelperException.h"
-#include "tools.h"
+#include <dsp/clockrecovery.h>
+#include <exceptions/SatHelperException.h>
+#include <tools.h>
 #include <cstring>
 #include <iostream>
 #include <cmath>

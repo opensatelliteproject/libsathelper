@@ -11,7 +11,7 @@
 #include <cstdint>
 #include <stdint.h>
 #include <memory.h>
-#include "ipaddress.h"
+#include <SatHelper/ipaddress.h>
 
 #ifdef _WIN32
 #include <atomic>

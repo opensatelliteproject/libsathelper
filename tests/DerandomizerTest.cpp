@@ -6,7 +6,7 @@
  */
 
 #include "DerandomizerTest.h"
-#include "derandomizer.h"
+#include <SatHelper/derandomizer.h>
 #include <cstring>
 
 namespace SatHelper {

@@ -6,10 +6,10 @@
  *      Based on GNU Radio Implementation
  */
 
-#include "dsp/firkernel.h"
+#include <dsp/firkernel.h>
 #include <cstring>
-#include "SIMD/MemoryOp.h"
-#include "SIMD/Operations.h"
+#include <SIMD/MemoryOp.h>
+#include <SIMD/Operations.h>
 
 namespace SatHelper {
 
