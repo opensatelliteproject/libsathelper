@@ -1,3 +1,4 @@
+libcorrect
 Debug/*.so
 Debug/**/*.o
 Debug/*.obj

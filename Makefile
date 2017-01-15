@@ -56,3 +56,24 @@ test: libSatHelper.a
 	@echo -e '\033[0m'
 	@echo -e '\033[0;32mFinished building target: $@\033[0m'
 	@echo ' '
+
+libcorrect: FORCE
+	@echo -e '\033[0;32mBuilding target: $@\033[0m'
+	@echo -e '\033[0;34m'
+	@git clone https://github.com/quiet/libcorrect/
+	@mkdir libcorrect/build -p
+	@cd libcorrect/build && cmake ..
+	$(MAKE) -C libcorrect/build
+	@echo -e '\033[0m'
+	@echo -e '\033[0;32mFinished building target: $@\033[0m'
+	@echo ' '
+
+libcorrect-install: FORCE
+	@echo -e '\033[0;32mInstalling target: $@\033[0m'
+	@echo -e '\033[0;34m'
+	$(MAKE) -C libcorrect/build install
+	@echo -e '\033[0m'
+	@echo -e '\033[0;32mFinished installing target: $@\033[0m'
+	@echo ' '
+
+FORCE:
