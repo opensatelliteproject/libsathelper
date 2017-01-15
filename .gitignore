@@ -1,26 +1,9 @@
 libcorrect
 build
 test/build
-Debug/*.so
-Debug/**/*.o
-Debug/*.obj
-Debug/**/*.d
-Debug/*.*log
-Debug/*.idb
-Debug/*.pdb
-Debug/*.dll
-Release/*.so
-Release/**/*.o
-Release/*.obj
-Release/**/*.d
-Release/*.dll
-Debug/channels*
-Release (Static)/*.a
-Release (Static)/**/*.o
-Release (Static)/**/*.d
-Release/*.*log
-Release/*.idb
-Release/*.pdb
+Debug/
+Release/
+Release (Static)/
 winfec
 *.db
 *.opendb
