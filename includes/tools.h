@@ -12,6 +12,13 @@
 #include <complex>
 #include <cmath>
 
+#ifdef _WIN32
+#undef _WCHAR_H
+#include <io.h>
+#include <direct.h>
+#include <time.h>
+#endif
+
 namespace SatHelper {
 
     class Tools {
@@ -21,11 +28,19 @@ namespace SatHelper {
         }
 
         inline static uint32_t getTimestamp() {
+            #ifndef _WIN32
             return (int) time(NULL);
+            #else
+            return (int) localtime(NULL);
+            #endif
         }
 
         inline static void makedir(const std::string &folder) {
+            #ifdef __linux__
             mkdir(folder.c_str(), 0777);
+            #else
+            _mkdir(folder.c_str());
+            #endif
         }
 
         inline static std::complex<float> phase2complex(float phase) {

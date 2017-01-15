@@ -9,6 +9,7 @@
 #ifndef INCLUDES_DSP_CONTROLLOOP_H_
 #define INCLUDES_DSP_CONTROLLOOP_H_
 
+#define _USE_MATH_DEFINES
 #include <cmath>
 #define M_TWOPI (2.0f*M_PI)
 

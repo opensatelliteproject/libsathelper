@@ -5,21 +5,57 @@
  *      Author: Lucas Teske
  */
 #include <cstdio>
-#include <unistd.h>
-#include <socket.h>
-#include <sys/resource.h>
-#include <sys/select.h>
-#include <sys/ioctl.h>
-#include <netdb.h>
 #include <sstream>
 #include <iostream>
 #include "exceptions.h"
+#include "socket.h"
 
+#ifdef _WIN32
+    #include <windows.h>
+    #include <winsock2.h>
+    #include <Ws2tcpip.h>
+    #include <atomic>
+    #ifndef MSG_WAITALL
+        #define MSG_WAITALL (1 << 3)
+    #endif
+    #ifndef MSG_NOSIGNAL
+        #define MSG_NOSIGNAL 0
+    #endif
+#else
+    #include <sys/socket.h>
+    #include <arpa/inet.h>
+    #include <sys/resource.h>
+    #include <sys/select.h>
+    #include <sys/ioctl.h>
+    #include <netdb.h>
+    #include <unistd.h>
+    #define ioctlsocket ioctl
+#endif
 using namespace SatHelper;
 
+#ifdef _WIN32
+std::atomic_bool Socket::initialized(false);
+std::atomic_uint Socket::sockCount(0);
+
+void Socket::socketInitialize() {
+    if (!initialized) {
+        initialized = true;
+        sockCount = 1;
+        WSADATA wsa_data;
+        WSAStartup(MAKEWORD(1, 1), &wsa_data);
+    } else {
+        sockCount++;
+    }
+}
+#endif
 
 Socket::~Socket() {
-
+    #ifdef _WIN32
+    sockCount--;
+    if (!sockCount) {
+        WSACleanup();
+    }
+    #endif
 }
 
 void Socket::Receive(char *data, int length) {
@@ -88,7 +124,7 @@ uint64_t Socket::AvailableData() {
     }
 
     unsigned long bytesAvailable = 0;
-    int ret = ioctl(s, FIONREAD, &bytesAvailable);
+    int ret = ioctlsocket(s, FIONREAD, &bytesAvailable);
 
     switch (ret) {
         case EINVAL:
@@ -107,10 +143,17 @@ uint64_t Socket::AvailableData() {
 void Socket::Close() {
     if (s > 0) {
         int status = 0;
+#ifdef _WIN32
+        status = shutdown(s, SD_BOTH);
+        if (status == 0) {
+            status = closesocket(s);
+        }
+#else
         status = shutdown(s, 2);
         if (status == 0) {
             status = close(s);
         }
+#endif
     }
 }
 

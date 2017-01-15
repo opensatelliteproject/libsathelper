@@ -9,6 +9,7 @@
 #ifndef INCLUDES_DSP_COSTASLOOP_H_
 #define INCLUDES_DSP_COSTASLOOP_H_
 
+#define _USE_MATH_DEFINES
 #include <complex>
 
 #include "controlloop.h"

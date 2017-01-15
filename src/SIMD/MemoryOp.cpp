@@ -13,6 +13,10 @@
 #include <cstdio>
 #include <cstring>
 
+#ifdef _WIN32
+#include <malloc.h>
+#endif
+
 namespace SatHelper {
 
     inline static void c_free(void *ptr) {
@@ -24,8 +28,12 @@ namespace SatHelper {
             return malloc(size);
         }
 
-#ifdef _MSC_VER
+#ifdef _WIN32
+        #ifdef __MINGW32__
+        return __mingw_aligned_malloc(size, alignment);
+        #else
         return _aligned_malloc(size, alignment);
+        #endif
 #else
         void *ptr;
         int err = posix_memalign(&ptr, alignment, size);
@@ -39,8 +47,12 @@ namespace SatHelper {
     }
 
     void MemoryOp::free(void *data) {
-#ifdef _MSC_VER
-        _aligned_free(ptr);
+#ifdef _WIN32
+        #ifdef __MINGW32__
+        __mingw_aligned_free(data);
+        #else
+        _aligned_free(data);
+        #endif
 #else
         c_free(data);
 #endif

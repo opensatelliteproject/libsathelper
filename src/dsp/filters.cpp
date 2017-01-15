@@ -7,6 +7,7 @@
  *      https://github.com/gnuradio/gnuradio/blob/master/gr-filter/lib/firdes.cc
  */
 
+#define _USE_MATH_DEFINES
 #include <dsp/filters.h>
 #include <SatHelperException.h>
 #include <cmath>

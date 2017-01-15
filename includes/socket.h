@@ -10,13 +10,27 @@
 
 #include <cstdint>
 #include <stdint.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
 #include <memory.h>
 #include "ipaddress.h"
 
+#ifdef _WIN32
+#include <atomic>
+#include <winsock2.h>
+#include <Ws2tcpip.h>
+#include <atomic>
+#else
+#include <sys/socket.h>
+#include <netinet/in.h>
+#endif
+
 namespace SatHelper {
     class Socket {
+    private:
+        #ifdef _WIN32
+        static std::atomic_bool initialized;
+        static std::atomic_uint sockCount;
+        void socketInitialize();
+        #endif
     protected:
         IPAddress address;
         fd_set writeFd;
@@ -27,22 +41,37 @@ namespace SatHelper {
         Socket() :
                 Socket(IPAddress()) {
             memset(&socketAddr, 0x00, sizeof(sockaddr_in));
+            #ifdef _WIN32
+            socketInitialize();
+            #endif
         }
 
         Socket(IPAddress addr) :
                 address(addr), s(0) {
+            #ifdef _WIN32
+            socketInitialize();
+            #endif
         }
 
         Socket(std::string addr) :
                 address(IPAddress(addr)), s(0) {
+            #ifdef _WIN32
+            socketInitialize();
+            #endif
         }
 
         Socket(IPAddress addr, int socket) :
                 address(addr), s(socket) {
+            #ifdef _WIN32
+            socketInitialize();
+            #endif
         }
 
         Socket(const Socket &a) :
                 Socket(a.address, a.s) {
+            #ifdef _WIN32
+            socketInitialize();
+            #endif
             socketAddr = a.socketAddr;
         }
 
