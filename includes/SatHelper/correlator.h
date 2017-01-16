@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <stdint.h>
 #include <cstdio>
+
 namespace SatHelper {
 
     typedef std::vector<uint8_t> VecU8;
@@ -25,7 +26,14 @@ namespace SatHelper {
         uint32_t wordNumber;
         uint8_t currentWordSize;
 
+        // Cache Start of the array, so the loop doesn't call vector[]
+        uint8_t **wordsPtr;
+        uint32_t *tmpCorrelationPtr;
+        uint32_t *correlationPtr;
+        uint32_t *positionPtr;
+
         void resetCorrelation();
+        void updatePointers();
     public:
 
         static inline bool hardCorrelate(uint8_t dataByte, uint8_t wordByte) {

@@ -17,6 +17,8 @@ using namespace SatHelper;
 Correlator::Correlator() {
     wordNumber = 0;
     currentWordSize = 0;
+    wordsPtr = NULL;
+    updatePointers();
 }
 
 void Correlator::addWord(uint32_t word) {
@@ -33,6 +35,7 @@ void Correlator::addWord(uint32_t word) {
     correlation.push_back(0);
     position.push_back(0);
     tmpCorrelation.push_back(0);
+    updatePointers();
 }
 
 void Correlator::addWord(uint64_t word) {
@@ -49,13 +52,30 @@ void Correlator::addWord(uint64_t word) {
     correlation.push_back(0);
     position.push_back(0);
     tmpCorrelation.push_back(0);
+    updatePointers();
 }
 
 void Correlator::resetCorrelation() {
     int numWords = words.size();
-    memset(&correlation[0], 0x00, numWords * sizeof(uint32_t));
-    memset(&position[0], 0x00, numWords * sizeof(uint32_t));
-    memset(&tmpCorrelation[0], 0x00, numWords * sizeof(uint32_t));
+    memset(correlationPtr, 0x00, numWords * sizeof(uint32_t));
+    memset(positionPtr, 0x00, numWords * sizeof(uint32_t));
+    memset(tmpCorrelationPtr, 0x00, numWords * sizeof(uint32_t));
+}
+
+void Correlator::updatePointers() {
+    // Cache Start of the array, so the loop doesn't call vector[]
+    if (wordsPtr != NULL) {
+        delete wordsPtr;
+    }
+
+    wordsPtr = new uint8_t* [words.size()];
+    for (unsigned int i=0; i<words.size(); i++) {
+        wordsPtr[i] = &words[i][0];
+    }
+
+    tmpCorrelationPtr = &tmpCorrelation[0];
+    correlationPtr = &correlation[0];
+    positionPtr = &position[0];
 }
 
 #ifndef USE_UNROLLING
@@ -68,29 +88,29 @@ void Correlator::correlate(uint8_t *data, uint32_t length) {
 
     for (int i = 0; i < maxSearch; i++) {
         for (int n = 0; n < numWords; n++) {
-            tmpCorrelation[n] = 0;
+            tmpCorrelationPtr[n] = 0;
         }
 
         for (int k = 0; k < wordSize; k++) {
             for (int n = 0; n < numWords; n++) {
-                tmpCorrelation[n] += (uint32_t) Correlator::hardCorrelate(data[i + k], words[n][k]);
+                tmpCorrelationPtr[n] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[n][k]);
             }
         }
 
         for (int n = 0; n < numWords; n++) {
-            if (tmpCorrelation[n] > correlation[n]) {
-                correlation[n] = tmpCorrelation[n];
-                position[n] = i;
-                tmpCorrelation[n] = 0;
+            if (tmpCorrelationPtr[n] > correlationPtr[n]) {
+                correlationPtr[n] = tmpCorrelationPtr[n];
+                positionPtr[n] = i;
+                tmpCorrelationPtr[n] = 0;
             }
         }
     }
 
     uint32_t corr = 0;
     for (int n = 0; n < numWords; n++) {
-        if (correlation[n] > corr) {
+        if (correlationPtr[n] > corr) {
             wordNumber = n;
-            corr = correlation[n];
+            corr = correlationPtr[n];
         }
     }
 }
@@ -104,62 +124,62 @@ void Correlator::correlate(uint8_t *data, uint32_t length) {
 
     if (numWords == 2) { // Optimization for BPSK Phase
         for (int i = 0; i < maxSearch; i++) {
-            tmpCorrelation[0] = 0;
-            tmpCorrelation[1] = 0;
+            tmpCorrelationPtr[0] = 0;
+            tmpCorrelationPtr[1] = 0;
 
             for (int k = 0; k < wordSize; k++) {
-                tmpCorrelation[0] += softCorrelate(data[i + k], words[0][k]); //(uint32_t) Correlator::hardCorrelate(data[i + k], words[0][k]);
-                tmpCorrelation[1] += softCorrelate(data[i + k], words[1][k]); //(uint32_t) Correlator::hardCorrelate(data[i + k], words[1][k]);
+                tmpCorrelationPtr[0] += softCorrelate(data[i + k], wordsPtr[0][k]); //(uint32_t) Correlator::hardCorrelate(data[i + k], words[0][k]);
+                tmpCorrelationPtr[1] += softCorrelate(data[i + k], wordsPtr[1][k]); //(uint32_t) Correlator::hardCorrelate(data[i + k], words[1][k]);
             }
 
-            if (tmpCorrelation[0] > correlation[0]) {
-                correlation[0] = tmpCorrelation[0];
-                position[0] = i;
-                tmpCorrelation[0] = 0;
+            if (tmpCorrelationPtr[0] > correlationPtr[0]) {
+                correlationPtr[0] = tmpCorrelationPtr[0];
+                positionPtr[0] = i;
+                tmpCorrelationPtr[0] = 0;
             }
 
-            if (tmpCorrelation[1] > correlation[1]) {
-                correlation[1] = tmpCorrelation[1];
-                position[1] = i;
-                tmpCorrelation[1] = 0;
+            if (tmpCorrelationPtr[1] > correlationPtr[1]) {
+                correlationPtr[1] = tmpCorrelationPtr[1];
+                positionPtr[1] = i;
+                tmpCorrelationPtr[1] = 0;
             }
         }
     } else if (numWords == 4) { // Optimization for QPSK Phase
         for (int i = 0; i < maxSearch; i++) {
-            tmpCorrelation[0] = 0;
-            tmpCorrelation[1] = 0;
-            tmpCorrelation[2] = 0;
-            tmpCorrelation[3] = 0;
+            tmpCorrelationPtr[0] = 0;
+            tmpCorrelationPtr[1] = 0;
+            tmpCorrelationPtr[2] = 0;
+            tmpCorrelationPtr[3] = 0;
 
             for (int k = 0; k < wordSize; k++) {
-                tmpCorrelation[0] += softCorrelate(data[i + k], words[0][k]); //(uint32_t) Correlator::hardCorrelate(data[i + k], words[0][k]);
-                tmpCorrelation[1] += softCorrelate(data[i + k], words[1][k]); //(uint32_t) Correlator::hardCorrelate(data[i + k], words[1][k]);
-                tmpCorrelation[2] += softCorrelate(data[i + k], words[2][k]); //(uint32_t) Correlator::hardCorrelate(data[i + k], words[2][k]);
-                tmpCorrelation[3] += softCorrelate(data[i + k], words[3][k]); //(uint32_t) Correlator::hardCorrelate(data[i + k], words[3][k]);
+                tmpCorrelationPtr[0] += softCorrelate(data[i + k], wordsPtr[0][k]); //(uint32_t) Correlator::hardCorrelate(data[i + k], words[0][k]);
+                tmpCorrelationPtr[1] += softCorrelate(data[i + k], wordsPtr[1][k]); //(uint32_t) Correlator::hardCorrelate(data[i + k], words[1][k]);
+                tmpCorrelationPtr[2] += softCorrelate(data[i + k], wordsPtr[2][k]); //(uint32_t) Correlator::hardCorrelate(data[i + k], words[2][k]);
+                tmpCorrelationPtr[3] += softCorrelate(data[i + k], wordsPtr[3][k]); //(uint32_t) Correlator::hardCorrelate(data[i + k], words[3][k]);
             }
 
-            if (tmpCorrelation[0] > correlation[0]) {
-                correlation[0] = tmpCorrelation[0];
-                position[0] = i;
-                tmpCorrelation[0] = 0;
+            if (tmpCorrelationPtr[0] > correlationPtr[0]) {
+                correlationPtr[0] = tmpCorrelationPtr[0];
+                positionPtr[0] = i;
+                tmpCorrelationPtr[0] = 0;
             }
 
-            if (tmpCorrelation[1] > correlation[1]) {
-                correlation[1] = tmpCorrelation[1];
-                position[1] = i;
-                tmpCorrelation[1] = 0;
+            if (tmpCorrelationPtr[1] > correlationPtr[1]) {
+                correlationPtr[1] = tmpCorrelationPtr[1];
+                positionPtr[1] = i;
+                tmpCorrelationPtr[1] = 0;
             }
 
-            if (tmpCorrelation[2] > correlation[2]) {
-                correlation[2] = tmpCorrelation[2];
-                position[2] = i;
-                tmpCorrelation[2] = 0;
+            if (tmpCorrelationPtr[2] > correlationPtr[2]) {
+                correlationPtr[2] = tmpCorrelationPtr[2];
+                positionPtr[2] = i;
+                tmpCorrelationPtr[2] = 0;
             }
 
-            if (tmpCorrelation[3] > correlation[3]) {
-                correlation[3] = tmpCorrelation[3];
-                position[3] = i;
-                tmpCorrelation[3] = 0;
+            if (tmpCorrelationPtr[3] > correlationPtr[3]) {
+                correlationPtr[3] = tmpCorrelationPtr[3];
+                positionPtr[3] = i;
+                tmpCorrelationPtr[3] = 0;
             }
         }
     } else { // Other use cases
@@ -167,35 +187,35 @@ void Correlator::correlate(uint8_t *data, uint32_t length) {
         int c;
         register int n;
         for (int i = 0; i < maxSearch; i++) {
-            memset(&tmpCorrelation[0], 0x00, numWords * sizeof(uint32_t));
+            memset(tmpCorrelationPtr, 0x00, numWords * sizeof(uint32_t));
             for (int k = 0; k < wordSize; k++) {
                 c = 0;
                 n = (numWords + 7) / 8;
                 switch (numWords % 8) {
                     case 0:
                         do {
-                            tmpCorrelation[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], words[c][k]);
+                                tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
                             c++;
                             case 7:
-                            tmpCorrelation[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], words[c][k]);
+                                tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
                             c++;
                             case 6:
-                            tmpCorrelation[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], words[c][k]);
+                                tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
                             c++;
                             case 5:
-                            tmpCorrelation[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], words[c][k]);
+                                tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
                             c++;
                             case 4:
-                            tmpCorrelation[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], words[c][k]);
+                                tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
                             c++;
                             case 3:
-                            tmpCorrelation[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], words[c][k]);
+                                tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
                             c++;
                             case 2:
-                            tmpCorrelation[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], words[c][k]);
+                                tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
                             c++;
                             case 1:
-                            tmpCorrelation[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], words[c][k]);
+                                tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
                             c++;
                         } while (--n > 0);
                 }
@@ -206,59 +226,59 @@ void Correlator::correlate(uint8_t *data, uint32_t length) {
             switch (numWords % 8) {
                 case 0:
                     do {
-                        if (tmpCorrelation[c] > correlation[c]) {
-                            correlation[c] = tmpCorrelation[c];
-                            position[c] = i;
-                            tmpCorrelation[c] = 0;
+                        if (tmpCorrelationPtr[c] > correlationPtr[c]) {
+                            correlationPtr[c] = tmpCorrelationPtr[c];
+                            positionPtr[c] = i;
+                            tmpCorrelationPtr[c] = 0;
                         }
                         c++;
                         case 7:
-                        if (tmpCorrelation[c] > correlation[c]) {
-                            correlation[c] = tmpCorrelation[c];
-                            position[c] = i;
-                            tmpCorrelation[c] = 0;
+                        if (tmpCorrelationPtr[c] > correlationPtr[c]) {
+                            correlationPtr[c] = tmpCorrelationPtr[c];
+                            positionPtr[c] = i;
+                            tmpCorrelationPtr[c] = 0;
                         }
                         c++;
                         case 6:
-                        if (tmpCorrelation[c] > correlation[c]) {
-                            correlation[c] = tmpCorrelation[c];
-                            position[c] = i;
-                            tmpCorrelation[c] = 0;
+                        if (tmpCorrelationPtr[c] > correlationPtr[c]) {
+                            correlationPtr[c] = tmpCorrelationPtr[c];
+                            positionPtr[c] = i;
+                            tmpCorrelationPtr[c] = 0;
                         }
                         c++;
                         case 5:
-                        if (tmpCorrelation[c] > correlation[c]) {
-                            correlation[c] = tmpCorrelation[c];
-                            position[c] = i;
-                            tmpCorrelation[c] = 0;
+                        if (tmpCorrelationPtr[c] > correlationPtr[c]) {
+                            correlationPtr[c] = tmpCorrelationPtr[c];
+                            positionPtr[c] = i;
+                            tmpCorrelationPtr[c] = 0;
                         }
                         c++;
                         case 4:
-                        if (tmpCorrelation[c] > correlation[c]) {
-                            correlation[c] = tmpCorrelation[c];
-                            position[c] = i;
-                            tmpCorrelation[c] = 0;
+                        if (tmpCorrelationPtr[c] > correlationPtr[c]) {
+                            correlationPtr[c] = tmpCorrelationPtr[c];
+                            positionPtr[c] = i;
+                            tmpCorrelationPtr[c] = 0;
                         }
                         c++;
                         case 3:
-                        if (tmpCorrelation[c] > correlation[c]) {
-                            correlation[c] = tmpCorrelation[c];
-                            position[c] = i;
-                            tmpCorrelation[c] = 0;
+                        if (tmpCorrelationPtr[c] > correlationPtr[c]) {
+                            correlationPtr[c] = tmpCorrelationPtr[c];
+                            positionPtr[c] = i;
+                            tmpCorrelationPtr[c] = 0;
                         }
                         c++;
                         case 2:
-                        if (tmpCorrelation[c] > correlation[c]) {
-                            correlation[c] = tmpCorrelation[c];
-                            position[c] = i;
-                            tmpCorrelation[c] = 0;
+                        if (tmpCorrelationPtr[c] > correlationPtr[c]) {
+                            correlationPtr[c] = tmpCorrelationPtr[c];
+                            positionPtr[c] = i;
+                            tmpCorrelationPtr[c] = 0;
                         }
                         c++;
                         case 1:
-                        if (tmpCorrelation[c] > correlation[c]) {
-                            correlation[c] = tmpCorrelation[c];
-                            position[c] = i;
-                            tmpCorrelation[c] = 0;
+                        if (tmpCorrelationPtr[c] > correlationPtr[c]) {
+                            correlationPtr[c] = tmpCorrelationPtr[c];
+                            positionPtr[c] = i;
+                            tmpCorrelationPtr[c] = 0;
                         }
                         c++;
                     } while (--n > 0);
@@ -268,9 +288,9 @@ void Correlator::correlate(uint8_t *data, uint32_t length) {
 
     uint32_t corr = 0;
     for (int n = 0; n < numWords; n++) {
-        if (correlation[n] > corr) {
+        if (correlationPtr[n] > corr) {
             wordNumber = n;
-            corr = correlation[n];
+            corr = correlationPtr[n];
         }
     }
 }

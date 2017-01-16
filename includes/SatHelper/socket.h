@@ -12,12 +12,13 @@
 #include <stdint.h>
 #include <memory.h>
 #include <SatHelper/ipaddress.h>
+#include <SatHelper/tools.h>
+#include <unistd.h>
 
 #ifdef _WIN32
 #include <atomic>
 #include <winsock2.h>
 #include <Ws2tcpip.h>
-#include <atomic>
 #else
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -81,11 +82,20 @@ namespace SatHelper {
         void Send(char *data, int length);
         void SendTo(char *data, int length, IPAddress destinationAddress, int destinationPort);
         int ReceiveFrom(char *data, int length, IPAddress fromAddress, int fromPort);
-
         uint64_t AvailableData();
 
         inline const IPAddress GetAddress() const {
             return address;
+        }
+
+        inline const void WaitForData(uint64_t bytes, uint32_t timeout) {
+            uint32_t checkTime = Tools::getTimestamp();
+            while (AvailableData() < bytes) {
+                if (Tools::getTimestamp() - checkTime > timeout) {
+                    return;
+                }
+                usleep(10);
+            }
         }
 
         virtual void Close();
