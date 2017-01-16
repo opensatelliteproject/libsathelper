@@ -28,11 +28,7 @@ namespace SatHelper {
         }
 
         inline static uint32_t getTimestamp() {
-            #ifndef _WIN32
             return (int) time(NULL);
-            #else
-            return (int) localtime(NULL);
-            #endif
         }
 
         inline static void makedir(const std::string &folder) {
