@@ -18,9 +18,6 @@
     #ifndef MSG_WAITALL
         #define MSG_WAITALL (1 << 3)
     #endif
-    #ifndef MSG_NOSIGNAL
-        #define MSG_NOSIGNAL 0
-    #endif
 #else
     #include <sys/socket.h>
     #include <arpa/inet.h>
@@ -30,6 +27,11 @@
     #include <netdb.h>
     #include <unistd.h>
     #define ioctlsocket ioctl
+#endif
+#if defined(_WIN32) || defined(__APPLE__)
+    #ifndef MSG_NOSIGNAL
+        #define MSG_NOSIGNAL 0
+    #endif
 #endif
 using namespace SatHelper;
 
@@ -156,4 +158,3 @@ void Socket::Close() {
 #endif
     }
 }
-
