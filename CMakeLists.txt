@@ -65,7 +65,7 @@ install(FILES ${HEADERS_EXCEPTIONS} DESTINATION include/${PROJECT_NAME}/exceptio
 add_subdirectory(tests)
 enable_testing()
 
-SET(AVAILABLE_TESTS "CorrelationTest;DerandomizerTest;PacketFixerTest;ReedSolomonTest;SIMDTest;ViterbiTest")
+SET(AVAILABLE_TESTS "DifferentialEncodingTest;CorrelationTest;DerandomizerTest;PacketFixerTest;ReedSolomonTest;SIMDTest;ViterbiTest")
 
 foreach(TEST_NAME ${AVAILABLE_TESTS})
   add_test (NAME ${TEST_NAME} COMMAND ${TEST_NAME})

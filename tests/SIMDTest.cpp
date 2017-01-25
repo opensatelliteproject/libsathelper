@@ -2,7 +2,7 @@
  * SIMDTest.cpp
  *
  *  Created on: 08/01/2017
- *      Author: lucas
+ *      Author: Lucas Teske
  */
 
 #include "SIMDTest.h"
