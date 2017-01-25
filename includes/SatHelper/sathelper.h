@@ -19,6 +19,7 @@
 #include <SatHelper/tcpclient.h>
 #include <SatHelper/derandomizer.h>
 #include <SatHelper/tools.h>
+#include <SatHelper/differentialencoding.h>
 
 #include <SatHelper/exceptions.h>
 
