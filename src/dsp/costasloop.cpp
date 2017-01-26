@@ -9,21 +9,24 @@
 #include <dsp/costasloop.h>
 #include <tools.h>
 #include <exceptions/SatHelperException.h>
-
+#include <iostream>
 namespace SatHelper {
 
     CostasLoop::CostasLoop(float loop_bw, int order) :
             ControlLoop(loop_bw, 1.0, -1.0), order(order), error(0), noise(1.0), PhaseDetector(NULL) {
         switch (order) {
             case 2:
+                std::cout << "BPSK Costas Loop" << std::endl;
                 PhaseDetector = &CostasLoop::PhaseDetector2;
                 break;
 
             case 4:
+                std::cout << "QPSK Costas Loop" << std::endl;
                 PhaseDetector = &CostasLoop::PhaseDetector4;
                 break;
 
             case 8:
+                std::cout << "8PSK Costas Loop" << std::endl;
                 PhaseDetector = &CostasLoop::PhaseDetector8;
                 break;
 

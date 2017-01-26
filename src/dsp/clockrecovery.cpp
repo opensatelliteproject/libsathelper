@@ -13,14 +13,14 @@
 #include <iostream>
 #include <cmath>
 
-#define MIN_SAMPLE_HISTORY 8
+#define MIN_SAMPLE_HISTORY 3
 
 namespace SatHelper {
     static const int FUDGE = 16;
 
     ClockRecovery::ClockRecovery(float omega, float gainOmega, float mu, float gainMu, float omegaRelativeLimit) :
-            mu(mu), omega(omega), gainOmega(gainOmega), omegaRelativeLimit(omegaRelativeLimit), gainMu(gainMu), interp(new MMSEFirInterpolator()), p_2T(0, 0), p_1T(
-                    0, 0), p_0T(0, 0), c_2T(0, 0), c_1T(0, 0), c_0T(0, 0) {
+            mu(mu), omega(omega), gainOmega(gainOmega), omegaRelativeLimit(omegaRelativeLimit), gainMu(gainMu), p_2T(0, 0), p_1T(
+                    0, 0), p_0T(0, 0), c_2T(0, 0), c_1T(0, 0), c_0T(0, 0), consumed(0) {
 
         if (omega <= 0.0) {
             throw SatHelperException("ClockRecovery Rate must be higher than 0.");
@@ -37,87 +37,82 @@ namespace SatHelper {
         for (int i = 0; i < sampleHistory; i++) {
             samples.push_back(std::complex<float>(0, 0));
         }
+
+        std::cout << "MM - Omega: " << this->omega << " Gain Omega: " << this->gainOmega << " Mu: " << this->mu << " Gain Mu: " << this->gainMu << " Omega Relative Limit: " << this->omegaRelativeLimit << std::endl;
     }
 
     ClockRecovery::~ClockRecovery() {
-        delete interp;
+
     }
 
-    std::complex<float> ClockRecovery::slicer_0deg(std::complex<float> sample) {
-        float real = 0, imag = 0;
-
-        if (sample.real() > 0) {
-            real = 1;
-        }
-
-        if (sample.imag() > 0) {
-            imag = 1;
-        }
-
-        return std::complex<float>(real, imag);
+    std::complex<float> ClockRecovery::slicer(std::complex<float> sample) {
+        return std::complex<float>(sample.real() > 0 ? 1 : 0, sample.imag() > 0 ? 1 : 0);
     }
 
-    std::complex<float> ClockRecovery::slicer_45deg(std::complex<float> sample) {
-        float real = -1, imag = -1;
-        if (sample.real() > 0) {
-            real = 1;
-        }
-
-        if (sample.imag() > 0) {
-            imag = 1;
-        }
-
-        return std::complex<float>(real, imag);
-    }
-
-    int ClockRecovery::Work(std::complex<float> *rInput, std::complex<float> *output, int length) {
-
-        int ii = 0; // input index
-        int oo = 0; // output index
-        int ni = sampleHistory + length - interp->GetNTaps() - FUDGE;  // don't use more input than this
-        //
+    int ClockRecovery::InternalWork(std::complex<float> *rInput, std::complex<float> *output, int inputLen, int outputLen) {
+        int inputIndex = 0;
+        int outputIndex = 0;
+        int numberInput = inputLen - interp.GetNTaps() - FUDGE;
         float mm_val = 0;
         std::complex<float> u, x, y;
 
-        if (samples.size() < (unsigned int) (sampleHistory + length)) {
-            samples.resize(sampleHistory + length);
-        }
-
-        memcpy(&samples[sampleHistory], rInput, length * sizeof(std::complex<float>));
-
-        while (oo < length && ii < ni) {
+        while (outputIndex < outputLen && inputIndex < numberInput) {
             p_2T = p_1T;
             p_1T = p_0T;
-            p_0T = interp->interpolate(&samples[ii], mu);
+            p_0T = interp.interpolate(&rInput[inputIndex], mu);
 
             c_2T = c_1T;
             c_1T = c_0T;
-            c_0T = slicer_0deg(p_0T);
+            c_0T = slicer(p_0T);
 
             x = (c_0T - c_2T) * conj(p_1T);
             y = (p_0T - p_2T) * conj(c_1T);
             u = y - x;
             mm_val = u.real();
-            output[oo++] = p_0T;
+            output[outputIndex++] = p_0T;
 
             mm_val = Tools::clip(mm_val, 1.0);
             omega = omega + gainOmega * mm_val;
             omega = omegaMid + Tools::clip(omega - omegaMid, omegaLim);
 
             mu = mu + omega + gainMu * mm_val;
-            ii += (int) floor(mu);
+            inputIndex += (int) floor(mu);
             mu -= floor(mu);
 
-            if (ii < 0) {
-                ii = 0;
+            if (inputIndex < 0) {
+                inputIndex = 0;
             }
         }
 
-        sampleHistory = sampleHistory + length - ii;
+        consumed = inputIndex;
 
-        memmove(&samples[0], &samples[ii], sampleHistory * sizeof(std::complex<float>));
+        if (consumed > inputLen) {
+            std::cerr << "Consumed more samples than input." << std::endl;
+        }
 
-        return oo;
+        return outputIndex;
+    }
+
+    int ClockRecovery::Work(std::complex<float> *rInput, std::complex<float> *output, int length) {
+        // Manage the history
+        int totalLength = sampleHistory + length;
+        if (samples.size() < (unsigned int) (totalLength)) {
+            samples.resize(totalLength);
+        }
+
+        memcpy(&samples[sampleHistory], rInput, length * sizeof(std::complex<float>));
+
+        int symbols = InternalWork(&samples[0], output, totalLength, length);
+
+        sampleHistory = totalLength - consumed;
+
+        if (sampleHistory < MIN_SAMPLE_HISTORY) {
+            sampleHistory = MIN_SAMPLE_HISTORY;
+        }
+
+        memmove(&samples[0], &samples[totalLength - sampleHistory], (sampleHistory) * sizeof(std::complex<float>));
+
+        return symbols;
     }
 
 } /* namespace SatHelper */

@@ -42,8 +42,7 @@ namespace SatHelper {
             throw SatHelperException("MMSE Fir Interpolator imu is out of bounds.");
         }
 
-        std::complex<float> r = filters[imu]->filter(input);
-        return r;
+        return filters[imu]->filter(input);
     }
 
 } /* namespace SatHelper */
