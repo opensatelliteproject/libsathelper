@@ -111,7 +111,7 @@ void Operations::dotProduct(std::complex<float> *result, const std::complex<floa
     float *iPtr = (float *)input;
     float *tPtr = (float *)taps;
 
-    for (int i = 0; i < length; i++) {
+    for (unsigned int i = 0; i < length; i++) {
         res[0] += ((*iPtr++) * (*tPtr));
         res[1] += ((*iPtr++) * (*tPtr++));
     }

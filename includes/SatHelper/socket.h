@@ -21,8 +21,13 @@
 #else
 #include <sys/socket.h>
 #include <netinet/in.h>
+#endif
+
+
+#if defined(__GNUC__) || defined(__MINGW32__)
 #include <unistd.h>
 #endif
+
 
 namespace SatHelper {
     class Socket {
