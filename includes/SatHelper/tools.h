@@ -32,7 +32,7 @@ namespace SatHelper {
         }
 
         inline static void makedir(const std::string &folder) {
-            #ifdef __linux__
+            #if defined(__linux__) || defined(__APPLE__)
             mkdir(folder.c_str(), 0777);
             #else
             _mkdir(folder.c_str());

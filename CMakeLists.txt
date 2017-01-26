@@ -23,6 +23,7 @@ set(VERSION_INFO_MAINT_VERSION 0)
 # Flags
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -mstackrealign -O3")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -mstackrealign -O3")
+set(CMAKE_MACOSX_RPATH 1)
 
 # Includes
 include_directories ("${PROJECT_SOURCE_DIR}/includes")
