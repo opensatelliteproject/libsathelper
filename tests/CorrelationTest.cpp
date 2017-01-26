@@ -129,7 +129,7 @@ namespace SatHelper {
 
         std::random_device rd;
         std::mt19937 e2(rd());
-        std::normal_distribution<> dist(-100, 100);
+        std::normal_distribution<> dist(-50, 50);
         uint8_t data[TEST_SIZE];
         SatHelper::Correlator correlator[3];
 
