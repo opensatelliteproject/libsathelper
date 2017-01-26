@@ -34,7 +34,7 @@ namespace SatHelper {
         MemoryOp::free(output);
     }
 
-    void FirKernel::SetTaps(const std::vector<float> &taps) {
+    void FirKernel::SetTaps(const std::vector<float> &itaps) {
         if (aligned_taps != NULL) {
             for (int i = 0; i < naligned; i++) {
                 MemoryOp::free(aligned_taps[i]);
@@ -43,9 +43,9 @@ namespace SatHelper {
             aligned_taps = NULL;
         }
 
-        ntaps = (int) taps.size();
-        this->taps = taps;
-        std::reverse(this->taps.begin(), this->taps.end());
+        ntaps = (int)itaps.size();
+        taps = itaps;
+        std::reverse(taps.begin(), taps.end());
 
         aligned_taps = (float**) malloc(naligned * sizeof(float*));
         for (int i = 0; i < naligned; i++) {
@@ -60,7 +60,6 @@ namespace SatHelper {
     std::complex<float> FirKernel::filter(const std::complex<float> *input) {
         const std::complex<float> *ar = (std::complex<float> *) ((size_t) input & ~(align - 1));
         unsigned al = input - ar;
-
         Operations::dotProduct(output, ar, aligned_taps[al], (ntaps + al));
         return *output;
     }

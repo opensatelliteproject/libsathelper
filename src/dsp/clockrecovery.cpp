@@ -19,8 +19,8 @@ namespace SatHelper {
     static const int FUDGE = 16;
 
     ClockRecovery::ClockRecovery(float omega, float gainOmega, float mu, float gainMu, float omegaRelativeLimit) :
-            mu(mu), omega(omega), gainOmega(gainOmega), omegaRelativeLimit(omegaRelativeLimit), gainMu(gainMu), p_2T(0, 0), p_1T(
-                    0, 0), p_0T(0, 0), c_2T(0, 0), c_1T(0, 0), c_0T(0, 0), consumed(0) {
+            mu(mu), omega(omega), gainOmega(gainOmega), omegaRelativeLimit(omegaRelativeLimit), gainMu(gainMu), consumed(0),
+            p_2T(0, 0), p_1T(0, 0), p_0T(0, 0), c_2T(0, 0), c_1T(0, 0), c_0T(0, 0) {
 
         if (omega <= 0.0) {
             throw SatHelperException("ClockRecovery Rate must be higher than 0.");
@@ -38,7 +38,8 @@ namespace SatHelper {
             samples.push_back(std::complex<float>(0, 0));
         }
 
-        std::cout << "MM - Omega: " << this->omega << " Gain Omega: " << this->gainOmega << " Mu: " << this->mu << " Gain Mu: " << this->gainMu << " Omega Relative Limit: " << this->omegaRelativeLimit << std::endl;
+        std::cout << "MM - Omega: " << this->omega << " Gain Omega: " << this->gainOmega << " Mu: " << this->mu << " Gain Mu: " << this->gainMu
+                << " Omega Relative Limit: " << this->omegaRelativeLimit << std::endl;
     }
 
     ClockRecovery::~ClockRecovery() {

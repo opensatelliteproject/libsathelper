@@ -7,8 +7,8 @@
  */
 
 #include <dsp/firinterpolator.h>
-#include <dsp/interpolator_taps.h>
 #include <exceptions/SatHelperException.h>
+#include <dsp/interpolator_taps.h>
 
 namespace SatHelper {
 
