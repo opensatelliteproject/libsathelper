@@ -13,7 +13,6 @@
 #include <memory.h>
 #include <SatHelper/ipaddress.h>
 #include <SatHelper/tools.h>
-#include <unistd.h>
 
 #ifdef _WIN32
 #include <atomic>
@@ -22,6 +21,7 @@
 #else
 #include <sys/socket.h>
 #include <netinet/in.h>
+#include <unistd.h>
 #endif
 
 namespace SatHelper {
