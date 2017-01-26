@@ -53,6 +53,10 @@ namespace SatHelper {
             return port;
         }
 
+        inline int GetMaxConnections() {
+            return maxConnections;
+        }
+
         inline void Listen(std::string port) {
             Listen(atoi(port.c_str()));
         }

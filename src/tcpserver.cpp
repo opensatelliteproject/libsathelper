@@ -7,7 +7,6 @@
 
 #include <tcpserver.h>
 #include <cstdio>
-#include <unistd.h>
 #include <sstream>
 #include <iostream>
 #include <exceptions.h>

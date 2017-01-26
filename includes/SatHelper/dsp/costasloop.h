@@ -17,8 +17,7 @@ namespace SatHelper {
 
     class CostasLoop: ControlLoop {
     private:
-        int order;
-        float error, noise;
+        float error;
 
         float PhaseDetector2(std::complex<float> sample) const;
         float PhaseDetector4(std::complex<float> sample) const;

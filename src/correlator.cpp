@@ -185,7 +185,7 @@ void Correlator::correlate(uint8_t *data, uint32_t length) {
     } else { // Other use cases
         // Duff's Device Loop Unfolding
         int c;
-        register int n;
+        int n;
         for (int i = 0; i < maxSearch; i++) {
             memset(tmpCorrelationPtr, 0x00, numWords * sizeof(uint32_t));
             for (int k = 0; k < wordSize; k++) {

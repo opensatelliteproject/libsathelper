@@ -19,17 +19,17 @@ namespace SatHelper {
         float mu, omega, gainOmega, omegaRelativeLimit, omegaMid, omegaLim, gainMu;
 
         std::complex<float> lastSample;
-        MMSEFirInterpolator *interp;
-
-        bool d_verbose;
+        MMSEFirInterpolator interp;
         int sampleHistory;
+        int consumed;
 
         std::complex<float> p_2T, p_1T, p_0T;
         std::complex<float> c_2T, c_1T, c_0T;
         std::vector<std::complex<float>> samples;
 
-        std::complex<float> slicer_0deg(std::complex<float> sample);
-        std::complex<float> slicer_45deg(std::complex<float> sample);
+        std::complex<float> slicer(std::complex<float> sample);
+
+        int InternalWork(std::complex<float> *rInput, std::complex<float> *output, int inputLen, int outputLen);
 
     public:
         ClockRecovery(float omega, float gain_omega, float mu, float gain_mu, float omega_relative_limit);

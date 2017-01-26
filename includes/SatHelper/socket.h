@@ -13,7 +13,6 @@
 #include <memory.h>
 #include <SatHelper/ipaddress.h>
 #include <SatHelper/tools.h>
-#include <unistd.h>
 
 #ifdef _WIN32
 #include <atomic>
@@ -23,6 +22,12 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #endif
+
+
+#if defined(__GNUC__) || defined(__MINGW32__)
+#include <unistd.h>
+#endif
+
 
 namespace SatHelper {
     class Socket {
@@ -83,6 +88,19 @@ namespace SatHelper {
         void SendTo(char *data, int length, IPAddress destinationAddress, int destinationPort);
         int ReceiveFrom(char *data, int length, IPAddress fromAddress, int fromPort);
         uint64_t AvailableData();
+
+#ifdef _MSC_VER
+		inline void usleep(DWORD waitTime) {
+			LARGE_INTEGER perfCnt, start, now;
+
+			QueryPerformanceFrequency(&perfCnt);
+			QueryPerformanceCounter(&start);
+
+			do {
+				QueryPerformanceCounter((LARGE_INTEGER*) &now);
+			} while ((now.QuadPart - start.QuadPart) / float(perfCnt.QuadPart) * 1000 * 1000 < waitTime);
+		}
+#endif
 
         inline const IPAddress GetAddress() const {
             return address;

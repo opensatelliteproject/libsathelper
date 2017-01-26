@@ -60,7 +60,7 @@ namespace SatHelper {
 
     int MemoryOp::getAligment() {
 #ifdef MEMORY_OP_X86
-        return 16; // SSE
+        return 32;
 #elif defined(MEMORY_OP_ARM)
         return 1;
 #else
