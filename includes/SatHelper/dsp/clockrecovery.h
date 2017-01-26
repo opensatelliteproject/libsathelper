@@ -20,8 +20,6 @@ namespace SatHelper {
 
         std::complex<float> lastSample;
         MMSEFirInterpolator interp;
-
-        bool d_verbose;
         int sampleHistory;
         int consumed;
 
