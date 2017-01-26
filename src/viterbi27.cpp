@@ -39,7 +39,7 @@ Viterbi27::~Viterbi27() {
 void Viterbi27::encode(uint8_t *input, uint8_t *output) {
     const int l = correct_convolutional_encode_len((correct_convolutional *)viterbi, this->DecodedSize());
     const int bl = l % 8 == 0 ? l / 8 : (l / 8) + 1;
-    uint8_t data[bl];
+    uint8_t *data = new uint8_t[bl];
     correct_convolutional_encode((correct_convolutional *)viterbi, input, this->DecodedSize(), data);
 
     // Convert to soft bits
@@ -49,6 +49,7 @@ void Viterbi27::encode(uint8_t *input, uint8_t *output) {
             output[i*8+(7-z)] = 0 - ( (d & (1 << z)) == 0);
         }
     }
+	delete[] data;
 }
 
 void Viterbi27::decode(uint8_t *input, uint8_t *output) {

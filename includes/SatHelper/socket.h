@@ -84,6 +84,19 @@ namespace SatHelper {
         int ReceiveFrom(char *data, int length, IPAddress fromAddress, int fromPort);
         uint64_t AvailableData();
 
+#ifdef _MSC_VER
+		inline void usleep(DWORD waitTime) {
+			LARGE_INTEGER perfCnt, start, now;
+
+			QueryPerformanceFrequency(&perfCnt);
+			QueryPerformanceCounter(&start);
+
+			do {
+				QueryPerformanceCounter((LARGE_INTEGER*) &now);
+			} while ((now.QuadPart - start.QuadPart) / float(perfCnt.QuadPart) * 1000 * 1000 < waitTime);
+		}
+#endif
+
         inline const IPAddress GetAddress() const {
             return address;
         }
