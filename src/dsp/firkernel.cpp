@@ -8,6 +8,7 @@
 
 #include <dsp/firkernel.h>
 #include <cstring>
+#include <algorithm>
 #include <SIMD/MemoryOp.h>
 #include <SIMD/Operations.h>
 
