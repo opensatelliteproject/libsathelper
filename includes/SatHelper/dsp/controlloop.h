@@ -17,10 +17,10 @@ namespace SatHelper {
 
     class ControlLoop {
     protected:
-        float phase, freq, max_freq, min_freq, damping, loop_bw, alpha, beta;
+        float phase, freq, maxRelFreq, minRelFreq, dampingFactor, loopBandwidth, alpha, beta;
 
     public:
-        ControlLoop(float loop_bw, float max_freq, float min_freq);
+        ControlLoop(float loopBandwidth, float maxRelativeFrequency, float minRelativeFrequency);
         virtual ~ControlLoop();
 
         void UpdateGains();
@@ -36,20 +36,20 @@ namespace SatHelper {
             PhaseWrap();
         }
 
-        inline void GetMaxFrequency(float freq) {
-            max_freq = freq;
+        inline void GetRelativeMaxFrequency(float freq) {
+            maxRelFreq = freq;
         }
 
-        inline void GetMinFrequency(float freq) {
-            min_freq = freq;
+        inline void GetRelativeMinFrequency(float freq) {
+            minRelFreq = freq;
         }
 
         inline float GetLoopBandwidth() const {
-            return loop_bw;
+            return loopBandwidth;
         }
 
         inline float GetDampingFactor() const {
-            return damping;
+            return dampingFactor;
         }
 
         inline float GetAlpha() const {
@@ -60,7 +60,7 @@ namespace SatHelper {
             return beta;
         }
 
-        inline float GetFrequency() const {
+        inline float GetRelativeFrequency() const {
             return freq;
         }
 
@@ -68,19 +68,19 @@ namespace SatHelper {
             return phase;
         }
 
-        inline float GetMaxFrequency() const {
-            return max_freq;
+        inline float GetMaxRelativeFrequency() const {
+            return maxRelFreq;
         }
 
-        inline float GetMinFrequency() const {
-            return min_freq;
+        inline float GetMinRelativeFrequency() const {
+            return minRelFreq;
         }
 
         inline void FrequencyLimit() {
-            if (freq > max_freq) {
-                freq = max_freq;
-            } else if (freq < min_freq) {
-                freq = min_freq;
+            if (freq > maxRelFreq) {
+                freq = maxRelFreq;
+            } else if (freq < minRelFreq) {
+                freq = minRelFreq;
             }
         }
 
@@ -92,8 +92,6 @@ namespace SatHelper {
                 phase += M_TWOPI;
             }
         }
-
-        // TODO: May use GNURadio tanh LUT
     };
 
 } /* namespace SatHelper */
