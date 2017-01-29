@@ -12,8 +12,7 @@
 #include <iostream>
 namespace SatHelper {
 
-    CostasLoop::CostasLoop(float loop_bw, int order) :
-            ControlLoop(loop_bw, 1.0, -1.0), error(0), PhaseDetector(NULL) {
+    CostasLoop::CostasLoop(float loopBandwidth, int order) : ControlLoop(loopBandwidth, 1.0, -1.0), error(0), PhaseDetector(NULL) {
         switch (order) {
             case 2:
                 std::cout << "BPSK Costas Loop" << std::endl;

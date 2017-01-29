@@ -15,8 +15,8 @@
 namespace SatHelper {
 
     ControlLoop::ControlLoop(float loop_bw, float max_freq, float min_freq) :
-            phase(0), freq(0), max_freq(max_freq), min_freq(min_freq) {
-        damping = sqrt(2.0f) / 2.0f;
+            phase(0), freq(0), maxRelFreq(max_freq), minRelFreq(min_freq) {
+        dampingFactor = sqrt(2.0f) / 2.0f;
         SetLoopBandwidth(loop_bw);
     }
 
@@ -25,9 +25,9 @@ namespace SatHelper {
     }
 
     void ControlLoop::UpdateGains() {
-        float denom = (1.0 + 2.0 * damping * loop_bw + loop_bw * loop_bw);
-        alpha = (4 * damping * loop_bw) / denom;
-        beta = (4 * loop_bw * loop_bw) / denom;
+        float denom = (1.0 + 2.0 * dampingFactor * loopBandwidth + loopBandwidth * loopBandwidth);
+        alpha = (4 * dampingFactor * loopBandwidth) / denom;
+        beta = (4 * loopBandwidth * loopBandwidth) / denom;
     }
 
     void ControlLoop::AdvanceLoop(float error) {
@@ -40,7 +40,7 @@ namespace SatHelper {
             throw SatHelperException("Control Loop Bandwidth needs to be higher than or equal to 0.");
         }
 
-        loop_bw = bw;
+        loopBandwidth = bw;
         UpdateGains();
     }
 
@@ -49,7 +49,7 @@ namespace SatHelper {
             throw SatHelperException("Control Loop Bandwidth needs to be higher than 0.");
         }
 
-        damping = df;
+        dampingFactor = df;
         UpdateGains();
     }
 
@@ -69,10 +69,10 @@ namespace SatHelper {
     }
 
     void ControlLoop::SetFrequency(float freq) {
-        if (freq > max_freq) {
-            this->freq = min_freq;
-        } else if (freq < min_freq) {
-            this->freq = max_freq;
+        if (freq > maxRelFreq) {
+            this->freq = minRelFreq;
+        } else if (freq < minRelFreq) {
+            this->freq = maxRelFreq;
         } else {
             this->freq = freq;
         }

@@ -26,7 +26,7 @@ namespace SatHelper {
         float (CostasLoop::*PhaseDetector)(std::complex<float> sample) const;
 
     public:
-        CostasLoop(float loop_bw, int order);
+        CostasLoop(float loopBandwidth, int order);
         virtual ~CostasLoop();
 
         inline float GetError() const {

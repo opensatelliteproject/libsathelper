@@ -32,7 +32,7 @@ namespace SatHelper {
         int InternalWork(std::complex<float> *rInput, std::complex<float> *output, int inputLen, int outputLen);
 
     public:
-        ClockRecovery(float omega, float gain_omega, float mu, float gain_mu, float omega_relative_limit);
+        ClockRecovery(float omega, float gainOmega, float mu, float gainMu, float omegaRelativeLimit);
         virtual ~ClockRecovery();
 
         int Work(std::complex<float> *input, std::complex<float> *output, int length);
