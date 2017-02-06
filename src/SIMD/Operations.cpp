@@ -37,10 +37,10 @@ namespace SatHelper {
         for (unsigned int i = 0; i < runs; i++) {
 
             // Load inputs to SIMD registers
-            tmp0 = _mm_load_ps(iPtr + 0);
-            tmp1 = _mm_load_ps(iPtr + 4);
-            tmp2 = _mm_load_ps(iPtr + 8);
-            tmp3 = _mm_load_ps(iPtr + 12);
+            tmp0 = _mm_loadu_ps(iPtr + 0);
+            tmp1 = _mm_loadu_ps(iPtr + 4);
+            tmp2 = _mm_loadu_ps(iPtr + 8);
+            tmp3 = _mm_loadu_ps(iPtr + 12);
 
             // Load taps to SIMD registers
             tap0 = _mm_load_ps(tPtr + 0);
