@@ -92,19 +92,19 @@ namespace SatHelper {
     }
 
     std::vector<float> FFTWindows::Blackman(int ntaps) {
-        return coswindow(ntaps, 0.34401, 0.49755, 0.15844);
+        return coswindow(ntaps, 0.34401f, 0.49755f, 0.15844f);
     }
 
     std::vector<float> FFTWindows::BlackmanHarris(int ntaps, int atten) {
         switch (atten) {
             case (61):
-                return coswindow(ntaps, 0.42323, 0.49755, 0.07922);
+                return coswindow(ntaps, 0.42323f, 0.49755f, 0.07922f);
             case (67):
-                return coswindow(ntaps, 0.44959, 0.49364, 0.05677);
+                return coswindow(ntaps, 0.44959f, 0.49364f, 0.05677f);
             case (74):
-                return coswindow(ntaps, 0.40271, 0.49703, 0.09392, 0.00183);
+                return coswindow(ntaps, 0.40271f, 0.49703f, 0.09392f, 0.00183f);
             case (92):
-                return coswindow(ntaps, 0.35875, 0.48829, 0.14128, 0.01168);
+                return coswindow(ntaps, 0.35875f, 0.48829f, 0.14128f, 0.01168f);
             default:
                 throw SatHelperException("BlackmanHarris attenuation must be one of the following values: 61, 67, 74, or 92");
         }
