@@ -74,7 +74,7 @@
     <LibraryPath>.\winfec;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>.\includes;.\includes\exceptions;.\winfec;$(IncludePath)</IncludePath>
+    <IncludePath>.\includes\SatHelper;.\winfec;.\includes;$(IncludePath)</IncludePath>
     <LibraryPath>.\winfec;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -99,6 +99,7 @@
     </Link>
     <Link>
       <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
+      <AdditionalDependencies>libcorrect.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -128,19 +129,72 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="includes\correlator.h" />
-    <ClInclude Include="includes\exceptions\SatHelperException.h" />
     <ClInclude Include="includes\exceptions\ViterbiCreationException.h" />
     <ClInclude Include="includes\exceptions\WordSizeException.h" />
-    <ClInclude Include="includes\packetfixer.h" />
-    <ClInclude Include="includes\reedsolomon.h" />
-    <ClInclude Include="includes\sathelper.h" />
+    <ClInclude Include="includes\SatHelper\circularbuffer.h" />
+    <ClInclude Include="includes\SatHelper\configparser.h" />
+    <ClInclude Include="includes\SatHelper\correlator.h" />
+    <ClInclude Include="includes\SatHelper\derandomizer.h" />
+    <ClInclude Include="includes\SatHelper\differentialencoding.h" />
+    <ClInclude Include="includes\SatHelper\dsp\agc.h" />
+    <ClInclude Include="includes\SatHelper\dsp\clockrecovery.h" />
+    <ClInclude Include="includes\SatHelper\dsp\controlloop.h" />
+    <ClInclude Include="includes\SatHelper\dsp\costasloop.h" />
+    <ClInclude Include="includes\SatHelper\dsp\fftwindows.h" />
+    <ClInclude Include="includes\SatHelper\dsp\filters.h" />
+    <ClInclude Include="includes\SatHelper\dsp\firfilter.h" />
+    <ClInclude Include="includes\SatHelper\dsp\firinterpolator.h" />
+    <ClInclude Include="includes\SatHelper\dsp\firkernel.h" />
+    <ClInclude Include="includes\SatHelper\dsp\interpolator_taps.h" />
+    <ClInclude Include="includes\SatHelper\exceptions.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\ClientDisconnectedException.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\NotAllDataSentException.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\SatHelperException.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\SocketAcceptException.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\SocketBindException.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\SocketConnectException.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\SocketErrorException.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\SocketException.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\SocketNotReadyException.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\SocketWriteException.h" />
+    <ClInclude Include="includes\SatHelper\info.h" />
+    <ClInclude Include="includes\SatHelper\ipaddress.h" />
+    <ClInclude Include="includes\SatHelper\packetfixer.h" />
+    <ClInclude Include="includes\SatHelper\reedsolomon.h" />
+    <ClInclude Include="includes\SatHelper\sathelper.h" />
+    <ClInclude Include="includes\SatHelper\screenmanager.h" />
+    <ClInclude Include="includes\SatHelper\SIMD\MemoryOp.h" />
+    <ClInclude Include="includes\SatHelper\SIMD\Operations.h" />
+    <ClInclude Include="includes\SatHelper\SIMD\SIMD.h" />
+    <ClInclude Include="includes\SatHelper\socket.h" />
+    <ClInclude Include="includes\SatHelper\tcpclient.h" />
+    <ClInclude Include="includes\SatHelper\tcpserver.h" />
+    <ClInclude Include="includes\SatHelper\tcpsocket.h" />
+    <ClInclude Include="includes\SatHelper\tools.h" />
     <ClInclude Include="includes\viterbi27.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\configparser.cpp" />
     <ClCompile Include="src\correlator.cpp" />
+    <ClCompile Include="src\derandomizer.cpp" />
+    <ClCompile Include="src\differentialencoding.cpp" />
+    <ClCompile Include="src\dsp\clockrecovery.cpp" />
+    <ClCompile Include="src\dsp\controlloop.cpp" />
+    <ClCompile Include="src\dsp\costasloop.cpp" />
+    <ClCompile Include="src\dsp\fftwindows.cpp" />
+    <ClCompile Include="src\dsp\filters.cpp" />
+    <ClCompile Include="src\dsp\firfilter.cpp" />
+    <ClCompile Include="src\dsp\firinterpolator.cpp" />
+    <ClCompile Include="src\dsp\firkernel.cpp" />
+    <ClCompile Include="src\Info.cpp" />
     <ClCompile Include="src\packetfixer.cpp" />
     <ClCompile Include="src\reedsolomon.cpp" />
+    <ClCompile Include="src\screenmanager.cpp" />
+    <ClCompile Include="src\SIMD\MemoryOp.cpp" />
+    <ClCompile Include="src\SIMD\Operations.cpp" />
+    <ClCompile Include="src\socket.cpp" />
+    <ClCompile Include="src\tcpclient.cpp" />
+    <ClCompile Include="src\tcpserver.cpp" />
     <ClCompile Include="src\viterbi27.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
