@@ -21,6 +21,7 @@
 #include <SatHelper/derandomizer.h>
 #include <SatHelper/tools.h>
 #include <SatHelper/differentialencoding.h>
+#include <SatHelper/circularbuffer.h>
 
 #include <SatHelper/exceptions.h>
 
@@ -32,5 +33,6 @@
 #include <SatHelper/dsp/firkernel.h>
 #include <SatHelper/dsp/fftwindows.h>
 #include <SatHelper/dsp/firfilter.h>
+#include <SatHelper/info.h>
 
 #endif /* SATHELPER_INCLUDES_SATHELPER_H_ */
