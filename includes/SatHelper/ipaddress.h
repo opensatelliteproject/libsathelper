@@ -33,6 +33,10 @@ namespace SatHelper {
             uint32_t addr;
         } address_data;
     public:
+
+        static const IPAddress localhost;
+        static const IPAddress anyAddress;
+
         IPAddress() :
                 IPAddress(IP_ANY) {
         }

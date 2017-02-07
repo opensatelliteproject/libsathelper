@@ -10,6 +10,7 @@
 
 #include <atomic>
 #include <mutex>
+#include <SatHelper/exceptions.h>
 
 namespace SatHelper {
 
@@ -67,26 +68,21 @@ namespace SatHelper {
     template<class T>
     void CircularBuffer<T>::addSamples(const T *data, unsigned int length) {
       fifoMutex.lock();
-      bool trimmed = false;
-      if (length >= maxLength) {
-        overflow = true;
-        length = maxLength;
-        trimmed = true;
-      }
-
-      if (numItems + length == maxLength) {
-        curSample += length;
-        curSample %= maxLength;
-        numItems -= length;
-        overflow = true;
-      } else if (!trimmed) {
-        overflow = false;
-      }
+      length = length > maxLength ? maxLength : length;
 
       for (unsigned int i = 0; i < length; i++) {
         *getPositionPointer(curSample + numItems) = data[i];
         numItems++;
+        if (numItems > maxLength) {
+            curSample += 1;
+            curSample %= maxLength;
+            numItems = maxLength;
+            overflow = true;
+        } else {
+            overflow = false;
+        }
       }
+
       fifoMutex.unlock();
     }
 
@@ -112,13 +108,20 @@ namespace SatHelper {
     template<class T>
     T CircularBuffer<T>::takeSample() {
       T v;
+      bool found;
 
       fifoMutex.lock();
       if (numItems > 0) {
         v = unsafe_takeSample();
+        found = true;
+      } else {
+        found = false;
       }
       fifoMutex.unlock();
 
+      if (!found) {
+          throw SatHelperException("The buffer is empty.");
+      }
       return v;
     }
 

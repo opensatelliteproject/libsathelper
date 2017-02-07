@@ -18,6 +18,7 @@
 #include <SatHelper/tcpsocket.h>
 #include <SatHelper/tcpserver.h>
 #include <SatHelper/tcpclient.h>
+#include <SatHelper/udpsocket.h>
 #include <SatHelper/derandomizer.h>
 #include <SatHelper/tools.h>
 #include <SatHelper/differentialencoding.h>
