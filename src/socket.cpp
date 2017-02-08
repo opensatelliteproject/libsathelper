@@ -11,22 +11,23 @@
 #include <SatHelper/socket.h>
 
 #ifdef _WIN32
-    #include <windows.h>
-    #include <winsock2.h>
-    #include <Ws2tcpip.h>
-    #include <atomic>
-    #ifndef MSG_WAITALL
-        #define MSG_WAITALL (1 << 3)
-    #endif
+#	include <windows.h>
+#	include <winsock2.h>
+#	include <Ws2tcpip.h>
+#	include <atomic>
+#	pragma comment(lib, "ws2_32.lib")
+#	ifndef MSG_WAITALL
+#		define MSG_WAITALL (1 << 3)
+#	endif
 #else
-    #include <sys/socket.h>
-    #include <arpa/inet.h>
-    #include <sys/resource.h>
-    #include <sys/select.h>
-    #include <sys/ioctl.h>
-    #include <netdb.h>
-    #include <unistd.h>
-    #define ioctlsocket ioctl
+#	include <sys/socket.h>
+#	include <arpa/inet.h>
+#	include <sys/resource.h>
+#	include <sys/select.h>
+#	include <sys/ioctl.h>
+#	include <netdb.h>
+#	include <unistd.h>
+#	define ioctlsocket ioctl
 #endif
 #if defined(_WIN32) || defined(__APPLE__)
     #ifndef MSG_NOSIGNAL

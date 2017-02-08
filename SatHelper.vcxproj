@@ -25,30 +25,30 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140_xp</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140_xp</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -70,11 +70,19 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>.\includes;.\includes\exceptions;.\winfec;$(IncludePath)</IncludePath>
+    <IncludePath>.\includes\SatHelper;.\winfec;.\includes;$(IncludePath)</IncludePath>
     <LibraryPath>.\winfec;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>.\includes;.\includes\exceptions;.\winfec;$(IncludePath)</IncludePath>
+    <IncludePath>.\includes\SatHelper;.\winfec;.\includes;$(IncludePath)</IncludePath>
+    <LibraryPath>.\winfec;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>.\includes\SatHelper;.\winfec;.\includes;$(IncludePath)</IncludePath>
+    <LibraryPath>.\winfec;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>.\includes\SatHelper;.\winfec;.\includes;$(IncludePath)</IncludePath>
     <LibraryPath>.\winfec;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -85,7 +93,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>libfec.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -99,6 +107,7 @@
     </Link>
     <Link>
       <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
+      <AdditionalDependencies>libcorrect.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -125,22 +134,76 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);ws2_32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="includes\correlator.h" />
-    <ClInclude Include="includes\exceptions\SatHelperException.h" />
     <ClInclude Include="includes\exceptions\ViterbiCreationException.h" />
     <ClInclude Include="includes\exceptions\WordSizeException.h" />
-    <ClInclude Include="includes\packetfixer.h" />
-    <ClInclude Include="includes\reedsolomon.h" />
-    <ClInclude Include="includes\sathelper.h" />
+    <ClInclude Include="includes\SatHelper\circularbuffer.h" />
+    <ClInclude Include="includes\SatHelper\configparser.h" />
+    <ClInclude Include="includes\SatHelper\correlator.h" />
+    <ClInclude Include="includes\SatHelper\derandomizer.h" />
+    <ClInclude Include="includes\SatHelper\differentialencoding.h" />
+    <ClInclude Include="includes\SatHelper\dsp\agc.h" />
+    <ClInclude Include="includes\SatHelper\dsp\clockrecovery.h" />
+    <ClInclude Include="includes\SatHelper\dsp\controlloop.h" />
+    <ClInclude Include="includes\SatHelper\dsp\costasloop.h" />
+    <ClInclude Include="includes\SatHelper\dsp\fftwindows.h" />
+    <ClInclude Include="includes\SatHelper\dsp\filters.h" />
+    <ClInclude Include="includes\SatHelper\dsp\firfilter.h" />
+    <ClInclude Include="includes\SatHelper\dsp\firinterpolator.h" />
+    <ClInclude Include="includes\SatHelper\dsp\firkernel.h" />
+    <ClInclude Include="includes\SatHelper\dsp\interpolator_taps.h" />
+    <ClInclude Include="includes\SatHelper\exceptions.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\ClientDisconnectedException.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\NotAllDataSentException.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\SatHelperException.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\SocketAcceptException.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\SocketBindException.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\SocketConnectException.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\SocketErrorException.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\SocketException.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\SocketNotReadyException.h" />
+    <ClInclude Include="includes\SatHelper\exceptions\SocketWriteException.h" />
+    <ClInclude Include="includes\SatHelper\info.h" />
+    <ClInclude Include="includes\SatHelper\ipaddress.h" />
+    <ClInclude Include="includes\SatHelper\packetfixer.h" />
+    <ClInclude Include="includes\SatHelper\reedsolomon.h" />
+    <ClInclude Include="includes\SatHelper\sathelper.h" />
+    <ClInclude Include="includes\SatHelper\screenmanager.h" />
+    <ClInclude Include="includes\SatHelper\SIMD\MemoryOp.h" />
+    <ClInclude Include="includes\SatHelper\SIMD\Operations.h" />
+    <ClInclude Include="includes\SatHelper\SIMD\SIMD.h" />
+    <ClInclude Include="includes\SatHelper\socket.h" />
+    <ClInclude Include="includes\SatHelper\tcpclient.h" />
+    <ClInclude Include="includes\SatHelper\tcpserver.h" />
+    <ClInclude Include="includes\SatHelper\tcpsocket.h" />
+    <ClInclude Include="includes\SatHelper\tools.h" />
     <ClInclude Include="includes\viterbi27.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\configparser.cpp" />
     <ClCompile Include="src\correlator.cpp" />
+    <ClCompile Include="src\derandomizer.cpp" />
+    <ClCompile Include="src\differentialencoding.cpp" />
+    <ClCompile Include="src\dsp\clockrecovery.cpp" />
+    <ClCompile Include="src\dsp\controlloop.cpp" />
+    <ClCompile Include="src\dsp\costasloop.cpp" />
+    <ClCompile Include="src\dsp\fftwindows.cpp" />
+    <ClCompile Include="src\dsp\filters.cpp" />
+    <ClCompile Include="src\dsp\firfilter.cpp" />
+    <ClCompile Include="src\dsp\firinterpolator.cpp" />
+    <ClCompile Include="src\dsp\firkernel.cpp" />
+    <ClCompile Include="src\Info.cpp" />
     <ClCompile Include="src\packetfixer.cpp" />
     <ClCompile Include="src\reedsolomon.cpp" />
+    <ClCompile Include="src\screenmanager.cpp" />
+    <ClCompile Include="src\SIMD\MemoryOp.cpp" />
+    <ClCompile Include="src\SIMD\Operations.cpp" />
+    <ClCompile Include="src\socket.cpp" />
+    <ClCompile Include="src\tcpclient.cpp" />
+    <ClCompile Include="src\tcpserver.cpp" />
     <ClCompile Include="src\viterbi27.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

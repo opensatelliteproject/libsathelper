@@ -16,31 +16,148 @@
     <Filter Include="Header Files\exceptions">
       <UniqueIdentifier>{2058791a-301d-41c1-8558-792b3bd704e6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\SIMD">
+      <UniqueIdentifier>{13fb1e4d-9ff1-4dc9-b2dd-3abfcb92c355}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dsp">
+      <UniqueIdentifier>{209dfbbb-5661-45e2-89c7-c77b739a1e1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SIMD">
+      <UniqueIdentifier>{d511e4f5-8216-4081-94a8-111a23a86b0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dsp">
+      <UniqueIdentifier>{34cdec32-01cf-4f37-905f-21645468c17a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="includes\correlator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\packetfixer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\reedsolomon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\sathelper.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="includes\viterbi27.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\exceptions\SatHelperException.h">
-      <Filter>Header Files\exceptions</Filter>
     </ClInclude>
     <ClInclude Include="includes\exceptions\ViterbiCreationException.h">
       <Filter>Header Files\exceptions</Filter>
     </ClInclude>
     <ClInclude Include="includes\exceptions\WordSizeException.h">
       <Filter>Header Files\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\circularbuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\configparser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\correlator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\derandomizer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\differentialencoding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\exceptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\ipaddress.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\packetfixer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\reedsolomon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\sathelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\screenmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\socket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\tcpclient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\tcpserver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\tcpsocket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\tools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\exceptions\ClientDisconnectedException.h">
+      <Filter>Header Files\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\exceptions\NotAllDataSentException.h">
+      <Filter>Header Files\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\exceptions\SatHelperException.h">
+      <Filter>Header Files\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\exceptions\SocketAcceptException.h">
+      <Filter>Header Files\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\exceptions\SocketBindException.h">
+      <Filter>Header Files\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\exceptions\SocketConnectException.h">
+      <Filter>Header Files\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\exceptions\SocketErrorException.h">
+      <Filter>Header Files\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\exceptions\SocketException.h">
+      <Filter>Header Files\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\exceptions\SocketNotReadyException.h">
+      <Filter>Header Files\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\exceptions\SocketWriteException.h">
+      <Filter>Header Files\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\SIMD\MemoryOp.h">
+      <Filter>Header Files\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\SIMD\Operations.h">
+      <Filter>Header Files\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\SIMD\SIMD.h">
+      <Filter>Header Files\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\dsp\agc.h">
+      <Filter>Header Files\dsp</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\dsp\clockrecovery.h">
+      <Filter>Header Files\dsp</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\dsp\controlloop.h">
+      <Filter>Header Files\dsp</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\dsp\costasloop.h">
+      <Filter>Header Files\dsp</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\dsp\fftwindows.h">
+      <Filter>Header Files\dsp</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\dsp\filters.h">
+      <Filter>Header Files\dsp</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\dsp\firfilter.h">
+      <Filter>Header Files\dsp</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\dsp\firinterpolator.h">
+      <Filter>Header Files\dsp</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\dsp\firkernel.h">
+      <Filter>Header Files\dsp</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\dsp\interpolator_taps.h">
+      <Filter>Header Files\dsp</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +171,60 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\viterbi27.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SIMD\MemoryOp.cpp">
+      <Filter>Source Files\SIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SIMD\Operations.cpp">
+      <Filter>Source Files\SIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dsp\clockrecovery.cpp">
+      <Filter>Source Files\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dsp\controlloop.cpp">
+      <Filter>Source Files\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dsp\costasloop.cpp">
+      <Filter>Source Files\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dsp\fftwindows.cpp">
+      <Filter>Source Files\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dsp\filters.cpp">
+      <Filter>Source Files\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dsp\firfilter.cpp">
+      <Filter>Source Files\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dsp\firinterpolator.cpp">
+      <Filter>Source Files\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dsp\firkernel.cpp">
+      <Filter>Source Files\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\configparser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\derandomizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\differentialencoding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\screenmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\socket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tcpclient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tcpserver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

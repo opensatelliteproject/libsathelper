@@ -42,6 +42,10 @@ namespace SatHelper {
     }
 
     void TcpClient::Close() {
+#ifdef _MSC_VER
+		_close(s);
+#else
         close(s);
+#endif
     }
 } /* namespace SatHelper */
