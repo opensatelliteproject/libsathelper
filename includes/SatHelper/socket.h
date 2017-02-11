@@ -39,7 +39,6 @@ namespace SatHelper {
         #endif
     protected:
         IPAddress address;
-        fd_set writeFd;
         struct sockaddr_in socketAddr;
         int s;
 

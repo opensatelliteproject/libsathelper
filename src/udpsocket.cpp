@@ -39,9 +39,7 @@ void UdpSocket::Bind(int port) {
     if (x < 0) {
         throw SocketBindException(errno, port, address);
     }
-
-    FD_SET(s, &writeFd);
-
+    
     this->port = port;
 }
 

@@ -15,7 +15,9 @@
 #	include <winsock2.h>
 #	include <Ws2tcpip.h>
 #	include <atomic>
-#	pragma comment(lib, "ws2_32.lib")
+#   ifdef _MSC_VER
+#	  pragma comment(lib, "ws2_32.lib")
+#   endif
 #	ifndef MSG_WAITALL
 #		define MSG_WAITALL (1 << 3)
 #	endif
@@ -86,21 +88,13 @@ void Socket::SendTo(char * data, int length, IPAddress destinationAddress, int d
     targetSocketAddr.sin_family = AF_INET;
     targetSocketAddr.sin_addr = destinationAddress.ToInAddr();
     targetSocketAddr.sin_port = htons(destinationPort);
-    if (select(s + 1, NULL, &writeFd, NULL, NULL) < 0) {
+    int n = sendto(s, data, length, 0, (struct sockaddr*) &targetSocketAddr, sizeof(targetSocketAddr));
+    if (n == 0) {
+        throw ClientDisconnectedException();
+    } else if (n < 0) {
         throw SocketWriteException(errno);
-    }
-
-    if (FD_ISSET(s, &writeFd)) {
-        int n = sendto(s, data, length, 0, (struct sockaddr*) &targetSocketAddr, sizeof(targetSocketAddr));
-        if (n == 0) {
-            throw ClientDisconnectedException();
-        } else if (n < 0) {
-            throw SocketWriteException(errno);
-        } else if (n != length) {
-            throw NotAllDataSentException(errno);
-        }
-    } else {
-        throw SocketNotReadyException();
+    } else if (n != length) {
+        throw NotAllDataSentException(errno);
     }
 }
 

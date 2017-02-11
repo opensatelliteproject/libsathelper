@@ -30,8 +30,8 @@ add_definitions(-DMAINT_VERSION=${VERSION_INFO_MAINT_VERSION})
 add_definitions(-DGIT_SHA1=${GIT_SHA1})
 
 # Flags
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -mstackrealign -O3")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -mstackrealign -O3")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -mstackrealign -O3 -msse -msse4")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -mstackrealign -O3 -msse -msse4")
 set(CMAKE_MACOSX_RPATH 1)
 
 # Includes
