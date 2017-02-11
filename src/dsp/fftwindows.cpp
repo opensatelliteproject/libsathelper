@@ -7,7 +7,9 @@
  *      https://github.com/gnuradio/gnuradio/blob/master/gr-fft/include/gnuradio/fft/window.h
  */
 
+#ifndef _USE_MATH_DEFINES
 #define _USE_MATH_DEFINES
+#endif
 #include <cmath>
 #include <dsp/fftwindows.h>
 #include <exceptions/SatHelperException.h>
@@ -19,7 +21,7 @@ namespace SatHelper {
         float M = static_cast<float>(ntaps - 1);
 
         for (int n = 0; n < ntaps; n++) {
-            taps[n] = c0 - c1 * cosf((2.0f * M_PI * n) / M) + c2 * cosf((4.0f * M_PI * n) / M);
+            taps[n] = c0 - c1 * cosf((float) ((2.0f * M_PI * n) / M)) + c2 * cosf((float)((4.0f * M_PI * n) / M));
         }
         return taps;
     }
@@ -29,7 +31,7 @@ namespace SatHelper {
         float M = static_cast<float>(ntaps - 1);
 
         for (int n = 0; n < ntaps; n++) {
-            taps[n] = c0 - c1 * cosf((2.0f * M_PI * n) / M) + c2 * cosf((4.0f * M_PI * n) / M) - c3 * cosf((6.0f * M_PI * n) / M);
+            taps[n] = c0 - c1 * cosf((float)((2.0f * M_PI * n) / M)) + c2 * cosf((float)((4.0f * M_PI * n) / M)) - c3 * cosf((float)((6.0f * M_PI * n) / M));
         }
         return taps;
     }
@@ -39,8 +41,8 @@ namespace SatHelper {
         float M = static_cast<float>(ntaps - 1);
 
         for (int n = 0; n < ntaps; n++) {
-            taps[n] = c0 - c1 * cosf((2.0f * M_PI * n) / M) + c2 * cosf((4.0f * M_PI * n) / M) - c3 * cosf((6.0f * M_PI * n) / M)
-                    + c4 * cosf((8.0f * M_PI * n) / M);
+            taps[n] = c0 - c1 * cosf((float)((2.0f * M_PI * n) / M)) + c2 * cosf((float)((4.0f * M_PI * n) / M)) - c3 * cosf((float)((6.0f * M_PI * n) / M))
+                    + c4 * cosf((float)((8.0f * M_PI * n) / M));
         }
         return taps;
     }
@@ -76,7 +78,7 @@ namespace SatHelper {
         float M = static_cast<float>(ntaps - 1);
 
         for (int n = 0; n < ntaps; n++) {
-            taps[n] = 0.54 - 0.46 * cos((2 * M_PI * n) / M);
+            taps[n] = (float) (0.54 - 0.46 * cos((2 * M_PI * n) / M));
         }
         return taps;
     }
@@ -86,7 +88,7 @@ namespace SatHelper {
         float M = static_cast<float>(ntaps - 1);
 
         for (int n = 0; n < ntaps; n++) {
-            taps[n] = 0.5 - 0.5 * cos((2 * M_PI * n) / M);
+            taps[n] = (float) (0.5 - 0.5 * cos((2 * M_PI * n) / M));
         }
         return taps;
     }
@@ -112,7 +114,7 @@ namespace SatHelper {
 
     std::vector<float> FFTWindows::FlatTop(int ntaps) {
         double scale = 4.63867;
-        return coswindow(ntaps, 1.0 / scale, 1.93 / scale, 1.29 / scale, 0.388 / scale, 0.028 / scale);
+        return coswindow(ntaps, (float) (1.0 / scale), (float) (1.93 / scale), (float) (1.29 / scale), (float) (0.388 / scale), (float) (0.028 / scale));
     }
 
     std::vector<float> FFTWindows::Kaiser(int ntaps, double beta) {
@@ -128,7 +130,7 @@ namespace SatHelper {
 
         for (int i = 0; i < ntaps; i++) {
             temp = 2 * i * inm1 - 1;
-            taps[i] = Izero(beta * sqrt(1.0 - temp * temp)) * IBeta;
+            taps[i] = (float) (Izero(beta * sqrt(1.0 - temp * temp)) * IBeta);
         }
         return taps;
     }

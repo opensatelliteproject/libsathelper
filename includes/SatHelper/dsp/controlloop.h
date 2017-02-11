@@ -9,7 +9,9 @@
 #ifndef INCLUDES_DSP_CONTROLLOOP_H_
 #define INCLUDES_DSP_CONTROLLOOP_H_
 
+#ifndef _USE_MATH_DEFINES
 #define _USE_MATH_DEFINES
+#endif
 #include <cmath>
 #define M_TWOPI (2.0f*M_PI)
 
@@ -86,10 +88,10 @@ namespace SatHelper {
 
         inline void PhaseWrap() {
             while (phase > M_TWOPI) {
-                phase -= M_TWOPI;
+                phase -= (float)M_TWOPI;
             }
             while (phase < -M_TWOPI) {
-                phase += M_TWOPI;
+                phase += (float)M_TWOPI;
             }
         }
     };

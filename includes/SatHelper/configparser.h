@@ -42,7 +42,7 @@ namespace SatHelper {
         }
 
         inline float getFloat(const std::string &key) {
-            return std::atof(parameters[key].c_str());
+            return (float)std::atof(parameters[key].c_str());
         }
 
         inline int getInt(const std::string &key) {

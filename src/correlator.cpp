@@ -72,10 +72,17 @@ void Correlator::updatePointers() {
     for (unsigned int i=0; i<words.size(); i++) {
         wordsPtr[i] = &words[i][0];
     }
-
-    tmpCorrelationPtr = &tmpCorrelation[0];
-    correlationPtr = &correlation[0];
-    positionPtr = &position[0];
+	
+	if (tmpCorrelation.size() > 0) {
+	    tmpCorrelationPtr = &tmpCorrelation[0];
+	}
+	
+	if (correlation.size() > 0) {
+		correlationPtr = &correlation[0];
+	}
+	if (position.size() > 0) {
+		positionPtr = &position[0];
+	}
 }
 
 #ifndef USE_UNROLLING

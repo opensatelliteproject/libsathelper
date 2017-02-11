@@ -47,7 +47,7 @@ namespace SatHelper {
             float x1 = fabsf(v + max);
             float x2 = fabsf(v - max);
             x1 -= x2;
-            return 0.5 * x1;
+            return 0.5f * x1;
         }
     };
 }
