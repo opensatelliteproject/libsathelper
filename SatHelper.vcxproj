@@ -209,6 +209,7 @@
     <ClCompile Include="src\dsp\firinterpolator.cpp" />
     <ClCompile Include="src\dsp\firkernel.cpp" />
     <ClCompile Include="src\Info.cpp" />
+    <ClCompile Include="src\ipaddress.cpp" />
     <ClCompile Include="src\packetfixer.cpp" />
     <ClCompile Include="src\reedsolomon.cpp" />
     <ClCompile Include="src\screenmanager.cpp" />

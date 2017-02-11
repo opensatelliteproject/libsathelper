@@ -8,6 +8,8 @@
 #ifndef INCLUDES_SOCKET_H_
 #define INCLUDES_SOCKET_H_
 
+#include <chrono>
+#include <thread>
 #include <cstdint>
 #include <stdint.h>
 #include <memory.h>
@@ -87,20 +89,6 @@ namespace SatHelper {
         void SendTo(char *data, int length, IPAddress destinationAddress, int destinationPort);
         int ReceiveFrom(char *data, int length, IPAddress fromAddress, int fromPort);
         uint64_t AvailableData();
-
-#ifdef _MSC_VER
-		inline void usleep(DWORD waitTime) {
-			LARGE_INTEGER perfCnt, start, now;
-
-			QueryPerformanceFrequency(&perfCnt);
-			QueryPerformanceCounter(&start);
-
-			do {
-				QueryPerformanceCounter((LARGE_INTEGER*) &now);
-			} while ((now.QuadPart - start.QuadPart) / float(perfCnt.QuadPart) * 1000 * 1000 < waitTime);
-		}
-#endif
-
         inline const IPAddress GetAddress() const {
             return address;
         }
@@ -111,7 +99,8 @@ namespace SatHelper {
                 if (Tools::getTimestamp() - checkTime > timeout) {
                     return;
                 }
-                usleep(10);
+
+                std::this_thread::sleep_for(std::chrono::microseconds(10));
             }
         }
 
