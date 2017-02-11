@@ -47,7 +47,7 @@ namespace SatHelper {
     }
 
     std::complex<float> ClockRecovery::slicer(std::complex<float> sample) {
-        return std::complex<float>(sample.real() > 0 ? 1 : 0, sample.imag() > 0 ? 1 : 0);
+        return std::complex<float>(sample.real() > 0 ? 1.f : 0.f, sample.imag() > 0 ? 1.f : 0.f);
     }
 
     int ClockRecovery::InternalWork(std::complex<float> *rInput, std::complex<float> *output, int inputLen, int outputLen) {

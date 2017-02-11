@@ -44,7 +44,7 @@ namespace SatHelper {
     }
 
     float CostasLoop::PhaseDetector4(std::complex<float> sample) const {
-        return ((sample.real() > 0 ? 1.0 : -1.0) * sample.imag() - (sample.imag() > 0 ? 1.0 : -1.0) * sample.real());
+        return ((sample.real() > 0 ? 1.0f : -1.0f) * sample.imag() - (sample.imag() > 0 ? 1.0f : -1.0f) * sample.real());
     }
 
     /*
@@ -60,11 +60,11 @@ namespace SatHelper {
      * Circuits and Systems, Vol. 2, pp. 1447 - 1450, 2004.
      */
     float CostasLoop::PhaseDetector8(std::complex<float> sample) const {
-        float K = (sqrt(2.0) - 1);
+        float K = (float)(sqrt(2.0) - 1);
         if (fabsf(sample.real()) >= fabsf(sample.imag())) {
-            return ((sample.real() > 0 ? 1.0 : -1.0) * sample.imag() - (sample.imag() > 0 ? 1.0 : -1.0) * sample.real() * K);
+            return ((sample.real() > 0 ? 1.0f : -1.0f) * sample.imag() - (sample.imag() > 0 ? 1.0f : -1.0f) * sample.real() * K);
         } else {
-            return ((sample.real() > 0 ? 1.0 : -1.0) * sample.imag() * K - (sample.imag() > 0 ? 1.0 : -1.0) * sample.real());
+            return ((sample.real() > 0 ? 1.0f : -1.0f) * sample.imag() * K - (sample.imag() > 0 ? 1.0f : -1.0f) * sample.real());
         }
     }
 

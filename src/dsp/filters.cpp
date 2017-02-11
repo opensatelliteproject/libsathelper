@@ -7,7 +7,9 @@
  *      https://github.com/gnuradio/gnuradio/blob/master/gr-filter/lib/firdes.cc
  */
 
+#ifndef _USE_MATH_DEFINES
 #define _USE_MATH_DEFINES
+#endif
 #include <dsp/filters.h>
 #include <exceptions/SatHelperException.h>
 #include <cmath>
@@ -89,12 +91,12 @@ namespace SatHelper {
                         + sin(x3) * spb * spb / (4 * alpha * xindx * xindx));
                 den = -32 * M_PI * alpha * alpha * xindx / spb;
             }
-            taps[i] = 4 * alpha * num / den;
+            taps[i] = (float) (4 * alpha * num / den);
             scale += taps[i];
         }
 
         for (int i = 0; i < ntaps; i++) {
-            taps[i] = taps[i] * gain / scale;
+            taps[i] = (float) (taps[i] * gain / scale);
             if (taps[i] > 1) {
                 taps[i] = 1;
             }
@@ -108,16 +110,16 @@ namespace SatHelper {
         int ntaps = computeNTaps(sampling_freq, transition_width, window_type, beta);
 
         std::vector<float> taps(ntaps);
-        std::vector<float> w = FFTWindows::MakeWindow(window_type, ntaps, beta);
+        std::vector<float> w = FFTWindows::MakeWindow(window_type, ntaps, (float) beta);
 
         int M = (ntaps - 1) / 2;
         double fwT0 = 2 * M_PI * cutoff_freq / sampling_freq;
 
         for (int n = -M; n <= M; n++) {
             if (n == 0) {
-                taps[n + M] = fwT0 / M_PI * w[n + M];
+                taps[n + M] = (float) (fwT0 / M_PI * w[n + M]);
             } else {
-                taps[n + M] = sin(n * fwT0) / (n * M_PI) * w[n + M];
+                taps[n + M] = (float) (sin(n * fwT0) / (n * M_PI) * w[n + M]);
             }
         }
 
@@ -129,7 +131,7 @@ namespace SatHelper {
         gain /= fmax;
 
         for (int i = 0; i < ntaps; i++) {
-            taps[i] *= gain;
+            taps[i] = (float) (taps[i] * gain);
         }
 
         return taps;

@@ -24,7 +24,7 @@ public:
 
     virtual const char* what() const throw () { return msg_.c_str(); }
 
-    virtual const std::string message() { return msg_; }
+    virtual const std::string reason() { return msg_; }
 
 protected:
     /** Error message.

@@ -9,7 +9,9 @@
 #ifndef INCLUDES_DSP_COSTASLOOP_H_
 #define INCLUDES_DSP_COSTASLOOP_H_
 
+#ifndef _USE_MATH_DEFINES
 #define _USE_MATH_DEFINES
+#endif
 #include <complex>
 #include <SatHelper/dsp/controlloop.h>
 

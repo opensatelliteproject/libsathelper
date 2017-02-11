@@ -25,7 +25,7 @@ namespace SatHelper {
     }
 
     void ControlLoop::UpdateGains() {
-        float denom = (1.0 + 2.0 * dampingFactor * loopBandwidth + loopBandwidth * loopBandwidth);
+        float denom = (1.0f + 2.0f * dampingFactor * loopBandwidth + loopBandwidth * loopBandwidth);
         alpha = (4 * dampingFactor * loopBandwidth) / denom;
         beta = (4 * loopBandwidth * loopBandwidth) / denom;
     }
