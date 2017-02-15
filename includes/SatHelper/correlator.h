@@ -51,6 +51,7 @@ namespace SatHelper {
         }
 
         Correlator();
+        ~Correlator();
 
         inline uint32_t getHighestCorrelation() {
             return correlation[wordNumber];
