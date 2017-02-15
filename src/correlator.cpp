@@ -21,6 +21,12 @@ Correlator::Correlator() {
     updatePointers();
 }
 
+Correlator::~Correlator() {
+    if (wordsPtr != NULL) {
+        delete[] wordsPtr;
+    }
+}
+
 void Correlator::addWord(uint32_t word) {
     if (currentWordSize != 0 && currentWordSize != 32) {
         throw WordSizeException(32, currentWordSize);
@@ -57,32 +63,36 @@ void Correlator::addWord(uint64_t word) {
 
 void Correlator::resetCorrelation() {
     int numWords = words.size();
-    memset(correlationPtr, 0x00, numWords * sizeof(uint32_t));
-    memset(positionPtr, 0x00, numWords * sizeof(uint32_t));
-    memset(tmpCorrelationPtr, 0x00, numWords * sizeof(uint32_t));
+    if (words.size() > 0) {
+        memset(correlationPtr, 0x00, numWords * sizeof(uint32_t));
+        memset(positionPtr, 0x00, numWords * sizeof(uint32_t));
+        memset(tmpCorrelationPtr, 0x00, numWords * sizeof(uint32_t));
+    }
 }
 
 void Correlator::updatePointers() {
     // Cache Start of the array, so the loop doesn't call vector[]
     if (wordsPtr != NULL) {
-        delete wordsPtr;
+        delete[] wordsPtr;
     }
 
-    wordsPtr = new uint8_t* [words.size()];
-    for (unsigned int i=0; i<words.size(); i++) {
-        wordsPtr[i] = &words[i][0];
+    if (words.size() > 0) {
+        wordsPtr = new uint8_t*[words.size()];
+        for (unsigned int i = 0; i < words.size(); i++) {
+            wordsPtr[i] = &words[i][0];
+        }
+
+        if (tmpCorrelation.size() > 0) {
+            tmpCorrelationPtr = &tmpCorrelation[0];
+        }
+
+        if (correlation.size() > 0) {
+            correlationPtr = &correlation[0];
+        }
+        if (position.size() > 0) {
+            positionPtr = &position[0];
+        }
     }
-	
-	if (tmpCorrelation.size() > 0) {
-	    tmpCorrelationPtr = &tmpCorrelation[0];
-	}
-	
-	if (correlation.size() > 0) {
-		correlationPtr = &correlation[0];
-	}
-	if (position.size() > 0) {
-		positionPtr = &position[0];
-	}
 }
 
 #ifndef USE_UNROLLING
@@ -201,28 +211,28 @@ void Correlator::correlate(uint8_t *data, uint32_t length) {
                 switch (numWords % 8) {
                     case 0:
                         do {
-                                tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
+                            tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
                             c++;
                             case 7:
-                                tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
+                            tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
                             c++;
                             case 6:
-                                tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
+                            tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
                             c++;
                             case 5:
-                                tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
+                            tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
                             c++;
                             case 4:
-                                tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
+                            tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
                             c++;
                             case 3:
-                                tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
+                            tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
                             c++;
                             case 2:
-                                tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
+                            tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
                             c++;
                             case 1:
-                                tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
+                            tmpCorrelationPtr[c] += (uint32_t) Correlator::hardCorrelate(data[i + k], wordsPtr[c][k]);
                             c++;
                         } while (--n > 0);
                 }
