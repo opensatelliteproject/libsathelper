@@ -63,6 +63,24 @@ namespace SatHelper {
             overflow = false;
             return v;
         }
+
+        inline void unsafe_addSample(T data) {
+          if (numItems + 1 == maxLength) {
+            curSample++;
+            curSample %= maxLength;
+            numItems--;
+            overflow = true;
+          } else {
+            overflow = false;
+          }
+
+          *getPositionPointer(curSample + numItems) = data;
+          numItems++;
+        }
+
+        inline unsigned int unsafe_size() {
+            return numItems;
+        }
     };
 
     template<class T>
@@ -89,19 +107,7 @@ namespace SatHelper {
     template<class T>
     void CircularBuffer<T>::addSample(T data) {
       fifoMutex.lock();
-
-      if (numItems + 1 == maxLength) {
-        curSample++;
-        curSample %= maxLength;
-        numItems--;
-        overflow = true;
-      } else {
-        overflow = false;
-      }
-
-      *getPositionPointer(curSample + numItems) = data;
-      numItems++;
-
+      unsafe_addSample(data);
       fifoMutex.unlock();
     }
 
@@ -130,7 +136,7 @@ namespace SatHelper {
       unsigned int size;
 
       fifoMutex.lock();
-      size = numItems;
+      size = unsafe_size();
       fifoMutex.unlock();
 
       return size;
@@ -141,7 +147,7 @@ namespace SatHelper {
       bool ret;
 
       fifoMutex.lock();
-      ret = numItems > 0;
+      ret = unsafe_size() > 0;
       fifoMutex.unlock();
 
       return ret;
