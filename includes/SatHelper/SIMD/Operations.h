@@ -16,7 +16,9 @@
 #include <immintrin.h>
 #endif
 #elif defined(__arm__) || defined(_M_ARM) || defined(__aarch64__)
-#define MEMORY_OP_ARM
+// For now we don't have ARM Vec instructions, so lets fall back to generic
+// #define MEMORY_OP_ARM
+#define MEMORY_OP_GENERIC
 #else
 #define MEMORY_OP_GENERIC
 #endif
