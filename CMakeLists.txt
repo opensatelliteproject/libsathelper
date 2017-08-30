@@ -44,8 +44,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -O3")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -O3")
 
 if(${ARCHITECTURE} STREQUAL "x86" OR ${ARCHITECTURE} STREQUAL "x86_64")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -msse -msse4 -mstackrealign")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -msse -msse4 -mstackrealign")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -msse -msse3 -mstackrealign")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -msse -msse3 -mstackrealign")
 endif()
 
 set(CMAKE_MACOSX_RPATH 1)
@@ -89,9 +89,10 @@ install(FILES ${HEADERS_SIMD} DESTINATION include/${PROJECT_NAME}/SIMD)
 install(FILES ${HEADERS_EXCEPTIONS} DESTINATION include/${PROJECT_NAME}/exceptions)
 
 add_subdirectory(tests)
+add_subdirectory(tests/Benchmark)
 enable_testing()
 
-SET(AVAILABLE_TESTS "DifferentialEncodingTest;CorrelationTest;DerandomizerTest;PacketFixerTest;ReedSolomonTest;SIMDTest;ViterbiTest")
+SET(AVAILABLE_TESTS "DifferentialEncodingTest;CorrelationTest;DerandomizerTest;PacketFixerTest;ReedSolomonTest;SIMDTest;ViterbiTest;BenchMark_FIRTest")
 
 foreach(TEST_NAME ${AVAILABLE_TESTS})
   add_test (NAME ${TEST_NAME} COMMAND ${TEST_NAME})
