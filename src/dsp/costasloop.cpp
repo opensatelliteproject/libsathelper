@@ -90,4 +90,9 @@ namespace SatHelper {
         this->Work(input, output, NULL, length);
     }
 
+    void CostasLoop::Reset() {
+        ControlLoop::Reset();
+        error = 0;
+    }
+
 } /* namespace SatHelper */

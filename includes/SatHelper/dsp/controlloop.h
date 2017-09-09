@@ -32,6 +32,7 @@ namespace SatHelper {
         void SetAlpha(float alpha);
         void SetBeta(float beta);
         void SetFrequency(float freq);
+        void Reset();
 
         inline void SetPhase(float phase) {
             this->phase = phase;

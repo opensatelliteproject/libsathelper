@@ -21,7 +21,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")
 
 # Test
-SET(AVAILABLE_TESTS "BenchMark_FIRTest;BenchMark_CorrelationTest")
+SET(AVAILABLE_TESTS "BenchMark_FIRTest;BenchMark_CorrelationTest;BenchMark_CostasLoopTest")
 
 foreach(TEST_BENCH_NAME ${AVAILABLE_TESTS})
   string(REPLACE "BenchMark_" "" TEST_NAME ${TEST_BENCH_NAME})

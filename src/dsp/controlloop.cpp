@@ -24,6 +24,13 @@ namespace SatHelper {
 
     }
 
+    void ControlLoop::Reset() {
+        phase = 0;
+        freq = 0;
+        dampingFactor = sqrt(2.0f) / 2.0f;
+        SetLoopBandwidth(loopBandwidth);
+    }
+
     void ControlLoop::UpdateGains() {
         float denom = (1.0f + 2.0f * dampingFactor * loopBandwidth + loopBandwidth * loopBandwidth);
         alpha = (4 * dampingFactor * loopBandwidth) / denom;

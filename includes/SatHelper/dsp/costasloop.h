@@ -43,6 +43,8 @@ namespace SatHelper {
             return freq / ( 2 * 3.141592653589793 );
         }
 
+        void Reset();
+
         void Work(std::complex<float> *input, std::complex<float> *output, int length);
         void Work(std::complex<float> *input, std::complex<float> *output, float *frequencyDeviation, int length);
     };

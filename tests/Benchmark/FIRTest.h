@@ -5,8 +5,8 @@
  *      Author: Lucas Teske
  */
 
-#ifndef TESTS_VITERBITEST_H_
-#define TESTS_VITERBITEST_H_
+#ifndef TESTS_FIRTEST_H_
+#define TESTS_FIRTEST_H_
 
 #include "BaseBenchmark.h"
 
@@ -20,4 +20,4 @@ namespace SatHelper {
 
 } /* namespace SatHelper */
 
-#endif /* TESTS_VITERBITEST_H_ */
+#endif /* TESTS_FIRTEST_H_ */

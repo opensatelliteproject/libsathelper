@@ -57,7 +57,7 @@ namespace SatHelper {
         float minimumValue = 100;
         float averageValue = 0;
         for (int i=0; i<TESTSIZE; i++) {
-            float freqHz = frequencyDeviation[i] / ( 2 * 3.141592653589793 );
+            float freqHz = frequencyDeviation[i] / ( 2 * 3.141592653589793f );
             averageValue += freqHz;
             highestValue = max(highestValue, freqHz);
             minimumValue = min(minimumValue, freqHz);
@@ -70,7 +70,7 @@ namespace SatHelper {
         cout << "    | Average Deviation: " << averageValue << endl;
 
         if (abs(averageValue) > TEST_AVERAGE) {
-            cerr << "    | Average Value > 0.0004f" << endl;
+            cerr << "    | Average Value > " << TEST_AVERAGE << endl;
             return false;
         }
 
