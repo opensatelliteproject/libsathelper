@@ -19,6 +19,16 @@ endmacro(use_cxx11)
 
 use_cxx11()
 
+include(CheckCompilerFlags)
+
+if(CMAKE_COMPILER_IS_GNUCXX)
+    ADD_CXX_COMPILER_FLAG_IF_AVAILABLE(-Wsign-compare HAVE_WARN_SIGN_COMPARE)
+    ADD_CXX_COMPILER_FLAG_IF_AVAILABLE(-Wall HAVE_WARN_ALL)
+    ADD_CXX_COMPILER_FLAG_IF_AVAILABLE(-Wno-uninitialized HAVE_WARN_NO_UNINITIALIZED)
+    ADD_CXX_COMPILER_FLAG_IF_AVAILABLE(-O3 HAVE_WARN_NO_UNINITIALIZED)
+    ADD_CXX_COMPILER_FLAG_IF_AVAILABLE(-mfma HAVE_FMA)
+endif(CMAKE_COMPILER_IS_GNUCXX)
+
 # Version
 set(VERSION_INFO_MAJOR_VERSION 1)
 set(VERSION_INFO_MINOR_VERSION 0)
@@ -40,7 +50,6 @@ message( STATUS "Architecture: ${ARCHITECTURE}" )
 
 
 # Flags
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -O3")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -O3")
 
 if(${ARCHITECTURE} STREQUAL "x86" OR ${ARCHITECTURE} STREQUAL "x86_64")
@@ -89,9 +98,10 @@ install(FILES ${HEADERS_SIMD} DESTINATION include/${PROJECT_NAME}/SIMD)
 install(FILES ${HEADERS_EXCEPTIONS} DESTINATION include/${PROJECT_NAME}/exceptions)
 
 add_subdirectory(tests)
+add_subdirectory(tests/Benchmark)
 enable_testing()
 
-SET(AVAILABLE_TESTS "DifferentialEncodingTest;CorrelationTest;DerandomizerTest;PacketFixerTest;ReedSolomonTest;SIMDTest;ViterbiTest")
+SET(AVAILABLE_TESTS "DifferentialEncodingTest;CorrelationTest;DerandomizerTest;PacketFixerTest;ReedSolomonTest;SIMDTest;ViterbiTest;BenchMark_FIRTest")
 
 foreach(TEST_NAME ${AVAILABLE_TESTS})
   add_test (NAME ${TEST_NAME} COMMAND ${TEST_NAME})

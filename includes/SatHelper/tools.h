@@ -19,6 +19,14 @@
 #include <time.h>
 #endif
 
+#if !defined(__FMA__) && defined(__AVX2__)
+#define __FMA__ 1
+#endif
+
+#if defined(FP_FAST_FMA)
+#define __FMA__ 1
+#endif
+
 namespace SatHelper {
 
     class Tools {
@@ -44,10 +52,14 @@ namespace SatHelper {
         }
 
         inline static float clip(float v, float max) {
+            return 0.5 * (std::abs(v + max) - std::abs(v - max));
+            /*
+            // Old Version. See http://stackoverflow.com/questions/23474796/is-there-a-fast-fabsf-replacement-for-float-in-c
             float x1 = fabsf(v + max);
             float x2 = fabsf(v - max);
             x1 -= x2;
             return 0.5f * x1;
+            */
         }
     };
 }
