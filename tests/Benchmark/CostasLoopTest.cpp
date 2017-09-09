@@ -28,7 +28,7 @@
 #define GRB_SYMBOLRATE 8665938
 #define CALC_SPS 3.f
 
-#define ITERATIONS 20
+#define ITERATIONS 200
 
 
 using namespace std;
@@ -83,6 +83,7 @@ namespace SatHelper {
         float averageValue = 0;
 
         for (int c=0; c < ITERATIONS; c++) {
+            costasLoop.Reset();
             start = std::chrono::system_clock::now();
             costasLoop.Work(testData2, testData, frequencyDeviation, TESTSIZE);
             end = std::chrono::system_clock::now();

@@ -13,7 +13,19 @@
 #define _USE_MATH_DEFINES
 #endif
 #include <cmath>
-#define M_TWOPI (2.0f*M_PI)
+#define M_TWOPI 6.28318530717958647692f
+#define M_ONE_OVER_2PI 0.15915494309189533577
+#define M_MINUS_TWO_PI -6.28318530717958647692
+
+#if !defined(__FMA__) && defined(__AVX2__)
+#define __FMA__ 1
+#endif
+
+#if defined(FP_FAST_FMA)
+#define __FMA__ 1
+#endif
+
+#include <exceptions/SatHelperException.h>
 
 namespace SatHelper {
 
@@ -25,18 +37,75 @@ namespace SatHelper {
         ControlLoop(float loopBandwidth, float maxRelativeFrequency, float minRelativeFrequency);
         virtual ~ControlLoop();
 
-        void UpdateGains();
-        void AdvanceLoop(float error);
-        virtual void SetLoopBandwidth(float bw);
-        void SetDampingFactor(float df);
-        void SetAlpha(float alpha);
-        void SetBeta(float beta);
-        void SetFrequency(float freq);
-        void Reset();
+        inline void SetLoopBandwidth(float bw) {
+            if (bw < 0) {
+                throw SatHelperException("Control Loop Bandwidth needs to be higher than or equal to 0.");
+            }
+
+            loopBandwidth = bw;
+            UpdateGains();
+        }
+
+        inline void SetDampingFactor(float df) {
+            if (df <= 0) {
+                throw SatHelperException("Control Loop Bandwidth needs to be higher than 0.");
+            }
+
+            dampingFactor = df;
+            UpdateGains();
+        }
+
+        inline void SetAlpha(float alpha) {
+            if (alpha < 0 || alpha > 1.0) {
+                throw SatHelperException("Control Loop Alpha needs to be between 0 and 1.");
+            }
+            this->alpha = alpha;
+        }
+
+        inline void SetBeta(float beta) {
+            if (beta < 0 || beta > 1.0) {
+                throw SatHelperException("Control Loop Beta needs to be between 0 and 1.");
+            }
+
+            this->beta = beta;
+        }
+
+        inline void SetFrequency(float freq) {
+            if (freq > maxRelFreq) {
+                this->freq = minRelFreq;
+            } else if (freq < minRelFreq) {
+                this->freq = maxRelFreq;
+            } else {
+                this->freq = freq;
+            }
+        }
+
+        inline void Reset() {
+            phase = 0;
+            freq = 0;
+            dampingFactor = sqrt(2.0f) / 2.0f;
+            SetLoopBandwidth(loopBandwidth);
+        }
+
+        inline void UpdateGains() {
+            float denom = (1.0f + 2.0f * dampingFactor * loopBandwidth + loopBandwidth * loopBandwidth);
+            alpha = (4 * dampingFactor * loopBandwidth) / denom;
+            beta = (4 * loopBandwidth * loopBandwidth) / denom;
+        }
 
         inline void SetPhase(float phase) {
             this->phase = phase;
             PhaseWrap();
+        }
+
+        inline void AdvanceLoop(float error) {
+            #if defined(__FMA__)
+            freq = __builtin_fmaf(beta, error, freq);
+            phase = phase + __builtin_fmaf(alpha, error, freq);
+            #else
+            freq = beta * error + freq;
+            phase = phase + alpha * error + freq;
+            #endif
         }
 
         inline void GetRelativeMaxFrequency(float freq) {
@@ -88,12 +157,23 @@ namespace SatHelper {
         }
 
         inline void PhaseWrap() {
+            if ((phase > M_TWOPI) || (phase < M_MINUS_TWO_PI)) {
+                #if defined(__FMA__)
+                phase = __builtin_fmaf(phase, M_ONE_OVER_2PI, -(float)((int)(phase * M_ONE_OVER_2PI)));
+                #else
+                phase = phase * M_ONE_OVER_2PI - (float)((int)(phase * M_ONE_OVER_2PI));
+                #endif
+                phase = phase * M_TWOPI;
+            }
+            /*
+            // OLD Version
             while (phase > M_TWOPI) {
                 phase -= (float)M_TWOPI;
             }
             while (phase < -M_TWOPI) {
                 phase += (float)M_TWOPI;
             }
+            */
         }
     };
 
