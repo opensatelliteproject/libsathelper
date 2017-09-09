@@ -68,7 +68,7 @@ namespace SatHelper {
         }
     }
 
-    void CostasLoop::Work(std::complex<float> *input, std::complex<float> *output, int length) {
+    void CostasLoop::Work(std::complex<float> *input, std::complex<float> *output, float *frequencyDeviation, int length) {
         std::complex<float> nco_out;
 
         for (int i = 0; i < length; i++) {
@@ -80,7 +80,14 @@ namespace SatHelper {
             AdvanceLoop(error);
             PhaseWrap();
             FrequencyLimit();
+            if (frequencyDeviation != NULL) {
+                frequencyDeviation[i] = this->freq;
+            }
         }
+    }
+
+    void CostasLoop::Work(std::complex<float> *input, std::complex<float> *output, int length) {
+        this->Work(input, output, NULL, length);
     }
 
 } /* namespace SatHelper */

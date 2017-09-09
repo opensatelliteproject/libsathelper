@@ -14,18 +14,6 @@
 #include <cstring>
 #include <SatHelper/sathelper.h>
 
-#define BUFFSIZE 16384
-#define SAMPRATE 1e9
-#define RRCALPHA 0.5
-#define NUMTAPS 512
-#define SYMBRATE 100000
-// Samples per symbol, to evaluate required BW
-#define SPS 3.f
-
-#define LRIT_SYMBOLRATE 293883
-#define HRIT_SYMBOLRATE 927000
-#define GRB_SYMBOLRATE 8665938
-
 #define TEST_SIZE 1024
 
 using namespace std;

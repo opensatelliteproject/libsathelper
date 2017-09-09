@@ -39,7 +39,12 @@ namespace SatHelper {
             return freq;
         }
 
+        inline float GetFrequencyHz() const {
+            return freq / ( 2 * 3.141592653589793 );
+        }
+
         void Work(std::complex<float> *input, std::complex<float> *output, int length);
+        void Work(std::complex<float> *input, std::complex<float> *output, float *frequencyDeviation, int length);
     };
 
 } /* namespace SatHelper */
