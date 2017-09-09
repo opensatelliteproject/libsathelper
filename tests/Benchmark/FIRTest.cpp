@@ -25,6 +25,8 @@
 #define HRIT_SYMBOLRATE 927000
 #define GRB_SYMBOLRATE 8665938
 
+#define ITERATIONS 20
+
 
 using namespace std;
 
@@ -37,6 +39,7 @@ namespace SatHelper {
       std::cerr << c_info << "    -- RRCALPHA: " << tcarg(RRCALPHA) << tcendl;
       std::cerr << c_info << "    -- NUMTAPS:  " << tcarg(NUMTAPS)  << tcendl;
       std::cerr << c_info << "    -- SYMBRATE: " << tcarg(SYMBRATE) << tcendl;
+      std::cerr << c_info << "    -- ITERATIONS: " << tcarg(ITERATIONS) << tcendl;
 
       std::cerr << c_verbose << "Initializing RRC Filter (" << tcarg(SAMPRATE) << " " << tcarg(SYMBRATE) << " " << tcarg(RRCALPHA) << " " << tcarg(NUMTAPS) << c_verbose << ")" << tcendl;
       std::vector<float> rrcTaps = Filters::RRC(1, SAMPRATE, SYMBRATE, RRCALPHA, NUMTAPS);
@@ -56,11 +59,17 @@ namespace SatHelper {
       }
 
       std::cerr << c_verbose << "Performing Benchmark" << tcendl;
-
-      auto start = std::chrono::system_clock::now();
-      rrcFilter.Work(buffer0, buffer1, BUFFSIZE);
-      auto end = std::chrono::system_clock::now();
+      std::chrono::time_point<std::chrono::system_clock> start, end;
+      float averageTime = 0;
       auto elapsed = end - start;
+
+      for (int i = 0; i < ITERATIONS; i++) {
+            start = std::chrono::system_clock::now();
+            rrcFilter.Work(buffer0, buffer1, BUFFSIZE);
+            end = std::chrono::system_clock::now();
+            elapsed = end - start;
+            averageTime += std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+      }
       auto ticksns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
       cerr << c_info << "    -- FIR Took " << tcarg(ticksns) << c_info << " ns to finish." << tcendl;
       auto ticksus = std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count();
@@ -70,19 +79,25 @@ namespace SatHelper {
 
       cerr << tcendl;
 
-      cerr << c_verbose << "Testing LRIT/HRIT Settings (" << tcarg("alpha = 0.5, taps = 63") << c_verbose << ")" << tcendl;
+      cerr << c_verbose << "Testing LRIT/HRIT Settings (" << tcarg("alpha = 0.5, taps = 63, runs = " << ITERATIONS) << c_verbose << ")" << tcendl;
 
       std::vector<float> hritTaps = Filters::RRC(1, 2560000, 980000, 0.5, 63);
       FirFilter hritRRC(1, hritTaps);
 
-      start = std::chrono::system_clock::now();
-      hritRRC.Work(buffer0, buffer1, BUFFSIZE);
-      end = std::chrono::system_clock::now();
-      elapsed = end - start;
+      averageTime = 0;
 
-      ticksns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
-      float maxHritSps = ticksns / (BUFFSIZE *  1.0); // In msps
-      cerr << c_info << "    -- HRIT FIR Took " << tcarg(ticksns) << c_info << " ns to finish." << tcendl;
+      for (int i = 0; i < ITERATIONS; i++) {
+            start = std::chrono::system_clock::now();
+            hritRRC.Work(buffer0, buffer1, BUFFSIZE);
+            end = std::chrono::system_clock::now();
+            elapsed = end - start;
+            averageTime += std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+      }
+
+      averageTime /= ITERATIONS;
+
+      float maxHritSps = 1e3 / (averageTime / (1.f * BUFFSIZE)); // In msps
+      cerr << c_info << "    -- HRIT FIR Took " << tcarg(averageTime) << c_info << " ns to finish." << tcendl;
       cerr << c_info << "    -- Maximum Usable SampleRate in this settings: " << tcarg(maxHritSps) << c_info << " msps." << tcendl;
 
       if (maxHritSps > (LRIT_SYMBOLRATE * SPS) / 1e6) {
