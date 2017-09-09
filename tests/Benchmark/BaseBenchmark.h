@@ -28,16 +28,18 @@ namespace SatHelper {
     using namespace std; \
     int main(int argc, char **argv) { \
       T test; \
-      cout << "Starting " << test.TestName() << endl; \
+      cerr << c_info << "Starting Benchmark " << c_bold << test.TestName() << c_default << tcendl; \
+      cerr << c_dim << c_warn << "--------------------------------------------------------" << tcendl; \
       auto start = std::chrono::system_clock::now();\
       if (!test.RunTest()) { \
-          cerr << "The test "  << test.TestName() << " has failed." << std::endl; \
+          cerr << c_error << "The Benchmark " << c_bold << c_warn << test.TestName() << c_default << c_error << " has failed." << tcendl; \
           return 1; \
       } \
+      cerr << c_dim << c_warn << "--------------------------------------------------------" << tcendl; \
       auto end = std::chrono::system_clock::now();\
       auto elapsed = end - start;\
       auto ticks = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();\
-      cerr << "The test took " << ticks << "ns" << endl;\
+      cerr << c_info << "The Benchmark took " << c_bold << ticks << c_default << c_info << " ns" << tcendl;\
       return 0; \
     }
 
