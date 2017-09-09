@@ -40,7 +40,7 @@ namespace SatHelper {
     void CostasLoop::Work(std::complex<float> *input, std::complex<float> *output, float *frequencyDeviation, int length) {
         std::complex<float> nco_out;
 
-        float n_r,n_i,o_r,o_i;
+        float n_r, n_i, o_r, o_i;
         for (int i = 0; i < length; i++) {
             /*
             Older Version
@@ -68,10 +68,8 @@ namespace SatHelper {
             o_r = __builtin_fmaf(input[i].real(), n_r, -input[i].imag() * n_i);
             o_i = __builtin_fmaf(input[i].real(), n_i, input[i].imag() * n_r);
             #else
-            i_r = input[i].real();
-            i_i = input[i].imag();
-            o_r = (i_r * n_r) - (i_i*n_i);
-            o_i = (i_r * n_i) + (i_i * n_r);
+            o_r = (input[i].real() * n_r) - (input[i].imag() * n_i);
+            o_i = (input[i].real() * n_i) + (input[i].imag() * n_r);
             #endif
             output[i].real(o_r);
             output[i].imag(o_i);
