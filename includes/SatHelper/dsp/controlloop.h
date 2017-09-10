@@ -25,7 +25,7 @@
 #define __FMA__ 1
 #endif
 
-#include <exceptions/SatHelperException.h>
+#include <SatHelper/exceptions/SatHelperException.h>
 
 namespace SatHelper {
 
