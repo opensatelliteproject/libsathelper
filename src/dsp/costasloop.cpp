@@ -60,8 +60,8 @@ namespace SatHelper {
             // New Version
 
             // region nco_out = Tools::phase2complex(-phase);
-            n_i = sinf(-phase);
-            n_r = cosf(-phase);
+            n_r = sinf(-phase);
+            n_i = cosf(-phase);
             // endregion
             // region output[i] = input[i] * nco_out;
             #if defined(__FMA__)
