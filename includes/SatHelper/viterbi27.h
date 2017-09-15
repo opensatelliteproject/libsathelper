@@ -23,9 +23,7 @@ namespace SatHelper {
         int BER;
         bool calculateErrors;
 
-        void encode(uint8_t *input, uint8_t *output);
         static uint32_t calculateError(uint8_t *original, uint8_t *corrected, int length);
-
     public:
         Viterbi27(int frameBits, int polyA, int polyB);
         Viterbi27(int frameBits) :
@@ -49,6 +47,7 @@ namespace SatHelper {
         }
 
         void decode(uint8_t *input, uint8_t *output);
+        void encode(uint8_t *input, uint8_t *output);
 
         ~Viterbi27();
     };
