@@ -119,6 +119,7 @@ namespace SatHelper {
       }
 
       delete buffer0;
+      delete buffer1;
       return true;
     }
 

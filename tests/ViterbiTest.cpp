@@ -1,7 +1,7 @@
 /*
  * ViterbiTest.cpp
  *
- *  Created on: 05/01/2017
+ *  Created on: 15/09/2017
  *      Author: Lucas Teske
  */
 

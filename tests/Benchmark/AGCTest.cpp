@@ -1,11 +1,11 @@
 /*
- * ViterbiTest.cpp
+ * AGCTest.cpp
  *
  *  Created on: 15/09/2017
  *      Author: Lucas Teske
  */
 
-#include "ViterbiTest.h"
+#include "AGCTest.h"
 #include <complex>
 #include <vector>
 #include <random>
@@ -14,8 +14,11 @@
 #include <SatHelper/sathelper.h>
 
 
-#define FRAMEBYTES 2048
-#define FRAMEBITS (FRAMEBYTES * 8)
+#define AGC_RATE 0.01f
+#define AGC_REFERENCE 0.5f
+#define AGC_GAIN 1.f
+#define AGC_MAX_GAIN 4000
+#define BUFFSIZE 16384
 
 // Samples per symbol, to evaluate required BW
 #define SPS 3.f
@@ -31,28 +34,31 @@ using namespace std;
 
 namespace SatHelper {
 
-    unsigned char symbols[8 * 2 * (FRAMEBYTES + 6)];
-    unsigned char bits[FRAMEBYTES];
-    unsigned char output[FRAMEBYTES];
-
-    bool ViterbiTest::RunTest() {
+    bool AGCTest::RunTest() {
       std::cerr << c_verbose << "Benchmark Params: " << tcendl;
-      std::cerr << c_info << "    -- FRAMEBYTES: " << tcarg(FRAMEBYTES) << tcendl;
-      std::cerr << c_info << "    -- FRAMEBITS: " << tcarg(FRAMEBITS) << tcendl;
+      std::cerr << c_info << "    -- AGC_RATE: " << tcarg(AGC_RATE) << tcendl;
+      std::cerr << c_info << "    -- AGC_REFERENCE: " << tcarg(AGC_REFERENCE) << tcendl;
+      std::cerr << c_info << "    -- AGC_REFERENCE: " << tcarg(AGC_REFERENCE) << tcendl;
+      std::cerr << c_info << "    -- AGC_GAIN: " << tcarg(AGC_GAIN) << tcendl;
+      std::cerr << c_info << "    -- AGC_MAX_GAIN: " << tcarg(AGC_MAX_GAIN) << tcendl;
       std::cerr << c_info << "    -- ITERATIONS: " << tcarg(ITERATIONS) << tcendl;
 
-      std::uniform_int_distribution<int> signalDist(0, 255);
-      Viterbi27 viterbi(FRAMEBITS+6);
+      AGC agc(AGC_RATE, AGC_REFERENCE, AGC_GAIN, AGC_MAX_GAIN);
 
+      std::cerr << c_verbose << "Initializing Sample Buffer" << tcendl;
+      std::complex<float> *buffer0 = new std::complex<float>[BUFFSIZE];
+      std::complex<float> *buffer1 = new std::complex<float>[BUFFSIZE];
+
+      // Random Number
       random_device rd;
-      mt19937 e2(rd());
+      default_random_engine e2(rd());
+      normal_distribution<> dist(-1, 1);
 
-      for (int i=0; i<FRAMEBYTES; i++) {
-          bits[i] = signalDist(e2) & 0xFF;
+      // Fill with random numbers
+      for (unsigned int i=0; i < BUFFSIZE; i++) {
+          buffer0[i] = complex<float>(dist(e2), dist(e2));
       }
 
-
-      viterbi.encode(bits, symbols);
 
       std::cerr << c_verbose << "Performing Benchmark" << tcendl;
       std::chrono::time_point<std::chrono::system_clock> start, end;
@@ -61,7 +67,7 @@ namespace SatHelper {
 
       for (int i = 0; i < ITERATIONS; i++) {
             start = std::chrono::system_clock::now();
-            viterbi.decode(symbols, output);
+            agc.Work(buffer0, buffer1, BUFFSIZE);
             end = std::chrono::system_clock::now();
             elapsed = end - start;
             averageTime += std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
@@ -69,8 +75,8 @@ namespace SatHelper {
 
       averageTime /= ITERATIONS;
 
-      float maxHritSps = 1e3 / (averageTime / (1.f * FRAMEBITS)); // In msps
-      cerr << c_info << "    -- HRIT Viterbi Took " << tcarg(averageTime) << c_info << " ns to finish." << tcendl;
+      float maxHritSps = 1e3 / (averageTime / (1.f * BUFFSIZE)); // In msps
+      cerr << c_info << "    -- HRIT AGC Took " << tcarg(averageTime) << c_info << " ns to finish." << tcendl;
       cerr << c_info << "    -- Maximum Usable SampleRate in this settings: " << tcarg(maxHritSps) << c_info << " msps." << tcendl;
 
       if (maxHritSps > (LRIT_SYMBOLRATE * SPS) / 1e6) {
@@ -85,11 +91,17 @@ namespace SatHelper {
             cerr << c_error << c_bold << "    -- No good for HRIT  :(" << tcendl;
       }
 
-      cerr << c_warn << c_bold << "    -- Not applicable for GRB      ._." << tcendl;
+      if (maxHritSps > (GRB_SYMBOLRATE * SPS) / 1e6) {
+            cerr << c_info << c_bold << "    -- Good for GRB      \\o/" << tcendl;
+      } else {
+            cerr << c_error << c_bold << "    -- No good for GRB   :(" << tcendl;
+      }
 
+      delete buffer0;
+      delete buffer1;
       return true;
     }
 
 } /* namespace SatHelper */
 
-RUNTEST(ViterbiTest)
+RUNTEST(AGCTest)
