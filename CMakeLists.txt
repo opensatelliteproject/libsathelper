@@ -2,6 +2,7 @@ cmake_minimum_required (VERSION 2.6)
 project (SatHelper)
 enable_language(CXX)
 
+set(CMAKE_MACOSX_RPATH 1)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 include(GetGitRevisionDescription)
 get_git_head_revision(GIT_REFSPEC GIT_SHA1)
@@ -57,7 +58,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -msse -msse3 -mstackrealign")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -msse -msse3 -mstackrealign")
 endif()
 
-set(CMAKE_MACOSX_RPATH 1)
 
 # Includes
 include_directories ("${PROJECT_SOURCE_DIR}/includes")
@@ -65,6 +65,11 @@ include_directories ("${PROJECT_SOURCE_DIR}/includes/SatHelper")
 include_directories ("${PROJECT_SOURCE_DIR}/includes/SatHelper/dsp")
 include_directories ("${PROJECT_SOURCE_DIR}/includes/SatHelper/exceptions")
 include_directories ("${PROJECT_SOURCE_DIR}/includes/SatHelper/SIMD")
+
+if(APPLE)
+  include_directories ("/usr/local/include")
+  link_directories ("/usr/local/lib")
+endif()
 
 # Library Source Code
 file(GLOB SOURCES src/*.cpp src/SIMD/*.cpp src/dsp/*.cpp)
