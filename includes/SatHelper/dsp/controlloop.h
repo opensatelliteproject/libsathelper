@@ -17,13 +17,23 @@
 #define M_ONE_OVER_2PI 0.15915494309189533577
 #define M_MINUS_TWO_PI -6.28318530717958647692
 
-#if !defined(__FMA__) && defined(__AVX2__)
-#define __FMA__ 1
+// MSVC will optmize to FMA if /arch:AVX2 /GL /O2 /fp:fast
+#ifndef _WIN32
+#   if !defined(__FMA__) && defined(__AVX2__)
+#       define __FMA__ 1
+#   endif
+
+#   if defined(FP_FAST_FMA)
+#       define __FMA__ 1
+#   endif
 #endif
 
-#if defined(FP_FAST_FMA)
-#define __FMA__ 1
+
+#ifdef _WIN32
+#   undef __FMA__
 #endif
+
+
 
 #include <SatHelper/exceptions/SatHelperException.h>
 

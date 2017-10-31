@@ -42,23 +42,6 @@ namespace SatHelper {
 
         float n_r, n_i, o_r, o_i;
         for (int i = 0; i < length; i++) {
-            /*
-            Older Version
-            nco_out = Tools::phase2complex(-phase);
-            output[i] = input[i] * nco_out;
-
-            error = (this->*PhaseDetector)(output[i]);
-            error = Tools::clip(error, 1.0);
-            AdvanceLoop(error);
-            PhaseWrap();
-            FrequencyLimit();
-            if (frequencyDeviation != NULL) {
-                frequencyDeviation[i] = this->freq;
-            }
-            */
-
-            // New Version
-
             // region nco_out = Tools::phase2complex(-phase);
             n_r = sinf(-phase);
             n_i = cosf(-phase);

@@ -12,19 +12,23 @@
 #include <complex>
 #include <cmath>
 
+// MSVC will optmize to FMA if /arch:AVX2 /GL /O2 /fp:fast
+#ifndef _WIN32
+#   if !defined(__FMA__) && defined(__AVX2__)
+#       define __FMA__ 1
+#   endif
+
+#   if defined(FP_FAST_FMA)
+#       define __FMA__ 1
+#   endif
+#endif
+
 #ifdef _WIN32
 #undef _WCHAR_H
 #include <io.h>
 #include <direct.h>
 #include <time.h>
-#endif
-
-#if !defined(__FMA__) && defined(__AVX2__)
-#define __FMA__ 1
-#endif
-
-#if defined(FP_FAST_FMA)
-#define __FMA__ 1
+#undef __FMA__
 #endif
 
 namespace SatHelper {
