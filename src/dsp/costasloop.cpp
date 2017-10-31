@@ -9,6 +9,7 @@
 #include <dsp/costasloop.h>
 #include <tools.h>
 #include <exceptions/SatHelperException.h>
+#include <extensions.h>
 #include <iostream>
 
 namespace SatHelper {
@@ -64,13 +65,8 @@ namespace SatHelper {
             n_i = cosf(-phase);
             // endregion
             // region output[i] = input[i] * nco_out;
-            #if defined(__FMA__)
-            o_r = __builtin_fmaf(input[i].real(), n_r, -input[i].imag() * n_i);
-            o_i = __builtin_fmaf(input[i].real(), n_i, input[i].imag() * n_r);
-            #else
-            o_r = (input[i].real() * n_r) - (input[i].imag() * n_i);
-            o_i = (input[i].real() * n_i) + (input[i].imag() * n_r);
-            #endif
+            o_r = Extensions::FMA(input[i].real(), n_r, -input[i].imag() * n_i);
+            o_i = Extensions::FMA(input[i].real(), n_i, input[i].imag() * n_r);
             output[i].real(o_r);
             output[i].imag(o_i);
             // endregion

@@ -36,5 +36,6 @@
 #include <SatHelper/dsp/firfilter.h>
 #include <SatHelper/info.h>
 #include <SatHelper/TermColor.h>
+#include <SatHelper/extensions.h>
 
 #endif /* SATHELPER_INCLUDES_SATHELPER_H_ */
