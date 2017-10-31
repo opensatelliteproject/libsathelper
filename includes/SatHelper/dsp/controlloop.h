@@ -118,11 +118,11 @@ namespace SatHelper {
             #endif
         }
 
-        inline void GetRelativeMaxFrequency(float freq) {
+        inline void SetRelativeMaxFrequency(float freq) {
             maxRelFreq = freq;
         }
 
-        inline void GetRelativeMinFrequency(float freq) {
+        inline void SetRelativeMinFrequency(float freq) {
             minRelFreq = freq;
         }
 
