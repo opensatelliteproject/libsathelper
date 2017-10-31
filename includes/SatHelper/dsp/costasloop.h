@@ -53,6 +53,7 @@ namespace SatHelper {
 
     public:
         CostasLoop(float loopBandwidth, int order);
+        CostasLoop(float loopBandwidth, int order, float maxRelativeFrequency, float minRelativeFrequency);
         virtual ~CostasLoop();
 
         inline float GetError() const {

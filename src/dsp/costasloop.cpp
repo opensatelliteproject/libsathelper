@@ -12,8 +12,7 @@
 #include <iostream>
 
 namespace SatHelper {
-
-    CostasLoop::CostasLoop(float loopBandwidth, int order) : ControlLoop(loopBandwidth, 1.0, -1.0), order(order), error(0) {
+    CostasLoop::CostasLoop(float loopBandwidth, int order, float maxRelativeFrequency, float minRelativeFrequency) : ControlLoop(loopBandwidth, maxRelativeFrequency, minRelativeFrequency), order(order), error(0) {
         switch (order) {
             case 2:
                 std::cout << "BPSK Costas Loop" << std::endl;
@@ -32,6 +31,7 @@ namespace SatHelper {
                 break;
         }
     }
+    CostasLoop::CostasLoop(float loopBandwidth, int order) : CostasLoop(loopBandwidth, order, 1.0, -1.0) {}
 
     CostasLoop::~CostasLoop() {
 
