@@ -7,6 +7,7 @@
 
 #include "ViterbiTest.h"
 
+#include <random>
 #include <iostream>
 #include <sathelper.h>
 
