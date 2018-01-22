@@ -29,7 +29,7 @@ bool Extensions::hasFMA = false;
 bool Extensions::initialized = (InitExtensions(), true);
 
 float Extensions::FMA(float a, float b, float c ) {
-        float x = __builtin_fmaf(a, b, c); // a * b + c;
+/*        float x = __builtin_fmaf(a, b, c); // a * b + c;
         float res[4];
 
         __m128 c0, c1, c2;
@@ -40,7 +40,7 @@ float Extensions::FMA(float a, float b, float c ) {
         c2 = _mm_set1_ps(c);
         c0 = _mm_fmadd_ss (c0, c1, c2);
         _mm_store_ps(res, c0);
-
+*/
         return hasFMA ? __builtin_fmaf(a, b, c) : a * b + c;
       }
 
