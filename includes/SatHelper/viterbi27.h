@@ -9,6 +9,7 @@
 #define SATHELPER_INCLUDES_VITERBI27_H_
 
 #include <cstdint>
+#include <extensions.h>
 
 namespace SatHelper {
 #define _VITERBI27_POLYA 0x4F

@@ -15,7 +15,6 @@ extern "C" {
 #include <cstring>
 #include <correlator.h>
 #include <exceptions/ViterbiCreationException.h>
-#include <extensions.h>
 
 using namespace SatHelper;
 
