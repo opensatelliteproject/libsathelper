@@ -24,10 +24,18 @@ namespace SatHelper {
         bool calculateErrors;
 
         static uint32_t calculateError(uint8_t *original, uint8_t *corrected, int length);
+
+        void decode_generic(uint8_t *input, uint8_t *output);
+        void encode_generic(uint8_t *input, uint8_t *output);
+        void decode_sse4(uint8_t *input, uint8_t *output);
+        void encode_sse4(uint8_t *input, uint8_t *output);
+
+        void (Viterbi27::*_encode)(uint8_t *input, uint8_t *output) = NULL;
+        void (Viterbi27::*_decode)(uint8_t *input, uint8_t *output) = NULL;
     public:
         Viterbi27(int frameBits, int polyA, int polyB);
         Viterbi27(int frameBits) :
-                Viterbi27(frameBits, _VITERBI27_POLYA, _VITERBI27_POLYB) {
+            Viterbi27(frameBits, _VITERBI27_POLYA, _VITERBI27_POLYB) {
         }
 
         inline int DecodedSize() {
@@ -46,8 +54,12 @@ namespace SatHelper {
             return (100.f * this->BER) / this->frameBits;
         }
 
-        void decode(uint8_t *input, uint8_t *output);
-        void encode(uint8_t *input, uint8_t *output);
+        inline bool IsSSEMode() {
+            return SatHelper::Extensions::hasSSE4;
+        }
+
+        inline void decode(uint8_t *input, uint8_t *output) { (*this.*_decode)(input, output); }
+        inline void encode(uint8_t *input, uint8_t *output) { (*this.*_encode)(input, output); }
 
         ~Viterbi27();
     };

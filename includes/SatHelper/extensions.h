@@ -15,6 +15,9 @@ namespace SatHelper {
     class Extensions {
     public:
       static bool hasFMA;
+      static bool hasSSE;
+      static bool hasSSE4;
+      static bool hasAVX;
       static bool initialized;
       static float FMA(float a, float b, float c);
     };
