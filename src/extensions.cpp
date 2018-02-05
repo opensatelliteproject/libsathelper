@@ -70,17 +70,4 @@ bool Extensions::hasSSE4 = false;
 bool Extensions::hasAVX = false;
 bool Extensions::initialized = (InitExtensions(), true);
 
-float Extensions::FMA(float a, float b, float c ) {
-        if (hasFMA) {
-#ifdef _MSC_VER
-            return fmaf(a, b, c); // Inline not supported for x64 in MSVC :(
-#else
-          __asm__ __volatile__( "vfmadd231ss %[a], %[b], %[c]" : [a] "+x" (a), [b] "+x" (b), [c] "+x" (c) : );
-#endif
-          return c;
-        } else {
-            return a * b + c;
-        }
-      }
-
 } /* namespace SatHelper */
