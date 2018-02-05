@@ -178,6 +178,7 @@
     <ClInclude Include="includes\SatHelper\exceptions\SocketException.h" />
     <ClInclude Include="includes\SatHelper\exceptions\SocketNotReadyException.h" />
     <ClInclude Include="includes\SatHelper\exceptions\SocketWriteException.h" />
+    <ClInclude Include="includes\SatHelper\extensions.h" />
     <ClInclude Include="includes\SatHelper\info.h" />
     <ClInclude Include="includes\SatHelper\ipaddress.h" />
     <ClInclude Include="includes\SatHelper\packetfixer.h" />
@@ -193,7 +194,7 @@
     <ClInclude Include="includes\SatHelper\tcpsocket.h" />
     <ClInclude Include="includes\SatHelper\tools.h" />
     <ClInclude Include="includes\SatHelper\udpsocket.h" />
-    <ClInclude Include="includes\viterbi27.h" />
+    <ClInclude Include="includes\SatHelper\viterbi27.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\configparser.cpp" />
@@ -208,6 +209,7 @@
     <ClCompile Include="src\dsp\firfilter.cpp" />
     <ClCompile Include="src\dsp\firinterpolator.cpp" />
     <ClCompile Include="src\dsp\firkernel.cpp" />
+    <ClCompile Include="src\extensions.cpp" />
     <ClCompile Include="src\Info.cpp" />
     <ClCompile Include="src\ipaddress.cpp" />
     <ClCompile Include="src\packetfixer.cpp" />

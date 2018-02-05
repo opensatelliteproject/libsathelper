@@ -36,6 +36,7 @@
 
 
 #include <SatHelper/exceptions/SatHelperException.h>
+#include <SatHelper/extensions.h>
 
 namespace SatHelper {
 
@@ -109,6 +110,9 @@ namespace SatHelper {
         }
 
         inline void AdvanceLoop(float error) {
+            freq = Extensions::FMA(beta, error, freq);
+            phase = phase + Extensions::FMA(alpha, error, freq);
+            /*
             #if defined(__FMA__)
             freq = __builtin_fmaf(beta, error, freq);
             phase = phase + __builtin_fmaf(alpha, error, freq);
@@ -116,6 +120,7 @@ namespace SatHelper {
             freq = beta * error + freq;
             phase = phase + alpha * error + freq;
             #endif
+            */
         }
 
         inline void SetRelativeMaxFrequency(float freq) {

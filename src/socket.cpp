@@ -11,7 +11,6 @@
 #include <SatHelper/socket.h>
 
 #ifdef _WIN32
-#	include <windows.h>
 #	include <winsock2.h>
 #	include <Ws2tcpip.h>
 #	include <atomic>
