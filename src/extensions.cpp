@@ -14,6 +14,7 @@
 #define XCR  (1 << 27)
 #define AVX  (1 << 28)
 
+#ifndef _MSC_VER
 unsigned long long _xgetbv(unsigned int index) {
     unsigned int eax, edx;
     __asm__ __volatile__(
@@ -23,17 +24,25 @@ unsigned long long _xgetbv(unsigned int index) {
     );
     return ((unsigned long long)edx << 32) | eax;
 }
+#endif
 
 void InitExtensions() {
     unsigned int eax, ebx, ecx, edx;
     eax = 0x01;
-
+#ifdef _MSC_VER
+    int cpuInfo[4] = { -1 };
+    __cpuid(cpuInfo, 1);
+    eax = cpuInfo[0];
+    ebx = cpuInfo[1];
+    ecx = cpuInfo[2];
+    edx = cpuInfo[3];
+#else
     __asm__ __volatile__(
                          "cpuid;"
                          : "=a"(eax), "=b"(ebx), "=c"(ecx), "=d"(edx)
                          : "a"(eax)
                          );
-
+#endif
     SatHelper::Extensions::hasFMA = ecx & FMA3 || false;
     SatHelper::Extensions::hasSSE = edx & SSE || false;
     SatHelper::Extensions::hasSSE4 = ecx & SSE4 || false;
@@ -63,7 +72,11 @@ bool Extensions::initialized = (InitExtensions(), true);
 
 float Extensions::FMA(float a, float b, float c ) {
         if (hasFMA) {
+#ifdef _MSC_VER
+            return fmaf(a, b, c); // Inline not supported for x64 in MSVC :(
+#else
           __asm__ __volatile__( "vfmadd231ss %[a], %[b], %[c]" : [a] "+x" (a), [b] "+x" (b), [c] "+x" (c) : );
+#endif
           return c;
         } else {
             return a * b + c;

@@ -52,7 +52,7 @@ namespace SatHelper {
         }
 
         inline static float clip(float v, float max) {
-            return 0.5 * (std::abs(v + max) - std::abs(v - max));
+            return 0.5f * (std::abs(v + max) - std::abs(v - max));
             /*
             // Old Version. See http://stackoverflow.com/questions/23474796/is-there-a-fast-fabsf-replacement-for-float-in-c
             float x1 = fabsf(v + max);

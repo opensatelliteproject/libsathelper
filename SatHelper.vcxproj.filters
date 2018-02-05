@@ -30,9 +30,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="includes\viterbi27.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="includes\exceptions\ViterbiCreationException.h">
       <Filter>Header Files\exceptions</Filter>
     </ClInclude>
@@ -162,6 +159,12 @@
     <ClInclude Include="includes\SatHelper\udpsocket.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="includes\SatHelper\viterbi27.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\SatHelper\extensions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\correlator.cpp">
@@ -234,6 +237,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\ipaddress.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\extensions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
