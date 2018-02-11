@@ -9,6 +9,7 @@
 #define INCLUDES_EXTENSIONS_H_
 
 #include <iostream>
+#include "SatHelper/SIMD/MemoryOp.h"
 
 namespace SatHelper {
 
@@ -19,6 +20,8 @@ namespace SatHelper {
       static bool hasSSE4;
       static bool hasAVX;
       static bool initialized;
+
+#ifdef MEMORY_OP_X86
       static inline float FMA(float a, float b, float c) {
         if (hasFMA) {
 #ifdef _MSC_VER
@@ -31,6 +34,11 @@ namespace SatHelper {
             return a * b + c;
         }
       }
+#else
+      static inline float FMA(float a, float b, float c) {
+        return a * b + c;
+      }
+#endif
     };
 
 } /* namespace SatHelper */

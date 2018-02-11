@@ -8,6 +8,8 @@
 #include <SatHelper/extensions.h>
 #include <immintrin.h>
 
+#ifdef MEMORY_OP_X86
+
 #define FMA3 (1 << 12)
 #define SSE  (1 << 26)
 #define SSE4 (1 << 20)
@@ -61,6 +63,13 @@ void InitExtensions() {
     std::cerr << "Has AVX: "  << (SatHelper::Extensions::hasAVX  ? "true" : "false") << std::endl;
     #endif
 }
+
+#else
+void InitExtensions() {
+    std::cerr << "Non x86 device detected. No extesions supported." << std::endl;
+}
+
+#endif
 
 namespace SatHelper {
 
