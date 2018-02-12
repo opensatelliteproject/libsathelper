@@ -5,9 +5,13 @@
  *      Author: lucas
  */
 
+#include "SatHelper/SIMD/MemoryOp.h"
+
 extern "C" {
 #include <correct.h>
-#include <correct-sse.h>
+    #ifdef MEMORY_OP_X86
+        #include <correct-sse.h>
+    #endif
 }
 
 #include <viterbi27.h>

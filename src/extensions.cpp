@@ -6,9 +6,9 @@
  */
 
 #include <SatHelper/extensions.h>
-#include <immintrin.h>
 
 #ifdef MEMORY_OP_X86
+#include <immintrin.h>
 
 #define FMA3 (1 << 12)
 #define SSE  (1 << 26)
