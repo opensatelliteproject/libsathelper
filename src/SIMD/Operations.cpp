@@ -103,7 +103,36 @@ namespace SatHelper {
         result->imag(res[1]);
     }
 #elif defined(MEMORY_OP_ARM)
-// TODO
+    void Operations::dotProduct(std::complex<float> *result, const std::complex<float> *input, const float *taps, unsigned int length) {
+        float32x4x2_t si;
+        float32x4x2_t o = { vdupq_n_f32(0.0f), vdupq_n_f32(0.0f) }; 
+
+        float *s = (float *)input;
+        float *c = (float *)taps;
+
+        for (unsigned int i = 0; i < length; i += 8, c += 4) {
+            si = vuzpq_f32(vld1q_f32(s+i), vld1q_f32(s+i+4));
+
+            o.val[0] = vmlaq_f32(o.val[0], si.val[0], vld1q_f32(c));
+            o.val[1] = vmlaq_f32(o.val[1], si.val[1], vld1q_f32(c));
+        }
+
+#ifdef AARCH64
+        result->real(vaddvq_f32(o.val[0]));
+        result->imag(vaddvq_f32(o.val[1]));
+#else
+        result->real(vgetq_lane_f32(o.val[0], 0) + 
+                     vgetq_lane_f32(o.val[0], 1) + 
+                     vgetq_lane_f32(o.val[0], 2) + 
+                     vgetq_lane_f32(o.val[0], 3));
+
+        result->imag(vgetq_lane_f32(o.val[1], 0) + 
+                     vgetq_lane_f32(o.val[1], 1) + 
+                     vgetq_lane_f32(o.val[1], 2) + 
+                     vgetq_lane_f32(o.val[1], 3));
+#endif
+    }
+
 #else
 void Operations::dotProduct(std::complex<float> *result, const std::complex<float> *input, const float *taps, unsigned int length) {
     float res[2] = {0, 0};
