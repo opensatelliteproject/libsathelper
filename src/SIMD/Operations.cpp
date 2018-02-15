@@ -111,13 +111,12 @@ namespace SatHelper {
         float *c = (float *)taps;
 
         for (unsigned int i = 0; i < length; i += 8, c += 4) {
-            si = vuzpq_f32(vld1q_f32(s+i), vld1q_f32(s+i+4));
-
+            si = vld2q_f32(s+i);
             o.val[0] = vmlaq_f32(o.val[0], si.val[0], vld1q_f32(c));
             o.val[1] = vmlaq_f32(o.val[1], si.val[1], vld1q_f32(c));
         }
 
-#ifdef AARCH64
+#ifdef __aarch64__
         result->real(vaddvq_f32(o.val[0]));
         result->imag(vaddvq_f32(o.val[1]));
 #else
