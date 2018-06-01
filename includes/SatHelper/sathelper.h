@@ -33,6 +33,7 @@
 #include <SatHelper/dsp/firinterpolator.h>
 #include <SatHelper/dsp/firkernel.h>
 #include <SatHelper/dsp/fftwindows.h>
+#include "SatHelper/dsp/interpolator_taps.h"
 #include <SatHelper/dsp/firfilter.h>
 #include <SatHelper/info.h>
 #include <SatHelper/TermColor.h>

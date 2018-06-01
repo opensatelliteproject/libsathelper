@@ -5,7 +5,7 @@
  *      Author: Lucas teske
  */
 
-#include <reedsolomon.h>
+#include <SatHelper/reedsolomon.h>
 #include <cstring>
 
 extern "C" {

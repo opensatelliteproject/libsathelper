@@ -5,7 +5,7 @@
  *      Author: Lucas Teske
  */
 
-#include <screenmanager.h>
+#include <SatHelper/screenmanager.h>
 
 #include <iostream>
 
