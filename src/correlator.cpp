@@ -5,8 +5,8 @@
  *      Author: Lucas Teske
  */
 
-#include <correlator.h>
-#include <exceptions/WordSizeException.h>
+#include <SatHelper/correlator.h>
+#include <SatHelper/exceptions/WordSizeException.h>
 #include <memory.h>
 #include <iostream>
 

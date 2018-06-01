@@ -14,11 +14,11 @@ extern "C" {
     #endif
 }
 
-#include <viterbi27.h>
+#include <SatHelper/viterbi27.h>
 #include <memory.h>
 #include <cstring>
-#include <correlator.h>
-#include <exceptions/ViterbiCreationException.h>
+#include <SatHelper/correlator.h>
+#include <SatHelper/exceptions/ViterbiCreationException.h>
 
 using namespace SatHelper;
 

@@ -1,17 +1,37 @@
-dist: trusty
+dist: xenial
 sudo: required
-language: cpp
-compiler:
-  - gcc
-  - clang
 
 before_install:
   - sudo add-apt-repository ppa:myriadrf/drivers -y
   - sudo add-apt-repository ppa:myriadrf/gnuradio -y
   - sudo apt-get -qq update
-  - sudo apt-get install -y libairspy-dev
-env:
-  - CTEST_OUTPUT_ON_FAILURE=1 CMAKE_INSTALL_PREFIX=/usr
+  - sudo apt-get install -y libairspy-dev cmake swig
 
-script:
-  - make libcorrect && sudo make libcorrect-install && make && make test
+jobs:
+  include:
+    - stage: cppStage
+      language: cpp
+      compiler:
+        - gcc
+        - clang
+      env:
+        - CTEST_OUTPUT_ON_FAILURE=1 CMAKE_INSTALL_PREFIX=/usr
+      script:
+        - make libcorrect && sudo make libcorrect-install && make && make test
+    - stage: goStage
+      language: go
+      go:
+        "1.10.x"
+      env:
+        - CTEST_OUTPUT_ON_FAILURE=1 CMAKE_INSTALL_PREFIX=/usr
+      script:
+        - export CTEST_OUTPUT_ON_FAILURE=1
+        - export CMAKE_INSTALL_PREFIX=/usr
+        - make libcorrect && sudo make libcorrect-install && sudo make install
+        - cd /home/travis/gopath
+        - mv /home/travis/gopath/src/github.com/opensatelliteproject /home/travis/gopath/src/github.com/OpenSatelliteProject
+        - cd /home/travis/gopath/src/github.com/OpenSatelliteProject/libsathelper
+        - swig -go -cgo -c++ -intgosize 64 SatHelper.i
+        - go build -x
+        - go install
+        - go test ./... -v

@@ -5,11 +5,11 @@
  *      Author: Lucas Teske
  */
 
-#include <tcpserver.h>
+#include <SatHelper/tcpserver.h>
 #include <cstdio>
 #include <sstream>
 #include <iostream>
-#include <exceptions.h>
+#include <SatHelper/exceptions.h>
 #include <fcntl.h>
 
 
@@ -19,7 +19,7 @@
     #include <Ws2tcpip.h>
 #else
     #include <unistd.h>
-    #include <socket.h>
+    #include <sys/socket.h>
     #include <sys/resource.h>
     #include <sys/select.h>
     #include <sys/ioctl.h>

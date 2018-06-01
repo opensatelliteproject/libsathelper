@@ -7,7 +7,7 @@
 #include <cstdio>
 #include <sstream>
 #include <iostream>
-#include <exceptions.h>
+#include <SatHelper/exceptions.h>
 #include <SatHelper/socket.h>
 
 #ifdef _WIN32

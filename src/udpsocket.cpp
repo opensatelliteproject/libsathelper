@@ -5,9 +5,9 @@
  *      Author: Lucas Teske
  */
 
-#include "udpsocket.h"
+#include "SatHelper/udpsocket.h"
 #include <fcntl.h>
-#include <exceptions.h>
+#include <SatHelper/exceptions.h>
 
 #ifdef _WIN32
     #include <windows.h>
@@ -15,7 +15,7 @@
     #include <Ws2tcpip.h>
 #else
     #include <unistd.h>
-    #include <socket.h>
+    #include <sys/socket.h>
     #include <sys/resource.h>
     #include <sys/select.h>
     #include <sys/ioctl.h>
@@ -39,7 +39,7 @@ void UdpSocket::Bind(int port) {
     if (x < 0) {
         throw SocketBindException(errno, port, address);
     }
-    
+
     this->port = port;
 }
 

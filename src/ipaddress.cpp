@@ -5,7 +5,7 @@
  *      Author: lucas
  */
 
-#include "ipaddress.h"
+#include <SatHelper/ipaddress.h>
 
 using namespace SatHelper;
 
