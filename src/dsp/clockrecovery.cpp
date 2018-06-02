@@ -38,8 +38,7 @@ namespace SatHelper {
             samples.push_back(std::complex<float>(0, 0));
         }
 
-        std::cout << "MM - Omega: " << this->omega << " Gain Omega: " << this->gainOmega << " Mu: " << this->mu << " Gain Mu: " << this->gainMu
-                << " Omega Relative Limit: " << this->omegaRelativeLimit << std::endl;
+        // std::cout << "MM - Omega: " << this->omega << " Gain Omega: " << this->gainOmega << " Mu: " << this->mu << " Gain Mu: " << this->gainMu << " Omega Relative Limit: " << this->omegaRelativeLimit << std::endl;
     }
 
     ClockRecovery::~ClockRecovery() {

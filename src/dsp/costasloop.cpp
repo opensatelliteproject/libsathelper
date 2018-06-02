@@ -16,15 +16,15 @@ namespace SatHelper {
     CostasLoop::CostasLoop(float loopBandwidth, int order, float maxRelativeFrequency, float minRelativeFrequency) : ControlLoop(loopBandwidth, maxRelativeFrequency, minRelativeFrequency), order(order), error(0) {
         switch (order) {
             case 2:
-                std::cout << "BPSK Costas Loop" << std::endl;
+                // std::cout << "BPSK Costas Loop" << std::endl;
                 break;
 
             case 4:
-                std::cout << "QPSK Costas Loop" << std::endl;
+                // std::cout << "QPSK Costas Loop" << std::endl;
                 break;
 
             case 8:
-                std::cout << "8PSK Costas Loop" << std::endl;
+                // std::cout << "8PSK Costas Loop" << std::endl;
                 break;
 
             default:
