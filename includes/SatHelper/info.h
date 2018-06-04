@@ -14,10 +14,10 @@ namespace SatHelper {
 
     class Info {
     public:
-        const static std::string &GetVersion();
-        const static std::string &GetCompilationDate();
-        const static std::string &GetCompilationTime();
-        const static std::string &GetGitSHA1();
+        static const std::string &GetVersion();
+        static const std::string &GetCompilationDate();
+        static const std::string &GetCompilationTime();
+        static const std::string &GetGitSHA1();
     };
 
 } /* namespace SatHelper */

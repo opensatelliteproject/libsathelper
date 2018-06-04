@@ -17,7 +17,7 @@
 
 namespace SatHelper {
 
-    class CostasLoop: ControlLoop {
+    class CostasLoop: public ControlLoop {
     private:
         int order;
         float error;

@@ -5,9 +5,9 @@
  *      Author: Lucas Teske
  */
 
-#include <tcpclient.h>
+#include <SatHelper/tcpclient.h>
 #include <cstdio>
-#include <exceptions.h>
+#include <SatHelper/exceptions.h>
 #include <fcntl.h>
 
 #ifdef _WIN32
@@ -16,7 +16,7 @@
     #include <Ws2tcpip.h>
 #else
     #include <unistd.h>
-    #include <socket.h>
+    #include <sys/socket.h>
     #include <sys/resource.h>
     #include <sys/select.h>
     #include <sys/ioctl.h>

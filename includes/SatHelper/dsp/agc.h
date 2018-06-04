@@ -55,8 +55,8 @@ namespace SatHelper {
             this->maxGain = max_gain;
         }
 
-        inline std::complex<float> scale(std::complex<float> input) {
-            std::complex<float> output = input * gain;
+        inline std::complex<float> scale(const std::complex<float> *input) {
+            std::complex<float> output = (*input) * gain;
 
             gain += this->rate * (reference - sqrt(output.real() * output.real() + output.imag() * output.imag()));
             if (maxGain > 0.0 && gain > maxGain) {
@@ -67,7 +67,7 @@ namespace SatHelper {
 
         inline void scaleN(std::complex<float> *output, const std::complex<float> *input, unsigned n) {
             for (unsigned i = 0; i < n; i++) {
-                output[i] = scale(input[i]);
+                output[i] = scale(&input[i]);
             }
         }
 

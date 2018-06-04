@@ -11,7 +11,7 @@
 
 #include <ostream>
 namespace SatHelper {
-    enum Modifier {
+    enum Modifier : unsigned int {
         DEFAULT       =      0,
         BOLD          =      1,
         DIM           =      2,

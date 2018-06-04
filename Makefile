@@ -18,10 +18,32 @@ libSatHelper:
 	@echo -e '\033[0;32mFinished building target: $@\033[0m'
 	@echo ' '
 
+bootstrapgo:
+	@echo -e '\033[0;32mBuilding target: $@\033[0m'
+	@echo -e '\033[0;34m'
+	swig -go -cgo -c++ -intgosize 64 SatHelper.i
+	@echo -e '\033[0;32mFinished building target: $@\033[0m'
+	@echo ' '
+
+libSatHelperGo: bootstrapgo libSatHelper
+	@echo -e '\033[0;32mBuilding target: $@\033[0m'
+	@echo -e '\033[0;34m'
+	go build
+	@echo -e '\033[0;32mFinished building target: $@\033[0m'
+	@echo ' '
+
 test: libSatHelper
 	@echo -e '\033[0;32mBuilding target: $@\033[0m'
 	@echo -e '\033[0;34m'
 	$(MAKE) -C build test
+	@echo -e '\033[0m'
+	@echo -e '\033[0;32mFinished building target: $@\033[0m'
+	@echo ' '
+
+testGo: libSatHelperGo
+	@echo -e '\033[0;32mBuilding target: $@\033[0m'
+	@echo -e '\033[0;34m'
+	go test ./...
 	@echo -e '\033[0m'
 	@echo -e '\033[0;32mFinished building target: $@\033[0m'
 	@echo ' '
@@ -50,6 +72,7 @@ install: libSatHelper
 	@echo -e '\033[0;32mInstalling target: $@\033[0m'
 	@echo -e '\033[0;34m'
 	$(MAKE) -C build install
+	@ldconfig
 	@echo -e '\033[0m'
 	@echo -e '\033[0;32mFinished installing target: $@\033[0m'
 	@echo ' '
