@@ -1,6 +1,7 @@
 libcorrect
 build
 test/build
+.DS_Store
 Debug/
 Release/
 Release (Static)/
