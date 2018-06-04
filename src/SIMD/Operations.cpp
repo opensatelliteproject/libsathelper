@@ -87,10 +87,8 @@ namespace SatHelper {
         _mm_store_ps(vectorResult, r0);
 
         // Sum up to result
-        res[0] = vectorResult[0]; // I
-        res[1] = vectorResult[1]; // Q
-        res[0] += vectorResult[2];
-        res[1] += vectorResult[3];
+        res[0] = vectorResult[0] + vectorResult[2]; // I
+        res[1] = vectorResult[1] + vectorResult[3]; // Q
 
         // If the length not a multiple of 16, we need to do the remaining ones without SIMD.
         const unsigned int run2 = runs * 8;
@@ -104,32 +102,73 @@ namespace SatHelper {
     }
 #elif defined(MEMORY_OP_ARM)
     void Operations::dotProduct(std::complex<float> *result, const std::complex<float> *input, const float *taps, unsigned int length) {
-        float32x4x2_t si;
-        float32x4x2_t o = { vdupq_n_f32(0.0f), vdupq_n_f32(0.0f) }; 
+        const float *iPtr = (float *)input;
+        const float *tPtr = (float *)taps;
+        const unsigned int runs = length / 8;
+        const float zeros[4] = { 0, 0, 0, 0 };
+        float res[2];
+        float accReal[4];
+        float accImag[4];
 
-        float *s = (float *)input;
-        float *c = (float *)taps;
+        float32x4x2_t iVal0, iVal1;
+        float32x4_t tVal0, tVal1, rAcc0, rAcc1, iAcc0, iAcc1;
+        float32x4_t tmpR0, tmpR1, tmpI0, tmpI1;
 
-        for (unsigned int i = 0; i < length; i += 8, c += 4) {
-            si = vld2q_f32(s+i);
-            o.val[0] = vmlaq_f32(o.val[0], si.val[0], vld1q_f32(c));
-            o.val[1] = vmlaq_f32(o.val[1], si.val[1], vld1q_f32(c));
+        rAcc0 = vld1q_f32(zeros);
+        rAcc1 = vld1q_f32(zeros);
+        iAcc0 = vld1q_f32(zeros);
+        iAcc1 = vld1q_f32(zeros);
+
+        for (unsigned int i=0; i<runs; i++) {
+            // Load taps
+            tVal0 = vld1q_f32(tPtr);
+            tVal1 = vld1q_f32(tPtr+4);
+
+            // Load Complex
+            iVal0 = vld2q_f32(iPtr);
+            iVal1 = vld2q_f32(iPtr+8);
+
+            // Multiply first complex group by taps
+            tmpR0 = vmulq_f32(tVal0, iVal0.val[0]);
+            tmpI0 = vmulq_f32(tVal0, iVal0.val[1]);
+
+            // Multiply second complex group by taps
+            tmpR1 = vmulq_f32(tVal1, iVal1.val[0]);
+            tmpI1 = vmulq_f32(tVal1, iVal1.val[1]);
+
+            // Sum First complex group to accumulators
+            rAcc0 = vaddq_f32(rAcc0, tmpR0);
+            iAcc0 = vaddq_f32(iAcc0, tmpI0);
+
+            // Sum Second complex group to accumulators
+            rAcc1 = vaddq_f32(rAcc1, tmpR1);
+            iAcc1 = vaddq_f32(iAcc1, tmpI1);
+
+            tPtr += 8;
+            iPtr += 16;
         }
 
-#ifdef __aarch64__
-        result->real(vaddvq_f32(o.val[0]));
-        result->imag(vaddvq_f32(o.val[1]));
-#else
-        result->real(vgetq_lane_f32(o.val[0], 0) + 
-                     vgetq_lane_f32(o.val[0], 1) + 
-                     vgetq_lane_f32(o.val[0], 2) + 
-                     vgetq_lane_f32(o.val[0], 3));
+        // Sum um two complex group results
+        rAcc0 = vaddq_f32(rAcc0, rAcc1);
+        iAcc0 = vaddq_f32(iAcc0, iAcc1);
 
-        result->imag(vgetq_lane_f32(o.val[1], 0) + 
-                     vgetq_lane_f32(o.val[1], 1) + 
-                     vgetq_lane_f32(o.val[1], 2) + 
-                     vgetq_lane_f32(o.val[1], 3));
-#endif
+        // Get back values to memory from register
+        vst1q_f32(accReal, rAcc0);
+        vst1q_f32(accImag, iAcc0);
+
+        // Set result values
+        res[0] = accReal[0] + accReal[1] + accReal[2] + accReal[3];
+        res[1] = accImag[0] + accImag[1] + accImag[2] + accImag[3];
+
+        // Continue if length % 8 != 0
+        const unsigned int run2 = runs * 8;
+        for (unsigned int i = run2; i < length; i++) {
+            res[0] += ((*iPtr++) * (*tPtr));
+            res[1] += ((*iPtr++) * (*tPtr++));
+        }
+
+        result->real(res[0]);
+        result->imag(res[1]);
     }
 
 #else
