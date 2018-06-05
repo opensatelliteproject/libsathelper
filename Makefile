@@ -25,6 +25,8 @@ bootstrapgo:
 	@echo -e '\033[0;32mFinished building target: $@\033[0m'
 	@echo ' '
 
+updatego: bootstrapgo
+
 libSatHelperGo: bootstrapgo libSatHelper
 	@echo -e '\033[0;32mBuilding target: $@\033[0m'
 	@echo -e '\033[0;34m'

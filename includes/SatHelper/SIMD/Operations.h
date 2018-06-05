@@ -192,23 +192,23 @@ namespace SatHelper {
 
             result->real(res[0]);
             result->imag(res[1]);
+        }
+        #else
+        static inline void dotProduct(std::complex<float> *result, const std::complex<float> *input, const float *taps, unsigned int length) {
+            float res[2] = {0, 0};
+
+            float *iPtr = (float *)input;
+            float *tPtr = (float *)taps;
+
+            for (unsigned int i = 0; i < length; i++) {
+              res[0] += ((*iPtr++) * (*tPtr));
+              res[1] += ((*iPtr++) * (*tPtr++));
             }
-            #else
-            static inline void dotProduct(std::complex<float> *result, const std::complex<float> *input, const float *taps, unsigned int length) {
-                float res[2] = {0, 0};
 
-                float *iPtr = (float *)input;
-                float *tPtr = (float *)taps;
-
-                for (unsigned int i = 0; i < length; i++) {
-                  res[0] += ((*iPtr++) * (*tPtr));
-                  res[1] += ((*iPtr++) * (*tPtr++));
-                }
-
-                result->real(res[0]);
-                result->imag(res[1]);
-            }
-            #endif
+            result->real(res[0]);
+            result->imag(res[1]);
+        }
+        #endif
     };
 
 } /* namespace SatHelper */

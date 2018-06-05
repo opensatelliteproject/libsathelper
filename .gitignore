@@ -262,7 +262,6 @@ ModelManifest.xml
 .idea
 cmake-build-debug
 
-SatHelper.go
-
-SatHelper_wrap.cxx
+#SatHelper.go
+#SatHelper_wrap.cxx
 
