@@ -1,3 +1,9 @@
+libsathelper (1.1.0-1ppa0) xenial; urgency=medium
+
+  * Fixed builds for i386
+
+ -- Lucas Teske <lucas@teske.com.br>  Thu, 07 Jun 2018 03:04:14 -0300
+
 libsathelper (1.1.0-0ppa0) xenial; urgency=low
 
   * First PPA Package

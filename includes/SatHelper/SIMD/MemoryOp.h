@@ -8,6 +8,11 @@
 #ifndef SRC_SIMD_MEMORYOP_H_
 #define SRC_SIMD_MEMORYOP_H_
 
+#include <limits.h>
+#if ( __WORDSIZE == 64 ) || defined(__x86_64) || defined(_M_X64) || defined(__aarch64__)
+#define OP_X64 1
+#endif
+
 #if defined(_M_IX86) || defined(_M_X86) || defined(__i386__) || defined(__x86_64) || defined(_M_X64)
 #define MEMORY_OP_X86
 #elif defined(__arm__) || defined(_M_ARM) || defined(__aarch64__)

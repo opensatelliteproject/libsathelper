@@ -21,7 +21,7 @@ namespace SatHelper {
       static bool hasAVX;
       static bool initialized;
 
-#ifdef MEMORY_OP_X86
+#if defined(MEMORY_OP_X86) && defined(OP_X64)
       static inline float FMA(float a, float b, float c) {
         if (hasFMA) {
 #ifdef _MSC_VER
