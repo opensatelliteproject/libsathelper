@@ -1,0 +1,11 @@
+Source: libsathelper
+Section: devel
+Priority: optional
+Maintainer: Lucas Teske <lucas@teske.com.br>
+Build-Depends: cmake, build-essential, libcorrect
+Homepage: https://github.com/OpenSatelliteProject/libsathelper
+
+Package: libsathelper
+Architecture: any
+Depends: libcorrect, ${shlibs:Depends}, ${misc:Depends}
+Description: libsathelper is a Helper library for decoding Satellite Signals.

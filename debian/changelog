@@ -1,0 +1,6 @@
+libsathelper (1.1.0-0ppa0) xenial; urgency=low
+
+  * First PPA Package
+  * Updated README and added Go Wrapper Generated Files
+
+ -- Lucas Teske <lucas@teske.com.br>  Mon, 04 Jun 2018 02:33:58 -0300
