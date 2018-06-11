@@ -317,7 +317,7 @@ SWIGINTERN SatHelper::ConfigParser SatHelper_ConfigParser___getitem__(SatHelper:
 extern "C" {
 #endif
 
-void _wrap_Swig_free_SatHelper_4367b69a00f83bf7(void *_swig_go_0) {
+void _wrap_Swig_free_SatHelper_9d76377ed7889403(void *_swig_go_0) {
   void *arg1 = (void *) 0 ;
   
   arg1 = *(void **)&_swig_go_0; 
@@ -327,7 +327,7 @@ void _wrap_Swig_free_SatHelper_4367b69a00f83bf7(void *_swig_go_0) {
 }
 
 
-void *_wrap_Swig_malloc_SatHelper_4367b69a00f83bf7(intgo _swig_go_0) {
+void *_wrap_Swig_malloc_SatHelper_9d76377ed7889403(intgo _swig_go_0) {
   int arg1 ;
   void *result = 0 ;
   void *_swig_go_result;
@@ -340,7 +340,7 @@ void *_wrap_Swig_malloc_SatHelper_4367b69a00f83bf7(intgo _swig_go_0) {
 }
 
 
-std::vector< float > *_wrap_new_VecFloat__SWIG_0_SatHelper_4367b69a00f83bf7() {
+std::vector< float > *_wrap_new_VecFloat__SWIG_0_SatHelper_9d76377ed7889403() {
   std::vector< float > *result = 0 ;
   std::vector< float > *_swig_go_result;
   
@@ -351,7 +351,7 @@ std::vector< float > *_wrap_new_VecFloat__SWIG_0_SatHelper_4367b69a00f83bf7() {
 }
 
 
-std::vector< float > *_wrap_new_VecFloat__SWIG_1_SatHelper_4367b69a00f83bf7(long long _swig_go_0) {
+std::vector< float > *_wrap_new_VecFloat__SWIG_1_SatHelper_9d76377ed7889403(long long _swig_go_0) {
   std::vector< float >::size_type arg1 ;
   std::vector< float > *result = 0 ;
   std::vector< float > *_swig_go_result;
@@ -364,7 +364,7 @@ std::vector< float > *_wrap_new_VecFloat__SWIG_1_SatHelper_4367b69a00f83bf7(long
 }
 
 
-long long _wrap_VecFloat_size_SatHelper_4367b69a00f83bf7(std::vector< float > *_swig_go_0) {
+long long _wrap_VecFloat_size_SatHelper_9d76377ed7889403(std::vector< float > *_swig_go_0) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   std::vector< float >::size_type result;
   long long _swig_go_result;
@@ -377,7 +377,7 @@ long long _wrap_VecFloat_size_SatHelper_4367b69a00f83bf7(std::vector< float > *_
 }
 
 
-long long _wrap_VecFloat_capacity_SatHelper_4367b69a00f83bf7(std::vector< float > *_swig_go_0) {
+long long _wrap_VecFloat_capacity_SatHelper_9d76377ed7889403(std::vector< float > *_swig_go_0) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   std::vector< float >::size_type result;
   long long _swig_go_result;
@@ -390,7 +390,7 @@ long long _wrap_VecFloat_capacity_SatHelper_4367b69a00f83bf7(std::vector< float 
 }
 
 
-void _wrap_VecFloat_reserve_SatHelper_4367b69a00f83bf7(std::vector< float > *_swig_go_0, long long _swig_go_1) {
+void _wrap_VecFloat_reserve_SatHelper_9d76377ed7889403(std::vector< float > *_swig_go_0, long long _swig_go_1) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   std::vector< float >::size_type arg2 ;
   
@@ -402,7 +402,7 @@ void _wrap_VecFloat_reserve_SatHelper_4367b69a00f83bf7(std::vector< float > *_sw
 }
 
 
-bool _wrap_VecFloat_isEmpty_SatHelper_4367b69a00f83bf7(std::vector< float > *_swig_go_0) {
+bool _wrap_VecFloat_isEmpty_SatHelper_9d76377ed7889403(std::vector< float > *_swig_go_0) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   bool result;
   bool _swig_go_result;
@@ -415,7 +415,7 @@ bool _wrap_VecFloat_isEmpty_SatHelper_4367b69a00f83bf7(std::vector< float > *_sw
 }
 
 
-void _wrap_VecFloat_clear_SatHelper_4367b69a00f83bf7(std::vector< float > *_swig_go_0) {
+void _wrap_VecFloat_clear_SatHelper_9d76377ed7889403(std::vector< float > *_swig_go_0) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   
   arg1 = *(std::vector< float > **)&_swig_go_0; 
@@ -425,7 +425,7 @@ void _wrap_VecFloat_clear_SatHelper_4367b69a00f83bf7(std::vector< float > *_swig
 }
 
 
-void _wrap_VecFloat_add_SatHelper_4367b69a00f83bf7(std::vector< float > *_swig_go_0, float _swig_go_1) {
+void _wrap_VecFloat_add_SatHelper_9d76377ed7889403(std::vector< float > *_swig_go_0, float _swig_go_1) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   std::vector< float >::value_type *arg2 = 0 ;
   
@@ -437,7 +437,7 @@ void _wrap_VecFloat_add_SatHelper_4367b69a00f83bf7(std::vector< float > *_swig_g
 }
 
 
-float _wrap_VecFloat_get_SatHelper_4367b69a00f83bf7(std::vector< float > *_swig_go_0, intgo _swig_go_1) {
+float _wrap_VecFloat_get_SatHelper_9d76377ed7889403(std::vector< float > *_swig_go_0, intgo _swig_go_1) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
   std::vector< float >::value_type *result = 0 ;
@@ -458,7 +458,7 @@ float _wrap_VecFloat_get_SatHelper_4367b69a00f83bf7(std::vector< float > *_swig_
 }
 
 
-void _wrap_VecFloat_set_SatHelper_4367b69a00f83bf7(std::vector< float > *_swig_go_0, intgo _swig_go_1, float _swig_go_2) {
+void _wrap_VecFloat_set_SatHelper_9d76377ed7889403(std::vector< float > *_swig_go_0, intgo _swig_go_1, float _swig_go_2) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
   std::vector< float >::value_type *arg3 = 0 ;
@@ -478,7 +478,7 @@ void _wrap_VecFloat_set_SatHelper_4367b69a00f83bf7(std::vector< float > *_swig_g
 }
 
 
-void _wrap_delete_VecFloat_SatHelper_4367b69a00f83bf7(std::vector< float > *_swig_go_0) {
+void _wrap_delete_VecFloat_SatHelper_9d76377ed7889403(std::vector< float > *_swig_go_0) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   
   arg1 = *(std::vector< float > **)&_swig_go_0; 
@@ -488,7 +488,7 @@ void _wrap_delete_VecFloat_SatHelper_4367b69a00f83bf7(std::vector< float > *_swi
 }
 
 
-std::vector< double > *_wrap_new_VecDouble__SWIG_0_SatHelper_4367b69a00f83bf7() {
+std::vector< double > *_wrap_new_VecDouble__SWIG_0_SatHelper_9d76377ed7889403() {
   std::vector< double > *result = 0 ;
   std::vector< double > *_swig_go_result;
   
@@ -499,7 +499,7 @@ std::vector< double > *_wrap_new_VecDouble__SWIG_0_SatHelper_4367b69a00f83bf7() 
 }
 
 
-std::vector< double > *_wrap_new_VecDouble__SWIG_1_SatHelper_4367b69a00f83bf7(long long _swig_go_0) {
+std::vector< double > *_wrap_new_VecDouble__SWIG_1_SatHelper_9d76377ed7889403(long long _swig_go_0) {
   std::vector< double >::size_type arg1 ;
   std::vector< double > *result = 0 ;
   std::vector< double > *_swig_go_result;
@@ -512,7 +512,7 @@ std::vector< double > *_wrap_new_VecDouble__SWIG_1_SatHelper_4367b69a00f83bf7(lo
 }
 
 
-long long _wrap_VecDouble_size_SatHelper_4367b69a00f83bf7(std::vector< double > *_swig_go_0) {
+long long _wrap_VecDouble_size_SatHelper_9d76377ed7889403(std::vector< double > *_swig_go_0) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   std::vector< double >::size_type result;
   long long _swig_go_result;
@@ -525,7 +525,7 @@ long long _wrap_VecDouble_size_SatHelper_4367b69a00f83bf7(std::vector< double > 
 }
 
 
-long long _wrap_VecDouble_capacity_SatHelper_4367b69a00f83bf7(std::vector< double > *_swig_go_0) {
+long long _wrap_VecDouble_capacity_SatHelper_9d76377ed7889403(std::vector< double > *_swig_go_0) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   std::vector< double >::size_type result;
   long long _swig_go_result;
@@ -538,7 +538,7 @@ long long _wrap_VecDouble_capacity_SatHelper_4367b69a00f83bf7(std::vector< doubl
 }
 
 
-void _wrap_VecDouble_reserve_SatHelper_4367b69a00f83bf7(std::vector< double > *_swig_go_0, long long _swig_go_1) {
+void _wrap_VecDouble_reserve_SatHelper_9d76377ed7889403(std::vector< double > *_swig_go_0, long long _swig_go_1) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   std::vector< double >::size_type arg2 ;
   
@@ -550,7 +550,7 @@ void _wrap_VecDouble_reserve_SatHelper_4367b69a00f83bf7(std::vector< double > *_
 }
 
 
-bool _wrap_VecDouble_isEmpty_SatHelper_4367b69a00f83bf7(std::vector< double > *_swig_go_0) {
+bool _wrap_VecDouble_isEmpty_SatHelper_9d76377ed7889403(std::vector< double > *_swig_go_0) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   bool result;
   bool _swig_go_result;
@@ -563,7 +563,7 @@ bool _wrap_VecDouble_isEmpty_SatHelper_4367b69a00f83bf7(std::vector< double > *_
 }
 
 
-void _wrap_VecDouble_clear_SatHelper_4367b69a00f83bf7(std::vector< double > *_swig_go_0) {
+void _wrap_VecDouble_clear_SatHelper_9d76377ed7889403(std::vector< double > *_swig_go_0) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   
   arg1 = *(std::vector< double > **)&_swig_go_0; 
@@ -573,7 +573,7 @@ void _wrap_VecDouble_clear_SatHelper_4367b69a00f83bf7(std::vector< double > *_sw
 }
 
 
-void _wrap_VecDouble_add_SatHelper_4367b69a00f83bf7(std::vector< double > *_swig_go_0, double _swig_go_1) {
+void _wrap_VecDouble_add_SatHelper_9d76377ed7889403(std::vector< double > *_swig_go_0, double _swig_go_1) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   std::vector< double >::value_type *arg2 = 0 ;
   
@@ -585,7 +585,7 @@ void _wrap_VecDouble_add_SatHelper_4367b69a00f83bf7(std::vector< double > *_swig
 }
 
 
-double _wrap_VecDouble_get_SatHelper_4367b69a00f83bf7(std::vector< double > *_swig_go_0, intgo _swig_go_1) {
+double _wrap_VecDouble_get_SatHelper_9d76377ed7889403(std::vector< double > *_swig_go_0, intgo _swig_go_1) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   int arg2 ;
   std::vector< double >::value_type *result = 0 ;
@@ -606,7 +606,7 @@ double _wrap_VecDouble_get_SatHelper_4367b69a00f83bf7(std::vector< double > *_sw
 }
 
 
-void _wrap_VecDouble_set_SatHelper_4367b69a00f83bf7(std::vector< double > *_swig_go_0, intgo _swig_go_1, double _swig_go_2) {
+void _wrap_VecDouble_set_SatHelper_9d76377ed7889403(std::vector< double > *_swig_go_0, intgo _swig_go_1, double _swig_go_2) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   int arg2 ;
   std::vector< double >::value_type *arg3 = 0 ;
@@ -626,7 +626,7 @@ void _wrap_VecDouble_set_SatHelper_4367b69a00f83bf7(std::vector< double > *_swig
 }
 
 
-void _wrap_delete_VecDouble_SatHelper_4367b69a00f83bf7(std::vector< double > *_swig_go_0) {
+void _wrap_delete_VecDouble_SatHelper_9d76377ed7889403(std::vector< double > *_swig_go_0) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   
   arg1 = *(std::vector< double > **)&_swig_go_0; 
@@ -636,7 +636,7 @@ void _wrap_delete_VecDouble_SatHelper_4367b69a00f83bf7(std::vector< double > *_s
 }
 
 
-SatHelper::ConfigParser *_wrap_new_ConfigParser_SatHelper_4367b69a00f83bf7(_gostring_ _swig_go_0) {
+SatHelper::ConfigParser *_wrap_new_ConfigParser_SatHelper_9d76377ed7889403(_gostring_ _swig_go_0) {
   std::string *arg1 = 0 ;
   SatHelper::ConfigParser *result = 0 ;
   SatHelper::ConfigParser *_swig_go_result;
@@ -652,7 +652,7 @@ SatHelper::ConfigParser *_wrap_new_ConfigParser_SatHelper_4367b69a00f83bf7(_gost
 }
 
 
-void _wrap_ConfigParser_set_SatHelper_4367b69a00f83bf7(SatHelper::ConfigParser *_swig_go_0, _gostring_ _swig_go_1, _gostring_ _swig_go_2) {
+void _wrap_ConfigParser_set_SatHelper_9d76377ed7889403(SatHelper::ConfigParser *_swig_go_0, _gostring_ _swig_go_1, _gostring_ _swig_go_2) {
   SatHelper::ConfigParser *arg1 = (SatHelper::ConfigParser *) 0 ;
   std::string *arg2 = 0 ;
   std::string *arg3 = 0 ;
@@ -672,7 +672,7 @@ void _wrap_ConfigParser_set_SatHelper_4367b69a00f83bf7(SatHelper::ConfigParser *
 }
 
 
-bool _wrap_ConfigParser_hasKey_SatHelper_4367b69a00f83bf7(SatHelper::ConfigParser *_swig_go_0, _gostring_ _swig_go_1) {
+bool _wrap_ConfigParser_hasKey_SatHelper_9d76377ed7889403(SatHelper::ConfigParser *_swig_go_0, _gostring_ _swig_go_1) {
   SatHelper::ConfigParser *arg1 = (SatHelper::ConfigParser *) 0 ;
   std::string *arg2 = 0 ;
   bool result;
@@ -690,7 +690,7 @@ bool _wrap_ConfigParser_hasKey_SatHelper_4367b69a00f83bf7(SatHelper::ConfigParse
 }
 
 
-_gostring_ _wrap_ConfigParser_get_SatHelper_4367b69a00f83bf7(SatHelper::ConfigParser *_swig_go_0, _gostring_ _swig_go_1) {
+_gostring_ _wrap_ConfigParser_get_SatHelper_9d76377ed7889403(SatHelper::ConfigParser *_swig_go_0, _gostring_ _swig_go_1) {
   SatHelper::ConfigParser *arg1 = (SatHelper::ConfigParser *) 0 ;
   std::string *arg2 = 0 ;
   std::string result;
@@ -708,7 +708,7 @@ _gostring_ _wrap_ConfigParser_get_SatHelper_4367b69a00f83bf7(SatHelper::ConfigPa
 }
 
 
-float _wrap_ConfigParser_getFloat_SatHelper_4367b69a00f83bf7(SatHelper::ConfigParser *_swig_go_0, _gostring_ _swig_go_1) {
+float _wrap_ConfigParser_getFloat_SatHelper_9d76377ed7889403(SatHelper::ConfigParser *_swig_go_0, _gostring_ _swig_go_1) {
   SatHelper::ConfigParser *arg1 = (SatHelper::ConfigParser *) 0 ;
   std::string *arg2 = 0 ;
   float result;
@@ -726,7 +726,7 @@ float _wrap_ConfigParser_getFloat_SatHelper_4367b69a00f83bf7(SatHelper::ConfigPa
 }
 
 
-intgo _wrap_ConfigParser_getInt_SatHelper_4367b69a00f83bf7(SatHelper::ConfigParser *_swig_go_0, _gostring_ _swig_go_1) {
+intgo _wrap_ConfigParser_getInt_SatHelper_9d76377ed7889403(SatHelper::ConfigParser *_swig_go_0, _gostring_ _swig_go_1) {
   SatHelper::ConfigParser *arg1 = (SatHelper::ConfigParser *) 0 ;
   std::string *arg2 = 0 ;
   int result;
@@ -744,7 +744,7 @@ intgo _wrap_ConfigParser_getInt_SatHelper_4367b69a00f83bf7(SatHelper::ConfigPars
 }
 
 
-intgo _wrap_ConfigParser_getUInt_SatHelper_4367b69a00f83bf7(SatHelper::ConfigParser *_swig_go_0, _gostring_ _swig_go_1) {
+intgo _wrap_ConfigParser_getUInt_SatHelper_9d76377ed7889403(SatHelper::ConfigParser *_swig_go_0, _gostring_ _swig_go_1) {
   SatHelper::ConfigParser *arg1 = (SatHelper::ConfigParser *) 0 ;
   std::string *arg2 = 0 ;
   unsigned int result;
@@ -762,7 +762,7 @@ intgo _wrap_ConfigParser_getUInt_SatHelper_4367b69a00f83bf7(SatHelper::ConfigPar
 }
 
 
-bool _wrap_ConfigParser_getBool_SatHelper_4367b69a00f83bf7(SatHelper::ConfigParser *_swig_go_0, _gostring_ _swig_go_1) {
+bool _wrap_ConfigParser_getBool_SatHelper_9d76377ed7889403(SatHelper::ConfigParser *_swig_go_0, _gostring_ _swig_go_1) {
   SatHelper::ConfigParser *arg1 = (SatHelper::ConfigParser *) 0 ;
   std::string *arg2 = 0 ;
   bool result;
@@ -780,7 +780,7 @@ bool _wrap_ConfigParser_getBool_SatHelper_4367b69a00f83bf7(SatHelper::ConfigPars
 }
 
 
-void _wrap_ConfigParser_SaveFile_SatHelper_4367b69a00f83bf7(SatHelper::ConfigParser *_swig_go_0) {
+void _wrap_ConfigParser_SaveFile_SatHelper_9d76377ed7889403(SatHelper::ConfigParser *_swig_go_0) {
   SatHelper::ConfigParser *arg1 = (SatHelper::ConfigParser *) 0 ;
   
   arg1 = *(SatHelper::ConfigParser **)&_swig_go_0; 
@@ -790,7 +790,7 @@ void _wrap_ConfigParser_SaveFile_SatHelper_4367b69a00f83bf7(SatHelper::ConfigPar
 }
 
 
-bool _wrap_ConfigParser_LoadFile_SatHelper_4367b69a00f83bf7(SatHelper::ConfigParser *_swig_go_0) {
+bool _wrap_ConfigParser_LoadFile_SatHelper_9d76377ed7889403(SatHelper::ConfigParser *_swig_go_0) {
   SatHelper::ConfigParser *arg1 = (SatHelper::ConfigParser *) 0 ;
   bool result;
   bool _swig_go_result;
@@ -803,7 +803,7 @@ bool _wrap_ConfigParser_LoadFile_SatHelper_4367b69a00f83bf7(SatHelper::ConfigPar
 }
 
 
-void _wrap_delete_ConfigParser_SatHelper_4367b69a00f83bf7(SatHelper::ConfigParser *_swig_go_0) {
+void _wrap_delete_ConfigParser_SatHelper_9d76377ed7889403(SatHelper::ConfigParser *_swig_go_0) {
   SatHelper::ConfigParser *arg1 = (SatHelper::ConfigParser *) 0 ;
   
   arg1 = *(SatHelper::ConfigParser **)&_swig_go_0; 
@@ -813,7 +813,7 @@ void _wrap_delete_ConfigParser_SatHelper_4367b69a00f83bf7(SatHelper::ConfigParse
 }
 
 
-SatHelper::ConfigParser *_wrap_ConfigParser___getitem___SatHelper_4367b69a00f83bf7(SatHelper::ConfigParser *_swig_go_0, _gostring_ _swig_go_1) {
+SatHelper::ConfigParser *_wrap_ConfigParser___getitem___SatHelper_9d76377ed7889403(SatHelper::ConfigParser *_swig_go_0, _gostring_ _swig_go_1) {
   SatHelper::ConfigParser *arg1 = (SatHelper::ConfigParser *) 0 ;
   std::string *arg2 = 0 ;
   SwigValueWrapper< SatHelper::ConfigParser > result;
@@ -831,7 +831,7 @@ SatHelper::ConfigParser *_wrap_ConfigParser___getitem___SatHelper_4367b69a00f83b
 }
 
 
-bool _wrap_Correlator_hardCorrelate_SatHelper_4367b69a00f83bf7(char _swig_go_0, char _swig_go_1) {
+bool _wrap_Correlator_hardCorrelate_SatHelper_9d76377ed7889403(char _swig_go_0, char _swig_go_1) {
   uint8_t arg1 ;
   uint8_t arg2 ;
   bool result;
@@ -846,7 +846,7 @@ bool _wrap_Correlator_hardCorrelate_SatHelper_4367b69a00f83bf7(char _swig_go_0, 
 }
 
 
-intgo _wrap_Correlator_softCorrelate_SatHelper_4367b69a00f83bf7(char _swig_go_0, char _swig_go_1) {
+intgo _wrap_Correlator_softCorrelate_SatHelper_9d76377ed7889403(char _swig_go_0, char _swig_go_1) {
   uint8_t arg1 ;
   uint8_t arg2 ;
   uint32_t result;
@@ -861,7 +861,7 @@ intgo _wrap_Correlator_softCorrelate_SatHelper_4367b69a00f83bf7(char _swig_go_0,
 }
 
 
-SatHelper::Correlator *_wrap_new_Correlator_SatHelper_4367b69a00f83bf7() {
+SatHelper::Correlator *_wrap_new_Correlator_SatHelper_9d76377ed7889403() {
   SatHelper::Correlator *result = 0 ;
   SatHelper::Correlator *_swig_go_result;
   
@@ -872,7 +872,7 @@ SatHelper::Correlator *_wrap_new_Correlator_SatHelper_4367b69a00f83bf7() {
 }
 
 
-void _wrap_delete_Correlator_SatHelper_4367b69a00f83bf7(SatHelper::Correlator *_swig_go_0) {
+void _wrap_delete_Correlator_SatHelper_9d76377ed7889403(SatHelper::Correlator *_swig_go_0) {
   SatHelper::Correlator *arg1 = (SatHelper::Correlator *) 0 ;
   
   arg1 = *(SatHelper::Correlator **)&_swig_go_0; 
@@ -882,7 +882,7 @@ void _wrap_delete_Correlator_SatHelper_4367b69a00f83bf7(SatHelper::Correlator *_
 }
 
 
-intgo _wrap_Correlator_getHighestCorrelation_SatHelper_4367b69a00f83bf7(SatHelper::Correlator *_swig_go_0) {
+intgo _wrap_Correlator_getHighestCorrelation_SatHelper_9d76377ed7889403(SatHelper::Correlator *_swig_go_0) {
   SatHelper::Correlator *arg1 = (SatHelper::Correlator *) 0 ;
   uint32_t result;
   intgo _swig_go_result;
@@ -895,7 +895,7 @@ intgo _wrap_Correlator_getHighestCorrelation_SatHelper_4367b69a00f83bf7(SatHelpe
 }
 
 
-intgo _wrap_Correlator_getHighestCorrelationPosition_SatHelper_4367b69a00f83bf7(SatHelper::Correlator *_swig_go_0) {
+intgo _wrap_Correlator_getHighestCorrelationPosition_SatHelper_9d76377ed7889403(SatHelper::Correlator *_swig_go_0) {
   SatHelper::Correlator *arg1 = (SatHelper::Correlator *) 0 ;
   uint32_t result;
   intgo _swig_go_result;
@@ -908,7 +908,7 @@ intgo _wrap_Correlator_getHighestCorrelationPosition_SatHelper_4367b69a00f83bf7(
 }
 
 
-intgo _wrap_Correlator_getCorrelationWordNumber_SatHelper_4367b69a00f83bf7(SatHelper::Correlator *_swig_go_0) {
+intgo _wrap_Correlator_getCorrelationWordNumber_SatHelper_9d76377ed7889403(SatHelper::Correlator *_swig_go_0) {
   SatHelper::Correlator *arg1 = (SatHelper::Correlator *) 0 ;
   uint32_t result;
   intgo _swig_go_result;
@@ -921,7 +921,7 @@ intgo _wrap_Correlator_getCorrelationWordNumber_SatHelper_4367b69a00f83bf7(SatHe
 }
 
 
-void _wrap_Correlator_addWord__SWIG_0_SatHelper_4367b69a00f83bf7(SatHelper::Correlator *_swig_go_0, intgo _swig_go_1) {
+void _wrap_Correlator_addWord__SWIG_0_SatHelper_9d76377ed7889403(SatHelper::Correlator *_swig_go_0, intgo _swig_go_1) {
   SatHelper::Correlator *arg1 = (SatHelper::Correlator *) 0 ;
   uint32_t arg2 ;
   
@@ -933,7 +933,7 @@ void _wrap_Correlator_addWord__SWIG_0_SatHelper_4367b69a00f83bf7(SatHelper::Corr
 }
 
 
-void _wrap_Correlator_addWord__SWIG_1_SatHelper_4367b69a00f83bf7(SatHelper::Correlator *_swig_go_0, long long _swig_go_1) {
+void _wrap_Correlator_addWord__SWIG_1_SatHelper_9d76377ed7889403(SatHelper::Correlator *_swig_go_0, long long _swig_go_1) {
   SatHelper::Correlator *arg1 = (SatHelper::Correlator *) 0 ;
   uint64_t arg2 ;
   
@@ -945,7 +945,7 @@ void _wrap_Correlator_addWord__SWIG_1_SatHelper_4367b69a00f83bf7(SatHelper::Corr
 }
 
 
-void _wrap_Correlator_correlate_SatHelper_4367b69a00f83bf7(SatHelper::Correlator *_swig_go_0, char *_swig_go_1, intgo _swig_go_2) {
+void _wrap_Correlator_correlate_SatHelper_9d76377ed7889403(SatHelper::Correlator *_swig_go_0, char *_swig_go_1, intgo _swig_go_2) {
   SatHelper::Correlator *arg1 = (SatHelper::Correlator *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   uint32_t arg3 ;
@@ -959,7 +959,7 @@ void _wrap_Correlator_correlate_SatHelper_4367b69a00f83bf7(SatHelper::Correlator
 }
 
 
-SatHelper::Viterbi27 *_wrap_new_Viterbi27__SWIG_0_SatHelper_4367b69a00f83bf7(intgo _swig_go_0, intgo _swig_go_1, intgo _swig_go_2) {
+SatHelper::Viterbi27 *_wrap_new_Viterbi27__SWIG_0_SatHelper_9d76377ed7889403(intgo _swig_go_0, intgo _swig_go_1, intgo _swig_go_2) {
   int arg1 ;
   int arg2 ;
   int arg3 ;
@@ -976,7 +976,7 @@ SatHelper::Viterbi27 *_wrap_new_Viterbi27__SWIG_0_SatHelper_4367b69a00f83bf7(int
 }
 
 
-SatHelper::Viterbi27 *_wrap_new_Viterbi27__SWIG_1_SatHelper_4367b69a00f83bf7(intgo _swig_go_0) {
+SatHelper::Viterbi27 *_wrap_new_Viterbi27__SWIG_1_SatHelper_9d76377ed7889403(intgo _swig_go_0) {
   int arg1 ;
   SatHelper::Viterbi27 *result = 0 ;
   SatHelper::Viterbi27 *_swig_go_result;
@@ -989,7 +989,7 @@ SatHelper::Viterbi27 *_wrap_new_Viterbi27__SWIG_1_SatHelper_4367b69a00f83bf7(int
 }
 
 
-intgo _wrap_Viterbi27_DecodedSize_SatHelper_4367b69a00f83bf7(SatHelper::Viterbi27 *_swig_go_0) {
+intgo _wrap_Viterbi27_DecodedSize_SatHelper_9d76377ed7889403(SatHelper::Viterbi27 *_swig_go_0) {
   SatHelper::Viterbi27 *arg1 = (SatHelper::Viterbi27 *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -1002,7 +1002,7 @@ intgo _wrap_Viterbi27_DecodedSize_SatHelper_4367b69a00f83bf7(SatHelper::Viterbi2
 }
 
 
-intgo _wrap_Viterbi27_EncodedSize_SatHelper_4367b69a00f83bf7(SatHelper::Viterbi27 *_swig_go_0) {
+intgo _wrap_Viterbi27_EncodedSize_SatHelper_9d76377ed7889403(SatHelper::Viterbi27 *_swig_go_0) {
   SatHelper::Viterbi27 *arg1 = (SatHelper::Viterbi27 *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -1015,7 +1015,7 @@ intgo _wrap_Viterbi27_EncodedSize_SatHelper_4367b69a00f83bf7(SatHelper::Viterbi2
 }
 
 
-void _wrap_Viterbi27_SetCalculateErrors_SatHelper_4367b69a00f83bf7(SatHelper::Viterbi27 *_swig_go_0, bool _swig_go_1) {
+void _wrap_Viterbi27_SetCalculateErrors_SatHelper_9d76377ed7889403(SatHelper::Viterbi27 *_swig_go_0, bool _swig_go_1) {
   SatHelper::Viterbi27 *arg1 = (SatHelper::Viterbi27 *) 0 ;
   bool arg2 ;
   
@@ -1027,7 +1027,7 @@ void _wrap_Viterbi27_SetCalculateErrors_SatHelper_4367b69a00f83bf7(SatHelper::Vi
 }
 
 
-intgo _wrap_Viterbi27_GetBER_SatHelper_4367b69a00f83bf7(SatHelper::Viterbi27 *_swig_go_0) {
+intgo _wrap_Viterbi27_GetBER_SatHelper_9d76377ed7889403(SatHelper::Viterbi27 *_swig_go_0) {
   SatHelper::Viterbi27 *arg1 = (SatHelper::Viterbi27 *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -1040,7 +1040,7 @@ intgo _wrap_Viterbi27_GetBER_SatHelper_4367b69a00f83bf7(SatHelper::Viterbi27 *_s
 }
 
 
-float _wrap_Viterbi27_GetPercentBER_SatHelper_4367b69a00f83bf7(SatHelper::Viterbi27 *_swig_go_0) {
+float _wrap_Viterbi27_GetPercentBER_SatHelper_9d76377ed7889403(SatHelper::Viterbi27 *_swig_go_0) {
   SatHelper::Viterbi27 *arg1 = (SatHelper::Viterbi27 *) 0 ;
   float result;
   float _swig_go_result;
@@ -1053,7 +1053,7 @@ float _wrap_Viterbi27_GetPercentBER_SatHelper_4367b69a00f83bf7(SatHelper::Viterb
 }
 
 
-bool _wrap_Viterbi27_IsSSEMode_SatHelper_4367b69a00f83bf7(SatHelper::Viterbi27 *_swig_go_0) {
+bool _wrap_Viterbi27_IsSSEMode_SatHelper_9d76377ed7889403(SatHelper::Viterbi27 *_swig_go_0) {
   SatHelper::Viterbi27 *arg1 = (SatHelper::Viterbi27 *) 0 ;
   bool result;
   bool _swig_go_result;
@@ -1066,7 +1066,7 @@ bool _wrap_Viterbi27_IsSSEMode_SatHelper_4367b69a00f83bf7(SatHelper::Viterbi27 *
 }
 
 
-void _wrap_Viterbi27_decode_SatHelper_4367b69a00f83bf7(SatHelper::Viterbi27 *_swig_go_0, char *_swig_go_1, char *_swig_go_2) {
+void _wrap_Viterbi27_decode_SatHelper_9d76377ed7889403(SatHelper::Viterbi27 *_swig_go_0, char *_swig_go_1, char *_swig_go_2) {
   SatHelper::Viterbi27 *arg1 = (SatHelper::Viterbi27 *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   uint8_t *arg3 = (uint8_t *) 0 ;
@@ -1080,7 +1080,7 @@ void _wrap_Viterbi27_decode_SatHelper_4367b69a00f83bf7(SatHelper::Viterbi27 *_sw
 }
 
 
-void _wrap_Viterbi27_encode_SatHelper_4367b69a00f83bf7(SatHelper::Viterbi27 *_swig_go_0, char *_swig_go_1, char *_swig_go_2) {
+void _wrap_Viterbi27_encode_SatHelper_9d76377ed7889403(SatHelper::Viterbi27 *_swig_go_0, char *_swig_go_1, char *_swig_go_2) {
   SatHelper::Viterbi27 *arg1 = (SatHelper::Viterbi27 *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   uint8_t *arg3 = (uint8_t *) 0 ;
@@ -1094,7 +1094,7 @@ void _wrap_Viterbi27_encode_SatHelper_4367b69a00f83bf7(SatHelper::Viterbi27 *_sw
 }
 
 
-void _wrap_delete_Viterbi27_SatHelper_4367b69a00f83bf7(SatHelper::Viterbi27 *_swig_go_0) {
+void _wrap_delete_Viterbi27_SatHelper_9d76377ed7889403(SatHelper::Viterbi27 *_swig_go_0) {
   SatHelper::Viterbi27 *arg1 = (SatHelper::Viterbi27 *) 0 ;
   
   arg1 = *(SatHelper::Viterbi27 **)&_swig_go_0; 
@@ -1104,7 +1104,7 @@ void _wrap_delete_Viterbi27_SatHelper_4367b69a00f83bf7(SatHelper::Viterbi27 *_sw
 }
 
 
-SatHelper::ReedSolomon *_wrap_new_ReedSolomon_SatHelper_4367b69a00f83bf7() {
+SatHelper::ReedSolomon *_wrap_new_ReedSolomon_SatHelper_9d76377ed7889403() {
   SatHelper::ReedSolomon *result = 0 ;
   SatHelper::ReedSolomon *_swig_go_result;
   
@@ -1115,7 +1115,7 @@ SatHelper::ReedSolomon *_wrap_new_ReedSolomon_SatHelper_4367b69a00f83bf7() {
 }
 
 
-intgo _wrap_ReedSolomon_decode_ccsds_SatHelper_4367b69a00f83bf7(SatHelper::ReedSolomon *_swig_go_0, char *_swig_go_1) {
+intgo _wrap_ReedSolomon_decode_ccsds_SatHelper_9d76377ed7889403(SatHelper::ReedSolomon *_swig_go_0, char *_swig_go_1) {
   SatHelper::ReedSolomon *arg1 = (SatHelper::ReedSolomon *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   uint32_t result;
@@ -1130,7 +1130,7 @@ intgo _wrap_ReedSolomon_decode_ccsds_SatHelper_4367b69a00f83bf7(SatHelper::ReedS
 }
 
 
-intgo _wrap_ReedSolomon_decode_rs8_SatHelper_4367b69a00f83bf7(SatHelper::ReedSolomon *_swig_go_0, char *_swig_go_1) {
+intgo _wrap_ReedSolomon_decode_rs8_SatHelper_9d76377ed7889403(SatHelper::ReedSolomon *_swig_go_0, char *_swig_go_1) {
   SatHelper::ReedSolomon *arg1 = (SatHelper::ReedSolomon *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   uint32_t result;
@@ -1145,7 +1145,7 @@ intgo _wrap_ReedSolomon_decode_rs8_SatHelper_4367b69a00f83bf7(SatHelper::ReedSol
 }
 
 
-void _wrap_ReedSolomon_deinterleave_SatHelper_4367b69a00f83bf7(SatHelper::ReedSolomon *_swig_go_0, char *_swig_go_1, char *_swig_go_2, char _swig_go_3, char _swig_go_4) {
+void _wrap_ReedSolomon_deinterleave_SatHelper_9d76377ed7889403(SatHelper::ReedSolomon *_swig_go_0, char *_swig_go_1, char *_swig_go_2, char _swig_go_3, char _swig_go_4) {
   SatHelper::ReedSolomon *arg1 = (SatHelper::ReedSolomon *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   uint8_t *arg3 = (uint8_t *) 0 ;
@@ -1163,7 +1163,7 @@ void _wrap_ReedSolomon_deinterleave_SatHelper_4367b69a00f83bf7(SatHelper::ReedSo
 }
 
 
-void _wrap_ReedSolomon_interleave_SatHelper_4367b69a00f83bf7(SatHelper::ReedSolomon *_swig_go_0, char *_swig_go_1, char *_swig_go_2, char _swig_go_3, char _swig_go_4) {
+void _wrap_ReedSolomon_interleave_SatHelper_9d76377ed7889403(SatHelper::ReedSolomon *_swig_go_0, char *_swig_go_1, char *_swig_go_2, char _swig_go_3, char _swig_go_4) {
   SatHelper::ReedSolomon *arg1 = (SatHelper::ReedSolomon *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   uint8_t *arg3 = (uint8_t *) 0 ;
@@ -1181,7 +1181,7 @@ void _wrap_ReedSolomon_interleave_SatHelper_4367b69a00f83bf7(SatHelper::ReedSolo
 }
 
 
-void _wrap_ReedSolomon_SetCopyParityToOutput_SatHelper_4367b69a00f83bf7(SatHelper::ReedSolomon *_swig_go_0, bool _swig_go_1) {
+void _wrap_ReedSolomon_SetCopyParityToOutput_SatHelper_9d76377ed7889403(SatHelper::ReedSolomon *_swig_go_0, bool _swig_go_1) {
   SatHelper::ReedSolomon *arg1 = (SatHelper::ReedSolomon *) 0 ;
   bool arg2 ;
   
@@ -1193,7 +1193,7 @@ void _wrap_ReedSolomon_SetCopyParityToOutput_SatHelper_4367b69a00f83bf7(SatHelpe
 }
 
 
-void _wrap_delete_ReedSolomon_SatHelper_4367b69a00f83bf7(SatHelper::ReedSolomon *_swig_go_0) {
+void _wrap_delete_ReedSolomon_SatHelper_9d76377ed7889403(SatHelper::ReedSolomon *_swig_go_0) {
   SatHelper::ReedSolomon *arg1 = (SatHelper::ReedSolomon *) 0 ;
   
   arg1 = *(SatHelper::ReedSolomon **)&_swig_go_0; 
@@ -1203,7 +1203,7 @@ void _wrap_delete_ReedSolomon_SatHelper_4367b69a00f83bf7(SatHelper::ReedSolomon 
 }
 
 
-intgo _wrap_DEG_0_SatHelper_4367b69a00f83bf7() {
+intgo _wrap_DEG_0_SatHelper_9d76377ed7889403() {
   SatHelper::PhaseShift result;
   intgo _swig_go_result;
   
@@ -1215,7 +1215,7 @@ intgo _wrap_DEG_0_SatHelper_4367b69a00f83bf7() {
 }
 
 
-intgo _wrap_DEG_90_SatHelper_4367b69a00f83bf7() {
+intgo _wrap_DEG_90_SatHelper_9d76377ed7889403() {
   SatHelper::PhaseShift result;
   intgo _swig_go_result;
   
@@ -1227,7 +1227,7 @@ intgo _wrap_DEG_90_SatHelper_4367b69a00f83bf7() {
 }
 
 
-intgo _wrap_DEG_180_SatHelper_4367b69a00f83bf7() {
+intgo _wrap_DEG_180_SatHelper_9d76377ed7889403() {
   SatHelper::PhaseShift result;
   intgo _swig_go_result;
   
@@ -1239,7 +1239,7 @@ intgo _wrap_DEG_180_SatHelper_4367b69a00f83bf7() {
 }
 
 
-intgo _wrap_DEG_270_SatHelper_4367b69a00f83bf7() {
+intgo _wrap_DEG_270_SatHelper_9d76377ed7889403() {
   SatHelper::PhaseShift result;
   intgo _swig_go_result;
   
@@ -1251,7 +1251,7 @@ intgo _wrap_DEG_270_SatHelper_4367b69a00f83bf7() {
 }
 
 
-SatHelper::PacketFixer *_wrap_new_PacketFixer_SatHelper_4367b69a00f83bf7() {
+SatHelper::PacketFixer *_wrap_new_PacketFixer_SatHelper_9d76377ed7889403() {
   SatHelper::PacketFixer *result = 0 ;
   SatHelper::PacketFixer *_swig_go_result;
   
@@ -1262,7 +1262,7 @@ SatHelper::PacketFixer *_wrap_new_PacketFixer_SatHelper_4367b69a00f83bf7() {
 }
 
 
-void _wrap_PacketFixer_fixPacket_SatHelper_4367b69a00f83bf7(SatHelper::PacketFixer *_swig_go_0, char *_swig_go_1, intgo _swig_go_2, intgo _swig_go_3, bool _swig_go_4) {
+void _wrap_PacketFixer_fixPacket_SatHelper_9d76377ed7889403(SatHelper::PacketFixer *_swig_go_0, char *_swig_go_1, intgo _swig_go_2, intgo _swig_go_3, bool _swig_go_4) {
   SatHelper::PacketFixer *arg1 = (SatHelper::PacketFixer *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   uint32_t arg3 ;
@@ -1280,7 +1280,7 @@ void _wrap_PacketFixer_fixPacket_SatHelper_4367b69a00f83bf7(SatHelper::PacketFix
 }
 
 
-void _wrap_delete_PacketFixer_SatHelper_4367b69a00f83bf7(SatHelper::PacketFixer *_swig_go_0) {
+void _wrap_delete_PacketFixer_SatHelper_9d76377ed7889403(SatHelper::PacketFixer *_swig_go_0) {
   SatHelper::PacketFixer *arg1 = (SatHelper::PacketFixer *) 0 ;
   
   arg1 = *(SatHelper::PacketFixer **)&_swig_go_0; 
@@ -1290,7 +1290,7 @@ void _wrap_delete_PacketFixer_SatHelper_4367b69a00f83bf7(SatHelper::PacketFixer 
 }
 
 
-void _wrap_ScreenManager_GotoXY_SatHelper_4367b69a00f83bf7(intgo _swig_go_0, intgo _swig_go_1) {
+void _wrap_ScreenManager_GotoXY_SatHelper_9d76377ed7889403(intgo _swig_go_0, intgo _swig_go_1) {
   int arg1 ;
   int arg2 ;
   
@@ -1302,13 +1302,13 @@ void _wrap_ScreenManager_GotoXY_SatHelper_4367b69a00f83bf7(intgo _swig_go_0, int
 }
 
 
-void _wrap_ScreenManager_Clear_SatHelper_4367b69a00f83bf7() {
+void _wrap_ScreenManager_Clear_SatHelper_9d76377ed7889403() {
   SatHelper::ScreenManager::Clear();
   
 }
 
 
-SatHelper::ScreenManager *_wrap_new_ScreenManager_SatHelper_4367b69a00f83bf7() {
+SatHelper::ScreenManager *_wrap_new_ScreenManager_SatHelper_9d76377ed7889403() {
   SatHelper::ScreenManager *result = 0 ;
   SatHelper::ScreenManager *_swig_go_result;
   
@@ -1319,7 +1319,7 @@ SatHelper::ScreenManager *_wrap_new_ScreenManager_SatHelper_4367b69a00f83bf7() {
 }
 
 
-void _wrap_delete_ScreenManager_SatHelper_4367b69a00f83bf7(SatHelper::ScreenManager *_swig_go_0) {
+void _wrap_delete_ScreenManager_SatHelper_9d76377ed7889403(SatHelper::ScreenManager *_swig_go_0) {
   SatHelper::ScreenManager *arg1 = (SatHelper::ScreenManager *) 0 ;
   
   arg1 = *(SatHelper::ScreenManager **)&_swig_go_0; 
@@ -1329,7 +1329,7 @@ void _wrap_delete_ScreenManager_SatHelper_4367b69a00f83bf7(SatHelper::ScreenMana
 }
 
 
-intgo _wrap_IP_ANY_SatHelper_4367b69a00f83bf7() {
+intgo _wrap_IP_ANY_SatHelper_9d76377ed7889403() {
   SatHelper::PresetIpAddress result;
   intgo _swig_go_result;
   
@@ -1341,7 +1341,7 @@ intgo _wrap_IP_ANY_SatHelper_4367b69a00f83bf7() {
 }
 
 
-intgo _wrap_IP_LOCALHOST_SatHelper_4367b69a00f83bf7() {
+intgo _wrap_IP_LOCALHOST_SatHelper_9d76377ed7889403() {
   SatHelper::PresetIpAddress result;
   intgo _swig_go_result;
   
@@ -1353,7 +1353,7 @@ intgo _wrap_IP_LOCALHOST_SatHelper_4367b69a00f83bf7() {
 }
 
 
-SatHelper::IPAddress *_wrap_IPAddress_localhost_get_SatHelper_4367b69a00f83bf7() {
+SatHelper::IPAddress *_wrap_IPAddress_localhost_get_SatHelper_9d76377ed7889403() {
   SatHelper::IPAddress *result = 0 ;
   SatHelper::IPAddress *_swig_go_result;
   
@@ -1364,7 +1364,7 @@ SatHelper::IPAddress *_wrap_IPAddress_localhost_get_SatHelper_4367b69a00f83bf7()
 }
 
 
-SatHelper::IPAddress *_wrap_IPAddress_anyAddress_get_SatHelper_4367b69a00f83bf7() {
+SatHelper::IPAddress *_wrap_IPAddress_anyAddress_get_SatHelper_9d76377ed7889403() {
   SatHelper::IPAddress *result = 0 ;
   SatHelper::IPAddress *_swig_go_result;
   
@@ -1375,7 +1375,7 @@ SatHelper::IPAddress *_wrap_IPAddress_anyAddress_get_SatHelper_4367b69a00f83bf7(
 }
 
 
-SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_0_SatHelper_4367b69a00f83bf7() {
+SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_0_SatHelper_9d76377ed7889403() {
   SatHelper::IPAddress *result = 0 ;
   SatHelper::IPAddress *_swig_go_result;
   
@@ -1386,7 +1386,7 @@ SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_0_SatHelper_4367b69a00f83bf7() {
 }
 
 
-SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_1_SatHelper_4367b69a00f83bf7(intgo _swig_go_0) {
+SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_1_SatHelper_9d76377ed7889403(intgo _swig_go_0) {
   SatHelper::PresetIpAddress arg1 ;
   SatHelper::IPAddress *result = 0 ;
   SatHelper::IPAddress *_swig_go_result;
@@ -1399,7 +1399,7 @@ SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_1_SatHelper_4367b69a00f83bf7(int
 }
 
 
-SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_2_SatHelper_4367b69a00f83bf7(intgo _swig_go_0) {
+SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_2_SatHelper_9d76377ed7889403(intgo _swig_go_0) {
   uint32_t arg1 ;
   SatHelper::IPAddress *result = 0 ;
   SatHelper::IPAddress *_swig_go_result;
@@ -1412,7 +1412,7 @@ SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_2_SatHelper_4367b69a00f83bf7(int
 }
 
 
-SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_3_SatHelper_4367b69a00f83bf7(in_addr *_swig_go_0) {
+SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_3_SatHelper_9d76377ed7889403(in_addr *_swig_go_0) {
   in_addr arg1 ;
   in_addr *argp1 ;
   SatHelper::IPAddress *result = 0 ;
@@ -1432,7 +1432,7 @@ SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_3_SatHelper_4367b69a00f83bf7(in_
 }
 
 
-SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_4_SatHelper_4367b69a00f83bf7(char _swig_go_0, char _swig_go_1, char _swig_go_2, char _swig_go_3) {
+SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_4_SatHelper_9d76377ed7889403(char _swig_go_0, char _swig_go_1, char _swig_go_2, char _swig_go_3) {
   char arg1 ;
   char arg2 ;
   char arg3 ;
@@ -1451,7 +1451,7 @@ SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_4_SatHelper_4367b69a00f83bf7(cha
 }
 
 
-SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_5_SatHelper_4367b69a00f83bf7(_gostring_ _swig_go_0) {
+SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_5_SatHelper_9d76377ed7889403(_gostring_ _swig_go_0) {
   std::string arg1 ;
   SatHelper::IPAddress *result = 0 ;
   SatHelper::IPAddress *_swig_go_result;
@@ -1464,7 +1464,7 @@ SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_5_SatHelper_4367b69a00f83bf7(_go
 }
 
 
-SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_6_SatHelper_4367b69a00f83bf7(_gostring_ _swig_go_0) {
+SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_6_SatHelper_9d76377ed7889403(_gostring_ _swig_go_0) {
   char *arg1 = (char *) 0 ;
   SatHelper::IPAddress *result = 0 ;
   SatHelper::IPAddress *_swig_go_result;
@@ -1482,7 +1482,7 @@ SatHelper::IPAddress *_wrap_new_IPAddress__SWIG_6_SatHelper_4367b69a00f83bf7(_go
 }
 
 
-_gostring_ _wrap_IPAddress_ToString_SatHelper_4367b69a00f83bf7(SatHelper::IPAddress *_swig_go_0) {
+_gostring_ _wrap_IPAddress_ToString_SatHelper_9d76377ed7889403(SatHelper::IPAddress *_swig_go_0) {
   SatHelper::IPAddress *arg1 = (SatHelper::IPAddress *) 0 ;
   std::string result;
   _gostring_ _swig_go_result;
@@ -1495,7 +1495,7 @@ _gostring_ _wrap_IPAddress_ToString_SatHelper_4367b69a00f83bf7(SatHelper::IPAddr
 }
 
 
-intgo _wrap_IPAddress_ToUint32_SatHelper_4367b69a00f83bf7(SatHelper::IPAddress *_swig_go_0) {
+intgo _wrap_IPAddress_ToUint32_SatHelper_9d76377ed7889403(SatHelper::IPAddress *_swig_go_0) {
   SatHelper::IPAddress *arg1 = (SatHelper::IPAddress *) 0 ;
   uint32_t result;
   intgo _swig_go_result;
@@ -1508,7 +1508,7 @@ intgo _wrap_IPAddress_ToUint32_SatHelper_4367b69a00f83bf7(SatHelper::IPAddress *
 }
 
 
-in_addr *_wrap_IPAddress_ToInAddr_SatHelper_4367b69a00f83bf7(SatHelper::IPAddress *_swig_go_0) {
+in_addr *_wrap_IPAddress_ToInAddr_SatHelper_9d76377ed7889403(SatHelper::IPAddress *_swig_go_0) {
   SatHelper::IPAddress *arg1 = (SatHelper::IPAddress *) 0 ;
   in_addr result;
   in_addr *_swig_go_result;
@@ -1521,7 +1521,7 @@ in_addr *_wrap_IPAddress_ToInAddr_SatHelper_4367b69a00f83bf7(SatHelper::IPAddres
 }
 
 
-bool _wrap_IPAddress_equals_SatHelper_4367b69a00f83bf7(SatHelper::IPAddress *_swig_go_0, SatHelper::IPAddress *_swig_go_1) {
+bool _wrap_IPAddress_equals_SatHelper_9d76377ed7889403(SatHelper::IPAddress *_swig_go_0, SatHelper::IPAddress *_swig_go_1) {
   SatHelper::IPAddress *arg1 = (SatHelper::IPAddress *) 0 ;
   SatHelper::IPAddress *arg2 = 0 ;
   bool result;
@@ -1536,7 +1536,7 @@ bool _wrap_IPAddress_equals_SatHelper_4367b69a00f83bf7(SatHelper::IPAddress *_sw
 }
 
 
-bool _wrap_IPAddress_different_SatHelper_4367b69a00f83bf7(SatHelper::IPAddress *_swig_go_0, SatHelper::IPAddress *_swig_go_1) {
+bool _wrap_IPAddress_different_SatHelper_9d76377ed7889403(SatHelper::IPAddress *_swig_go_0, SatHelper::IPAddress *_swig_go_1) {
   SatHelper::IPAddress *arg1 = (SatHelper::IPAddress *) 0 ;
   SatHelper::IPAddress *arg2 = 0 ;
   bool result;
@@ -1551,7 +1551,7 @@ bool _wrap_IPAddress_different_SatHelper_4367b69a00f83bf7(SatHelper::IPAddress *
 }
 
 
-void _wrap_delete_IPAddress_SatHelper_4367b69a00f83bf7(SatHelper::IPAddress *_swig_go_0) {
+void _wrap_delete_IPAddress_SatHelper_9d76377ed7889403(SatHelper::IPAddress *_swig_go_0) {
   SatHelper::IPAddress *arg1 = (SatHelper::IPAddress *) 0 ;
   
   arg1 = *(SatHelper::IPAddress **)&_swig_go_0; 
@@ -1561,7 +1561,7 @@ void _wrap_delete_IPAddress_SatHelper_4367b69a00f83bf7(SatHelper::IPAddress *_sw
 }
 
 
-SatHelper::Socket *_wrap_new_Socket__SWIG_0_SatHelper_4367b69a00f83bf7() {
+SatHelper::Socket *_wrap_new_Socket__SWIG_0_SatHelper_9d76377ed7889403() {
   SatHelper::Socket *result = 0 ;
   SatHelper::Socket *_swig_go_result;
   
@@ -1572,7 +1572,7 @@ SatHelper::Socket *_wrap_new_Socket__SWIG_0_SatHelper_4367b69a00f83bf7() {
 }
 
 
-SatHelper::Socket *_wrap_new_Socket__SWIG_1_SatHelper_4367b69a00f83bf7(SatHelper::IPAddress *_swig_go_0) {
+SatHelper::Socket *_wrap_new_Socket__SWIG_1_SatHelper_9d76377ed7889403(SatHelper::IPAddress *_swig_go_0) {
   SatHelper::IPAddress arg1 ;
   SatHelper::IPAddress *argp1 ;
   SatHelper::Socket *result = 0 ;
@@ -1592,7 +1592,7 @@ SatHelper::Socket *_wrap_new_Socket__SWIG_1_SatHelper_4367b69a00f83bf7(SatHelper
 }
 
 
-SatHelper::Socket *_wrap_new_Socket__SWIG_2_SatHelper_4367b69a00f83bf7(_gostring_ _swig_go_0) {
+SatHelper::Socket *_wrap_new_Socket__SWIG_2_SatHelper_9d76377ed7889403(_gostring_ _swig_go_0) {
   std::string arg1 ;
   SatHelper::Socket *result = 0 ;
   SatHelper::Socket *_swig_go_result;
@@ -1605,7 +1605,7 @@ SatHelper::Socket *_wrap_new_Socket__SWIG_2_SatHelper_4367b69a00f83bf7(_gostring
 }
 
 
-SatHelper::Socket *_wrap_new_Socket__SWIG_3_SatHelper_4367b69a00f83bf7(SatHelper::IPAddress *_swig_go_0, intgo _swig_go_1) {
+SatHelper::Socket *_wrap_new_Socket__SWIG_3_SatHelper_9d76377ed7889403(SatHelper::IPAddress *_swig_go_0, intgo _swig_go_1) {
   SatHelper::IPAddress arg1 ;
   int arg2 ;
   SatHelper::IPAddress *argp1 ;
@@ -1627,7 +1627,7 @@ SatHelper::Socket *_wrap_new_Socket__SWIG_3_SatHelper_4367b69a00f83bf7(SatHelper
 }
 
 
-SatHelper::Socket *_wrap_new_Socket__SWIG_4_SatHelper_4367b69a00f83bf7(SatHelper::Socket *_swig_go_0) {
+SatHelper::Socket *_wrap_new_Socket__SWIG_4_SatHelper_9d76377ed7889403(SatHelper::Socket *_swig_go_0) {
   SatHelper::Socket *arg1 = 0 ;
   SatHelper::Socket *result = 0 ;
   SatHelper::Socket *_swig_go_result;
@@ -1640,7 +1640,7 @@ SatHelper::Socket *_wrap_new_Socket__SWIG_4_SatHelper_4367b69a00f83bf7(SatHelper
 }
 
 
-void _wrap_delete_Socket_SatHelper_4367b69a00f83bf7(SatHelper::Socket *_swig_go_0) {
+void _wrap_delete_Socket_SatHelper_9d76377ed7889403(SatHelper::Socket *_swig_go_0) {
   SatHelper::Socket *arg1 = (SatHelper::Socket *) 0 ;
   
   arg1 = *(SatHelper::Socket **)&_swig_go_0; 
@@ -1650,7 +1650,7 @@ void _wrap_delete_Socket_SatHelper_4367b69a00f83bf7(SatHelper::Socket *_swig_go_
 }
 
 
-void _wrap_Socket_Receive_SatHelper_4367b69a00f83bf7(SatHelper::Socket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
+void _wrap_Socket_Receive_SatHelper_9d76377ed7889403(SatHelper::Socket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
   SatHelper::Socket *arg1 = (SatHelper::Socket *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -1669,7 +1669,7 @@ void _wrap_Socket_Receive_SatHelper_4367b69a00f83bf7(SatHelper::Socket *_swig_go
 }
 
 
-void _wrap_Socket_Send_SatHelper_4367b69a00f83bf7(SatHelper::Socket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
+void _wrap_Socket_Send_SatHelper_9d76377ed7889403(SatHelper::Socket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
   SatHelper::Socket *arg1 = (SatHelper::Socket *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -1688,7 +1688,7 @@ void _wrap_Socket_Send_SatHelper_4367b69a00f83bf7(SatHelper::Socket *_swig_go_0,
 }
 
 
-void _wrap_Socket_SendTo_SatHelper_4367b69a00f83bf7(SatHelper::Socket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
+void _wrap_Socket_SendTo_SatHelper_9d76377ed7889403(SatHelper::Socket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
   SatHelper::Socket *arg1 = (SatHelper::Socket *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -1718,7 +1718,7 @@ void _wrap_Socket_SendTo_SatHelper_4367b69a00f83bf7(SatHelper::Socket *_swig_go_
 }
 
 
-intgo _wrap_Socket_ReceiveFrom_SatHelper_4367b69a00f83bf7(SatHelper::Socket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
+intgo _wrap_Socket_ReceiveFrom_SatHelper_9d76377ed7889403(SatHelper::Socket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
   SatHelper::Socket *arg1 = (SatHelper::Socket *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -1751,7 +1751,7 @@ intgo _wrap_Socket_ReceiveFrom_SatHelper_4367b69a00f83bf7(SatHelper::Socket *_sw
 }
 
 
-long long _wrap_Socket_AvailableData_SatHelper_4367b69a00f83bf7(SatHelper::Socket *_swig_go_0) {
+long long _wrap_Socket_AvailableData_SatHelper_9d76377ed7889403(SatHelper::Socket *_swig_go_0) {
   SatHelper::Socket *arg1 = (SatHelper::Socket *) 0 ;
   uint64_t result;
   long long _swig_go_result;
@@ -1764,7 +1764,7 @@ long long _wrap_Socket_AvailableData_SatHelper_4367b69a00f83bf7(SatHelper::Socke
 }
 
 
-SatHelper::IPAddress *_wrap_Socket_GetAddress_SatHelper_4367b69a00f83bf7(SatHelper::Socket *_swig_go_0) {
+SatHelper::IPAddress *_wrap_Socket_GetAddress_SatHelper_9d76377ed7889403(SatHelper::Socket *_swig_go_0) {
   SatHelper::Socket *arg1 = (SatHelper::Socket *) 0 ;
   SatHelper::IPAddress result;
   SatHelper::IPAddress *_swig_go_result;
@@ -1777,7 +1777,7 @@ SatHelper::IPAddress *_wrap_Socket_GetAddress_SatHelper_4367b69a00f83bf7(SatHelp
 }
 
 
-void _wrap_Socket_WaitForData_SatHelper_4367b69a00f83bf7(SatHelper::Socket *_swig_go_0, long long _swig_go_1, intgo _swig_go_2) {
+void _wrap_Socket_WaitForData_SatHelper_9d76377ed7889403(SatHelper::Socket *_swig_go_0, long long _swig_go_1, intgo _swig_go_2) {
   SatHelper::Socket *arg1 = (SatHelper::Socket *) 0 ;
   uint64_t arg2 ;
   uint32_t arg3 ;
@@ -1791,7 +1791,7 @@ void _wrap_Socket_WaitForData_SatHelper_4367b69a00f83bf7(SatHelper::Socket *_swi
 }
 
 
-void _wrap_Socket_Close_SatHelper_4367b69a00f83bf7(SatHelper::Socket *_swig_go_0) {
+void _wrap_Socket_Close_SatHelper_9d76377ed7889403(SatHelper::Socket *_swig_go_0) {
   SatHelper::Socket *arg1 = (SatHelper::Socket *) 0 ;
   
   arg1 = *(SatHelper::Socket **)&_swig_go_0; 
@@ -1801,7 +1801,7 @@ void _wrap_Socket_Close_SatHelper_4367b69a00f83bf7(SatHelper::Socket *_swig_go_0
 }
 
 
-SatHelper::TcpSocket *_wrap_new_TcpSocket__SWIG_0_SatHelper_4367b69a00f83bf7() {
+SatHelper::TcpSocket *_wrap_new_TcpSocket__SWIG_0_SatHelper_9d76377ed7889403() {
   SatHelper::TcpSocket *result = 0 ;
   SatHelper::TcpSocket *_swig_go_result;
   
@@ -1812,7 +1812,7 @@ SatHelper::TcpSocket *_wrap_new_TcpSocket__SWIG_0_SatHelper_4367b69a00f83bf7() {
 }
 
 
-SatHelper::TcpSocket *_wrap_new_TcpSocket__SWIG_1_SatHelper_4367b69a00f83bf7(SatHelper::IPAddress *_swig_go_0) {
+SatHelper::TcpSocket *_wrap_new_TcpSocket__SWIG_1_SatHelper_9d76377ed7889403(SatHelper::IPAddress *_swig_go_0) {
   SatHelper::IPAddress arg1 ;
   SatHelper::IPAddress *argp1 ;
   SatHelper::TcpSocket *result = 0 ;
@@ -1832,7 +1832,7 @@ SatHelper::TcpSocket *_wrap_new_TcpSocket__SWIG_1_SatHelper_4367b69a00f83bf7(Sat
 }
 
 
-SatHelper::TcpSocket *_wrap_new_TcpSocket__SWIG_2_SatHelper_4367b69a00f83bf7(_gostring_ _swig_go_0) {
+SatHelper::TcpSocket *_wrap_new_TcpSocket__SWIG_2_SatHelper_9d76377ed7889403(_gostring_ _swig_go_0) {
   std::string arg1 ;
   SatHelper::TcpSocket *result = 0 ;
   SatHelper::TcpSocket *_swig_go_result;
@@ -1845,7 +1845,7 @@ SatHelper::TcpSocket *_wrap_new_TcpSocket__SWIG_2_SatHelper_4367b69a00f83bf7(_go
 }
 
 
-SatHelper::TcpSocket *_wrap_new_TcpSocket__SWIG_3_SatHelper_4367b69a00f83bf7(SatHelper::IPAddress *_swig_go_0, intgo _swig_go_1) {
+SatHelper::TcpSocket *_wrap_new_TcpSocket__SWIG_3_SatHelper_9d76377ed7889403(SatHelper::IPAddress *_swig_go_0, intgo _swig_go_1) {
   SatHelper::IPAddress arg1 ;
   int arg2 ;
   SatHelper::IPAddress *argp1 ;
@@ -1867,7 +1867,7 @@ SatHelper::TcpSocket *_wrap_new_TcpSocket__SWIG_3_SatHelper_4367b69a00f83bf7(Sat
 }
 
 
-SatHelper::TcpSocket *_wrap_new_TcpSocket__SWIG_4_SatHelper_4367b69a00f83bf7(SatHelper::TcpSocket *_swig_go_0) {
+SatHelper::TcpSocket *_wrap_new_TcpSocket__SWIG_4_SatHelper_9d76377ed7889403(SatHelper::TcpSocket *_swig_go_0) {
   SatHelper::TcpSocket *arg1 = 0 ;
   SatHelper::TcpSocket *result = 0 ;
   SatHelper::TcpSocket *_swig_go_result;
@@ -1880,7 +1880,7 @@ SatHelper::TcpSocket *_wrap_new_TcpSocket__SWIG_4_SatHelper_4367b69a00f83bf7(Sat
 }
 
 
-intgo _wrap_TcpSocket_GetSocketFD_SatHelper_4367b69a00f83bf7(SatHelper::TcpSocket *_swig_go_0) {
+intgo _wrap_TcpSocket_GetSocketFD_SatHelper_9d76377ed7889403(SatHelper::TcpSocket *_swig_go_0) {
   SatHelper::TcpSocket *arg1 = (SatHelper::TcpSocket *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -1893,7 +1893,7 @@ intgo _wrap_TcpSocket_GetSocketFD_SatHelper_4367b69a00f83bf7(SatHelper::TcpSocke
 }
 
 
-void _wrap_delete_TcpSocket_SatHelper_4367b69a00f83bf7(SatHelper::TcpSocket *_swig_go_0) {
+void _wrap_delete_TcpSocket_SatHelper_9d76377ed7889403(SatHelper::TcpSocket *_swig_go_0) {
   SatHelper::TcpSocket *arg1 = (SatHelper::TcpSocket *) 0 ;
   
   arg1 = *(SatHelper::TcpSocket **)&_swig_go_0; 
@@ -1903,7 +1903,7 @@ void _wrap_delete_TcpSocket_SatHelper_4367b69a00f83bf7(SatHelper::TcpSocket *_sw
 }
 
 
-void _wrap_TcpSocket_Receive_SatHelper_4367b69a00f83bf7(SatHelper::TcpSocket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
+void _wrap_TcpSocket_Receive_SatHelper_9d76377ed7889403(SatHelper::TcpSocket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
   SatHelper::TcpSocket *arg1 = (SatHelper::TcpSocket *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -1923,7 +1923,7 @@ void _wrap_TcpSocket_Receive_SatHelper_4367b69a00f83bf7(SatHelper::TcpSocket *_s
 }
 
 
-void _wrap_TcpSocket_Send_SatHelper_4367b69a00f83bf7(SatHelper::TcpSocket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
+void _wrap_TcpSocket_Send_SatHelper_9d76377ed7889403(SatHelper::TcpSocket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
   SatHelper::TcpSocket *arg1 = (SatHelper::TcpSocket *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -1943,7 +1943,7 @@ void _wrap_TcpSocket_Send_SatHelper_4367b69a00f83bf7(SatHelper::TcpSocket *_swig
 }
 
 
-void _wrap_TcpSocket_SendTo_SatHelper_4367b69a00f83bf7(SatHelper::TcpSocket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
+void _wrap_TcpSocket_SendTo_SatHelper_9d76377ed7889403(SatHelper::TcpSocket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
   SatHelper::TcpSocket *arg1 = (SatHelper::TcpSocket *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -1974,7 +1974,7 @@ void _wrap_TcpSocket_SendTo_SatHelper_4367b69a00f83bf7(SatHelper::TcpSocket *_sw
 }
 
 
-intgo _wrap_TcpSocket_ReceiveFrom_SatHelper_4367b69a00f83bf7(SatHelper::TcpSocket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
+intgo _wrap_TcpSocket_ReceiveFrom_SatHelper_9d76377ed7889403(SatHelper::TcpSocket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
   SatHelper::TcpSocket *arg1 = (SatHelper::TcpSocket *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -2008,7 +2008,7 @@ intgo _wrap_TcpSocket_ReceiveFrom_SatHelper_4367b69a00f83bf7(SatHelper::TcpSocke
 }
 
 
-long long _wrap_TcpSocket_AvailableData_SatHelper_4367b69a00f83bf7(SatHelper::TcpSocket *_swig_go_0) {
+long long _wrap_TcpSocket_AvailableData_SatHelper_9d76377ed7889403(SatHelper::TcpSocket *_swig_go_0) {
   SatHelper::TcpSocket *arg1 = (SatHelper::TcpSocket *) 0 ;
   uint64_t result;
   long long _swig_go_result;
@@ -2022,7 +2022,7 @@ long long _wrap_TcpSocket_AvailableData_SatHelper_4367b69a00f83bf7(SatHelper::Tc
 }
 
 
-SatHelper::IPAddress *_wrap_TcpSocket_GetAddress_SatHelper_4367b69a00f83bf7(SatHelper::TcpSocket *_swig_go_0) {
+SatHelper::IPAddress *_wrap_TcpSocket_GetAddress_SatHelper_9d76377ed7889403(SatHelper::TcpSocket *_swig_go_0) {
   SatHelper::TcpSocket *arg1 = (SatHelper::TcpSocket *) 0 ;
   SatHelper::IPAddress result;
   SatHelper::IPAddress *_swig_go_result;
@@ -2036,7 +2036,7 @@ SatHelper::IPAddress *_wrap_TcpSocket_GetAddress_SatHelper_4367b69a00f83bf7(SatH
 }
 
 
-void _wrap_TcpSocket_WaitForData_SatHelper_4367b69a00f83bf7(SatHelper::TcpSocket *_swig_go_0, long long _swig_go_1, intgo _swig_go_2) {
+void _wrap_TcpSocket_WaitForData_SatHelper_9d76377ed7889403(SatHelper::TcpSocket *_swig_go_0, long long _swig_go_1, intgo _swig_go_2) {
   SatHelper::TcpSocket *arg1 = (SatHelper::TcpSocket *) 0 ;
   uint64_t arg2 ;
   uint32_t arg3 ;
@@ -2051,7 +2051,7 @@ void _wrap_TcpSocket_WaitForData_SatHelper_4367b69a00f83bf7(SatHelper::TcpSocket
 }
 
 
-void _wrap_TcpSocket_Close_SatHelper_4367b69a00f83bf7(SatHelper::TcpSocket *_swig_go_0) {
+void _wrap_TcpSocket_Close_SatHelper_9d76377ed7889403(SatHelper::TcpSocket *_swig_go_0) {
   SatHelper::TcpSocket *arg1 = (SatHelper::TcpSocket *) 0 ;
   
   arg1 = *(SatHelper::TcpSocket **)&_swig_go_0; 
@@ -2062,7 +2062,7 @@ void _wrap_TcpSocket_Close_SatHelper_4367b69a00f83bf7(SatHelper::TcpSocket *_swi
 }
 
 
-SatHelper::TcpServer *_wrap_new_TcpServer__SWIG_0_SatHelper_4367b69a00f83bf7() {
+SatHelper::TcpServer *_wrap_new_TcpServer__SWIG_0_SatHelper_9d76377ed7889403() {
   SatHelper::TcpServer *result = 0 ;
   SatHelper::TcpServer *_swig_go_result;
   
@@ -2073,7 +2073,7 @@ SatHelper::TcpServer *_wrap_new_TcpServer__SWIG_0_SatHelper_4367b69a00f83bf7() {
 }
 
 
-SatHelper::TcpServer *_wrap_new_TcpServer__SWIG_1_SatHelper_4367b69a00f83bf7(SatHelper::IPAddress *_swig_go_0) {
+SatHelper::TcpServer *_wrap_new_TcpServer__SWIG_1_SatHelper_9d76377ed7889403(SatHelper::IPAddress *_swig_go_0) {
   SatHelper::IPAddress arg1 ;
   SatHelper::IPAddress *argp1 ;
   SatHelper::TcpServer *result = 0 ;
@@ -2093,7 +2093,7 @@ SatHelper::TcpServer *_wrap_new_TcpServer__SWIG_1_SatHelper_4367b69a00f83bf7(Sat
 }
 
 
-SatHelper::TcpServer *_wrap_new_TcpServer__SWIG_2_SatHelper_4367b69a00f83bf7(_gostring_ _swig_go_0) {
+SatHelper::TcpServer *_wrap_new_TcpServer__SWIG_2_SatHelper_9d76377ed7889403(_gostring_ _swig_go_0) {
   std::string arg1 ;
   SatHelper::TcpServer *result = 0 ;
   SatHelper::TcpServer *_swig_go_result;
@@ -2106,7 +2106,7 @@ SatHelper::TcpServer *_wrap_new_TcpServer__SWIG_2_SatHelper_4367b69a00f83bf7(_go
 }
 
 
-SatHelper::TcpServer *_wrap_new_TcpServer__SWIG_3_SatHelper_4367b69a00f83bf7(intgo _swig_go_0) {
+SatHelper::TcpServer *_wrap_new_TcpServer__SWIG_3_SatHelper_9d76377ed7889403(intgo _swig_go_0) {
   int arg1 ;
   SatHelper::TcpServer *result = 0 ;
   SatHelper::TcpServer *_swig_go_result;
@@ -2119,7 +2119,7 @@ SatHelper::TcpServer *_wrap_new_TcpServer__SWIG_3_SatHelper_4367b69a00f83bf7(int
 }
 
 
-SatHelper::TcpServer *_wrap_new_TcpServer__SWIG_4_SatHelper_4367b69a00f83bf7(SatHelper::IPAddress *_swig_go_0, intgo _swig_go_1) {
+SatHelper::TcpServer *_wrap_new_TcpServer__SWIG_4_SatHelper_9d76377ed7889403(SatHelper::IPAddress *_swig_go_0, intgo _swig_go_1) {
   SatHelper::IPAddress arg1 ;
   int arg2 ;
   SatHelper::IPAddress *argp1 ;
@@ -2141,7 +2141,7 @@ SatHelper::TcpServer *_wrap_new_TcpServer__SWIG_4_SatHelper_4367b69a00f83bf7(Sat
 }
 
 
-SatHelper::TcpServer *_wrap_new_TcpServer__SWIG_5_SatHelper_4367b69a00f83bf7(_gostring_ _swig_go_0, intgo _swig_go_1) {
+SatHelper::TcpServer *_wrap_new_TcpServer__SWIG_5_SatHelper_9d76377ed7889403(_gostring_ _swig_go_0, intgo _swig_go_1) {
   std::string arg1 ;
   int arg2 ;
   SatHelper::TcpServer *result = 0 ;
@@ -2156,7 +2156,7 @@ SatHelper::TcpServer *_wrap_new_TcpServer__SWIG_5_SatHelper_4367b69a00f83bf7(_go
 }
 
 
-void _wrap_TcpServer_Listen__SWIG_0_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_swig_go_0, intgo _swig_go_1) {
+void _wrap_TcpServer_Listen__SWIG_0_SatHelper_9d76377ed7889403(SatHelper::TcpServer *_swig_go_0, intgo _swig_go_1) {
   SatHelper::TcpServer *arg1 = (SatHelper::TcpServer *) 0 ;
   int arg2 ;
   
@@ -2168,7 +2168,7 @@ void _wrap_TcpServer_Listen__SWIG_0_SatHelper_4367b69a00f83bf7(SatHelper::TcpSer
 }
 
 
-void _wrap_TcpServer_Listen__SWIG_1_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_swig_go_0, intgo _swig_go_1, bool _swig_go_2) {
+void _wrap_TcpServer_Listen__SWIG_1_SatHelper_9d76377ed7889403(SatHelper::TcpServer *_swig_go_0, intgo _swig_go_1, bool _swig_go_2) {
   SatHelper::TcpServer *arg1 = (SatHelper::TcpServer *) 0 ;
   int arg2 ;
   bool arg3 ;
@@ -2182,7 +2182,7 @@ void _wrap_TcpServer_Listen__SWIG_1_SatHelper_4367b69a00f83bf7(SatHelper::TcpSer
 }
 
 
-SatHelper::TcpSocket *_wrap_TcpServer_Accept_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_swig_go_0) {
+SatHelper::TcpSocket *_wrap_TcpServer_Accept_SatHelper_9d76377ed7889403(SatHelper::TcpServer *_swig_go_0) {
   SatHelper::TcpServer *arg1 = (SatHelper::TcpServer *) 0 ;
   SatHelper::TcpSocket result;
   SatHelper::TcpSocket *_swig_go_result;
@@ -2195,7 +2195,7 @@ SatHelper::TcpSocket *_wrap_TcpServer_Accept_SatHelper_4367b69a00f83bf7(SatHelpe
 }
 
 
-intgo _wrap_TcpServer_GetPort_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_swig_go_0) {
+intgo _wrap_TcpServer_GetPort_SatHelper_9d76377ed7889403(SatHelper::TcpServer *_swig_go_0) {
   SatHelper::TcpServer *arg1 = (SatHelper::TcpServer *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -2208,7 +2208,7 @@ intgo _wrap_TcpServer_GetPort_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_
 }
 
 
-intgo _wrap_TcpServer_GetMaxConnections_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_swig_go_0) {
+intgo _wrap_TcpServer_GetMaxConnections_SatHelper_9d76377ed7889403(SatHelper::TcpServer *_swig_go_0) {
   SatHelper::TcpServer *arg1 = (SatHelper::TcpServer *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -2221,7 +2221,7 @@ intgo _wrap_TcpServer_GetMaxConnections_SatHelper_4367b69a00f83bf7(SatHelper::Tc
 }
 
 
-void _wrap_TcpServer_Listen__SWIG_2_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TcpServer_Listen__SWIG_2_SatHelper_9d76377ed7889403(SatHelper::TcpServer *_swig_go_0, _gostring_ _swig_go_1) {
   SatHelper::TcpServer *arg1 = (SatHelper::TcpServer *) 0 ;
   std::string arg2 ;
   
@@ -2233,7 +2233,7 @@ void _wrap_TcpServer_Listen__SWIG_2_SatHelper_4367b69a00f83bf7(SatHelper::TcpSer
 }
 
 
-void _wrap_delete_TcpServer_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_swig_go_0) {
+void _wrap_delete_TcpServer_SatHelper_9d76377ed7889403(SatHelper::TcpServer *_swig_go_0) {
   SatHelper::TcpServer *arg1 = (SatHelper::TcpServer *) 0 ;
   
   arg1 = *(SatHelper::TcpServer **)&_swig_go_0; 
@@ -2243,7 +2243,7 @@ void _wrap_delete_TcpServer_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_sw
 }
 
 
-intgo _wrap_TcpServer_GetSocketFD_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_swig_go_0) {
+intgo _wrap_TcpServer_GetSocketFD_SatHelper_9d76377ed7889403(SatHelper::TcpServer *_swig_go_0) {
   SatHelper::TcpServer *arg1 = (SatHelper::TcpServer *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -2257,7 +2257,7 @@ intgo _wrap_TcpServer_GetSocketFD_SatHelper_4367b69a00f83bf7(SatHelper::TcpServe
 }
 
 
-void _wrap_TcpServer_Receive_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
+void _wrap_TcpServer_Receive_SatHelper_9d76377ed7889403(SatHelper::TcpServer *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
   SatHelper::TcpServer *arg1 = (SatHelper::TcpServer *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -2278,7 +2278,7 @@ void _wrap_TcpServer_Receive_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_s
 }
 
 
-void _wrap_TcpServer_Send_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
+void _wrap_TcpServer_Send_SatHelper_9d76377ed7889403(SatHelper::TcpServer *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
   SatHelper::TcpServer *arg1 = (SatHelper::TcpServer *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -2299,7 +2299,7 @@ void _wrap_TcpServer_Send_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_swig
 }
 
 
-void _wrap_TcpServer_SendTo_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
+void _wrap_TcpServer_SendTo_SatHelper_9d76377ed7889403(SatHelper::TcpServer *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
   SatHelper::TcpServer *arg1 = (SatHelper::TcpServer *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -2331,7 +2331,7 @@ void _wrap_TcpServer_SendTo_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_sw
 }
 
 
-intgo _wrap_TcpServer_ReceiveFrom_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
+intgo _wrap_TcpServer_ReceiveFrom_SatHelper_9d76377ed7889403(SatHelper::TcpServer *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
   SatHelper::TcpServer *arg1 = (SatHelper::TcpServer *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -2366,7 +2366,7 @@ intgo _wrap_TcpServer_ReceiveFrom_SatHelper_4367b69a00f83bf7(SatHelper::TcpServe
 }
 
 
-long long _wrap_TcpServer_AvailableData_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_swig_go_0) {
+long long _wrap_TcpServer_AvailableData_SatHelper_9d76377ed7889403(SatHelper::TcpServer *_swig_go_0) {
   SatHelper::TcpServer *arg1 = (SatHelper::TcpServer *) 0 ;
   uint64_t result;
   long long _swig_go_result;
@@ -2381,7 +2381,7 @@ long long _wrap_TcpServer_AvailableData_SatHelper_4367b69a00f83bf7(SatHelper::Tc
 }
 
 
-SatHelper::IPAddress *_wrap_TcpServer_GetAddress_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_swig_go_0) {
+SatHelper::IPAddress *_wrap_TcpServer_GetAddress_SatHelper_9d76377ed7889403(SatHelper::TcpServer *_swig_go_0) {
   SatHelper::TcpServer *arg1 = (SatHelper::TcpServer *) 0 ;
   SatHelper::IPAddress result;
   SatHelper::IPAddress *_swig_go_result;
@@ -2396,7 +2396,7 @@ SatHelper::IPAddress *_wrap_TcpServer_GetAddress_SatHelper_4367b69a00f83bf7(SatH
 }
 
 
-void _wrap_TcpServer_WaitForData_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_swig_go_0, long long _swig_go_1, intgo _swig_go_2) {
+void _wrap_TcpServer_WaitForData_SatHelper_9d76377ed7889403(SatHelper::TcpServer *_swig_go_0, long long _swig_go_1, intgo _swig_go_2) {
   SatHelper::TcpServer *arg1 = (SatHelper::TcpServer *) 0 ;
   uint64_t arg2 ;
   uint32_t arg3 ;
@@ -2412,7 +2412,7 @@ void _wrap_TcpServer_WaitForData_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer
 }
 
 
-void _wrap_TcpServer_Close_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_swig_go_0) {
+void _wrap_TcpServer_Close_SatHelper_9d76377ed7889403(SatHelper::TcpServer *_swig_go_0) {
   SatHelper::TcpServer *arg1 = (SatHelper::TcpServer *) 0 ;
   
   arg1 = *(SatHelper::TcpServer **)&_swig_go_0; 
@@ -2424,7 +2424,7 @@ void _wrap_TcpServer_Close_SatHelper_4367b69a00f83bf7(SatHelper::TcpServer *_swi
 }
 
 
-SatHelper::TcpClient *_wrap_new_TcpClient__SWIG_0_SatHelper_4367b69a00f83bf7(SatHelper::IPAddress *_swig_go_0, intgo _swig_go_1) {
+SatHelper::TcpClient *_wrap_new_TcpClient__SWIG_0_SatHelper_9d76377ed7889403(SatHelper::IPAddress *_swig_go_0, intgo _swig_go_1) {
   SatHelper::IPAddress arg1 ;
   int arg2 ;
   SatHelper::IPAddress *argp1 ;
@@ -2446,7 +2446,7 @@ SatHelper::TcpClient *_wrap_new_TcpClient__SWIG_0_SatHelper_4367b69a00f83bf7(Sat
 }
 
 
-SatHelper::TcpClient *_wrap_new_TcpClient__SWIG_1_SatHelper_4367b69a00f83bf7(_gostring_ _swig_go_0, intgo _swig_go_1) {
+SatHelper::TcpClient *_wrap_new_TcpClient__SWIG_1_SatHelper_9d76377ed7889403(_gostring_ _swig_go_0, intgo _swig_go_1) {
   std::string arg1 ;
   int arg2 ;
   SatHelper::TcpClient *result = 0 ;
@@ -2461,7 +2461,7 @@ SatHelper::TcpClient *_wrap_new_TcpClient__SWIG_1_SatHelper_4367b69a00f83bf7(_go
 }
 
 
-void _wrap_TcpClient_Connect_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient *_swig_go_0) {
+void _wrap_TcpClient_Connect_SatHelper_9d76377ed7889403(SatHelper::TcpClient *_swig_go_0) {
   SatHelper::TcpClient *arg1 = (SatHelper::TcpClient *) 0 ;
   
   arg1 = *(SatHelper::TcpClient **)&_swig_go_0; 
@@ -2471,7 +2471,7 @@ void _wrap_TcpClient_Connect_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient *_s
 }
 
 
-void _wrap_TcpClient_Close_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient *_swig_go_0) {
+void _wrap_TcpClient_Close_SatHelper_9d76377ed7889403(SatHelper::TcpClient *_swig_go_0) {
   SatHelper::TcpClient *arg1 = (SatHelper::TcpClient *) 0 ;
   
   arg1 = *(SatHelper::TcpClient **)&_swig_go_0; 
@@ -2481,7 +2481,7 @@ void _wrap_TcpClient_Close_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient *_swi
 }
 
 
-intgo _wrap_TcpClient_GetPort_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient *_swig_go_0) {
+intgo _wrap_TcpClient_GetPort_SatHelper_9d76377ed7889403(SatHelper::TcpClient *_swig_go_0) {
   SatHelper::TcpClient *arg1 = (SatHelper::TcpClient *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -2494,7 +2494,7 @@ intgo _wrap_TcpClient_GetPort_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient *_
 }
 
 
-void _wrap_delete_TcpClient_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient *_swig_go_0) {
+void _wrap_delete_TcpClient_SatHelper_9d76377ed7889403(SatHelper::TcpClient *_swig_go_0) {
   SatHelper::TcpClient *arg1 = (SatHelper::TcpClient *) 0 ;
   
   arg1 = *(SatHelper::TcpClient **)&_swig_go_0; 
@@ -2504,7 +2504,7 @@ void _wrap_delete_TcpClient_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient *_sw
 }
 
 
-intgo _wrap_TcpClient_GetSocketFD_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient *_swig_go_0) {
+intgo _wrap_TcpClient_GetSocketFD_SatHelper_9d76377ed7889403(SatHelper::TcpClient *_swig_go_0) {
   SatHelper::TcpClient *arg1 = (SatHelper::TcpClient *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -2518,7 +2518,7 @@ intgo _wrap_TcpClient_GetSocketFD_SatHelper_4367b69a00f83bf7(SatHelper::TcpClien
 }
 
 
-void _wrap_TcpClient_Receive_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
+void _wrap_TcpClient_Receive_SatHelper_9d76377ed7889403(SatHelper::TcpClient *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
   SatHelper::TcpClient *arg1 = (SatHelper::TcpClient *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -2539,7 +2539,7 @@ void _wrap_TcpClient_Receive_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient *_s
 }
 
 
-void _wrap_TcpClient_Send_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
+void _wrap_TcpClient_Send_SatHelper_9d76377ed7889403(SatHelper::TcpClient *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
   SatHelper::TcpClient *arg1 = (SatHelper::TcpClient *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -2560,7 +2560,7 @@ void _wrap_TcpClient_Send_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient *_swig
 }
 
 
-void _wrap_TcpClient_SendTo_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
+void _wrap_TcpClient_SendTo_SatHelper_9d76377ed7889403(SatHelper::TcpClient *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
   SatHelper::TcpClient *arg1 = (SatHelper::TcpClient *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -2592,7 +2592,7 @@ void _wrap_TcpClient_SendTo_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient *_sw
 }
 
 
-intgo _wrap_TcpClient_ReceiveFrom_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
+intgo _wrap_TcpClient_ReceiveFrom_SatHelper_9d76377ed7889403(SatHelper::TcpClient *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
   SatHelper::TcpClient *arg1 = (SatHelper::TcpClient *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -2627,7 +2627,7 @@ intgo _wrap_TcpClient_ReceiveFrom_SatHelper_4367b69a00f83bf7(SatHelper::TcpClien
 }
 
 
-long long _wrap_TcpClient_AvailableData_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient *_swig_go_0) {
+long long _wrap_TcpClient_AvailableData_SatHelper_9d76377ed7889403(SatHelper::TcpClient *_swig_go_0) {
   SatHelper::TcpClient *arg1 = (SatHelper::TcpClient *) 0 ;
   uint64_t result;
   long long _swig_go_result;
@@ -2642,7 +2642,7 @@ long long _wrap_TcpClient_AvailableData_SatHelper_4367b69a00f83bf7(SatHelper::Tc
 }
 
 
-SatHelper::IPAddress *_wrap_TcpClient_GetAddress_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient *_swig_go_0) {
+SatHelper::IPAddress *_wrap_TcpClient_GetAddress_SatHelper_9d76377ed7889403(SatHelper::TcpClient *_swig_go_0) {
   SatHelper::TcpClient *arg1 = (SatHelper::TcpClient *) 0 ;
   SatHelper::IPAddress result;
   SatHelper::IPAddress *_swig_go_result;
@@ -2657,7 +2657,7 @@ SatHelper::IPAddress *_wrap_TcpClient_GetAddress_SatHelper_4367b69a00f83bf7(SatH
 }
 
 
-void _wrap_TcpClient_WaitForData_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient *_swig_go_0, long long _swig_go_1, intgo _swig_go_2) {
+void _wrap_TcpClient_WaitForData_SatHelper_9d76377ed7889403(SatHelper::TcpClient *_swig_go_0, long long _swig_go_1, intgo _swig_go_2) {
   SatHelper::TcpClient *arg1 = (SatHelper::TcpClient *) 0 ;
   uint64_t arg2 ;
   uint32_t arg3 ;
@@ -2673,7 +2673,7 @@ void _wrap_TcpClient_WaitForData_SatHelper_4367b69a00f83bf7(SatHelper::TcpClient
 }
 
 
-SatHelper::UdpSocket *_wrap_new_UdpSocket__SWIG_0_SatHelper_4367b69a00f83bf7() {
+SatHelper::UdpSocket *_wrap_new_UdpSocket__SWIG_0_SatHelper_9d76377ed7889403() {
   SatHelper::UdpSocket *result = 0 ;
   SatHelper::UdpSocket *_swig_go_result;
   
@@ -2684,7 +2684,7 @@ SatHelper::UdpSocket *_wrap_new_UdpSocket__SWIG_0_SatHelper_4367b69a00f83bf7() {
 }
 
 
-SatHelper::UdpSocket *_wrap_new_UdpSocket__SWIG_1_SatHelper_4367b69a00f83bf7(SatHelper::IPAddress *_swig_go_0) {
+SatHelper::UdpSocket *_wrap_new_UdpSocket__SWIG_1_SatHelper_9d76377ed7889403(SatHelper::IPAddress *_swig_go_0) {
   SatHelper::IPAddress arg1 ;
   SatHelper::IPAddress *argp1 ;
   SatHelper::UdpSocket *result = 0 ;
@@ -2704,7 +2704,7 @@ SatHelper::UdpSocket *_wrap_new_UdpSocket__SWIG_1_SatHelper_4367b69a00f83bf7(Sat
 }
 
 
-SatHelper::UdpSocket *_wrap_new_UdpSocket__SWIG_2_SatHelper_4367b69a00f83bf7(_gostring_ _swig_go_0) {
+SatHelper::UdpSocket *_wrap_new_UdpSocket__SWIG_2_SatHelper_9d76377ed7889403(_gostring_ _swig_go_0) {
   std::string arg1 ;
   SatHelper::UdpSocket *result = 0 ;
   SatHelper::UdpSocket *_swig_go_result;
@@ -2717,7 +2717,7 @@ SatHelper::UdpSocket *_wrap_new_UdpSocket__SWIG_2_SatHelper_4367b69a00f83bf7(_go
 }
 
 
-SatHelper::UdpSocket *_wrap_new_UdpSocket__SWIG_3_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket *_swig_go_0) {
+SatHelper::UdpSocket *_wrap_new_UdpSocket__SWIG_3_SatHelper_9d76377ed7889403(SatHelper::UdpSocket *_swig_go_0) {
   SatHelper::UdpSocket *arg1 = 0 ;
   SatHelper::UdpSocket *result = 0 ;
   SatHelper::UdpSocket *_swig_go_result;
@@ -2730,7 +2730,7 @@ SatHelper::UdpSocket *_wrap_new_UdpSocket__SWIG_3_SatHelper_4367b69a00f83bf7(Sat
 }
 
 
-void _wrap_UdpSocket_Bind__SWIG_0_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket *_swig_go_0, intgo _swig_go_1) {
+void _wrap_UdpSocket_Bind__SWIG_0_SatHelper_9d76377ed7889403(SatHelper::UdpSocket *_swig_go_0, intgo _swig_go_1) {
   SatHelper::UdpSocket *arg1 = (SatHelper::UdpSocket *) 0 ;
   int arg2 ;
   
@@ -2742,7 +2742,7 @@ void _wrap_UdpSocket_Bind__SWIG_0_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocke
 }
 
 
-intgo _wrap_UdpSocket_GetPort_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket *_swig_go_0) {
+intgo _wrap_UdpSocket_GetPort_SatHelper_9d76377ed7889403(SatHelper::UdpSocket *_swig_go_0) {
   SatHelper::UdpSocket *arg1 = (SatHelper::UdpSocket *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -2755,7 +2755,7 @@ intgo _wrap_UdpSocket_GetPort_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket *_
 }
 
 
-void _wrap_UdpSocket_Bind__SWIG_1_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_UdpSocket_Bind__SWIG_1_SatHelper_9d76377ed7889403(SatHelper::UdpSocket *_swig_go_0, _gostring_ _swig_go_1) {
   SatHelper::UdpSocket *arg1 = (SatHelper::UdpSocket *) 0 ;
   std::string arg2 ;
   
@@ -2767,7 +2767,7 @@ void _wrap_UdpSocket_Bind__SWIG_1_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocke
 }
 
 
-void _wrap_delete_UdpSocket_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket *_swig_go_0) {
+void _wrap_delete_UdpSocket_SatHelper_9d76377ed7889403(SatHelper::UdpSocket *_swig_go_0) {
   SatHelper::UdpSocket *arg1 = (SatHelper::UdpSocket *) 0 ;
   
   arg1 = *(SatHelper::UdpSocket **)&_swig_go_0; 
@@ -2777,7 +2777,7 @@ void _wrap_delete_UdpSocket_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket *_sw
 }
 
 
-void _wrap_UdpSocket_Receive_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
+void _wrap_UdpSocket_Receive_SatHelper_9d76377ed7889403(SatHelper::UdpSocket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
   SatHelper::UdpSocket *arg1 = (SatHelper::UdpSocket *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -2797,7 +2797,7 @@ void _wrap_UdpSocket_Receive_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket *_s
 }
 
 
-void _wrap_UdpSocket_Send_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
+void _wrap_UdpSocket_Send_SatHelper_9d76377ed7889403(SatHelper::UdpSocket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2) {
   SatHelper::UdpSocket *arg1 = (SatHelper::UdpSocket *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -2817,7 +2817,7 @@ void _wrap_UdpSocket_Send_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket *_swig
 }
 
 
-void _wrap_UdpSocket_SendTo_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
+void _wrap_UdpSocket_SendTo_SatHelper_9d76377ed7889403(SatHelper::UdpSocket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
   SatHelper::UdpSocket *arg1 = (SatHelper::UdpSocket *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -2848,7 +2848,7 @@ void _wrap_UdpSocket_SendTo_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket *_sw
 }
 
 
-intgo _wrap_UdpSocket_ReceiveFrom_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
+intgo _wrap_UdpSocket_ReceiveFrom_SatHelper_9d76377ed7889403(SatHelper::UdpSocket *_swig_go_0, _gostring_ _swig_go_1, intgo _swig_go_2, SatHelper::IPAddress *_swig_go_3, intgo _swig_go_4) {
   SatHelper::UdpSocket *arg1 = (SatHelper::UdpSocket *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -2882,7 +2882,7 @@ intgo _wrap_UdpSocket_ReceiveFrom_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocke
 }
 
 
-long long _wrap_UdpSocket_AvailableData_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket *_swig_go_0) {
+long long _wrap_UdpSocket_AvailableData_SatHelper_9d76377ed7889403(SatHelper::UdpSocket *_swig_go_0) {
   SatHelper::UdpSocket *arg1 = (SatHelper::UdpSocket *) 0 ;
   uint64_t result;
   long long _swig_go_result;
@@ -2896,7 +2896,7 @@ long long _wrap_UdpSocket_AvailableData_SatHelper_4367b69a00f83bf7(SatHelper::Ud
 }
 
 
-SatHelper::IPAddress *_wrap_UdpSocket_GetAddress_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket *_swig_go_0) {
+SatHelper::IPAddress *_wrap_UdpSocket_GetAddress_SatHelper_9d76377ed7889403(SatHelper::UdpSocket *_swig_go_0) {
   SatHelper::UdpSocket *arg1 = (SatHelper::UdpSocket *) 0 ;
   SatHelper::IPAddress result;
   SatHelper::IPAddress *_swig_go_result;
@@ -2910,7 +2910,7 @@ SatHelper::IPAddress *_wrap_UdpSocket_GetAddress_SatHelper_4367b69a00f83bf7(SatH
 }
 
 
-void _wrap_UdpSocket_WaitForData_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket *_swig_go_0, long long _swig_go_1, intgo _swig_go_2) {
+void _wrap_UdpSocket_WaitForData_SatHelper_9d76377ed7889403(SatHelper::UdpSocket *_swig_go_0, long long _swig_go_1, intgo _swig_go_2) {
   SatHelper::UdpSocket *arg1 = (SatHelper::UdpSocket *) 0 ;
   uint64_t arg2 ;
   uint32_t arg3 ;
@@ -2925,7 +2925,7 @@ void _wrap_UdpSocket_WaitForData_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket
 }
 
 
-void _wrap_UdpSocket_Close_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket *_swig_go_0) {
+void _wrap_UdpSocket_Close_SatHelper_9d76377ed7889403(SatHelper::UdpSocket *_swig_go_0) {
   SatHelper::UdpSocket *arg1 = (SatHelper::UdpSocket *) 0 ;
   
   arg1 = *(SatHelper::UdpSocket **)&_swig_go_0; 
@@ -2936,7 +2936,7 @@ void _wrap_UdpSocket_Close_SatHelper_4367b69a00f83bf7(SatHelper::UdpSocket *_swi
 }
 
 
-void _wrap_DeRandomizer_DeRandomize_SatHelper_4367b69a00f83bf7(char *_swig_go_0, intgo _swig_go_1) {
+void _wrap_DeRandomizer_DeRandomize_SatHelper_9d76377ed7889403(char *_swig_go_0, intgo _swig_go_1) {
   uint8_t *arg1 = (uint8_t *) 0 ;
   int arg2 ;
   
@@ -2948,7 +2948,7 @@ void _wrap_DeRandomizer_DeRandomize_SatHelper_4367b69a00f83bf7(char *_swig_go_0,
 }
 
 
-SatHelper::DeRandomizer *_wrap_new_DeRandomizer_SatHelper_4367b69a00f83bf7() {
+SatHelper::DeRandomizer *_wrap_new_DeRandomizer_SatHelper_9d76377ed7889403() {
   SatHelper::DeRandomizer *result = 0 ;
   SatHelper::DeRandomizer *_swig_go_result;
   
@@ -2959,7 +2959,7 @@ SatHelper::DeRandomizer *_wrap_new_DeRandomizer_SatHelper_4367b69a00f83bf7() {
 }
 
 
-void _wrap_delete_DeRandomizer_SatHelper_4367b69a00f83bf7(SatHelper::DeRandomizer *_swig_go_0) {
+void _wrap_delete_DeRandomizer_SatHelper_9d76377ed7889403(SatHelper::DeRandomizer *_swig_go_0) {
   SatHelper::DeRandomizer *arg1 = (SatHelper::DeRandomizer *) 0 ;
   
   arg1 = *(SatHelper::DeRandomizer **)&_swig_go_0; 
@@ -2969,7 +2969,7 @@ void _wrap_delete_DeRandomizer_SatHelper_4367b69a00f83bf7(SatHelper::DeRandomize
 }
 
 
-intgo _wrap_Tools_swapEndianess_SatHelper_4367b69a00f83bf7(intgo _swig_go_0) {
+intgo _wrap_Tools_swapEndianess_SatHelper_9d76377ed7889403(intgo _swig_go_0) {
   uint32_t arg1 ;
   uint32_t result;
   intgo _swig_go_result;
@@ -2982,7 +2982,7 @@ intgo _wrap_Tools_swapEndianess_SatHelper_4367b69a00f83bf7(intgo _swig_go_0) {
 }
 
 
-intgo _wrap_Tools_getTimestamp_SatHelper_4367b69a00f83bf7() {
+intgo _wrap_Tools_getTimestamp_SatHelper_9d76377ed7889403() {
   uint32_t result;
   intgo _swig_go_result;
   
@@ -2993,7 +2993,7 @@ intgo _wrap_Tools_getTimestamp_SatHelper_4367b69a00f83bf7() {
 }
 
 
-void _wrap_Tools_makedir_SatHelper_4367b69a00f83bf7(_gostring_ _swig_go_0) {
+void _wrap_Tools_makedir_SatHelper_9d76377ed7889403(_gostring_ _swig_go_0) {
   std::string *arg1 = 0 ;
   
   
@@ -3006,7 +3006,7 @@ void _wrap_Tools_makedir_SatHelper_4367b69a00f83bf7(_gostring_ _swig_go_0) {
 }
 
 
-_Complex float _wrap_Tools_phase2complex_SatHelper_4367b69a00f83bf7(float _swig_go_0) {
+_Complex float _wrap_Tools_phase2complex_SatHelper_9d76377ed7889403(float _swig_go_0) {
   float arg1 ;
   std::complex< float > result;
   _Complex float _swig_go_result;
@@ -3019,7 +3019,7 @@ _Complex float _wrap_Tools_phase2complex_SatHelper_4367b69a00f83bf7(float _swig_
 }
 
 
-float _wrap_Tools_clip_SatHelper_4367b69a00f83bf7(float _swig_go_0, float _swig_go_1) {
+float _wrap_Tools_clip_SatHelper_9d76377ed7889403(float _swig_go_0, float _swig_go_1) {
   float arg1 ;
   float arg2 ;
   float result;
@@ -3034,7 +3034,7 @@ float _wrap_Tools_clip_SatHelper_4367b69a00f83bf7(float _swig_go_0, float _swig_
 }
 
 
-SatHelper::Tools *_wrap_new_Tools_SatHelper_4367b69a00f83bf7() {
+SatHelper::Tools *_wrap_new_Tools_SatHelper_9d76377ed7889403() {
   SatHelper::Tools *result = 0 ;
   SatHelper::Tools *_swig_go_result;
   
@@ -3045,7 +3045,7 @@ SatHelper::Tools *_wrap_new_Tools_SatHelper_4367b69a00f83bf7() {
 }
 
 
-void _wrap_delete_Tools_SatHelper_4367b69a00f83bf7(SatHelper::Tools *_swig_go_0) {
+void _wrap_delete_Tools_SatHelper_9d76377ed7889403(SatHelper::Tools *_swig_go_0) {
   SatHelper::Tools *arg1 = (SatHelper::Tools *) 0 ;
   
   arg1 = *(SatHelper::Tools **)&_swig_go_0; 
@@ -3055,7 +3055,7 @@ void _wrap_delete_Tools_SatHelper_4367b69a00f83bf7(SatHelper::Tools *_swig_go_0)
 }
 
 
-void _wrap_DifferentialEncoding_nrzmDecode_SatHelper_4367b69a00f83bf7(char *_swig_go_0, intgo _swig_go_1) {
+void _wrap_DifferentialEncoding_nrzmDecode_SatHelper_9d76377ed7889403(char *_swig_go_0, intgo _swig_go_1) {
   uint8_t *arg1 = (uint8_t *) 0 ;
   int arg2 ;
   
@@ -3067,7 +3067,7 @@ void _wrap_DifferentialEncoding_nrzmDecode_SatHelper_4367b69a00f83bf7(char *_swi
 }
 
 
-SatHelper::DifferentialEncoding *_wrap_new_DifferentialEncoding_SatHelper_4367b69a00f83bf7() {
+SatHelper::DifferentialEncoding *_wrap_new_DifferentialEncoding_SatHelper_9d76377ed7889403() {
   SatHelper::DifferentialEncoding *result = 0 ;
   SatHelper::DifferentialEncoding *_swig_go_result;
   
@@ -3078,7 +3078,7 @@ SatHelper::DifferentialEncoding *_wrap_new_DifferentialEncoding_SatHelper_4367b6
 }
 
 
-void _wrap_delete_DifferentialEncoding_SatHelper_4367b69a00f83bf7(SatHelper::DifferentialEncoding *_swig_go_0) {
+void _wrap_delete_DifferentialEncoding_SatHelper_9d76377ed7889403(SatHelper::DifferentialEncoding *_swig_go_0) {
   SatHelper::DifferentialEncoding *arg1 = (SatHelper::DifferentialEncoding *) 0 ;
   
   arg1 = *(SatHelper::DifferentialEncoding **)&_swig_go_0; 
@@ -3088,7 +3088,7 @@ void _wrap_delete_DifferentialEncoding_SatHelper_4367b69a00f83bf7(SatHelper::Dif
 }
 
 
-SatHelper::AGC *_wrap_new_AGC__SWIG_0_SatHelper_4367b69a00f83bf7(float _swig_go_0, float _swig_go_1, float _swig_go_2, float _swig_go_3) {
+SatHelper::AGC *_wrap_new_AGC__SWIG_0_SatHelper_9d76377ed7889403(float _swig_go_0, float _swig_go_1, float _swig_go_2, float _swig_go_3) {
   float arg1 ;
   float arg2 ;
   float arg3 ;
@@ -3107,7 +3107,7 @@ SatHelper::AGC *_wrap_new_AGC__SWIG_0_SatHelper_4367b69a00f83bf7(float _swig_go_
 }
 
 
-SatHelper::AGC *_wrap_new_AGC__SWIG_1_SatHelper_4367b69a00f83bf7(float _swig_go_0, float _swig_go_1, float _swig_go_2) {
+SatHelper::AGC *_wrap_new_AGC__SWIG_1_SatHelper_9d76377ed7889403(float _swig_go_0, float _swig_go_1, float _swig_go_2) {
   float arg1 ;
   float arg2 ;
   float arg3 ;
@@ -3124,7 +3124,7 @@ SatHelper::AGC *_wrap_new_AGC__SWIG_1_SatHelper_4367b69a00f83bf7(float _swig_go_
 }
 
 
-SatHelper::AGC *_wrap_new_AGC__SWIG_2_SatHelper_4367b69a00f83bf7(float _swig_go_0, float _swig_go_1) {
+SatHelper::AGC *_wrap_new_AGC__SWIG_2_SatHelper_9d76377ed7889403(float _swig_go_0, float _swig_go_1) {
   float arg1 ;
   float arg2 ;
   SatHelper::AGC *result = 0 ;
@@ -3139,7 +3139,7 @@ SatHelper::AGC *_wrap_new_AGC__SWIG_2_SatHelper_4367b69a00f83bf7(float _swig_go_
 }
 
 
-SatHelper::AGC *_wrap_new_AGC__SWIG_3_SatHelper_4367b69a00f83bf7(float _swig_go_0) {
+SatHelper::AGC *_wrap_new_AGC__SWIG_3_SatHelper_9d76377ed7889403(float _swig_go_0) {
   float arg1 ;
   SatHelper::AGC *result = 0 ;
   SatHelper::AGC *_swig_go_result;
@@ -3152,7 +3152,7 @@ SatHelper::AGC *_wrap_new_AGC__SWIG_3_SatHelper_4367b69a00f83bf7(float _swig_go_
 }
 
 
-SatHelper::AGC *_wrap_new_AGC__SWIG_4_SatHelper_4367b69a00f83bf7() {
+SatHelper::AGC *_wrap_new_AGC__SWIG_4_SatHelper_9d76377ed7889403() {
   SatHelper::AGC *result = 0 ;
   SatHelper::AGC *_swig_go_result;
   
@@ -3163,7 +3163,7 @@ SatHelper::AGC *_wrap_new_AGC__SWIG_4_SatHelper_4367b69a00f83bf7() {
 }
 
 
-float _wrap_AGC_GetRate_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0) {
+float _wrap_AGC_GetRate_SatHelper_9d76377ed7889403(SatHelper::AGC *_swig_go_0) {
   SatHelper::AGC *arg1 = (SatHelper::AGC *) 0 ;
   float result;
   float _swig_go_result;
@@ -3176,7 +3176,7 @@ float _wrap_AGC_GetRate_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0) {
 }
 
 
-float _wrap_AGC_GetReference_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0) {
+float _wrap_AGC_GetReference_SatHelper_9d76377ed7889403(SatHelper::AGC *_swig_go_0) {
   SatHelper::AGC *arg1 = (SatHelper::AGC *) 0 ;
   float result;
   float _swig_go_result;
@@ -3189,7 +3189,7 @@ float _wrap_AGC_GetReference_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go
 }
 
 
-float _wrap_AGC_GetGain_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0) {
+float _wrap_AGC_GetGain_SatHelper_9d76377ed7889403(SatHelper::AGC *_swig_go_0) {
   SatHelper::AGC *arg1 = (SatHelper::AGC *) 0 ;
   float result;
   float _swig_go_result;
@@ -3202,7 +3202,7 @@ float _wrap_AGC_GetGain_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0) {
 }
 
 
-float _wrap_AGC_GetMaxGain_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0) {
+float _wrap_AGC_GetMaxGain_SatHelper_9d76377ed7889403(SatHelper::AGC *_swig_go_0) {
   SatHelper::AGC *arg1 = (SatHelper::AGC *) 0 ;
   float result;
   float _swig_go_result;
@@ -3215,7 +3215,7 @@ float _wrap_AGC_GetMaxGain_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0
 }
 
 
-void _wrap_AGC_SetRate_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0, float _swig_go_1) {
+void _wrap_AGC_SetRate_SatHelper_9d76377ed7889403(SatHelper::AGC *_swig_go_0, float _swig_go_1) {
   SatHelper::AGC *arg1 = (SatHelper::AGC *) 0 ;
   float arg2 ;
   
@@ -3227,7 +3227,7 @@ void _wrap_AGC_SetRate_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0, fl
 }
 
 
-void _wrap_AGC_SetReference_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0, float _swig_go_1) {
+void _wrap_AGC_SetReference_SatHelper_9d76377ed7889403(SatHelper::AGC *_swig_go_0, float _swig_go_1) {
   SatHelper::AGC *arg1 = (SatHelper::AGC *) 0 ;
   float arg2 ;
   
@@ -3239,7 +3239,7 @@ void _wrap_AGC_SetReference_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_
 }
 
 
-void _wrap_AGC_SetGain_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0, float _swig_go_1) {
+void _wrap_AGC_SetGain_SatHelper_9d76377ed7889403(SatHelper::AGC *_swig_go_0, float _swig_go_1) {
   SatHelper::AGC *arg1 = (SatHelper::AGC *) 0 ;
   float arg2 ;
   
@@ -3251,7 +3251,7 @@ void _wrap_AGC_SetGain_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0, fl
 }
 
 
-void _wrap_AGC_SetMaxGain_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0, float _swig_go_1) {
+void _wrap_AGC_SetMaxGain_SatHelper_9d76377ed7889403(SatHelper::AGC *_swig_go_0, float _swig_go_1) {
   SatHelper::AGC *arg1 = (SatHelper::AGC *) 0 ;
   float arg2 ;
   
@@ -3263,7 +3263,7 @@ void _wrap_AGC_SetMaxGain_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0,
 }
 
 
-_Complex float _wrap_AGC_scale_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0, _Complex float *_swig_go_1) {
+_Complex float _wrap_AGC_scale_SatHelper_9d76377ed7889403(SatHelper::AGC *_swig_go_0, _Complex float *_swig_go_1) {
   SatHelper::AGC *arg1 = (SatHelper::AGC *) 0 ;
   std::complex< float > *arg2 = (std::complex< float > *) 0 ;
   std::complex< float > result;
@@ -3278,7 +3278,7 @@ _Complex float _wrap_AGC_scale_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_
 }
 
 
-void _wrap_AGC_scaleN_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0, _Complex float *_swig_go_1, _Complex float *_swig_go_2, intgo _swig_go_3) {
+void _wrap_AGC_scaleN_SatHelper_9d76377ed7889403(SatHelper::AGC *_swig_go_0, _Complex float *_swig_go_1, _Complex float *_swig_go_2, intgo _swig_go_3) {
   SatHelper::AGC *arg1 = (SatHelper::AGC *) 0 ;
   std::complex< float > *arg2 = (std::complex< float > *) 0 ;
   std::complex< float > *arg3 = (std::complex< float > *) 0 ;
@@ -3294,7 +3294,7 @@ void _wrap_AGC_scaleN_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0, _Co
 }
 
 
-void _wrap_AGC_Work_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0, _Complex float *_swig_go_1, _Complex float *_swig_go_2, intgo _swig_go_3) {
+void _wrap_AGC_Work_SatHelper_9d76377ed7889403(SatHelper::AGC *_swig_go_0, _Complex float *_swig_go_1, _Complex float *_swig_go_2, intgo _swig_go_3) {
   SatHelper::AGC *arg1 = (SatHelper::AGC *) 0 ;
   std::complex< float > *arg2 = (std::complex< float > *) 0 ;
   std::complex< float > *arg3 = (std::complex< float > *) 0 ;
@@ -3310,7 +3310,7 @@ void _wrap_AGC_Work_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0, _Comp
 }
 
 
-void _wrap_delete_AGC_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0) {
+void _wrap_delete_AGC_SatHelper_9d76377ed7889403(SatHelper::AGC *_swig_go_0) {
   SatHelper::AGC *arg1 = (SatHelper::AGC *) 0 ;
   
   arg1 = *(SatHelper::AGC **)&_swig_go_0; 
@@ -3320,7 +3320,7 @@ void _wrap_delete_AGC_SatHelper_4367b69a00f83bf7(SatHelper::AGC *_swig_go_0) {
 }
 
 
-SatHelper::ClockRecovery *_wrap_new_ClockRecovery_SatHelper_4367b69a00f83bf7(float _swig_go_0, float _swig_go_1, float _swig_go_2, float _swig_go_3, float _swig_go_4) {
+SatHelper::ClockRecovery *_wrap_new_ClockRecovery_SatHelper_9d76377ed7889403(float _swig_go_0, float _swig_go_1, float _swig_go_2, float _swig_go_3, float _swig_go_4) {
   float arg1 ;
   float arg2 ;
   float arg3 ;
@@ -3341,7 +3341,7 @@ SatHelper::ClockRecovery *_wrap_new_ClockRecovery_SatHelper_4367b69a00f83bf7(flo
 }
 
 
-void _wrap_delete_ClockRecovery_SatHelper_4367b69a00f83bf7(SatHelper::ClockRecovery *_swig_go_0) {
+void _wrap_delete_ClockRecovery_SatHelper_9d76377ed7889403(SatHelper::ClockRecovery *_swig_go_0) {
   SatHelper::ClockRecovery *arg1 = (SatHelper::ClockRecovery *) 0 ;
   
   arg1 = *(SatHelper::ClockRecovery **)&_swig_go_0; 
@@ -3351,7 +3351,7 @@ void _wrap_delete_ClockRecovery_SatHelper_4367b69a00f83bf7(SatHelper::ClockRecov
 }
 
 
-intgo _wrap_ClockRecovery_Work_SatHelper_4367b69a00f83bf7(SatHelper::ClockRecovery *_swig_go_0, _Complex float *_swig_go_1, _Complex float *_swig_go_2, intgo _swig_go_3) {
+intgo _wrap_ClockRecovery_Work_SatHelper_9d76377ed7889403(SatHelper::ClockRecovery *_swig_go_0, _Complex float *_swig_go_1, _Complex float *_swig_go_2, intgo _swig_go_3) {
   SatHelper::ClockRecovery *arg1 = (SatHelper::ClockRecovery *) 0 ;
   std::complex< float > *arg2 = (std::complex< float > *) 0 ;
   std::complex< float > *arg3 = (std::complex< float > *) 0 ;
@@ -3370,7 +3370,7 @@ intgo _wrap_ClockRecovery_Work_SatHelper_4367b69a00f83bf7(SatHelper::ClockRecove
 }
 
 
-float _wrap_ClockRecovery_GetMu_SatHelper_4367b69a00f83bf7(SatHelper::ClockRecovery *_swig_go_0) {
+float _wrap_ClockRecovery_GetMu_SatHelper_9d76377ed7889403(SatHelper::ClockRecovery *_swig_go_0) {
   SatHelper::ClockRecovery *arg1 = (SatHelper::ClockRecovery *) 0 ;
   float result;
   float _swig_go_result;
@@ -3383,7 +3383,7 @@ float _wrap_ClockRecovery_GetMu_SatHelper_4367b69a00f83bf7(SatHelper::ClockRecov
 }
 
 
-float _wrap_ClockRecovery_GetOmega_SatHelper_4367b69a00f83bf7(SatHelper::ClockRecovery *_swig_go_0) {
+float _wrap_ClockRecovery_GetOmega_SatHelper_9d76377ed7889403(SatHelper::ClockRecovery *_swig_go_0) {
   SatHelper::ClockRecovery *arg1 = (SatHelper::ClockRecovery *) 0 ;
   float result;
   float _swig_go_result;
@@ -3396,7 +3396,7 @@ float _wrap_ClockRecovery_GetOmega_SatHelper_4367b69a00f83bf7(SatHelper::ClockRe
 }
 
 
-float _wrap_ClockRecovery_GetGainMu_SatHelper_4367b69a00f83bf7(SatHelper::ClockRecovery *_swig_go_0) {
+float _wrap_ClockRecovery_GetGainMu_SatHelper_9d76377ed7889403(SatHelper::ClockRecovery *_swig_go_0) {
   SatHelper::ClockRecovery *arg1 = (SatHelper::ClockRecovery *) 0 ;
   float result;
   float _swig_go_result;
@@ -3409,7 +3409,7 @@ float _wrap_ClockRecovery_GetGainMu_SatHelper_4367b69a00f83bf7(SatHelper::ClockR
 }
 
 
-float _wrap_ClockRecovery_GetGainOmega_SatHelper_4367b69a00f83bf7(SatHelper::ClockRecovery *_swig_go_0) {
+float _wrap_ClockRecovery_GetGainOmega_SatHelper_9d76377ed7889403(SatHelper::ClockRecovery *_swig_go_0) {
   SatHelper::ClockRecovery *arg1 = (SatHelper::ClockRecovery *) 0 ;
   float result;
   float _swig_go_result;
@@ -3422,7 +3422,7 @@ float _wrap_ClockRecovery_GetGainOmega_SatHelper_4367b69a00f83bf7(SatHelper::Clo
 }
 
 
-void _wrap_ClockRecovery_SetGainMu_SatHelper_4367b69a00f83bf7(SatHelper::ClockRecovery *_swig_go_0, float _swig_go_1) {
+void _wrap_ClockRecovery_SetGainMu_SatHelper_9d76377ed7889403(SatHelper::ClockRecovery *_swig_go_0, float _swig_go_1) {
   SatHelper::ClockRecovery *arg1 = (SatHelper::ClockRecovery *) 0 ;
   float arg2 ;
   
@@ -3434,7 +3434,7 @@ void _wrap_ClockRecovery_SetGainMu_SatHelper_4367b69a00f83bf7(SatHelper::ClockRe
 }
 
 
-void _wrap_ClockRecovery_SetGainOmega_SatHelper_4367b69a00f83bf7(SatHelper::ClockRecovery *_swig_go_0, float _swig_go_1) {
+void _wrap_ClockRecovery_SetGainOmega_SatHelper_9d76377ed7889403(SatHelper::ClockRecovery *_swig_go_0, float _swig_go_1) {
   SatHelper::ClockRecovery *arg1 = (SatHelper::ClockRecovery *) 0 ;
   float arg2 ;
   
@@ -3446,7 +3446,7 @@ void _wrap_ClockRecovery_SetGainOmega_SatHelper_4367b69a00f83bf7(SatHelper::Cloc
 }
 
 
-void _wrap_ClockRecovery_SetMu_SatHelper_4367b69a00f83bf7(SatHelper::ClockRecovery *_swig_go_0, float _swig_go_1) {
+void _wrap_ClockRecovery_SetMu_SatHelper_9d76377ed7889403(SatHelper::ClockRecovery *_swig_go_0, float _swig_go_1) {
   SatHelper::ClockRecovery *arg1 = (SatHelper::ClockRecovery *) 0 ;
   float arg2 ;
   
@@ -3458,7 +3458,7 @@ void _wrap_ClockRecovery_SetMu_SatHelper_4367b69a00f83bf7(SatHelper::ClockRecove
 }
 
 
-void _wrap_ClockRecovery_SetOmega_SatHelper_4367b69a00f83bf7(SatHelper::ClockRecovery *_swig_go_0, float _swig_go_1) {
+void _wrap_ClockRecovery_SetOmega_SatHelper_9d76377ed7889403(SatHelper::ClockRecovery *_swig_go_0, float _swig_go_1) {
   SatHelper::ClockRecovery *arg1 = (SatHelper::ClockRecovery *) 0 ;
   float arg2 ;
   
@@ -3470,7 +3470,7 @@ void _wrap_ClockRecovery_SetOmega_SatHelper_4367b69a00f83bf7(SatHelper::ClockRec
 }
 
 
-SatHelper::ControlLoop *_wrap_new_ControlLoop_SatHelper_4367b69a00f83bf7(float _swig_go_0, float _swig_go_1, float _swig_go_2) {
+SatHelper::ControlLoop *_wrap_new_ControlLoop_SatHelper_9d76377ed7889403(float _swig_go_0, float _swig_go_1, float _swig_go_2) {
   float arg1 ;
   float arg2 ;
   float arg3 ;
@@ -3487,7 +3487,7 @@ SatHelper::ControlLoop *_wrap_new_ControlLoop_SatHelper_4367b69a00f83bf7(float _
 }
 
 
-void _wrap_delete_ControlLoop_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0) {
+void _wrap_delete_ControlLoop_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   
   arg1 = *(SatHelper::ControlLoop **)&_swig_go_0; 
@@ -3497,7 +3497,7 @@ void _wrap_delete_ControlLoop_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop 
 }
 
 
-void _wrap_ControlLoop_SetLoopBandwidth_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0, float _swig_go_1) {
+void _wrap_ControlLoop_SetLoopBandwidth_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0, float _swig_go_1) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   float arg2 ;
   
@@ -3509,7 +3509,7 @@ void _wrap_ControlLoop_SetLoopBandwidth_SatHelper_4367b69a00f83bf7(SatHelper::Co
 }
 
 
-void _wrap_ControlLoop_SetDampingFactor_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0, float _swig_go_1) {
+void _wrap_ControlLoop_SetDampingFactor_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0, float _swig_go_1) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   float arg2 ;
   
@@ -3521,7 +3521,7 @@ void _wrap_ControlLoop_SetDampingFactor_SatHelper_4367b69a00f83bf7(SatHelper::Co
 }
 
 
-void _wrap_ControlLoop_SetAlpha_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0, float _swig_go_1) {
+void _wrap_ControlLoop_SetAlpha_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0, float _swig_go_1) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   float arg2 ;
   
@@ -3533,7 +3533,7 @@ void _wrap_ControlLoop_SetAlpha_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoo
 }
 
 
-void _wrap_ControlLoop_SetBeta_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0, float _swig_go_1) {
+void _wrap_ControlLoop_SetBeta_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0, float _swig_go_1) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   float arg2 ;
   
@@ -3545,7 +3545,7 @@ void _wrap_ControlLoop_SetBeta_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop
 }
 
 
-void _wrap_ControlLoop_SetFrequency_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0, float _swig_go_1) {
+void _wrap_ControlLoop_SetFrequency_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0, float _swig_go_1) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   float arg2 ;
   
@@ -3557,7 +3557,7 @@ void _wrap_ControlLoop_SetFrequency_SatHelper_4367b69a00f83bf7(SatHelper::Contro
 }
 
 
-void _wrap_ControlLoop_Reset_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0) {
+void _wrap_ControlLoop_Reset_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   
   arg1 = *(SatHelper::ControlLoop **)&_swig_go_0; 
@@ -3567,7 +3567,7 @@ void _wrap_ControlLoop_Reset_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *
 }
 
 
-void _wrap_ControlLoop_UpdateGains_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0) {
+void _wrap_ControlLoop_UpdateGains_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   
   arg1 = *(SatHelper::ControlLoop **)&_swig_go_0; 
@@ -3577,7 +3577,7 @@ void _wrap_ControlLoop_UpdateGains_SatHelper_4367b69a00f83bf7(SatHelper::Control
 }
 
 
-void _wrap_ControlLoop_SetPhase_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0, float _swig_go_1) {
+void _wrap_ControlLoop_SetPhase_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0, float _swig_go_1) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   float arg2 ;
   
@@ -3589,7 +3589,7 @@ void _wrap_ControlLoop_SetPhase_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoo
 }
 
 
-void _wrap_ControlLoop_AdvanceLoop_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0, float _swig_go_1) {
+void _wrap_ControlLoop_AdvanceLoop_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0, float _swig_go_1) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   float arg2 ;
   
@@ -3601,7 +3601,7 @@ void _wrap_ControlLoop_AdvanceLoop_SatHelper_4367b69a00f83bf7(SatHelper::Control
 }
 
 
-void _wrap_ControlLoop_SetRelativeMaxFrequency_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0, float _swig_go_1) {
+void _wrap_ControlLoop_SetRelativeMaxFrequency_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0, float _swig_go_1) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   float arg2 ;
   
@@ -3613,7 +3613,7 @@ void _wrap_ControlLoop_SetRelativeMaxFrequency_SatHelper_4367b69a00f83bf7(SatHel
 }
 
 
-void _wrap_ControlLoop_SetRelativeMinFrequency_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0, float _swig_go_1) {
+void _wrap_ControlLoop_SetRelativeMinFrequency_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0, float _swig_go_1) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   float arg2 ;
   
@@ -3625,7 +3625,7 @@ void _wrap_ControlLoop_SetRelativeMinFrequency_SatHelper_4367b69a00f83bf7(SatHel
 }
 
 
-float _wrap_ControlLoop_GetLoopBandwidth_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0) {
+float _wrap_ControlLoop_GetLoopBandwidth_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   float result;
   float _swig_go_result;
@@ -3638,7 +3638,7 @@ float _wrap_ControlLoop_GetLoopBandwidth_SatHelper_4367b69a00f83bf7(SatHelper::C
 }
 
 
-float _wrap_ControlLoop_GetDampingFactor_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0) {
+float _wrap_ControlLoop_GetDampingFactor_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   float result;
   float _swig_go_result;
@@ -3651,7 +3651,7 @@ float _wrap_ControlLoop_GetDampingFactor_SatHelper_4367b69a00f83bf7(SatHelper::C
 }
 
 
-float _wrap_ControlLoop_GetAlpha_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0) {
+float _wrap_ControlLoop_GetAlpha_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   float result;
   float _swig_go_result;
@@ -3664,7 +3664,7 @@ float _wrap_ControlLoop_GetAlpha_SatHelper_4367b69a00f83bf7(SatHelper::ControlLo
 }
 
 
-float _wrap_ControlLoop_GetBeta_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0) {
+float _wrap_ControlLoop_GetBeta_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   float result;
   float _swig_go_result;
@@ -3677,7 +3677,7 @@ float _wrap_ControlLoop_GetBeta_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoo
 }
 
 
-float _wrap_ControlLoop_GetRelativeFrequency_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0) {
+float _wrap_ControlLoop_GetRelativeFrequency_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   float result;
   float _swig_go_result;
@@ -3690,7 +3690,7 @@ float _wrap_ControlLoop_GetRelativeFrequency_SatHelper_4367b69a00f83bf7(SatHelpe
 }
 
 
-float _wrap_ControlLoop_GetPhase_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0) {
+float _wrap_ControlLoop_GetPhase_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   float result;
   float _swig_go_result;
@@ -3703,7 +3703,7 @@ float _wrap_ControlLoop_GetPhase_SatHelper_4367b69a00f83bf7(SatHelper::ControlLo
 }
 
 
-float _wrap_ControlLoop_GetMaxRelativeFrequency_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0) {
+float _wrap_ControlLoop_GetMaxRelativeFrequency_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   float result;
   float _swig_go_result;
@@ -3716,7 +3716,7 @@ float _wrap_ControlLoop_GetMaxRelativeFrequency_SatHelper_4367b69a00f83bf7(SatHe
 }
 
 
-float _wrap_ControlLoop_GetMinRelativeFrequency_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0) {
+float _wrap_ControlLoop_GetMinRelativeFrequency_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   float result;
   float _swig_go_result;
@@ -3729,7 +3729,7 @@ float _wrap_ControlLoop_GetMinRelativeFrequency_SatHelper_4367b69a00f83bf7(SatHe
 }
 
 
-void _wrap_ControlLoop_FrequencyLimit_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0) {
+void _wrap_ControlLoop_FrequencyLimit_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   
   arg1 = *(SatHelper::ControlLoop **)&_swig_go_0; 
@@ -3739,7 +3739,7 @@ void _wrap_ControlLoop_FrequencyLimit_SatHelper_4367b69a00f83bf7(SatHelper::Cont
 }
 
 
-void _wrap_ControlLoop_PhaseWrap_SatHelper_4367b69a00f83bf7(SatHelper::ControlLoop *_swig_go_0) {
+void _wrap_ControlLoop_PhaseWrap_SatHelper_9d76377ed7889403(SatHelper::ControlLoop *_swig_go_0) {
   SatHelper::ControlLoop *arg1 = (SatHelper::ControlLoop *) 0 ;
   
   arg1 = *(SatHelper::ControlLoop **)&_swig_go_0; 
@@ -3749,7 +3749,7 @@ void _wrap_ControlLoop_PhaseWrap_SatHelper_4367b69a00f83bf7(SatHelper::ControlLo
 }
 
 
-SatHelper::CostasLoop *_wrap_new_CostasLoop__SWIG_0_SatHelper_4367b69a00f83bf7(float _swig_go_0, intgo _swig_go_1) {
+SatHelper::CostasLoop *_wrap_new_CostasLoop__SWIG_0_SatHelper_9d76377ed7889403(float _swig_go_0, intgo _swig_go_1) {
   float arg1 ;
   int arg2 ;
   SatHelper::CostasLoop *result = 0 ;
@@ -3764,7 +3764,7 @@ SatHelper::CostasLoop *_wrap_new_CostasLoop__SWIG_0_SatHelper_4367b69a00f83bf7(f
 }
 
 
-SatHelper::CostasLoop *_wrap_new_CostasLoop__SWIG_1_SatHelper_4367b69a00f83bf7(float _swig_go_0, intgo _swig_go_1, float _swig_go_2, float _swig_go_3) {
+SatHelper::CostasLoop *_wrap_new_CostasLoop__SWIG_1_SatHelper_9d76377ed7889403(float _swig_go_0, intgo _swig_go_1, float _swig_go_2, float _swig_go_3) {
   float arg1 ;
   int arg2 ;
   float arg3 ;
@@ -3783,7 +3783,7 @@ SatHelper::CostasLoop *_wrap_new_CostasLoop__SWIG_1_SatHelper_4367b69a00f83bf7(f
 }
 
 
-void _wrap_delete_CostasLoop_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0) {
+void _wrap_delete_CostasLoop_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   
   arg1 = *(SatHelper::CostasLoop **)&_swig_go_0; 
@@ -3793,7 +3793,7 @@ void _wrap_delete_CostasLoop_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_
 }
 
 
-float _wrap_CostasLoop_GetError_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0) {
+float _wrap_CostasLoop_GetError_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float result;
   float _swig_go_result;
@@ -3806,7 +3806,7 @@ float _wrap_CostasLoop_GetError_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop
 }
 
 
-float _wrap_CostasLoop_GetFrequency_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0) {
+float _wrap_CostasLoop_GetFrequency_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float result;
   float _swig_go_result;
@@ -3819,7 +3819,7 @@ float _wrap_CostasLoop_GetFrequency_SatHelper_4367b69a00f83bf7(SatHelper::Costas
 }
 
 
-float _wrap_CostasLoop_GetFrequencyHz_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0) {
+float _wrap_CostasLoop_GetFrequencyHz_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float result;
   float _swig_go_result;
@@ -3832,7 +3832,7 @@ float _wrap_CostasLoop_GetFrequencyHz_SatHelper_4367b69a00f83bf7(SatHelper::Cost
 }
 
 
-void _wrap_CostasLoop_Reset_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0) {
+void _wrap_CostasLoop_Reset_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   
   arg1 = *(SatHelper::CostasLoop **)&_swig_go_0; 
@@ -3842,7 +3842,7 @@ void _wrap_CostasLoop_Reset_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_s
 }
 
 
-void _wrap_CostasLoop_Work__SWIG_0_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0, _Complex float *_swig_go_1, _Complex float *_swig_go_2, intgo _swig_go_3) {
+void _wrap_CostasLoop_Work__SWIG_0_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0, _Complex float *_swig_go_1, _Complex float *_swig_go_2, intgo _swig_go_3) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   std::complex< float > *arg2 = (std::complex< float > *) 0 ;
   std::complex< float > *arg3 = (std::complex< float > *) 0 ;
@@ -3858,7 +3858,7 @@ void _wrap_CostasLoop_Work__SWIG_0_SatHelper_4367b69a00f83bf7(SatHelper::CostasL
 }
 
 
-void _wrap_CostasLoop_Work__SWIG_1_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0, _Complex float *_swig_go_1, _Complex float *_swig_go_2, float *_swig_go_3, intgo _swig_go_4) {
+void _wrap_CostasLoop_Work__SWIG_1_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0, _Complex float *_swig_go_1, _Complex float *_swig_go_2, float *_swig_go_3, intgo _swig_go_4) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   std::complex< float > *arg2 = (std::complex< float > *) 0 ;
   std::complex< float > *arg3 = (std::complex< float > *) 0 ;
@@ -3876,7 +3876,7 @@ void _wrap_CostasLoop_Work__SWIG_1_SatHelper_4367b69a00f83bf7(SatHelper::CostasL
 }
 
 
-void _wrap_CostasLoop_SetLoopBandwidth_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0, float _swig_go_1) {
+void _wrap_CostasLoop_SetLoopBandwidth_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0, float _swig_go_1) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float arg2 ;
   
@@ -3889,7 +3889,7 @@ void _wrap_CostasLoop_SetLoopBandwidth_SatHelper_4367b69a00f83bf7(SatHelper::Cos
 }
 
 
-void _wrap_CostasLoop_SetDampingFactor_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0, float _swig_go_1) {
+void _wrap_CostasLoop_SetDampingFactor_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0, float _swig_go_1) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float arg2 ;
   
@@ -3902,7 +3902,7 @@ void _wrap_CostasLoop_SetDampingFactor_SatHelper_4367b69a00f83bf7(SatHelper::Cos
 }
 
 
-void _wrap_CostasLoop_SetAlpha_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0, float _swig_go_1) {
+void _wrap_CostasLoop_SetAlpha_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0, float _swig_go_1) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float arg2 ;
   
@@ -3915,7 +3915,7 @@ void _wrap_CostasLoop_SetAlpha_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop 
 }
 
 
-void _wrap_CostasLoop_SetBeta_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0, float _swig_go_1) {
+void _wrap_CostasLoop_SetBeta_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0, float _swig_go_1) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float arg2 ;
   
@@ -3928,7 +3928,7 @@ void _wrap_CostasLoop_SetBeta_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *
 }
 
 
-void _wrap_CostasLoop_SetFrequency_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0, float _swig_go_1) {
+void _wrap_CostasLoop_SetFrequency_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0, float _swig_go_1) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float arg2 ;
   
@@ -3941,7 +3941,7 @@ void _wrap_CostasLoop_SetFrequency_SatHelper_4367b69a00f83bf7(SatHelper::CostasL
 }
 
 
-void _wrap_CostasLoop_UpdateGains_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0) {
+void _wrap_CostasLoop_UpdateGains_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   
   arg1 = *(SatHelper::CostasLoop **)&_swig_go_0; 
@@ -3952,7 +3952,7 @@ void _wrap_CostasLoop_UpdateGains_SatHelper_4367b69a00f83bf7(SatHelper::CostasLo
 }
 
 
-void _wrap_CostasLoop_SetPhase_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0, float _swig_go_1) {
+void _wrap_CostasLoop_SetPhase_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0, float _swig_go_1) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float arg2 ;
   
@@ -3965,7 +3965,7 @@ void _wrap_CostasLoop_SetPhase_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop 
 }
 
 
-void _wrap_CostasLoop_AdvanceLoop_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0, float _swig_go_1) {
+void _wrap_CostasLoop_AdvanceLoop_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0, float _swig_go_1) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float arg2 ;
   
@@ -3978,7 +3978,7 @@ void _wrap_CostasLoop_AdvanceLoop_SatHelper_4367b69a00f83bf7(SatHelper::CostasLo
 }
 
 
-void _wrap_CostasLoop_SetRelativeMaxFrequency_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0, float _swig_go_1) {
+void _wrap_CostasLoop_SetRelativeMaxFrequency_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0, float _swig_go_1) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float arg2 ;
   
@@ -3991,7 +3991,7 @@ void _wrap_CostasLoop_SetRelativeMaxFrequency_SatHelper_4367b69a00f83bf7(SatHelp
 }
 
 
-void _wrap_CostasLoop_SetRelativeMinFrequency_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0, float _swig_go_1) {
+void _wrap_CostasLoop_SetRelativeMinFrequency_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0, float _swig_go_1) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float arg2 ;
   
@@ -4004,7 +4004,7 @@ void _wrap_CostasLoop_SetRelativeMinFrequency_SatHelper_4367b69a00f83bf7(SatHelp
 }
 
 
-float _wrap_CostasLoop_GetLoopBandwidth_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0) {
+float _wrap_CostasLoop_GetLoopBandwidth_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float result;
   float _swig_go_result;
@@ -4018,7 +4018,7 @@ float _wrap_CostasLoop_GetLoopBandwidth_SatHelper_4367b69a00f83bf7(SatHelper::Co
 }
 
 
-float _wrap_CostasLoop_GetDampingFactor_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0) {
+float _wrap_CostasLoop_GetDampingFactor_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float result;
   float _swig_go_result;
@@ -4032,7 +4032,7 @@ float _wrap_CostasLoop_GetDampingFactor_SatHelper_4367b69a00f83bf7(SatHelper::Co
 }
 
 
-float _wrap_CostasLoop_GetAlpha_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0) {
+float _wrap_CostasLoop_GetAlpha_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float result;
   float _swig_go_result;
@@ -4046,7 +4046,7 @@ float _wrap_CostasLoop_GetAlpha_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop
 }
 
 
-float _wrap_CostasLoop_GetBeta_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0) {
+float _wrap_CostasLoop_GetBeta_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float result;
   float _swig_go_result;
@@ -4060,7 +4060,7 @@ float _wrap_CostasLoop_GetBeta_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop 
 }
 
 
-float _wrap_CostasLoop_GetRelativeFrequency_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0) {
+float _wrap_CostasLoop_GetRelativeFrequency_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float result;
   float _swig_go_result;
@@ -4074,7 +4074,7 @@ float _wrap_CostasLoop_GetRelativeFrequency_SatHelper_4367b69a00f83bf7(SatHelper
 }
 
 
-float _wrap_CostasLoop_GetPhase_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0) {
+float _wrap_CostasLoop_GetPhase_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float result;
   float _swig_go_result;
@@ -4088,7 +4088,7 @@ float _wrap_CostasLoop_GetPhase_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop
 }
 
 
-float _wrap_CostasLoop_GetMaxRelativeFrequency_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0) {
+float _wrap_CostasLoop_GetMaxRelativeFrequency_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float result;
   float _swig_go_result;
@@ -4102,7 +4102,7 @@ float _wrap_CostasLoop_GetMaxRelativeFrequency_SatHelper_4367b69a00f83bf7(SatHel
 }
 
 
-float _wrap_CostasLoop_GetMinRelativeFrequency_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0) {
+float _wrap_CostasLoop_GetMinRelativeFrequency_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   float result;
   float _swig_go_result;
@@ -4116,7 +4116,7 @@ float _wrap_CostasLoop_GetMinRelativeFrequency_SatHelper_4367b69a00f83bf7(SatHel
 }
 
 
-void _wrap_CostasLoop_FrequencyLimit_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0) {
+void _wrap_CostasLoop_FrequencyLimit_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   
   arg1 = *(SatHelper::CostasLoop **)&_swig_go_0; 
@@ -4127,7 +4127,7 @@ void _wrap_CostasLoop_FrequencyLimit_SatHelper_4367b69a00f83bf7(SatHelper::Costa
 }
 
 
-void _wrap_CostasLoop_PhaseWrap_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop *_swig_go_0) {
+void _wrap_CostasLoop_PhaseWrap_SatHelper_9d76377ed7889403(SatHelper::CostasLoop *_swig_go_0) {
   SatHelper::CostasLoop *arg1 = (SatHelper::CostasLoop *) 0 ;
   
   arg1 = *(SatHelper::CostasLoop **)&_swig_go_0; 
@@ -4138,7 +4138,7 @@ void _wrap_CostasLoop_PhaseWrap_SatHelper_4367b69a00f83bf7(SatHelper::CostasLoop
 }
 
 
-intgo _wrap_HAMMING_FFTWindows_SatHelper_4367b69a00f83bf7() {
+intgo _wrap_HAMMING_FFTWindows_SatHelper_9d76377ed7889403() {
   SatHelper::FFTWindows::WindowType result;
   intgo _swig_go_result;
   
@@ -4150,7 +4150,7 @@ intgo _wrap_HAMMING_FFTWindows_SatHelper_4367b69a00f83bf7() {
 }
 
 
-intgo _wrap_HANN_FFTWindows_SatHelper_4367b69a00f83bf7() {
+intgo _wrap_HANN_FFTWindows_SatHelper_9d76377ed7889403() {
   SatHelper::FFTWindows::WindowType result;
   intgo _swig_go_result;
   
@@ -4162,7 +4162,7 @@ intgo _wrap_HANN_FFTWindows_SatHelper_4367b69a00f83bf7() {
 }
 
 
-intgo _wrap_BLACKMAN_FFTWindows_SatHelper_4367b69a00f83bf7() {
+intgo _wrap_BLACKMAN_FFTWindows_SatHelper_9d76377ed7889403() {
   SatHelper::FFTWindows::WindowType result;
   intgo _swig_go_result;
   
@@ -4174,7 +4174,7 @@ intgo _wrap_BLACKMAN_FFTWindows_SatHelper_4367b69a00f83bf7() {
 }
 
 
-intgo _wrap_RECTANGULAR_FFTWindows_SatHelper_4367b69a00f83bf7() {
+intgo _wrap_RECTANGULAR_FFTWindows_SatHelper_9d76377ed7889403() {
   SatHelper::FFTWindows::WindowType result;
   intgo _swig_go_result;
   
@@ -4186,7 +4186,7 @@ intgo _wrap_RECTANGULAR_FFTWindows_SatHelper_4367b69a00f83bf7() {
 }
 
 
-intgo _wrap_KAISER_FFTWindows_SatHelper_4367b69a00f83bf7() {
+intgo _wrap_KAISER_FFTWindows_SatHelper_9d76377ed7889403() {
   SatHelper::FFTWindows::WindowType result;
   intgo _swig_go_result;
   
@@ -4198,7 +4198,7 @@ intgo _wrap_KAISER_FFTWindows_SatHelper_4367b69a00f83bf7() {
 }
 
 
-intgo _wrap_BLACKMAN_HARRIS_FFTWindows_SatHelper_4367b69a00f83bf7() {
+intgo _wrap_BLACKMAN_HARRIS_FFTWindows_SatHelper_9d76377ed7889403() {
   SatHelper::FFTWindows::WindowType result;
   intgo _swig_go_result;
   
@@ -4210,7 +4210,7 @@ intgo _wrap_BLACKMAN_HARRIS_FFTWindows_SatHelper_4367b69a00f83bf7() {
 }
 
 
-intgo _wrap_BARTLETT_FFTWindows_SatHelper_4367b69a00f83bf7() {
+intgo _wrap_BARTLETT_FFTWindows_SatHelper_9d76377ed7889403() {
   SatHelper::FFTWindows::WindowType result;
   intgo _swig_go_result;
   
@@ -4222,7 +4222,7 @@ intgo _wrap_BARTLETT_FFTWindows_SatHelper_4367b69a00f83bf7() {
 }
 
 
-intgo _wrap_FLATTOP_FFTWindows_SatHelper_4367b69a00f83bf7() {
+intgo _wrap_FLATTOP_FFTWindows_SatHelper_9d76377ed7889403() {
   SatHelper::FFTWindows::WindowType result;
   intgo _swig_go_result;
   
@@ -4234,7 +4234,7 @@ intgo _wrap_FLATTOP_FFTWindows_SatHelper_4367b69a00f83bf7() {
 }
 
 
-std::vector< float > *_wrap_FFTWindows_Rectangular_SatHelper_4367b69a00f83bf7(intgo _swig_go_0) {
+std::vector< float > *_wrap_FFTWindows_Rectangular_SatHelper_9d76377ed7889403(intgo _swig_go_0) {
   int arg1 ;
   std::vector< float > result;
   std::vector< float > *_swig_go_result;
@@ -4247,7 +4247,7 @@ std::vector< float > *_wrap_FFTWindows_Rectangular_SatHelper_4367b69a00f83bf7(in
 }
 
 
-std::vector< float > *_wrap_FFTWindows_Hamming_SatHelper_4367b69a00f83bf7(intgo _swig_go_0) {
+std::vector< float > *_wrap_FFTWindows_Hamming_SatHelper_9d76377ed7889403(intgo _swig_go_0) {
   int arg1 ;
   std::vector< float > result;
   std::vector< float > *_swig_go_result;
@@ -4260,7 +4260,7 @@ std::vector< float > *_wrap_FFTWindows_Hamming_SatHelper_4367b69a00f83bf7(intgo 
 }
 
 
-std::vector< float > *_wrap_FFTWindows_Hanning_SatHelper_4367b69a00f83bf7(intgo _swig_go_0) {
+std::vector< float > *_wrap_FFTWindows_Hanning_SatHelper_9d76377ed7889403(intgo _swig_go_0) {
   int arg1 ;
   std::vector< float > result;
   std::vector< float > *_swig_go_result;
@@ -4273,7 +4273,7 @@ std::vector< float > *_wrap_FFTWindows_Hanning_SatHelper_4367b69a00f83bf7(intgo 
 }
 
 
-std::vector< float > *_wrap_FFTWindows_Blackman_SatHelper_4367b69a00f83bf7(intgo _swig_go_0) {
+std::vector< float > *_wrap_FFTWindows_Blackman_SatHelper_9d76377ed7889403(intgo _swig_go_0) {
   int arg1 ;
   std::vector< float > result;
   std::vector< float > *_swig_go_result;
@@ -4286,7 +4286,7 @@ std::vector< float > *_wrap_FFTWindows_Blackman_SatHelper_4367b69a00f83bf7(intgo
 }
 
 
-std::vector< float > *_wrap_FFTWindows_BlackmanHarris__SWIG_0_SatHelper_4367b69a00f83bf7(intgo _swig_go_0, intgo _swig_go_1) {
+std::vector< float > *_wrap_FFTWindows_BlackmanHarris__SWIG_0_SatHelper_9d76377ed7889403(intgo _swig_go_0, intgo _swig_go_1) {
   int arg1 ;
   int arg2 ;
   std::vector< float > result;
@@ -4301,7 +4301,7 @@ std::vector< float > *_wrap_FFTWindows_BlackmanHarris__SWIG_0_SatHelper_4367b69a
 }
 
 
-std::vector< float > *_wrap_FFTWindows_BlackmanHarris__SWIG_1_SatHelper_4367b69a00f83bf7(intgo _swig_go_0) {
+std::vector< float > *_wrap_FFTWindows_BlackmanHarris__SWIG_1_SatHelper_9d76377ed7889403(intgo _swig_go_0) {
   int arg1 ;
   std::vector< float > result;
   std::vector< float > *_swig_go_result;
@@ -4314,7 +4314,7 @@ std::vector< float > *_wrap_FFTWindows_BlackmanHarris__SWIG_1_SatHelper_4367b69a
 }
 
 
-std::vector< float > *_wrap_FFTWindows_FlatTop_SatHelper_4367b69a00f83bf7(intgo _swig_go_0) {
+std::vector< float > *_wrap_FFTWindows_FlatTop_SatHelper_9d76377ed7889403(intgo _swig_go_0) {
   int arg1 ;
   std::vector< float > result;
   std::vector< float > *_swig_go_result;
@@ -4327,7 +4327,7 @@ std::vector< float > *_wrap_FFTWindows_FlatTop_SatHelper_4367b69a00f83bf7(intgo 
 }
 
 
-std::vector< float > *_wrap_FFTWindows_Kaiser_SatHelper_4367b69a00f83bf7(intgo _swig_go_0, double _swig_go_1) {
+std::vector< float > *_wrap_FFTWindows_Kaiser_SatHelper_9d76377ed7889403(intgo _swig_go_0, double _swig_go_1) {
   int arg1 ;
   double arg2 ;
   std::vector< float > result;
@@ -4342,7 +4342,7 @@ std::vector< float > *_wrap_FFTWindows_Kaiser_SatHelper_4367b69a00f83bf7(intgo _
 }
 
 
-std::vector< float > *_wrap_FFTWindows_Bartlett_SatHelper_4367b69a00f83bf7(intgo _swig_go_0) {
+std::vector< float > *_wrap_FFTWindows_Bartlett_SatHelper_9d76377ed7889403(intgo _swig_go_0) {
   int arg1 ;
   std::vector< float > result;
   std::vector< float > *_swig_go_result;
@@ -4355,7 +4355,7 @@ std::vector< float > *_wrap_FFTWindows_Bartlett_SatHelper_4367b69a00f83bf7(intgo
 }
 
 
-std::vector< float > *_wrap_FFTWindows_MakeWindow_SatHelper_4367b69a00f83bf7(intgo _swig_go_0, intgo _swig_go_1, float _swig_go_2) {
+std::vector< float > *_wrap_FFTWindows_MakeWindow_SatHelper_9d76377ed7889403(intgo _swig_go_0, intgo _swig_go_1, float _swig_go_2) {
   SatHelper::FFTWindows::WindowType arg1 ;
   int arg2 ;
   float arg3 ;
@@ -4372,7 +4372,7 @@ std::vector< float > *_wrap_FFTWindows_MakeWindow_SatHelper_4367b69a00f83bf7(int
 }
 
 
-SatHelper::FFTWindows *_wrap_new_FFTWindows_SatHelper_4367b69a00f83bf7() {
+SatHelper::FFTWindows *_wrap_new_FFTWindows_SatHelper_9d76377ed7889403() {
   SatHelper::FFTWindows *result = 0 ;
   SatHelper::FFTWindows *_swig_go_result;
   
@@ -4383,7 +4383,7 @@ SatHelper::FFTWindows *_wrap_new_FFTWindows_SatHelper_4367b69a00f83bf7() {
 }
 
 
-void _wrap_delete_FFTWindows_SatHelper_4367b69a00f83bf7(SatHelper::FFTWindows *_swig_go_0) {
+void _wrap_delete_FFTWindows_SatHelper_9d76377ed7889403(SatHelper::FFTWindows *_swig_go_0) {
   SatHelper::FFTWindows *arg1 = (SatHelper::FFTWindows *) 0 ;
   
   arg1 = *(SatHelper::FFTWindows **)&_swig_go_0; 
@@ -4393,7 +4393,7 @@ void _wrap_delete_FFTWindows_SatHelper_4367b69a00f83bf7(SatHelper::FFTWindows *_
 }
 
 
-std::vector< float > *_wrap_Filters_RRC_SatHelper_4367b69a00f83bf7(double _swig_go_0, double _swig_go_1, double _swig_go_2, double _swig_go_3, intgo _swig_go_4) {
+std::vector< float > *_wrap_Filters_RRC_SatHelper_9d76377ed7889403(double _swig_go_0, double _swig_go_1, double _swig_go_2, double _swig_go_3, intgo _swig_go_4) {
   double arg1 ;
   double arg2 ;
   double arg3 ;
@@ -4414,7 +4414,7 @@ std::vector< float > *_wrap_Filters_RRC_SatHelper_4367b69a00f83bf7(double _swig_
 }
 
 
-std::vector< float > *_wrap_Filters_lowPass_SatHelper_4367b69a00f83bf7(double _swig_go_0, double _swig_go_1, double _swig_go_2, double _swig_go_3, intgo _swig_go_4, double _swig_go_5) {
+std::vector< float > *_wrap_Filters_lowPass_SatHelper_9d76377ed7889403(double _swig_go_0, double _swig_go_1, double _swig_go_2, double _swig_go_3, intgo _swig_go_4, double _swig_go_5) {
   double arg1 ;
   double arg2 ;
   double arg3 ;
@@ -4437,7 +4437,7 @@ std::vector< float > *_wrap_Filters_lowPass_SatHelper_4367b69a00f83bf7(double _s
 }
 
 
-SatHelper::Filters *_wrap_new_Filters_SatHelper_4367b69a00f83bf7() {
+SatHelper::Filters *_wrap_new_Filters_SatHelper_9d76377ed7889403() {
   SatHelper::Filters *result = 0 ;
   SatHelper::Filters *_swig_go_result;
   
@@ -4448,7 +4448,7 @@ SatHelper::Filters *_wrap_new_Filters_SatHelper_4367b69a00f83bf7() {
 }
 
 
-void _wrap_delete_Filters_SatHelper_4367b69a00f83bf7(SatHelper::Filters *_swig_go_0) {
+void _wrap_delete_Filters_SatHelper_9d76377ed7889403(SatHelper::Filters *_swig_go_0) {
   SatHelper::Filters *arg1 = (SatHelper::Filters *) 0 ;
   
   arg1 = *(SatHelper::Filters **)&_swig_go_0; 
@@ -4458,7 +4458,7 @@ void _wrap_delete_Filters_SatHelper_4367b69a00f83bf7(SatHelper::Filters *_swig_g
 }
 
 
-SatHelper::FirFilter *_wrap_new_FirFilter_SatHelper_4367b69a00f83bf7(intgo _swig_go_0, std::vector< float > *_swig_go_1) {
+SatHelper::FirFilter *_wrap_new_FirFilter_SatHelper_9d76377ed7889403(intgo _swig_go_0, std::vector< float > *_swig_go_1) {
   unsigned int arg1 ;
   std::vector< float > *arg2 = 0 ;
   SatHelper::FirFilter *result = 0 ;
@@ -4473,7 +4473,7 @@ SatHelper::FirFilter *_wrap_new_FirFilter_SatHelper_4367b69a00f83bf7(intgo _swig
 }
 
 
-void _wrap_delete_FirFilter_SatHelper_4367b69a00f83bf7(SatHelper::FirFilter *_swig_go_0) {
+void _wrap_delete_FirFilter_SatHelper_9d76377ed7889403(SatHelper::FirFilter *_swig_go_0) {
   SatHelper::FirFilter *arg1 = (SatHelper::FirFilter *) 0 ;
   
   arg1 = *(SatHelper::FirFilter **)&_swig_go_0; 
@@ -4483,7 +4483,7 @@ void _wrap_delete_FirFilter_SatHelper_4367b69a00f83bf7(SatHelper::FirFilter *_sw
 }
 
 
-intgo _wrap_FirFilter_Work_SatHelper_4367b69a00f83bf7(SatHelper::FirFilter *_swig_go_0, _Complex float *_swig_go_1, _Complex float *_swig_go_2, intgo _swig_go_3) {
+intgo _wrap_FirFilter_Work_SatHelper_9d76377ed7889403(SatHelper::FirFilter *_swig_go_0, _Complex float *_swig_go_1, _Complex float *_swig_go_2, intgo _swig_go_3) {
   SatHelper::FirFilter *arg1 = (SatHelper::FirFilter *) 0 ;
   std::complex< float > *arg2 = (std::complex< float > *) 0 ;
   std::complex< float > *arg3 = (std::complex< float > *) 0 ;
@@ -4502,7 +4502,7 @@ intgo _wrap_FirFilter_Work_SatHelper_4367b69a00f83bf7(SatHelper::FirFilter *_swi
 }
 
 
-SatHelper::MMSEFirInterpolator *_wrap_new_MMSEFirInterpolator_SatHelper_4367b69a00f83bf7() {
+SatHelper::MMSEFirInterpolator *_wrap_new_MMSEFirInterpolator_SatHelper_9d76377ed7889403() {
   SatHelper::MMSEFirInterpolator *result = 0 ;
   SatHelper::MMSEFirInterpolator *_swig_go_result;
   
@@ -4513,7 +4513,7 @@ SatHelper::MMSEFirInterpolator *_wrap_new_MMSEFirInterpolator_SatHelper_4367b69a
 }
 
 
-void _wrap_delete_MMSEFirInterpolator_SatHelper_4367b69a00f83bf7(SatHelper::MMSEFirInterpolator *_swig_go_0) {
+void _wrap_delete_MMSEFirInterpolator_SatHelper_9d76377ed7889403(SatHelper::MMSEFirInterpolator *_swig_go_0) {
   SatHelper::MMSEFirInterpolator *arg1 = (SatHelper::MMSEFirInterpolator *) 0 ;
   
   arg1 = *(SatHelper::MMSEFirInterpolator **)&_swig_go_0; 
@@ -4523,7 +4523,7 @@ void _wrap_delete_MMSEFirInterpolator_SatHelper_4367b69a00f83bf7(SatHelper::MMSE
 }
 
 
-intgo _wrap_MMSEFirInterpolator_GetNTaps_SatHelper_4367b69a00f83bf7(SatHelper::MMSEFirInterpolator *_swig_go_0) {
+intgo _wrap_MMSEFirInterpolator_GetNTaps_SatHelper_9d76377ed7889403(SatHelper::MMSEFirInterpolator *_swig_go_0) {
   SatHelper::MMSEFirInterpolator *arg1 = (SatHelper::MMSEFirInterpolator *) 0 ;
   unsigned int result;
   intgo _swig_go_result;
@@ -4536,7 +4536,7 @@ intgo _wrap_MMSEFirInterpolator_GetNTaps_SatHelper_4367b69a00f83bf7(SatHelper::M
 }
 
 
-intgo _wrap_MMSEFirInterpolator_GetNSteps_SatHelper_4367b69a00f83bf7(SatHelper::MMSEFirInterpolator *_swig_go_0) {
+intgo _wrap_MMSEFirInterpolator_GetNSteps_SatHelper_9d76377ed7889403(SatHelper::MMSEFirInterpolator *_swig_go_0) {
   SatHelper::MMSEFirInterpolator *arg1 = (SatHelper::MMSEFirInterpolator *) 0 ;
   unsigned int result;
   intgo _swig_go_result;
@@ -4549,7 +4549,7 @@ intgo _wrap_MMSEFirInterpolator_GetNSteps_SatHelper_4367b69a00f83bf7(SatHelper::
 }
 
 
-_Complex float _wrap_MMSEFirInterpolator_interpolate_SatHelper_4367b69a00f83bf7(SatHelper::MMSEFirInterpolator *_swig_go_0, _Complex float *_swig_go_1, float _swig_go_2) {
+_Complex float _wrap_MMSEFirInterpolator_interpolate_SatHelper_9d76377ed7889403(SatHelper::MMSEFirInterpolator *_swig_go_0, _Complex float *_swig_go_1, float _swig_go_2) {
   SatHelper::MMSEFirInterpolator *arg1 = (SatHelper::MMSEFirInterpolator *) 0 ;
   std::complex< float > *arg2 ;
   float arg3 ;
@@ -4566,7 +4566,7 @@ _Complex float _wrap_MMSEFirInterpolator_interpolate_SatHelper_4367b69a00f83bf7(
 }
 
 
-SatHelper::FirKernel *_wrap_new_FirKernel_SatHelper_4367b69a00f83bf7(std::vector< float > *_swig_go_0) {
+SatHelper::FirKernel *_wrap_new_FirKernel_SatHelper_9d76377ed7889403(std::vector< float > *_swig_go_0) {
   std::vector< float > *arg1 = 0 ;
   SatHelper::FirKernel *result = 0 ;
   SatHelper::FirKernel *_swig_go_result;
@@ -4579,7 +4579,7 @@ SatHelper::FirKernel *_wrap_new_FirKernel_SatHelper_4367b69a00f83bf7(std::vector
 }
 
 
-void _wrap_delete_FirKernel_SatHelper_4367b69a00f83bf7(SatHelper::FirKernel *_swig_go_0) {
+void _wrap_delete_FirKernel_SatHelper_9d76377ed7889403(SatHelper::FirKernel *_swig_go_0) {
   SatHelper::FirKernel *arg1 = (SatHelper::FirKernel *) 0 ;
   
   arg1 = *(SatHelper::FirKernel **)&_swig_go_0; 
@@ -4589,7 +4589,7 @@ void _wrap_delete_FirKernel_SatHelper_4367b69a00f83bf7(SatHelper::FirKernel *_sw
 }
 
 
-void _wrap_FirKernel_SetTaps_SatHelper_4367b69a00f83bf7(SatHelper::FirKernel *_swig_go_0, std::vector< float > *_swig_go_1) {
+void _wrap_FirKernel_SetTaps_SatHelper_9d76377ed7889403(SatHelper::FirKernel *_swig_go_0, std::vector< float > *_swig_go_1) {
   SatHelper::FirKernel *arg1 = (SatHelper::FirKernel *) 0 ;
   std::vector< float > *arg2 = 0 ;
   
@@ -4601,7 +4601,7 @@ void _wrap_FirKernel_SetTaps_SatHelper_4367b69a00f83bf7(SatHelper::FirKernel *_s
 }
 
 
-_Complex float _wrap_FirKernel_filter_SatHelper_4367b69a00f83bf7(SatHelper::FirKernel *_swig_go_0, _Complex float *_swig_go_1) {
+_Complex float _wrap_FirKernel_filter_SatHelper_9d76377ed7889403(SatHelper::FirKernel *_swig_go_0, _Complex float *_swig_go_1) {
   SatHelper::FirKernel *arg1 = (SatHelper::FirKernel *) 0 ;
   std::complex< float > *arg2 = (std::complex< float > *) 0 ;
   std::complex< float > result;
@@ -4616,7 +4616,7 @@ _Complex float _wrap_FirKernel_filter_SatHelper_4367b69a00f83bf7(SatHelper::FirK
 }
 
 
-void _wrap_FirKernel_filterData_SatHelper_4367b69a00f83bf7(SatHelper::FirKernel *_swig_go_0, _Complex float *_swig_go_1, _Complex float *_swig_go_2, long long _swig_go_3) {
+void _wrap_FirKernel_filterData_SatHelper_9d76377ed7889403(SatHelper::FirKernel *_swig_go_0, _Complex float *_swig_go_1, _Complex float *_swig_go_2, long long _swig_go_3) {
   SatHelper::FirKernel *arg1 = (SatHelper::FirKernel *) 0 ;
   std::complex< float > *arg2 = (std::complex< float > *) 0 ;
   std::complex< float > *arg3 = (std::complex< float > *) 0 ;
@@ -4632,7 +4632,7 @@ void _wrap_FirKernel_filterData_SatHelper_4367b69a00f83bf7(SatHelper::FirKernel 
 }
 
 
-void _wrap_FirKernel_FilterDecimating_SatHelper_4367b69a00f83bf7(SatHelper::FirKernel *_swig_go_0, _Complex float *_swig_go_1, _Complex float *_swig_go_2, long long _swig_go_3, intgo _swig_go_4) {
+void _wrap_FirKernel_FilterDecimating_SatHelper_9d76377ed7889403(SatHelper::FirKernel *_swig_go_0, _Complex float *_swig_go_1, _Complex float *_swig_go_2, long long _swig_go_3, intgo _swig_go_4) {
   SatHelper::FirKernel *arg1 = (SatHelper::FirKernel *) 0 ;
   std::complex< float > *arg2 = (std::complex< float > *) 0 ;
   std::complex< float > *arg3 = (std::complex< float > *) 0 ;
@@ -4650,7 +4650,7 @@ void _wrap_FirKernel_FilterDecimating_SatHelper_4367b69a00f83bf7(SatHelper::FirK
 }
 
 
-void _wrap_FirKernel_UpdateTap_SatHelper_4367b69a00f83bf7(SatHelper::FirKernel *_swig_go_0, float _swig_go_1, intgo _swig_go_2) {
+void _wrap_FirKernel_UpdateTap_SatHelper_9d76377ed7889403(SatHelper::FirKernel *_swig_go_0, float _swig_go_1, intgo _swig_go_2) {
   SatHelper::FirKernel *arg1 = (SatHelper::FirKernel *) 0 ;
   float arg2 ;
   unsigned int arg3 ;
@@ -4664,7 +4664,7 @@ void _wrap_FirKernel_UpdateTap_SatHelper_4367b69a00f83bf7(SatHelper::FirKernel *
 }
 
 
-std::vector< float > *_wrap_FirKernel_GetTaps_SatHelper_4367b69a00f83bf7(SatHelper::FirKernel *_swig_go_0) {
+std::vector< float > *_wrap_FirKernel_GetTaps_SatHelper_9d76377ed7889403(SatHelper::FirKernel *_swig_go_0) {
   SatHelper::FirKernel *arg1 = (SatHelper::FirKernel *) 0 ;
   std::vector< float > result;
   std::vector< float > *_swig_go_result;
@@ -4677,7 +4677,7 @@ std::vector< float > *_wrap_FirKernel_GetTaps_SatHelper_4367b69a00f83bf7(SatHelp
 }
 
 
-intgo _wrap_FirKernel_GetNTaps_SatHelper_4367b69a00f83bf7(SatHelper::FirKernel *_swig_go_0) {
+intgo _wrap_FirKernel_GetNTaps_SatHelper_9d76377ed7889403(SatHelper::FirKernel *_swig_go_0) {
   SatHelper::FirKernel *arg1 = (SatHelper::FirKernel *) 0 ;
   unsigned int result;
   intgo _swig_go_result;
@@ -4690,7 +4690,7 @@ intgo _wrap_FirKernel_GetNTaps_SatHelper_4367b69a00f83bf7(SatHelper::FirKernel *
 }
 
 
-_gostring_ _wrap_Info_GetVersion_SatHelper_4367b69a00f83bf7() {
+_gostring_ _wrap_Info_GetVersion_SatHelper_9d76377ed7889403() {
   std::string *result = 0 ;
   _gostring_ _swig_go_result;
   
@@ -4701,7 +4701,7 @@ _gostring_ _wrap_Info_GetVersion_SatHelper_4367b69a00f83bf7() {
 }
 
 
-_gostring_ _wrap_Info_GetCompilationDate_SatHelper_4367b69a00f83bf7() {
+_gostring_ _wrap_Info_GetCompilationDate_SatHelper_9d76377ed7889403() {
   std::string *result = 0 ;
   _gostring_ _swig_go_result;
   
@@ -4712,7 +4712,7 @@ _gostring_ _wrap_Info_GetCompilationDate_SatHelper_4367b69a00f83bf7() {
 }
 
 
-_gostring_ _wrap_Info_GetCompilationTime_SatHelper_4367b69a00f83bf7() {
+_gostring_ _wrap_Info_GetCompilationTime_SatHelper_9d76377ed7889403() {
   std::string *result = 0 ;
   _gostring_ _swig_go_result;
   
@@ -4723,7 +4723,7 @@ _gostring_ _wrap_Info_GetCompilationTime_SatHelper_4367b69a00f83bf7() {
 }
 
 
-_gostring_ _wrap_Info_GetGitSHA1_SatHelper_4367b69a00f83bf7() {
+_gostring_ _wrap_Info_GetGitSHA1_SatHelper_9d76377ed7889403() {
   std::string *result = 0 ;
   _gostring_ _swig_go_result;
   
@@ -4734,7 +4734,7 @@ _gostring_ _wrap_Info_GetGitSHA1_SatHelper_4367b69a00f83bf7() {
 }
 
 
-SatHelper::Info *_wrap_new_Info_SatHelper_4367b69a00f83bf7() {
+SatHelper::Info *_wrap_new_Info_SatHelper_9d76377ed7889403() {
   SatHelper::Info *result = 0 ;
   SatHelper::Info *_swig_go_result;
   
@@ -4745,7 +4745,7 @@ SatHelper::Info *_wrap_new_Info_SatHelper_4367b69a00f83bf7() {
 }
 
 
-void _wrap_delete_Info_SatHelper_4367b69a00f83bf7(SatHelper::Info *_swig_go_0) {
+void _wrap_delete_Info_SatHelper_9d76377ed7889403(SatHelper::Info *_swig_go_0) {
   SatHelper::Info *arg1 = (SatHelper::Info *) 0 ;
   
   arg1 = *(SatHelper::Info **)&_swig_go_0; 
@@ -4755,7 +4755,7 @@ void _wrap_delete_Info_SatHelper_4367b69a00f83bf7(SatHelper::Info *_swig_go_0) {
 }
 
 
-void _wrap_Extensions_hasFMA_set_SatHelper_4367b69a00f83bf7(bool _swig_go_0) {
+void _wrap_Extensions_hasFMA_set_SatHelper_9d76377ed7889403(bool _swig_go_0) {
   bool arg1 ;
   
   arg1 = (bool)_swig_go_0; 
@@ -4765,7 +4765,7 @@ void _wrap_Extensions_hasFMA_set_SatHelper_4367b69a00f83bf7(bool _swig_go_0) {
 }
 
 
-bool _wrap_Extensions_hasFMA_get_SatHelper_4367b69a00f83bf7() {
+bool _wrap_Extensions_hasFMA_get_SatHelper_9d76377ed7889403() {
   bool result;
   bool _swig_go_result;
   
@@ -4776,7 +4776,7 @@ bool _wrap_Extensions_hasFMA_get_SatHelper_4367b69a00f83bf7() {
 }
 
 
-void _wrap_Extensions_hasSSE_set_SatHelper_4367b69a00f83bf7(bool _swig_go_0) {
+void _wrap_Extensions_hasSSE_set_SatHelper_9d76377ed7889403(bool _swig_go_0) {
   bool arg1 ;
   
   arg1 = (bool)_swig_go_0; 
@@ -4786,7 +4786,7 @@ void _wrap_Extensions_hasSSE_set_SatHelper_4367b69a00f83bf7(bool _swig_go_0) {
 }
 
 
-bool _wrap_Extensions_hasSSE_get_SatHelper_4367b69a00f83bf7() {
+bool _wrap_Extensions_hasSSE_get_SatHelper_9d76377ed7889403() {
   bool result;
   bool _swig_go_result;
   
@@ -4797,7 +4797,7 @@ bool _wrap_Extensions_hasSSE_get_SatHelper_4367b69a00f83bf7() {
 }
 
 
-void _wrap_Extensions_hasSSE4_set_SatHelper_4367b69a00f83bf7(bool _swig_go_0) {
+void _wrap_Extensions_hasSSE4_set_SatHelper_9d76377ed7889403(bool _swig_go_0) {
   bool arg1 ;
   
   arg1 = (bool)_swig_go_0; 
@@ -4807,7 +4807,7 @@ void _wrap_Extensions_hasSSE4_set_SatHelper_4367b69a00f83bf7(bool _swig_go_0) {
 }
 
 
-bool _wrap_Extensions_hasSSE4_get_SatHelper_4367b69a00f83bf7() {
+bool _wrap_Extensions_hasSSE4_get_SatHelper_9d76377ed7889403() {
   bool result;
   bool _swig_go_result;
   
@@ -4818,7 +4818,7 @@ bool _wrap_Extensions_hasSSE4_get_SatHelper_4367b69a00f83bf7() {
 }
 
 
-void _wrap_Extensions_hasAVX_set_SatHelper_4367b69a00f83bf7(bool _swig_go_0) {
+void _wrap_Extensions_hasAVX_set_SatHelper_9d76377ed7889403(bool _swig_go_0) {
   bool arg1 ;
   
   arg1 = (bool)_swig_go_0; 
@@ -4828,7 +4828,7 @@ void _wrap_Extensions_hasAVX_set_SatHelper_4367b69a00f83bf7(bool _swig_go_0) {
 }
 
 
-bool _wrap_Extensions_hasAVX_get_SatHelper_4367b69a00f83bf7() {
+bool _wrap_Extensions_hasAVX_get_SatHelper_9d76377ed7889403() {
   bool result;
   bool _swig_go_result;
   
@@ -4839,7 +4839,7 @@ bool _wrap_Extensions_hasAVX_get_SatHelper_4367b69a00f83bf7() {
 }
 
 
-void _wrap_Extensions_initialized_set_SatHelper_4367b69a00f83bf7(bool _swig_go_0) {
+void _wrap_Extensions_initialized_set_SatHelper_9d76377ed7889403(bool _swig_go_0) {
   bool arg1 ;
   
   arg1 = (bool)_swig_go_0; 
@@ -4849,7 +4849,7 @@ void _wrap_Extensions_initialized_set_SatHelper_4367b69a00f83bf7(bool _swig_go_0
 }
 
 
-bool _wrap_Extensions_initialized_get_SatHelper_4367b69a00f83bf7() {
+bool _wrap_Extensions_initialized_get_SatHelper_9d76377ed7889403() {
   bool result;
   bool _swig_go_result;
   
@@ -4860,7 +4860,7 @@ bool _wrap_Extensions_initialized_get_SatHelper_4367b69a00f83bf7() {
 }
 
 
-float _wrap_Extensions_FMA_SatHelper_4367b69a00f83bf7(float _swig_go_0, float _swig_go_1, float _swig_go_2) {
+float _wrap_Extensions_FMA_SatHelper_9d76377ed7889403(float _swig_go_0, float _swig_go_1, float _swig_go_2) {
   float arg1 ;
   float arg2 ;
   float arg3 ;
@@ -4877,7 +4877,7 @@ float _wrap_Extensions_FMA_SatHelper_4367b69a00f83bf7(float _swig_go_0, float _s
 }
 
 
-SatHelper::Extensions *_wrap_new_Extensions_SatHelper_4367b69a00f83bf7() {
+SatHelper::Extensions *_wrap_new_Extensions_SatHelper_9d76377ed7889403() {
   SatHelper::Extensions *result = 0 ;
   SatHelper::Extensions *_swig_go_result;
   
@@ -4888,7 +4888,7 @@ SatHelper::Extensions *_wrap_new_Extensions_SatHelper_4367b69a00f83bf7() {
 }
 
 
-void _wrap_delete_Extensions_SatHelper_4367b69a00f83bf7(SatHelper::Extensions *_swig_go_0) {
+void _wrap_delete_Extensions_SatHelper_9d76377ed7889403(SatHelper::Extensions *_swig_go_0) {
   SatHelper::Extensions *arg1 = (SatHelper::Extensions *) 0 ;
   
   arg1 = *(SatHelper::Extensions **)&_swig_go_0; 

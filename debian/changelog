@@ -1,3 +1,9 @@
+libsathelper (1.1.0-5ppa0) XENIAL; urgency=medium
+
+  * Changed default Go build to -O0 to avoid issues in 32 bit archs
+
+ -- Lucas Teske <lucas@teske.com.br>  Mon, 11 Jun 2018 14:12:08 -0300
+
 libsathelper (1.1.0-4ppa0) xenial; urgency=medium
 
   * Fixed compiler bug for 32 bit arch
