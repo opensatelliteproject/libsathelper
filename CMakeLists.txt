@@ -60,9 +60,13 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -funsafe-math-optimizations -mtune=corte
 endif()
 
 if(${ARCHITECTURE} STREQUAL "armv7l")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -funsafe-math-optimizations -mfloat-abi=softfp -mfpu=neon -ftree-vectorize")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -funsafe-math-optimizations -mfloat-abi=hard -mfpu=neon -ftree-vectorize -I/usr/include/arm-linux-gnueabihf/c++/5/ -I/usr/include/arm-linux-gnueabihf/")
 endif()
 
+if(${ARCHITECTURE} STREQUAL "i686")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m32")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m32")
+endif()
 
 if(${ARCHITECTURE} STREQUAL "x86" OR ${ARCHITECTURE} STREQUAL "x86_64" OR ${ARCHITECTURE} STREQUAL "i686")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -msse -msse3 -mstackrealign")
