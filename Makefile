@@ -1,4 +1,4 @@
-
+INTSIZE := $(shell getconf LONG_BIT)
 
 all: libSatHelper
 
@@ -21,7 +21,11 @@ libSatHelper:
 bootstrapgo:
 	@echo -e '\033[0;32mBuilding target: $@\033[0m'
 	@echo -e '\033[0;34m'
-	swig -go -cgo -c++ -intgosize 64 SatHelper.i
+ifeq ($(INTSIZE), 32)
+	@echo -e '\033[0;32mFixing Compiler bug for 32 bit\033[0m'
+	@sed -i 's/CXXFLAGS:.*-std=c++11.*/CXXFLAGS: -std=c++11 -O0/g' SatHelper.i
+endif
+	swig -go -cgo -c++ -intgosize $(INTSIZE) SatHelper.i
 	@echo -e '\033[0;32mFinished building target: $@\033[0m'
 	@echo ' '
 
