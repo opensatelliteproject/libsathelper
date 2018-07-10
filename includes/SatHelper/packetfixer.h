@@ -41,7 +41,7 @@ namespace SatHelper {
             int8_t a = data[0];
             int8_t b = data[1];
             data[0] = (128 - b);
-            data[1] = a;
+            data[1] = a + 128;
           }
 
         public:
