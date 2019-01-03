@@ -30,7 +30,7 @@ typedef struct { void* array; intgo len; intgo cap; } _goslice_;
 
 
 #cgo CXXFLAGS: -std=c++11 -O0
-#cgo LDFLAGS: -lcorrect -lSatHelper
+#cgo LDFLAGS: -l:libSatHelper.a -l:libcorrect.a
 
 typedef long long swig_type_1;
 typedef long long swig_type_2;

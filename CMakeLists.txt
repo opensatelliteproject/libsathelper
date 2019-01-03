@@ -9,13 +9,7 @@ get_git_head_revision(GIT_REFSPEC GIT_SHA1)
 
 # C++11 Macro
 macro(use_cxx11)
-  if (CMAKE_VERSION VERSION_LESS "3.1")
-    if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-      set (CMAKE_CXX_FLAGS "--std=gnu++11 ${CMAKE_CXX_FLAGS}")
-    endif ()
-  else ()
-    set (CMAKE_CXX_STANDARD 11)
-  endif ()
+  set (CMAKE_CXX_STANDARD 11)
 endmacro(use_cxx11)
 
 use_cxx11()
@@ -52,8 +46,8 @@ message( STATUS "Architecture: ${ARCHITECTURE}" )
 
 
 # Flags
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -O3")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -O3")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -fPIC -O3")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -fPIC -O3")
 
 if(${ARCHITECTURE} STREQUAL "aarch64")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -funsafe-math-optimizations -mtune=cortex-a53 -ftree-vectorize")
@@ -96,7 +90,7 @@ SET_TARGET_PROPERTIES(${PROJECT_NAME}_s PROPERTIES OUTPUT_NAME ${PROJECT_NAME} C
 SET_TARGET_PROPERTIES(${PROJECT_NAME}   PROPERTIES OUTPUT_NAME ${PROJECT_NAME} CLEAN_DIRECT_OUTPUT 1)
 
 # Links
-target_link_libraries (${PROJECT_NAME} correct)
+target_link_libraries (${PROJECT_NAME} correct.a)
 if(WIN32)
   target_link_libraries(${PROJECT_NAME} wsock32 ws2_32)
   set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -static")
