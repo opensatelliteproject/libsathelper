@@ -44,8 +44,8 @@ namespace SatHelper {
         float n_r, n_i, o_r, o_i;
         for (int i = 0; i < length; i++) {
             // region nco_out = Tools::phase2complex(-phase);
-            n_r = sinf(-phase);
-            n_i = cosf(-phase);
+            n_r = cosf(-phase);
+            n_i = sinf(-phase);
             // endregion
             // region output[i] = input[i] * nco_out;
             o_r = Extensions::FMA(input[i].real(), n_r, -input[i].imag() * n_i);
