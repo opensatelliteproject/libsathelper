@@ -9,7 +9,13 @@
 #define INCLUDES_SOCKET_H_
 
 #include <chrono>
-#include <thread>
+
+#if !defined(__MINGW32__)
+#	include <thread>
+#else
+#	include <mingw32/mingw.thread.h>
+#endif
+
 #include <cstdint>
 #include <stdint.h>
 #include <memory.h>
@@ -18,8 +24,9 @@
 
 #ifdef _WIN32
 #	include <winsock2.h>
+#	include <windows.h>
 #	include <atomic>
-#	include <Ws2tcpip.h>
+#	include <ws2tcpip.h>
 #else
 #	include <sys/socket.h>
 #	include <netinet/in.h>

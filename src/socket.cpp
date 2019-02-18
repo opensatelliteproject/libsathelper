@@ -12,7 +12,7 @@
 
 #ifdef _WIN32
 #	include <winsock2.h>
-#	include <Ws2tcpip.h>
+#	include <ws2tcpip.h>
 #	include <atomic>
 #   ifdef _MSC_VER
 #	  pragma comment(lib, "ws2_32.lib")

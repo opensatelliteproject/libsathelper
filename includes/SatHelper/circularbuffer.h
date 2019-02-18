@@ -9,7 +9,12 @@
 #define SRC_CIRCULARBUFFER_H_
 
 #include <atomic>
-#include <mutex>
+#if !defined(__MINGW32__)
+#       include <mutex>
+#else
+#       include <mingw32/mingw.mutex.h>
+#endif
+
 #include <SatHelper/exceptions.h>
 
 namespace SatHelper {
