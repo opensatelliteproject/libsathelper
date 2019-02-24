@@ -12,10 +12,11 @@
 #include <sstream>
 
 #ifdef _WIN32
-#include <winsock2.h>
-#include <Ws2tcpip.h>
+#	include <winsock2.h>
+#	include <windows.h>
+#	include <ws2tcpip.h>
 #else
-#include <netinet/in.h>
+#	include <netinet/in.h>
 #endif
 
 namespace SatHelper {
