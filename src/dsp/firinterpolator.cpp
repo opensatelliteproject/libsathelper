@@ -9,6 +9,7 @@
 #include <dsp/firinterpolator.h>
 #include <exceptions/SatHelperException.h>
 #include <dsp/interpolator_taps.h>
+#include <iostream>
 
 namespace SatHelper {
 
@@ -39,7 +40,12 @@ namespace SatHelper {
         int imu = (int) rint(mu * NSTEPS);
 
         if ((imu < 0) || (imu > NSTEPS)) {
-            throw SatHelperException("MMSE Fir Interpolator imu is out of bounds.");
+            std::cerr << "MMSE Fir Interpolator imu is out of bounds." << std::endl;
+            if (imu < 0) {
+                imu = 0;
+            } else if (imu > NSTEPS) {
+                imu = NSTEPS;
+            }
         }
 
         return filters[imu]->filter(input);
