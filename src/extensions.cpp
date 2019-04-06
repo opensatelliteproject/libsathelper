@@ -66,7 +66,7 @@ void InitExtensions() {
 
 #else
 void InitExtensions() {
-    std::cerr << "Non x86 device detected. No extesions supported." << std::endl;
+    std::cerr << "Non x86 device detected. No extensions supported." << std::endl;
 }
 
 #endif
