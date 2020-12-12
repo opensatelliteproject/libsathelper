@@ -16,8 +16,7 @@
 #define XCR  (1 << 27)
 #define AVX  (1 << 28)
 
-#ifndef _MSC_VER
-unsigned long long _xgetbv(unsigned int index) {
+unsigned long long __xgetbv(unsigned int index) {
     unsigned int eax, edx;
     __asm__ __volatile__(
         "xgetbv;"
@@ -26,7 +25,6 @@ unsigned long long _xgetbv(unsigned int index) {
     );
     return ((unsigned long long)edx << 32) | eax;
 }
-#endif
 
 void InitExtensions() {
     unsigned int eax, ebx, ecx, edx;
@@ -52,7 +50,7 @@ void InitExtensions() {
     SatHelper::Extensions::hasAVX = ecx & AVX || false;
     bool osxsaveSupported = ecx & XCR || false;
     if (osxsaveSupported && SatHelper::Extensions::hasAVX) {
-        unsigned long long xcrFeatureMask = _xgetbv(0);
+        auto xcrFeatureMask = __xgetbv(0);
         SatHelper::Extensions::hasAVX = (xcrFeatureMask & 0x6) == 0x6;
     }
 
