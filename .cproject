@@ -6,11 +6,11 @@
 				<externalSettings>
 					<externalSetting>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/SatHelper"/>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/OpenSatelliteProject"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/opensatelliteproject"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/SatHelper/Debug"/>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/OpenSatelliteProject/Debug"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/opensatelliteproject/Debug"/>
 						<entry flags="RESOLVED" kind="libraryFile" name="SatHelper" srcPrefixMapping="" srcRootPath=""/>
-						<entry flags="RESOLVED" kind="libraryFile" name="OpenSatelliteProject" srcPrefixMapping="" srcRootPath=""/>
+						<entry flags="RESOLVED" kind="libraryFile" name="opensatelliteproject" srcPrefixMapping="" srcRootPath=""/>
 					</externalSetting>
 				</externalSettings>
 				<extensions>
@@ -89,11 +89,11 @@
 				<externalSettings>
 					<externalSetting>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/SatHelper"/>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/OpenSatelliteProject"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/opensatelliteproject"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/SatHelper/Release"/>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/OpenSatelliteProject/Release"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/opensatelliteproject/Release"/>
 						<entry flags="RESOLVED" kind="libraryFile" name="SatHelper" srcPrefixMapping="" srcRootPath=""/>
-						<entry flags="RESOLVED" kind="libraryFile" name="OpenSatelliteProject" srcPrefixMapping="" srcRootPath=""/>
+						<entry flags="RESOLVED" kind="libraryFile" name="opensatelliteproject" srcPrefixMapping="" srcRootPath=""/>
 					</externalSetting>
 				</externalSettings>
 				<extensions>

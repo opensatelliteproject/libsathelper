@@ -48,7 +48,7 @@ GO Wrappers
 Now libSatHelper has golang wrappers. It's currently under test with [SatHelperApp](https://github.com/opensatelliteproject/SatHelperApp/) but so far it seens to be working pretty well. By default you can use it as a normal Go Library by running
 
 ```bash
-go get github.com/OpenSatelliteProject/libsathelper
+go get github.com/opensatelliteproject/libsathelper
 ```
 
 Just make sure you have `libSatHelper` installed in your OS (your Go app will be linked to it).

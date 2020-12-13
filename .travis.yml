@@ -29,8 +29,7 @@ jobs:
         - export CMAKE_INSTALL_PREFIX=/usr
         - make libcorrect && sudo make libcorrect-install && sudo make install
         - cd /home/travis/gopath
-        - mv /home/travis/gopath/src/github.com/opensatelliteproject /home/travis/gopath/src/github.com/OpenSatelliteProject
-        - cd /home/travis/gopath/src/github.com/OpenSatelliteProject/libsathelper
+        - cd /home/travis/gopath/src/github.com/opensatelliteproject/libsathelper
         - swig -go -cgo -c++ -intgosize 64 SatHelper.i
         - go build -x
         - go install

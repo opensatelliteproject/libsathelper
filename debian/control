@@ -3,7 +3,7 @@ Section: devel
 Priority: optional
 Maintainer: Lucas Teske <lucas@teske.com.br>
 Build-Depends: cmake, build-essential, libcorrect
-Homepage: https://github.com/OpenSatelliteProject/libsathelper
+Homepage: https://github.com/opensatelliteproject/libsathelper
 
 Package: libsathelper
 Architecture: any

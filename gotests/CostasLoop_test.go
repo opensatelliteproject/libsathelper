@@ -1,10 +1,10 @@
 package SatHelper
 
 import (
-	"testing"
-	"github.com/OpenSatelliteProject/libsathelper"
+	"github.com/opensatelliteproject/libsathelper"
 	"math"
 	"math/rand"
+	"testing"
 )
 
 var CostasLoopTestSize = 4096
@@ -27,9 +27,9 @@ func TestCostasLoop(t *testing.T) {
 
 	for i := 0; i < CostasLoopTestSize; i++ {
 		// Create Signal
-		testData[i] = mul(phaseShift, (rand.Float32() * 2) - 1)
+		testData[i] = mul(phaseShift, (rand.Float32()*2)-1)
 		// Add Noise
-		testData[i] = add(testData[i], complex(rand.Float32() * NOISELEVEL, rand.Float32() * NOISELEVEL))
+		testData[i] = add(testData[i], complex(rand.Float32()*NOISELEVEL, rand.Float32()*NOISELEVEL))
 	}
 
 	rrcTaps := SatHelper.FiltersRRC(1, SPS, SPS, ROLLOFF, NUMTAPS)
@@ -48,7 +48,7 @@ func TestCostasLoop(t *testing.T) {
 	averageValue := 0.0
 
 	for i := 0; i < CostasLoopTestSize; i++ {
-		freqHz := frequencyDeviation[i] / ( 2 * math.Pi)
+		freqHz := frequencyDeviation[i] / (2 * math.Pi)
 		averageValue += float64(freqHz)
 		highestValue = math.Max(highestValue, float64(freqHz))
 		minimumValue = math.Min(minimumValue, float64(freqHz))

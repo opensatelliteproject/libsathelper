@@ -32,7 +32,7 @@ func compareByteArray(a []byte, b []byte, len int) int {
 			return i
 		}
 	}
-	return -1;
+	return -1
 }
 
 // Range -50 to 50
@@ -45,5 +45,5 @@ func randomByte() byte {
 }
 
 func compareFloat(a float32, b float32, epsilon float32) bool {
-	return math.Abs(float64(a - b)) < float64(epsilon)
+	return math.Abs(float64(a-b)) < float64(epsilon)
 }
